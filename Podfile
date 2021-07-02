@@ -20,7 +20,7 @@ target 'Castcle-iOS' do
 end
 
 # Core
-# target 'Core' do
-#     project 'Core/Core.xcodeproj'
-#     share_pods
-# end
+ target 'Core' do
+     project 'Core/Core.xcodeproj'
+     share_pods
+ end
