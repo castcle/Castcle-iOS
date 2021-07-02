@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		317C19E41885EF74A040E1DA /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570CA31EAA7E46A1F57A79A1 /* Pods_Castcle_iOS.framework */; };
+		B792811C268EC784000ED84A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B792811B268EC784000ED84A /* Core.framework */; };
+		B792811D268EC784000ED84A /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B792811B268EC784000ED84A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7F69CA8268EB21E00B01223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CA7268EB21E00B01223 /* AppDelegate.swift */; };
 		B7F69CAA268EB21E00B01223 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CA9268EB21E00B01223 /* SceneDelegate.swift */; };
 		B7F69CAC268EB21E00B01223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CAB268EB21E00B01223 /* ViewController.swift */; };
@@ -16,10 +18,25 @@
 		B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B792811E268EC784000ED84A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B792811D268EC784000ED84A /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		570CA31EAA7E46A1F57A79A1 /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6531F0FD738A8AE8E4BD9A16 /* Pods-Castcle-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release.xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		67C62DB390E9DE628C42BA78 /* Pods-Castcle-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B792811B268EC784000ED84A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA4268EB21E00B01223 /* Castcle-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Castcle-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA7268EB21E00B01223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F69CA9268EB21E00B01223 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				317C19E41885EF74A040E1DA /* Pods_Castcle_iOS.framework in Frameworks */,
+				B792811C268EC784000ED84A /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +63,7 @@
 		7F3A3F40D4655699A46A2DB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B792811B268EC784000ED84A /* Core.framework */,
 				570CA31EAA7E46A1F57A79A1 /* Pods_Castcle_iOS.framework */,
 			);
 			name = Frameworks;
@@ -103,6 +122,7 @@
 				B7F69CA1268EB21E00B01223 /* Frameworks */,
 				B7F69CA2268EB21E00B01223 /* Resources */,
 				53C0194CFA97C5F46B67A04E /* [CP] Embed Pods Frameworks */,
+				B792811E268EC784000ED84A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -339,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -357,7 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,7 +397,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

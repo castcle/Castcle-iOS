@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Search/Search.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Feed/Feed.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Component/Component.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Core/Core.xcodeproj">
    </FileRef>
    <FileRef
