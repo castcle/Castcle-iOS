@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		317C19E41885EF74A040E1DA /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570CA31EAA7E46A1F57A79A1 /* Pods_Castcle_iOS.framework */; };
 		B792811C268EC784000ED84A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B792811B268EC784000ED84A /* Core.framework */; };
 		B792811D268EC784000ED84A /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B792811B268EC784000ED84A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7928167269420B5000ED84A /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = B7928166269420B5000ED84A /* Defaults */; };
+		B792817226942967000ED84A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B792817126942967000ED84A /* Moya */; };
+		B792817426942967000ED84A /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B792817326942967000ED84A /* ReactiveMoya */; };
+		B792817626942967000ED84A /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B792817526942967000ED84A /* RxMoya */; };
+		B792817C269429DA000ED84A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B792817B269429DA000ED84A /* SwiftyJSON */; };
+		B792817F26942A49000ED84A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B792817E26942A49000ED84A /* Kingfisher */; };
+		B79281A926942BF0000ED84A /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = B79281A826942BF0000ED84A /* SwiftDate */; };
 		B7F69CA8268EB21E00B01223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CA7268EB21E00B01223 /* AppDelegate.swift */; };
 		B7F69CAA268EB21E00B01223 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CA9268EB21E00B01223 /* SceneDelegate.swift */; };
 		B7F69CAC268EB21E00B01223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CAB268EB21E00B01223 /* ViewController.swift */; };
 		B7F69CAF268EB21E00B01223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CAD268EB21E00B01223 /* Main.storyboard */; };
 		B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB0268EB22000B01223 /* Assets.xcassets */; };
 		B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */; };
+		F834A79BEBE883B50235BA9B /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072D0AADE4949224584BD0B1 /* Pods_Castcle_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,9 +40,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		570CA31EAA7E46A1F57A79A1 /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6531F0FD738A8AE8E4BD9A16 /* Pods-Castcle-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release.xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		67C62DB390E9DE628C42BA78 /* Pods-Castcle-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		072D0AADE4949224584BD0B1 /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74665FCAD2B9BD46CA23A465 /* Pods-Castcle-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release.xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		B792811B268EC784000ED84A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA4268EB21E00B01223 /* Castcle-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Castcle-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA7268EB21E00B01223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,7 @@
 		B7F69CB0268EB22000B01223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7F69CB3268EB22000B01223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7F69CB5268EB22000B01223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0128DD98DBCD150E3891A79 /* Pods-Castcle-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +59,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				317C19E41885EF74A040E1DA /* Pods_Castcle_iOS.framework in Frameworks */,
+				B7928167269420B5000ED84A /* Defaults in Frameworks */,
 				B792811C268EC784000ED84A /* Core.framework in Frameworks */,
+				B792817426942967000ED84A /* ReactiveMoya in Frameworks */,
+				B792817626942967000ED84A /* RxMoya in Frameworks */,
+				B792817226942967000ED84A /* Moya in Frameworks */,
+				B792817F26942A49000ED84A /* Kingfisher in Frameworks */,
+				B792817C269429DA000ED84A /* SwiftyJSON in Frameworks */,
+				F834A79BEBE883B50235BA9B /* Pods_Castcle_iOS.framework in Frameworks */,
+				B79281A926942BF0000ED84A /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				B792811B268EC784000ED84A /* Core.framework */,
-				570CA31EAA7E46A1F57A79A1 /* Pods_Castcle_iOS.framework */,
+				072D0AADE4949224584BD0B1 /* Pods_Castcle_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -104,8 +118,8 @@
 		F093F7C16BC95A49994F6E0B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				67C62DB390E9DE628C42BA78 /* Pods-Castcle-iOS.debug.xcconfig */,
-				6531F0FD738A8AE8E4BD9A16 /* Pods-Castcle-iOS.release.xcconfig */,
+				E0128DD98DBCD150E3891A79 /* Pods-Castcle-iOS.debug.xcconfig */,
+				74665FCAD2B9BD46CA23A465 /* Pods-Castcle-iOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -117,11 +131,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7F69CB8268EB22000B01223 /* Build configuration list for PBXNativeTarget "Castcle-iOS" */;
 			buildPhases = (
-				5EA9CB78A8A171CF87CCF337 /* [CP] Check Pods Manifest.lock */,
+				839278136246ACC64FA81CA8 /* [CP] Check Pods Manifest.lock */,
 				B7F69CA0268EB21E00B01223 /* Sources */,
 				B7F69CA1268EB21E00B01223 /* Frameworks */,
 				B7F69CA2268EB21E00B01223 /* Resources */,
-				53C0194CFA97C5F46B67A04E /* [CP] Embed Pods Frameworks */,
 				B792811E268EC784000ED84A /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -129,6 +142,15 @@
 			dependencies = (
 			);
 			name = "Castcle-iOS";
+			packageProductDependencies = (
+				B7928166269420B5000ED84A /* Defaults */,
+				B792817126942967000ED84A /* Moya */,
+				B792817326942967000ED84A /* ReactiveMoya */,
+				B792817526942967000ED84A /* RxMoya */,
+				B792817B269429DA000ED84A /* SwiftyJSON */,
+				B792817E26942A49000ED84A /* Kingfisher */,
+				B79281A826942BF0000ED84A /* SwiftDate */,
+			);
 			productName = "Castcle-iOS";
 			productReference = B7F69CA4268EB21E00B01223 /* Castcle-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -156,6 +178,13 @@
 				Base,
 			);
 			mainGroup = B7F69C9B268EB21E00B01223;
+			packageReferences = (
+				B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */,
+				B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */,
+				B792817A269429DA000ED84A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				B792817D26942A49000ED84A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B79281A726942BF0000ED84A /* XCRemoteSwiftPackageReference "SwiftDate" */,
+			);
 			productRefGroup = B7F69CA5268EB21E00B01223 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -179,24 +208,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		53C0194CFA97C5F46B67A04E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5EA9CB78A8A171CF87CCF337 /* [CP] Check Pods Manifest.lock */ = {
+		839278136246ACC64FA81CA8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -304,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -359,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -371,13 +383,14 @@
 		};
 		B7F69CB9268EB22000B01223 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67C62DB390E9DE628C42BA78 /* Pods-Castcle-iOS.debug.xcconfig */;
+			baseConfigurationReference = E0128DD98DBCD150E3891A79 /* Pods-Castcle-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,13 +404,14 @@
 		};
 		B7F69CBA268EB22000B01223 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6531F0FD738A8AE8E4BD9A16 /* Pods-Castcle-iOS.release.xcconfig */;
+			baseConfigurationReference = 74665FCAD2B9BD46CA23A465 /* Pods-Castcle-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,6 +445,87 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.1;
+			};
+		};
+		B792817A269429DA000ED84A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		B792817D26942A49000ED84A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
+		B79281A726942BF0000ED84A /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7928166269420B5000ED84A /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		B792817126942967000ED84A /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		B792817326942967000ED84A /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		B792817526942967000ED84A /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		B792817B269429DA000ED84A /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B792817A269429DA000ED84A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		B792817E26942A49000ED84A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B792817D26942A49000ED84A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		B79281A826942BF0000ED84A /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B79281A726942BF0000ED84A /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B7F69C9C268EB21E00B01223 /* Project object */;
 }

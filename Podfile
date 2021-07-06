@@ -1,4 +1,4 @@
-platform :ios, '12.0'
+platform :ios, '13.0'
 
 use_frameworks!
 
@@ -6,11 +6,6 @@ workspace 'Castcle-iOS'
 
 def share_pods
   pod 'AppCenter'
-  pod 'Defaults'
-  pod 'SwiftDate'
-  pod 'Moya'
-  pod 'SwiftyJSON'
-  pod 'Kingfisher'
 end
 
 # Castcle-iOS
