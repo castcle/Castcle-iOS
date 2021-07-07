@@ -7,17 +7,21 @@ PODS:
   - AppCenter/Core (4.2.0)
   - AppCenter/Crashes (4.2.0):
     - AppCenter/Core
+  - SwiftIcons (3.0)
 
 DEPENDENCIES:
   - AppCenter
+  - SwiftIcons
 
 SPEC REPOS:
   trunk:
     - AppCenter
+    - SwiftIcons
 
 SPEC CHECKSUMS:
   AppCenter: 87ef6eefd8ade4df59e88951288587429f3dd2a5
+  SwiftIcons: 3b748e57d9eee0c7c8d3bdbf2d742c0b1b4c6172
 
-PODFILE CHECKSUM: 9909e7ed6aeef2fded19dac3f2e96e2d48f15d18
+PODFILE CHECKSUM: bb8c8c7d1a40c1fafedd9e40aa8e282454a28406
 
 COCOAPODS: 1.10.1

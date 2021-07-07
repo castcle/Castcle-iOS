@@ -16,10 +16,13 @@
 		B792817C269429DA000ED84A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B792817B269429DA000ED84A /* SwiftyJSON */; };
 		B792817F26942A49000ED84A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B792817E26942A49000ED84A /* Kingfisher */; };
 		B79281A926942BF0000ED84A /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = B79281A826942BF0000ED84A /* SwiftDate */; };
+		B79281B4269455D1000ED84A /* Feed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B2269455D1000ED84A /* Feed.framework */; };
+		B79281B5269455D1000ED84A /* Feed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B2269455D1000ED84A /* Feed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B79281B6269455D1000ED84A /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B3269455D1000ED84A /* Search.framework */; };
+		B79281B7269455D1000ED84A /* Search.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B3269455D1000ED84A /* Search.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B79281B92694560D000ED84A /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79281B82694560D000ED84A /* CustomTabBarController.swift */; };
 		B7F69CA8268EB21E00B01223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CA7268EB21E00B01223 /* AppDelegate.swift */; };
-		B7F69CAA268EB21E00B01223 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CA9268EB21E00B01223 /* SceneDelegate.swift */; };
 		B7F69CAC268EB21E00B01223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CAB268EB21E00B01223 /* ViewController.swift */; };
-		B7F69CAF268EB21E00B01223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CAD268EB21E00B01223 /* Main.storyboard */; };
 		B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB0268EB22000B01223 /* Assets.xcassets */; };
 		B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */; };
 		F834A79BEBE883B50235BA9B /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072D0AADE4949224584BD0B1 /* Pods_Castcle_iOS.framework */; };
@@ -32,6 +35,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B79281B5269455D1000ED84A /* Feed.framework in Embed Frameworks */,
+				B79281B7269455D1000ED84A /* Search.framework in Embed Frameworks */,
 				B792811D268EC784000ED84A /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -43,11 +48,12 @@
 		072D0AADE4949224584BD0B1 /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74665FCAD2B9BD46CA23A465 /* Pods-Castcle-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release.xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		B792811B268EC784000ED84A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79281B2269455D1000ED84A /* Feed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Feed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79281B3269455D1000ED84A /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79281B82694560D000ED84A /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		B7F69CA4268EB21E00B01223 /* Castcle-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Castcle-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA7268EB21E00B01223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7F69CA9268EB21E00B01223 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B7F69CAB268EB21E00B01223 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B7F69CAE268EB21E00B01223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7F69CB0268EB22000B01223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7F69CB3268EB22000B01223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7F69CB5268EB22000B01223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,9 +65,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B79281B4269455D1000ED84A /* Feed.framework in Frameworks */,
 				B7928167269420B5000ED84A /* Defaults in Frameworks */,
 				B792811C268EC784000ED84A /* Core.framework in Frameworks */,
 				B792817426942967000ED84A /* ReactiveMoya in Frameworks */,
+				B79281B6269455D1000ED84A /* Search.framework in Frameworks */,
 				B792817626942967000ED84A /* RxMoya in Frameworks */,
 				B792817226942967000ED84A /* Moya in Frameworks */,
 				B792817F26942A49000ED84A /* Kingfisher in Frameworks */,
@@ -77,6 +85,8 @@
 		7F3A3F40D4655699A46A2DB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B79281B2269455D1000ED84A /* Feed.framework */,
+				B79281B3269455D1000ED84A /* Search.framework */,
 				B792811B268EC784000ED84A /* Core.framework */,
 				072D0AADE4949224584BD0B1 /* Pods_Castcle_iOS.framework */,
 			);
@@ -105,9 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				B7F69CA7268EB21E00B01223 /* AppDelegate.swift */,
-				B7F69CA9268EB21E00B01223 /* SceneDelegate.swift */,
+				B79281B82694560D000ED84A /* CustomTabBarController.swift */,
 				B7F69CAB268EB21E00B01223 /* ViewController.swift */,
-				B7F69CAD268EB21E00B01223 /* Main.storyboard */,
 				B7F69CB0268EB22000B01223 /* Assets.xcassets */,
 				B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */,
 				B7F69CB5268EB22000B01223 /* Info.plist */,
@@ -136,6 +145,7 @@
 				B7F69CA1268EB21E00B01223 /* Frameworks */,
 				B7F69CA2268EB21E00B01223 /* Resources */,
 				B792811E268EC784000ED84A /* Embed Frameworks */,
+				0D6A77C1EDE5A2206044F5BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,13 +211,29 @@
 			files = (
 				B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */,
 				B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */,
-				B7F69CAF268EB21E00B01223 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D6A77C1EDE5A2206044F5BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		839278136246ACC64FA81CA8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,21 +265,13 @@
 			files = (
 				B7F69CAC268EB21E00B01223 /* ViewController.swift in Sources */,
 				B7F69CA8268EB21E00B01223 /* AppDelegate.swift in Sources */,
-				B7F69CAA268EB21E00B01223 /* SceneDelegate.swift in Sources */,
+				B79281B92694560D000ED84A /* CustomTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B7F69CAD268EB21E00B01223 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B7F69CAE268EB21E00B01223 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

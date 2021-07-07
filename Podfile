@@ -6,6 +6,7 @@ workspace 'Castcle-iOS'
 
 def share_pods
   pod 'AppCenter'
+  pod 'SwiftIcons'
 end
 
 # Castcle-iOS
