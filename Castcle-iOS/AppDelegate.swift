@@ -11,7 +11,6 @@ import Feed
 import Search
 import ESTabBarController
 import SwiftColor
-import SwiftIcons
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -63,9 +62,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - Action
         let actionViewController: UIViewController = UIViewController()
 
-        self.feedNavi?.tabBarItem = ESTabBarItem.init(BouncesContentView(), image: UIImage.init(icon: .fontAwesomeSolid(.rss), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .fontAwesomeSolid(.rss), size: CGSize(width: 23, height: 23)))
-        actionViewController.tabBarItem = ESTabBarItem.init(IrregularityContentView(), image: UIImage.init(icon: .fontAwesomeSolid(.plusSquare), size: CGSize(width: 50, height: 50)), selectedImage: UIImage.init(icon: .fontAwesomeSolid(.plusSquare), size: CGSize(width: 50, height: 50)))
-        self.searchNavi?.tabBarItem = ESTabBarItem.init(BouncesContentView(), image: UIImage.init(icon: .fontAwesomeSolid(.search), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .fontAwesomeSolid(.search), size: CGSize(width: 23, height: 23)))
+        self.feedNavi?.tabBarItem = ESTabBarItem.init(BouncesContentView(), image: UIImage.init(icon: .castcle(.alignCenter), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .castcle(.alignCenter), size: CGSize(width: 23, height: 23)))
+        actionViewController.tabBarItem = ESTabBarItem.init(IrregularityContentView(), image: UIImage.init(icon: .castcle(.alignJustify), size: CGSize(width: 50, height: 50)), selectedImage: UIImage.init(icon: .castcle(.alignJustify), size: CGSize(width: 50, height: 50)))
+        self.searchNavi?.tabBarItem = ESTabBarItem.init(BouncesContentView(), image: UIImage.init(icon: .castcle(.batteryFull), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .castcle(.batteryFull), size: CGSize(width: 23, height: 23)))
         
         tabBarController.viewControllers = [self.feedNavi, actionViewController, self.searchNavi] as? [UIViewController] ?? []
         

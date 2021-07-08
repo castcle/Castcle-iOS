@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B75E627D26961A7F003E1ADA /* SwiftColor in Frameworks */ = {isa = PBXBuildFile; productRef = B75E627C26961A7F003E1ADA /* SwiftColor */; };
+		B75E627D26961A7F003E1ADA /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B75E627C26961A7F003E1ADA /* SwiftPackageProductDependency */; };
 		B75E628726969B04003E1ADA /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; };
 		B75E628826969B04003E1ADA /* Component.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B75E628B26969C5D003E1ADA /* ESTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = B75E628A26969C5D003E1ADA /* ESTabBarController */; };
+		B75E628B26969C5D003E1ADA /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B75E628A26969C5D003E1ADA /* SwiftPackageProductDependency */; };
 		B75E629B2696A003003E1ADA /* BouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75E629A2696A003003E1ADA /* BouncesContentView.swift */; };
 		B75E629D2696A062003E1ADA /* BasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75E629C2696A062003E1ADA /* BasicContentView.swift */; };
 		B75E629F2696ADB6003E1ADA /* IrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75E629E2696ADB5003E1ADA /* IrregularityContentView.swift */; };
 		B792811C268EC784000ED84A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B792811B268EC784000ED84A /* Core.framework */; };
 		B792811D268EC784000ED84A /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B792811B268EC784000ED84A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B7928167269420B5000ED84A /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = B7928166269420B5000ED84A /* Defaults */; };
-		B792817226942967000ED84A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B792817126942967000ED84A /* Moya */; };
-		B792817426942967000ED84A /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B792817326942967000ED84A /* ReactiveMoya */; };
-		B792817626942967000ED84A /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B792817526942967000ED84A /* RxMoya */; };
-		B792817C269429DA000ED84A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B792817B269429DA000ED84A /* SwiftyJSON */; };
-		B792817F26942A49000ED84A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B792817E26942A49000ED84A /* Kingfisher */; };
-		B79281A926942BF0000ED84A /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = B79281A826942BF0000ED84A /* SwiftDate */; };
+		B7928167269420B5000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B7928166269420B5000ED84A /* SwiftPackageProductDependency */; };
+		B792817226942967000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B792817126942967000ED84A /* SwiftPackageProductDependency */; };
+		B792817426942967000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B792817326942967000ED84A /* SwiftPackageProductDependency */; };
+		B792817626942967000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B792817526942967000ED84A /* SwiftPackageProductDependency */; };
+		B792817C269429DA000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B792817B269429DA000ED84A /* SwiftPackageProductDependency */; };
+		B792817F26942A49000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B792817E26942A49000ED84A /* SwiftPackageProductDependency */; };
+		B79281A926942BF0000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B79281A826942BF0000ED84A /* SwiftPackageProductDependency */; };
 		B79281B4269455D1000ED84A /* Feed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B2269455D1000ED84A /* Feed.framework */; };
 		B79281B5269455D1000ED84A /* Feed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B2269455D1000ED84A /* Feed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B79281B6269455D1000ED84A /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B3269455D1000ED84A /* Search.framework */; };
@@ -74,19 +74,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B79281B4269455D1000ED84A /* Feed.framework in Frameworks */,
-				B7928167269420B5000ED84A /* Defaults in Frameworks */,
+				B7928167269420B5000ED84A /* BuildFile in Frameworks */,
 				B792811C268EC784000ED84A /* Core.framework in Frameworks */,
-				B75E627D26961A7F003E1ADA /* SwiftColor in Frameworks */,
-				B792817426942967000ED84A /* ReactiveMoya in Frameworks */,
+				B75E627D26961A7F003E1ADA /* BuildFile in Frameworks */,
+				B792817426942967000ED84A /* BuildFile in Frameworks */,
 				B79281B6269455D1000ED84A /* Search.framework in Frameworks */,
-				B792817626942967000ED84A /* RxMoya in Frameworks */,
-				B792817226942967000ED84A /* Moya in Frameworks */,
-				B792817F26942A49000ED84A /* Kingfisher in Frameworks */,
+				B792817626942967000ED84A /* BuildFile in Frameworks */,
+				B792817226942967000ED84A /* BuildFile in Frameworks */,
+				B792817F26942A49000ED84A /* BuildFile in Frameworks */,
 				B75E628726969B04003E1ADA /* Component.framework in Frameworks */,
-				B75E628B26969C5D003E1ADA /* ESTabBarController in Frameworks */,
-				B792817C269429DA000ED84A /* SwiftyJSON in Frameworks */,
+				B75E628B26969C5D003E1ADA /* BuildFile in Frameworks */,
+				B792817C269429DA000ED84A /* BuildFile in Frameworks */,
 				F834A79BEBE883B50235BA9B /* Pods_Castcle_iOS.framework in Frameworks */,
-				B79281A926942BF0000ED84A /* SwiftDate in Frameworks */,
+				B79281A926942BF0000ED84A /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +166,6 @@
 				B7F69CA1268EB21E00B01223 /* Frameworks */,
 				B7F69CA2268EB21E00B01223 /* Resources */,
 				B792811E268EC784000ED84A /* Embed Frameworks */,
-				0D6A77C1EDE5A2206044F5BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,15 +173,15 @@
 			);
 			name = "Castcle-iOS";
 			packageProductDependencies = (
-				B7928166269420B5000ED84A /* Defaults */,
-				B792817126942967000ED84A /* Moya */,
-				B792817326942967000ED84A /* ReactiveMoya */,
-				B792817526942967000ED84A /* RxMoya */,
-				B792817B269429DA000ED84A /* SwiftyJSON */,
-				B792817E26942A49000ED84A /* Kingfisher */,
-				B79281A826942BF0000ED84A /* SwiftDate */,
-				B75E627C26961A7F003E1ADA /* SwiftColor */,
-				B75E628A26969C5D003E1ADA /* ESTabBarController */,
+				B7928166269420B5000ED84A /* SwiftPackageProductDependency */,
+				B792817126942967000ED84A /* SwiftPackageProductDependency */,
+				B792817326942967000ED84A /* SwiftPackageProductDependency */,
+				B792817526942967000ED84A /* SwiftPackageProductDependency */,
+				B792817B269429DA000ED84A /* SwiftPackageProductDependency */,
+				B792817E26942A49000ED84A /* SwiftPackageProductDependency */,
+				B79281A826942BF0000ED84A /* SwiftPackageProductDependency */,
+				B75E627C26961A7F003E1ADA /* SwiftPackageProductDependency */,
+				B75E628A26969C5D003E1ADA /* SwiftPackageProductDependency */,
 			);
 			productName = "Castcle-iOS";
 			productReference = B7F69CA4268EB21E00B01223 /* Castcle-iOS.app */;
@@ -212,13 +211,13 @@
 			);
 			mainGroup = B7F69C9B268EB21E00B01223;
 			packageReferences = (
-				B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */,
-				B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */,
-				B792817A269429DA000ED84A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
-				B792817D26942A49000ED84A /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				B79281A726942BF0000ED84A /* XCRemoteSwiftPackageReference "SwiftDate" */,
-				B75E627B26961A7F003E1ADA /* XCRemoteSwiftPackageReference "SwiftColor" */,
-				B75E628926969C5D003E1ADA /* XCRemoteSwiftPackageReference "ESTabBarController" */,
+				B7928165269420B5000ED84A /* RemoteSwiftPackageReference */,
+				B792817026942967000ED84A /* RemoteSwiftPackageReference */,
+				B792817A269429DA000ED84A /* RemoteSwiftPackageReference */,
+				B792817D26942A49000ED84A /* RemoteSwiftPackageReference */,
+				B79281A726942BF0000ED84A /* RemoteSwiftPackageReference */,
+				B75E627B26961A7F003E1ADA /* RemoteSwiftPackageReference */,
+				B75E628926969C5D003E1ADA /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = B7F69CA5268EB21E00B01223 /* Products */;
 			projectDirPath = "";
@@ -242,23 +241,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D6A77C1EDE5A2206044F5BD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		839278136246ACC64FA81CA8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -491,7 +473,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B75E627B26961A7F003E1ADA /* XCRemoteSwiftPackageReference "SwiftColor" */ = {
+		B75E627B26961A7F003E1ADA /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/icodesign/SwiftColor.git";
 			requirement = {
@@ -499,7 +481,7 @@
 				minimumVersion = 1.6.0;
 			};
 		};
-		B75E628926969C5D003E1ADA /* XCRemoteSwiftPackageReference "ESTabBarController" */ = {
+		B75E628926969C5D003E1ADA /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/eggswift/ESTabBarController.git";
 			requirement = {
@@ -507,7 +489,7 @@
 				minimumVersion = 2.9.0;
 			};
 		};
-		B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */ = {
+		B7928165269420B5000ED84A /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/Defaults";
 			requirement = {
@@ -515,7 +497,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */ = {
+		B792817026942967000ED84A /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
@@ -523,7 +505,7 @@
 				minimumVersion = 14.0.1;
 			};
 		};
-		B792817A269429DA000ED84A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		B792817A269429DA000ED84A /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
@@ -531,7 +513,7 @@
 				minimumVersion = 5.0.1;
 			};
 		};
-		B792817D26942A49000ED84A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		B792817D26942A49000ED84A /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -539,7 +521,7 @@
 				minimumVersion = 6.3.0;
 			};
 		};
-		B79281A726942BF0000ED84A /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+		B79281A726942BF0000ED84A /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
 			requirement = {
@@ -550,49 +532,49 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B75E627C26961A7F003E1ADA /* SwiftColor */ = {
+		B75E627C26961A7F003E1ADA /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75E627B26961A7F003E1ADA /* XCRemoteSwiftPackageReference "SwiftColor" */;
+			package = B75E627B26961A7F003E1ADA /* RemoteSwiftPackageReference */;
 			productName = SwiftColor;
 		};
-		B75E628A26969C5D003E1ADA /* ESTabBarController */ = {
+		B75E628A26969C5D003E1ADA /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75E628926969C5D003E1ADA /* XCRemoteSwiftPackageReference "ESTabBarController" */;
+			package = B75E628926969C5D003E1ADA /* RemoteSwiftPackageReference */;
 			productName = ESTabBarController;
 		};
-		B7928166269420B5000ED84A /* Defaults */ = {
+		B7928166269420B5000ED84A /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */;
+			package = B7928165269420B5000ED84A /* RemoteSwiftPackageReference */;
 			productName = Defaults;
 		};
-		B792817126942967000ED84A /* Moya */ = {
+		B792817126942967000ED84A /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */;
+			package = B792817026942967000ED84A /* RemoteSwiftPackageReference */;
 			productName = Moya;
 		};
-		B792817326942967000ED84A /* ReactiveMoya */ = {
+		B792817326942967000ED84A /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */;
+			package = B792817026942967000ED84A /* RemoteSwiftPackageReference */;
 			productName = ReactiveMoya;
 		};
-		B792817526942967000ED84A /* RxMoya */ = {
+		B792817526942967000ED84A /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */;
+			package = B792817026942967000ED84A /* RemoteSwiftPackageReference */;
 			productName = RxMoya;
 		};
-		B792817B269429DA000ED84A /* SwiftyJSON */ = {
+		B792817B269429DA000ED84A /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B792817A269429DA000ED84A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = B792817A269429DA000ED84A /* RemoteSwiftPackageReference */;
 			productName = SwiftyJSON;
 		};
-		B792817E26942A49000ED84A /* Kingfisher */ = {
+		B792817E26942A49000ED84A /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B792817D26942A49000ED84A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = B792817D26942A49000ED84A /* RemoteSwiftPackageReference */;
 			productName = Kingfisher;
 		};
-		B79281A826942BF0000ED84A /* SwiftDate */ = {
+		B79281A826942BF0000ED84A /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B79281A726942BF0000ED84A /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			package = B79281A726942BF0000ED84A /* RemoteSwiftPackageReference */;
 			productName = SwiftDate;
 		};
 /* End XCSwiftPackageProductDependency section */

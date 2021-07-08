@@ -7,7 +7,6 @@
 
 import UIKit
 import ESTabBarController
-import pop
 
 class IrregularityContentView: ESTabBarItemContentView {
 
