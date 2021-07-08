@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "ESTabBarController",
+        "repositoryURL": "https://github.com/eggswift/ESTabBarController.git",
+        "state": {
+          "branch": null,
+          "revision": "93a30b833a05fd916c6d4c5d6e94a270cf3b6636",
+          "version": "2.9.0"
+        }
+      },
+      {
         "package": "Kingfisher",
         "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {
@@ -107,6 +116,15 @@
           "branch": null,
           "revision": "254617dd7fae0c45319ba5fbea435bf4d0e15b5d",
           "version": "5.1.2"
+        }
+      },
+      {
+        "package": "SwiftColor",
+        "repositoryURL": "https://github.com/icodesign/SwiftColor.git",
+        "state": {
+          "branch": null,
+          "revision": "8ada1bd6b4c132a658b63cc95ff77a56e345ccb7",
+          "version": "1.6.0"
         }
       },
       {
