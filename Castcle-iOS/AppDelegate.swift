@@ -53,11 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Feed
         self.feedNavi = UINavigationController(rootViewController: FeedOpener.open(.feed))
-        self.feedNavi?.navigationBar.isHidden = true
                 
         // MARK: - Search
         self.searchNavi = UINavigationController(rootViewController: SearchOpener.open(.search))
-        self.searchNavi?.navigationBar.isHidden = true
         
         // MARK: - Action
         let actionViewController: UIViewController = UIViewController()
