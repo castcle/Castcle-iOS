@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B75E627D26961A7F003E1ADA /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B75E627C26961A7F003E1ADA /* SwiftPackageProductDependency */; };
+		B75E627D26961A7F003E1ADA /* SwiftColor in Frameworks */ = {isa = PBXBuildFile; productRef = B75E627C26961A7F003E1ADA /* SwiftColor */; };
 		B75E628726969B04003E1ADA /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; };
 		B75E628826969B04003E1ADA /* Component.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B75E628B26969C5D003E1ADA /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B75E628A26969C5D003E1ADA /* SwiftPackageProductDependency */; };
+		B75E628B26969C5D003E1ADA /* ESTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = B75E628A26969C5D003E1ADA /* ESTabBarController */; };
 		B75E629B2696A003003E1ADA /* BouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75E629A2696A003003E1ADA /* BouncesContentView.swift */; };
 		B75E629D2696A062003E1ADA /* BasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75E629C2696A062003E1ADA /* BasicContentView.swift */; };
 		B75E629F2696ADB6003E1ADA /* IrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75E629E2696ADB5003E1ADA /* IrregularityContentView.swift */; };
 		B792811C268EC784000ED84A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B792811B268EC784000ED84A /* Core.framework */; };
 		B792811D268EC784000ED84A /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B792811B268EC784000ED84A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B7928167269420B5000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B7928166269420B5000ED84A /* SwiftPackageProductDependency */; };
-		B792817226942967000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B792817126942967000ED84A /* SwiftPackageProductDependency */; };
-		B792817426942967000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B792817326942967000ED84A /* SwiftPackageProductDependency */; };
-		B792817626942967000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B792817526942967000ED84A /* SwiftPackageProductDependency */; };
-		B792817C269429DA000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B792817B269429DA000ED84A /* SwiftPackageProductDependency */; };
-		B792817F26942A49000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B792817E26942A49000ED84A /* SwiftPackageProductDependency */; };
-		B79281A926942BF0000ED84A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B79281A826942BF0000ED84A /* SwiftPackageProductDependency */; };
+		B7928167269420B5000ED84A /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = B7928166269420B5000ED84A /* Defaults */; };
+		B792817226942967000ED84A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B792817126942967000ED84A /* Moya */; };
+		B792817426942967000ED84A /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B792817326942967000ED84A /* ReactiveMoya */; };
+		B792817626942967000ED84A /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B792817526942967000ED84A /* RxMoya */; };
+		B792817C269429DA000ED84A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B792817B269429DA000ED84A /* SwiftyJSON */; };
+		B792817F26942A49000ED84A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B792817E26942A49000ED84A /* Kingfisher */; };
+		B79281A926942BF0000ED84A /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = B79281A826942BF0000ED84A /* SwiftDate */; };
 		B79281B4269455D1000ED84A /* Feed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B2269455D1000ED84A /* Feed.framework */; };
 		B79281B5269455D1000ED84A /* Feed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B2269455D1000ED84A /* Feed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B79281B6269455D1000ED84A /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B3269455D1000ED84A /* Search.framework */; };
@@ -52,20 +52,27 @@
 
 /* Begin PBXFileReference section */
 		072D0AADE4949224584BD0B1 /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		74665FCAD2B9BD46CA23A465 /* Pods-Castcle-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release.xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		479DC91FCEBF3C4F553E945C /* Pods-Castcle-iOS.release (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (staging).xcconfig"; sourceTree = "<group>"; };
+		5598A5580D32845F890954C7 /* Pods-Castcle-iOS.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (development).xcconfig"; sourceTree = "<group>"; };
+		666258C9A9DBB29732F94C3F /* Pods-Castcle-iOS.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (production).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (production).xcconfig"; sourceTree = "<group>"; };
+		6B1E7D4286B803C2890F2476 /* Pods-Castcle-iOS.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (development).xcconfig"; sourceTree = "<group>"; };
+		B30C877AE396DCA2DA44B38C /* Pods-Castcle-iOS.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (staging).xcconfig"; sourceTree = "<group>"; };
 		B75E628626969B04003E1ADA /* Component.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Component.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75E629A2696A003003E1ADA /* BouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncesContentView.swift; sourceTree = "<group>"; };
 		B75E629C2696A062003E1ADA /* BasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicContentView.swift; sourceTree = "<group>"; };
 		B75E629E2696ADB5003E1ADA /* IrregularityContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrregularityContentView.swift; sourceTree = "<group>"; };
+		B75E62EE269978CA003E1ADA /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		B75E62EF269978DA003E1ADA /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		B75E62F0269978ED003E1ADA /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		B792811B268EC784000ED84A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79281B2269455D1000ED84A /* Feed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Feed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79281B3269455D1000ED84A /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7F69CA4268EB21E00B01223 /* Castcle-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Castcle-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7F69CA4268EB21E00B01223 /* Castcle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castcle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA7268EB21E00B01223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F69CB0268EB22000B01223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7F69CB3268EB22000B01223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7F69CB5268EB22000B01223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0128DD98DBCD150E3891A79 /* Pods-Castcle-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E85A123A3F030809108F2E50 /* Pods-Castcle-iOS.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (production).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (production).xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,19 +81,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B79281B4269455D1000ED84A /* Feed.framework in Frameworks */,
-				B7928167269420B5000ED84A /* BuildFile in Frameworks */,
+				B7928167269420B5000ED84A /* Defaults in Frameworks */,
 				B792811C268EC784000ED84A /* Core.framework in Frameworks */,
-				B75E627D26961A7F003E1ADA /* BuildFile in Frameworks */,
-				B792817426942967000ED84A /* BuildFile in Frameworks */,
+				B75E627D26961A7F003E1ADA /* SwiftColor in Frameworks */,
+				B792817426942967000ED84A /* ReactiveMoya in Frameworks */,
 				B79281B6269455D1000ED84A /* Search.framework in Frameworks */,
-				B792817626942967000ED84A /* BuildFile in Frameworks */,
-				B792817226942967000ED84A /* BuildFile in Frameworks */,
-				B792817F26942A49000ED84A /* BuildFile in Frameworks */,
+				B792817626942967000ED84A /* RxMoya in Frameworks */,
+				B792817226942967000ED84A /* Moya in Frameworks */,
+				B792817F26942A49000ED84A /* Kingfisher in Frameworks */,
 				B75E628726969B04003E1ADA /* Component.framework in Frameworks */,
-				B75E628B26969C5D003E1ADA /* BuildFile in Frameworks */,
-				B792817C269429DA000ED84A /* BuildFile in Frameworks */,
+				B75E628B26969C5D003E1ADA /* ESTabBarController in Frameworks */,
+				B792817C269429DA000ED84A /* SwiftyJSON in Frameworks */,
 				F834A79BEBE883B50235BA9B /* Pods_Castcle_iOS.framework in Frameworks */,
-				B79281A926942BF0000ED84A /* BuildFile in Frameworks */,
+				B79281A926942BF0000ED84A /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +122,16 @@
 			path = "Tab Bar";
 			sourceTree = "<group>";
 		};
+		B75E62ED269978A7003E1ADA /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B75E62EE269978CA003E1ADA /* Development.xcconfig */,
+				B75E62EF269978DA003E1ADA /* Staging.xcconfig */,
+				B75E62F0269978ED003E1ADA /* Production.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		B7F69C9B268EB21E00B01223 = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +145,7 @@
 		B7F69CA5268EB21E00B01223 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B7F69CA4268EB21E00B01223 /* Castcle-iOS.app */,
+				B7F69CA4268EB21E00B01223 /* Castcle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +158,7 @@
 				B7F69CB0268EB22000B01223 /* Assets.xcassets */,
 				B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */,
 				B7F69CB5268EB22000B01223 /* Info.plist */,
+				B75E62ED269978A7003E1ADA /* Config */,
 			);
 			path = "Castcle-iOS";
 			sourceTree = "<group>";
@@ -148,8 +166,12 @@
 		F093F7C16BC95A49994F6E0B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E0128DD98DBCD150E3891A79 /* Pods-Castcle-iOS.debug.xcconfig */,
-				74665FCAD2B9BD46CA23A465 /* Pods-Castcle-iOS.release.xcconfig */,
+				E85A123A3F030809108F2E50 /* Pods-Castcle-iOS.debug (production).xcconfig */,
+				B30C877AE396DCA2DA44B38C /* Pods-Castcle-iOS.debug (staging).xcconfig */,
+				5598A5580D32845F890954C7 /* Pods-Castcle-iOS.debug (development).xcconfig */,
+				666258C9A9DBB29732F94C3F /* Pods-Castcle-iOS.release (production).xcconfig */,
+				479DC91FCEBF3C4F553E945C /* Pods-Castcle-iOS.release (staging).xcconfig */,
+				6B1E7D4286B803C2890F2476 /* Pods-Castcle-iOS.release (development).xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -173,18 +195,18 @@
 			);
 			name = "Castcle-iOS";
 			packageProductDependencies = (
-				B7928166269420B5000ED84A /* SwiftPackageProductDependency */,
-				B792817126942967000ED84A /* SwiftPackageProductDependency */,
-				B792817326942967000ED84A /* SwiftPackageProductDependency */,
-				B792817526942967000ED84A /* SwiftPackageProductDependency */,
-				B792817B269429DA000ED84A /* SwiftPackageProductDependency */,
-				B792817E26942A49000ED84A /* SwiftPackageProductDependency */,
-				B79281A826942BF0000ED84A /* SwiftPackageProductDependency */,
-				B75E627C26961A7F003E1ADA /* SwiftPackageProductDependency */,
-				B75E628A26969C5D003E1ADA /* SwiftPackageProductDependency */,
+				B7928166269420B5000ED84A /* Defaults */,
+				B792817126942967000ED84A /* Moya */,
+				B792817326942967000ED84A /* ReactiveMoya */,
+				B792817526942967000ED84A /* RxMoya */,
+				B792817B269429DA000ED84A /* SwiftyJSON */,
+				B792817E26942A49000ED84A /* Kingfisher */,
+				B79281A826942BF0000ED84A /* SwiftDate */,
+				B75E627C26961A7F003E1ADA /* SwiftColor */,
+				B75E628A26969C5D003E1ADA /* ESTabBarController */,
 			);
 			productName = "Castcle-iOS";
-			productReference = B7F69CA4268EB21E00B01223 /* Castcle-iOS.app */;
+			productReference = B7F69CA4268EB21E00B01223 /* Castcle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -211,13 +233,13 @@
 			);
 			mainGroup = B7F69C9B268EB21E00B01223;
 			packageReferences = (
-				B7928165269420B5000ED84A /* RemoteSwiftPackageReference */,
-				B792817026942967000ED84A /* RemoteSwiftPackageReference */,
-				B792817A269429DA000ED84A /* RemoteSwiftPackageReference */,
-				B792817D26942A49000ED84A /* RemoteSwiftPackageReference */,
-				B79281A726942BF0000ED84A /* RemoteSwiftPackageReference */,
-				B75E627B26961A7F003E1ADA /* RemoteSwiftPackageReference */,
-				B75E628926969C5D003E1ADA /* RemoteSwiftPackageReference */,
+				B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */,
+				B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */,
+				B792817A269429DA000ED84A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				B792817D26942A49000ED84A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B79281A726942BF0000ED84A /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				B75E627B26961A7F003E1ADA /* XCRemoteSwiftPackageReference "SwiftColor" */,
+				B75E628926969C5D003E1ADA /* XCRemoteSwiftPackageReference "ESTabBarController" */,
 			);
 			productRefGroup = B7F69CA5268EB21E00B01223 /* Products */;
 			projectDirPath = "";
@@ -291,8 +313,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B7F69CB6268EB22000B01223 /* Debug */ = {
+		B75E62E526997702003E1ADA /* Debug (Staging) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EF269978DA003E1ADA /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -350,10 +373,117 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Debug (Staging)";
 		};
-		B7F69CB7268EB22000B01223 /* Release */ = {
+		B75E62E626997702003E1ADA /* Debug (Staging) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EF269978DA003E1ADA /* Staging.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Stg";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug (Staging)";
+		};
+		B75E62E726997707003E1ADA /* Debug (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EE269978CA003E1ADA /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug (Development)";
+		};
+		B75E62E826997707003E1ADA /* Debug (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EE269978CA003E1ADA /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug (Development)";
+		};
+		B75E62E92699770B003E1ADA /* Release (Staging) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EF269978DA003E1ADA /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -405,11 +535,229 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Release (Staging)";
 		};
-		B7F69CB9268EB22000B01223 /* Debug */ = {
+		B75E62EA2699770B003E1ADA /* Release (Staging) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0128DD98DBCD150E3891A79 /* Pods-Castcle-iOS.debug.xcconfig */;
+			baseConfigurationReference = B75E62EF269978DA003E1ADA /* Staging.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Stg";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release (Staging)";
+		};
+		B75E62EB2699770E003E1ADA /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EE269978CA003E1ADA /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release (Development)";
+		};
+		B75E62EC2699770E003E1ADA /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EE269978CA003E1ADA /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release (Development)";
+		};
+		B7F69CB6268EB22000B01223 /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62F0269978ED003E1ADA /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug (Production)";
+		};
+		B7F69CB7268EB22000B01223 /* Release (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62F0269978ED003E1ADA /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release (Production)";
+		};
+		B7F69CB9268EB22000B01223 /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62F0269978ED003E1ADA /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -421,16 +769,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.castcle.Castcle-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = "Debug (Production)";
 		};
-		B7F69CBA268EB22000B01223 /* Release */ = {
+		B7F69CBA268EB22000B01223 /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74665FCAD2B9BD46CA23A465 /* Pods-Castcle-iOS.release.xcconfig */;
+			baseConfigurationReference = B75E62F0269978ED003E1ADA /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,12 +791,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.castcle.Castcle-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = "Release (Production)";
 		};
 /* End XCBuildConfiguration section */
 
@@ -455,25 +805,33 @@
 		B7F69C9F268EB21E00B01223 /* Build configuration list for PBXProject "Castcle-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7F69CB6268EB22000B01223 /* Debug */,
-				B7F69CB7268EB22000B01223 /* Release */,
+				B7F69CB6268EB22000B01223 /* Debug (Production) */,
+				B75E62E526997702003E1ADA /* Debug (Staging) */,
+				B75E62E726997707003E1ADA /* Debug (Development) */,
+				B7F69CB7268EB22000B01223 /* Release (Production) */,
+				B75E62E92699770B003E1ADA /* Release (Staging) */,
+				B75E62EB2699770E003E1ADA /* Release (Development) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Production)";
 		};
 		B7F69CB8268EB22000B01223 /* Build configuration list for PBXNativeTarget "Castcle-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7F69CB9268EB22000B01223 /* Debug */,
-				B7F69CBA268EB22000B01223 /* Release */,
+				B7F69CB9268EB22000B01223 /* Debug (Production) */,
+				B75E62E626997702003E1ADA /* Debug (Staging) */,
+				B75E62E826997707003E1ADA /* Debug (Development) */,
+				B7F69CBA268EB22000B01223 /* Release (Production) */,
+				B75E62EA2699770B003E1ADA /* Release (Staging) */,
+				B75E62EC2699770E003E1ADA /* Release (Development) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Production)";
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B75E627B26961A7F003E1ADA /* RemoteSwiftPackageReference */ = {
+		B75E627B26961A7F003E1ADA /* XCRemoteSwiftPackageReference "SwiftColor" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/icodesign/SwiftColor.git";
 			requirement = {
@@ -481,7 +839,7 @@
 				minimumVersion = 1.6.0;
 			};
 		};
-		B75E628926969C5D003E1ADA /* RemoteSwiftPackageReference */ = {
+		B75E628926969C5D003E1ADA /* XCRemoteSwiftPackageReference "ESTabBarController" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/eggswift/ESTabBarController.git";
 			requirement = {
@@ -489,7 +847,7 @@
 				minimumVersion = 2.9.0;
 			};
 		};
-		B7928165269420B5000ED84A /* RemoteSwiftPackageReference */ = {
+		B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/Defaults";
 			requirement = {
@@ -497,7 +855,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		B792817026942967000ED84A /* RemoteSwiftPackageReference */ = {
+		B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
@@ -505,7 +863,7 @@
 				minimumVersion = 14.0.1;
 			};
 		};
-		B792817A269429DA000ED84A /* RemoteSwiftPackageReference */ = {
+		B792817A269429DA000ED84A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
@@ -513,7 +871,7 @@
 				minimumVersion = 5.0.1;
 			};
 		};
-		B792817D26942A49000ED84A /* RemoteSwiftPackageReference */ = {
+		B792817D26942A49000ED84A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -521,7 +879,7 @@
 				minimumVersion = 6.3.0;
 			};
 		};
-		B79281A726942BF0000ED84A /* RemoteSwiftPackageReference */ = {
+		B79281A726942BF0000ED84A /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
 			requirement = {
@@ -532,49 +890,49 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B75E627C26961A7F003E1ADA /* SwiftPackageProductDependency */ = {
+		B75E627C26961A7F003E1ADA /* SwiftColor */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75E627B26961A7F003E1ADA /* RemoteSwiftPackageReference */;
+			package = B75E627B26961A7F003E1ADA /* XCRemoteSwiftPackageReference "SwiftColor" */;
 			productName = SwiftColor;
 		};
-		B75E628A26969C5D003E1ADA /* SwiftPackageProductDependency */ = {
+		B75E628A26969C5D003E1ADA /* ESTabBarController */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75E628926969C5D003E1ADA /* RemoteSwiftPackageReference */;
+			package = B75E628926969C5D003E1ADA /* XCRemoteSwiftPackageReference "ESTabBarController" */;
 			productName = ESTabBarController;
 		};
-		B7928166269420B5000ED84A /* SwiftPackageProductDependency */ = {
+		B7928166269420B5000ED84A /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B7928165269420B5000ED84A /* RemoteSwiftPackageReference */;
+			package = B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */;
 			productName = Defaults;
 		};
-		B792817126942967000ED84A /* SwiftPackageProductDependency */ = {
+		B792817126942967000ED84A /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B792817026942967000ED84A /* RemoteSwiftPackageReference */;
+			package = B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
-		B792817326942967000ED84A /* SwiftPackageProductDependency */ = {
+		B792817326942967000ED84A /* ReactiveMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B792817026942967000ED84A /* RemoteSwiftPackageReference */;
+			package = B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = ReactiveMoya;
 		};
-		B792817526942967000ED84A /* SwiftPackageProductDependency */ = {
+		B792817526942967000ED84A /* RxMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B792817026942967000ED84A /* RemoteSwiftPackageReference */;
+			package = B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
 		};
-		B792817B269429DA000ED84A /* SwiftPackageProductDependency */ = {
+		B792817B269429DA000ED84A /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B792817A269429DA000ED84A /* RemoteSwiftPackageReference */;
+			package = B792817A269429DA000ED84A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		B792817E26942A49000ED84A /* SwiftPackageProductDependency */ = {
+		B792817E26942A49000ED84A /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B792817D26942A49000ED84A /* RemoteSwiftPackageReference */;
+			package = B792817D26942A49000ED84A /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		B79281A826942BF0000ED84A /* SwiftPackageProductDependency */ = {
+		B79281A826942BF0000ED84A /* SwiftDate */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B79281A726942BF0000ED84A /* RemoteSwiftPackageReference */;
+			package = B79281A726942BF0000ED84A /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDate;
 		};
 /* End XCSwiftPackageProductDependency section */

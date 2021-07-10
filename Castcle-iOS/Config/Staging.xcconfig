@@ -1,0 +1,17 @@
+//
+//  Staging.xcconfig
+//  Castcle-iOS
+//
+//  Created by Tanakorn Phoochaliaw on 10/7/2564 BE.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (staging).xcconfig"
+#include "Pods/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (staging).xcconfig"
+
+// App Settings
+APP_NAME = Staging
+APP_BUNDLE_ID = com.castcle.ios.stg
+APP_VERSION = 9.9.9
