@@ -13,5 +13,5 @@
 
 // App Settings
 APP_NAME = Develop
-APP_BUNDLE_ID = com.castcle.ios.dev
+APP_BUNDLE_ID = com.castcle.ios.devs
 APP_VERSION = 8.8.8
