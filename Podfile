@@ -6,6 +6,7 @@ workspace 'Castcle-iOS'
 
 def share_pods
   pod 'AppCenter'
+  pod 'IGListKit'
 end
 
 # Castcle-iOS

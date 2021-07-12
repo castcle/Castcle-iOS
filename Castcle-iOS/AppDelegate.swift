@@ -40,14 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             [weak tabBarController] tabbarController, viewController, index in
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                let alertController = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
-                let takePhotoAction = UIAlertAction(title: "Take a photo", style: .default, handler: nil)
-                alertController.addAction(takePhotoAction)
-                let selectFromAlbumAction = UIAlertAction(title: "Select from album", style: .default, handler: nil)
-                alertController.addAction(selectFromAlbumAction)
-                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                alertController.addAction(cancelAction)
-                tabBarController?.present(alertController, animated: true, completion: nil)
+                let alert = UIAlertController(title: nil, message: "Go to post view", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                tabBarController?.present(alert, animated: true, completion: nil)
             }
         }
         
