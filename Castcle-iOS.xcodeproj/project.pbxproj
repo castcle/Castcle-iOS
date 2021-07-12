@@ -12,13 +12,7 @@
 		B7552904269C0E63005D5EB5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7552902269C0E63005D5EB5 /* README.md */; };
 		B7552915269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */; };
 		B7552917269C1F38005D5EB5 /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */; };
-		B755291A269C21C5005D5EB5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B7552919269C21C5005D5EB5 /* FirebaseFirestore */; };
-		B755291C269C21C5005D5EB5 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = B755291B269C21C5005D5EB5 /* FirebaseInstallations */; };
-		B755291E269C21C5005D5EB5 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B755291D269C21C5005D5EB5 /* FirebaseDatabase */; };
-		B7552920269C21C5005D5EB5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B755291F269C21C5005D5EB5 /* FirebaseAnalytics */; };
-		B7552922269C21C5005D5EB5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B7552921269C21C5005D5EB5 /* FirebaseStorage */; };
-		B7552924269C21C5005D5EB5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = B7552923269C21C5005D5EB5 /* FirebaseCrashlytics */; };
-		B7552926269C21C5005D5EB5 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = B7552925269C21C5005D5EB5 /* FirebaseRemoteConfig */; };
+		B7552929269C3F01005D5EB5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B7552928269C3F01005D5EB5 /* FirebaseAnalytics */; };
 		B75E627D26961A7F003E1ADA /* SwiftColor in Frameworks */ = {isa = PBXBuildFile; productRef = B75E627C26961A7F003E1ADA /* SwiftColor */; };
 		B75E628726969B04003E1ADA /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; };
 		B75E628826969B04003E1ADA /* Component.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -29,12 +23,6 @@
 		B792811C268EC784000ED84A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B792811B268EC784000ED84A /* Core.framework */; };
 		B792811D268EC784000ED84A /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B792811B268EC784000ED84A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7928167269420B5000ED84A /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = B7928166269420B5000ED84A /* Defaults */; };
-		B792817226942967000ED84A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B792817126942967000ED84A /* Moya */; };
-		B792817426942967000ED84A /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B792817326942967000ED84A /* ReactiveMoya */; };
-		B792817626942967000ED84A /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B792817526942967000ED84A /* RxMoya */; };
-		B792817C269429DA000ED84A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B792817B269429DA000ED84A /* SwiftyJSON */; };
-		B792817F26942A49000ED84A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B792817E26942A49000ED84A /* Kingfisher */; };
-		B79281A926942BF0000ED84A /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = B79281A826942BF0000ED84A /* SwiftDate */; };
 		B79281B4269455D1000ED84A /* Feed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B2269455D1000ED84A /* Feed.framework */; };
 		B79281B5269455D1000ED84A /* Feed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B2269455D1000ED84A /* Feed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B79281B6269455D1000ED84A /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B3269455D1000ED84A /* Search.framework */; };
@@ -98,23 +86,11 @@
 				B79281B4269455D1000ED84A /* Feed.framework in Frameworks */,
 				B7928167269420B5000ED84A /* Defaults in Frameworks */,
 				B792811C268EC784000ED84A /* Core.framework in Frameworks */,
-				B7552926269C21C5005D5EB5 /* FirebaseRemoteConfig in Frameworks */,
 				B75E627D26961A7F003E1ADA /* SwiftColor in Frameworks */,
-				B792817426942967000ED84A /* ReactiveMoya in Frameworks */,
 				B79281B6269455D1000ED84A /* Search.framework in Frameworks */,
-				B792817626942967000ED84A /* RxMoya in Frameworks */,
-				B755291E269C21C5005D5EB5 /* FirebaseDatabase in Frameworks */,
-				B7552920269C21C5005D5EB5 /* FirebaseAnalytics in Frameworks */,
-				B7552922269C21C5005D5EB5 /* FirebaseStorage in Frameworks */,
-				B792817226942967000ED84A /* Moya in Frameworks */,
-				B755291A269C21C5005D5EB5 /* FirebaseFirestore in Frameworks */,
-				B792817F26942A49000ED84A /* Kingfisher in Frameworks */,
+				B7552929269C3F01005D5EB5 /* FirebaseAnalytics in Frameworks */,
 				B75E628726969B04003E1ADA /* Component.framework in Frameworks */,
-				B755291C269C21C5005D5EB5 /* FirebaseInstallations in Frameworks */,
 				B75E628B26969C5D003E1ADA /* ESTabBarController in Frameworks */,
-				B792817C269429DA000ED84A /* SwiftyJSON in Frameworks */,
-				B7552924269C21C5005D5EB5 /* FirebaseCrashlytics in Frameworks */,
-				B79281A926942BF0000ED84A /* SwiftDate in Frameworks */,
 				A393B65F49BE072F6442CEC3 /* Pods_Castcle_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +199,7 @@
 				B7F69CA2268EB21E00B01223 /* Resources */,
 				B792811E268EC784000ED84A /* Embed Frameworks */,
 				4401A52C35813D29F104FAA7 /* [CP] Embed Pods Frameworks */,
+				B7552944269C5179005D5EB5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -231,21 +208,9 @@
 			name = "Castcle-iOS";
 			packageProductDependencies = (
 				B7928166269420B5000ED84A /* Defaults */,
-				B792817126942967000ED84A /* Moya */,
-				B792817326942967000ED84A /* ReactiveMoya */,
-				B792817526942967000ED84A /* RxMoya */,
-				B792817B269429DA000ED84A /* SwiftyJSON */,
-				B792817E26942A49000ED84A /* Kingfisher */,
-				B79281A826942BF0000ED84A /* SwiftDate */,
 				B75E627C26961A7F003E1ADA /* SwiftColor */,
 				B75E628A26969C5D003E1ADA /* ESTabBarController */,
-				B7552919269C21C5005D5EB5 /* FirebaseFirestore */,
-				B755291B269C21C5005D5EB5 /* FirebaseInstallations */,
-				B755291D269C21C5005D5EB5 /* FirebaseDatabase */,
-				B755291F269C21C5005D5EB5 /* FirebaseAnalytics */,
-				B7552921269C21C5005D5EB5 /* FirebaseStorage */,
-				B7552923269C21C5005D5EB5 /* FirebaseCrashlytics */,
-				B7552925269C21C5005D5EB5 /* FirebaseRemoteConfig */,
+				B7552928269C3F01005D5EB5 /* FirebaseAnalytics */,
 			);
 			productName = "Castcle-iOS";
 			productReference = B7F69CA4268EB21E00B01223 /* Castcle.app */;
@@ -276,13 +241,9 @@
 			mainGroup = B7F69C9B268EB21E00B01223;
 			packageReferences = (
 				B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */,
-				B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */,
-				B792817A269429DA000ED84A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
-				B792817D26942A49000ED84A /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				B79281A726942BF0000ED84A /* XCRemoteSwiftPackageReference "SwiftDate" */,
 				B75E627B26961A7F003E1ADA /* XCRemoteSwiftPackageReference "SwiftColor" */,
 				B75E628926969C5D003E1ADA /* XCRemoteSwiftPackageReference "ESTabBarController" */,
-				B7552918269C21C5005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B7552927269C3F01005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B7F69CA5268EB21E00B01223 /* Products */;
 			projectDirPath = "";
@@ -348,6 +309,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B7552944269C5179005D5EB5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(date +%Y%m%d%H%M)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -919,7 +897,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B7552918269C21C5005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		B7552927269C3F01005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -951,75 +929,13 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 14.0.1;
-			};
-		};
-		B792817A269429DA000ED84A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
-			};
-		};
-		B792817D26942A49000ED84A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.3.0;
-			};
-		};
-		B79281A726942BF0000ED84A /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.3.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B7552919269C21C5005D5EB5 /* FirebaseFirestore */ = {
+		B7552928269C3F01005D5EB5 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B7552918269C21C5005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		B755291B269C21C5005D5EB5 /* FirebaseInstallations */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B7552918269C21C5005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseInstallations;
-		};
-		B755291D269C21C5005D5EB5 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B7552918269C21C5005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		B755291F269C21C5005D5EB5 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B7552918269C21C5005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = B7552927269C3F01005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
-		};
-		B7552921269C21C5005D5EB5 /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B7552918269C21C5005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-		B7552923269C21C5005D5EB5 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B7552918269C21C5005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-		B7552925269C21C5005D5EB5 /* FirebaseRemoteConfig */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B7552918269C21C5005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseRemoteConfig;
 		};
 		B75E627C26961A7F003E1ADA /* SwiftColor */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1035,36 +951,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */;
 			productName = Defaults;
-		};
-		B792817126942967000ED84A /* Moya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
-		};
-		B792817326942967000ED84A /* ReactiveMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = ReactiveMoya;
-		};
-		B792817526942967000ED84A /* RxMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B792817026942967000ED84A /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = RxMoya;
-		};
-		B792817B269429DA000ED84A /* SwiftyJSON */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B792817A269429DA000ED84A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
-		};
-		B792817E26942A49000ED84A /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B792817D26942A49000ED84A /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-		B79281A826942BF0000ED84A /* SwiftDate */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B79281A726942BF0000ED84A /* XCRemoteSwiftPackageReference "SwiftDate" */;
-			productName = SwiftDate;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
