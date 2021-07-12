@@ -11,6 +11,7 @@ import Feed
 import Search
 import ESTabBarController
 import SwiftColor
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Load Font
         UIFont.loadAllFonts
+        
+        // MARK: - Setup Firebase
+        if Environment.appEnv == .prod {
+            let filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist")
+            guard let fileopts = FirebaseOptions(contentsOfFile: filePath!)
+              else { assert(false, "Couldn't load config file") }
+            FirebaseApp.configure(options: fileopts)
+        } else if Environment.appEnv == .stg {
+            let filePath = Bundle.main.path(forResource: "GoogleService-Info-Stg", ofType: "plist")
+            guard let fileopts = FirebaseOptions(contentsOfFile: filePath!)
+              else { assert(false, "Couldn't load config file") }
+            FirebaseApp.configure(options: fileopts)
+        } else {
+            let filePath = Bundle.main.path(forResource: "GoogleService-Info-Dev", ofType: "plist")
+            guard let fileopts = FirebaseOptions(contentsOfFile: filePath!)
+              else { assert(false, "Couldn't load config file") }
+            FirebaseApp.configure(options: fileopts)
+        }
         
         // MARK: - Setup TabBar
         let tabBarController = ESTabBarController()

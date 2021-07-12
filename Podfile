@@ -15,12 +15,6 @@ target 'Castcle-iOS' do
     share_pods
 end
 
-# Core
- target 'Core' do
-     project 'Core/Core.xcodeproj'
-     share_pods
- end
-
 # Component
  target 'Component' do
      project 'Component/Component.xcodeproj'

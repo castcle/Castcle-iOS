@@ -10,3 +10,6 @@
 [submodule "Component"]
 	path = Component
 	url = git@github.com:castcle/Component-iOS.git
+[submodule "Config"]
+	path = Config
+	url = git@github.com:castcle/Config-iOS.git
