@@ -12,6 +12,9 @@ import Search
 import ESTabBarController
 import SwiftColor
 import Firebase
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,21 +31,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Setup Firebase
         if Environment.appEnv == .prod {
-            let filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist")
-            guard let fileopts = FirebaseOptions(contentsOfFile: filePath!)
-              else { assert(false, "Couldn't load config file") }
+            let filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info", ofType: "plist")
+            guard let fileopts = FirebaseOptions(contentsOfFile: filePath!) else {
+                assert(false, "Couldn't load config file")
+                return true
+            }
             FirebaseApp.configure(options: fileopts)
         } else if Environment.appEnv == .stg {
-            let filePath = Bundle.main.path(forResource: "GoogleService-Info-Stg", ofType: "plist")
-            guard let fileopts = FirebaseOptions(contentsOfFile: filePath!)
-              else { assert(false, "Couldn't load config file") }
+            let filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Stg", ofType: "plist")
+            guard let fileopts = FirebaseOptions(contentsOfFile: filePath!) else {
+                assert(false, "Couldn't load config file")
+                return true
+            }
             FirebaseApp.configure(options: fileopts)
         } else {
-            let filePath = Bundle.main.path(forResource: "GoogleService-Info-Dev", ofType: "plist")
-            guard let fileopts = FirebaseOptions(contentsOfFile: filePath!)
-              else { assert(false, "Couldn't load config file") }
+            let filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Dev", ofType: "plist")
+            guard let fileopts = FirebaseOptions(contentsOfFile: filePath!) else {
+                assert(false, "Couldn't load config file")
+                return true
+            }
             FirebaseApp.configure(options: fileopts)
         }
+        
+        // MARK: - App Center
+        AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
+          Analytics.self,
+          Crashes.self
+        ])
+        print()
         
         // MARK: - Setup TabBar
         let tabBarController = ESTabBarController()

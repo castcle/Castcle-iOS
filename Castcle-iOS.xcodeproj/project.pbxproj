@@ -12,7 +12,8 @@
 		B7552904269C0E63005D5EB5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7552902269C0E63005D5EB5 /* README.md */; };
 		B7552915269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */; };
 		B7552917269C1F38005D5EB5 /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */; };
-		B7552929269C3F01005D5EB5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B7552928269C3F01005D5EB5 /* FirebaseAnalytics */; };
+		B7552947269C5C73005D5EB5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B7552946269C5C73005D5EB5 /* FirebaseAnalytics */; };
+		B7552949269C5C73005D5EB5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = B7552948269C5C73005D5EB5 /* FirebaseCrashlytics */; };
 		B75E627D26961A7F003E1ADA /* SwiftColor in Frameworks */ = {isa = PBXBuildFile; productRef = B75E627C26961A7F003E1ADA /* SwiftColor */; };
 		B75E628726969B04003E1ADA /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; };
 		B75E628826969B04003E1ADA /* Component.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -88,10 +89,11 @@
 				B792811C268EC784000ED84A /* Core.framework in Frameworks */,
 				B75E627D26961A7F003E1ADA /* SwiftColor in Frameworks */,
 				B79281B6269455D1000ED84A /* Search.framework in Frameworks */,
-				B7552929269C3F01005D5EB5 /* FirebaseAnalytics in Frameworks */,
 				B75E628726969B04003E1ADA /* Component.framework in Frameworks */,
 				B75E628B26969C5D003E1ADA /* ESTabBarController in Frameworks */,
+				B7552949269C5C73005D5EB5 /* FirebaseCrashlytics in Frameworks */,
 				A393B65F49BE072F6442CEC3 /* Pods_Castcle_iOS.framework in Frameworks */,
+				B7552947269C5C73005D5EB5 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +212,8 @@
 				B7928166269420B5000ED84A /* Defaults */,
 				B75E627C26961A7F003E1ADA /* SwiftColor */,
 				B75E628A26969C5D003E1ADA /* ESTabBarController */,
-				B7552928269C3F01005D5EB5 /* FirebaseAnalytics */,
+				B7552946269C5C73005D5EB5 /* FirebaseAnalytics */,
+				B7552948269C5C73005D5EB5 /* FirebaseCrashlytics */,
 			);
 			productName = "Castcle-iOS";
 			productReference = B7F69CA4268EB21E00B01223 /* Castcle.app */;
@@ -243,7 +246,7 @@
 				B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */,
 				B75E627B26961A7F003E1ADA /* XCRemoteSwiftPackageReference "SwiftColor" */,
 				B75E628926969C5D003E1ADA /* XCRemoteSwiftPackageReference "ESTabBarController" */,
-				B7552927269C3F01005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B7552945269C5C73005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B7F69CA5268EB21E00B01223 /* Products */;
 			projectDirPath = "";
@@ -318,6 +321,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
 			outputFileListPaths = (
 			);
@@ -325,7 +329,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(date +%Y%m%d%H%M)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+			shellScript = "buildNumber=$(date +%Y%m%d%H%M)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run -gsp \"${PROJECT_DIR}/Config/${FIREBASR_CONFIG_FILE}.plist\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -390,7 +394,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -426,6 +430,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LT4X78Q64A;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
@@ -435,6 +440,31 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppCenter\"",
+					"-framework",
+					"\"AppCenterAnalytics\"",
+					"-framework",
+					"\"AppCenterCrashes\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IGListDiffKit\"",
+					"-framework",
+					"\"IGListKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
@@ -478,7 +508,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -514,6 +544,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LT4X78Q64A;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
@@ -523,6 +554,31 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppCenter\"",
+					"-framework",
+					"\"AppCenterAnalytics\"",
+					"-framework",
+					"\"AppCenterCrashes\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IGListDiffKit\"",
+					"-framework",
+					"\"IGListKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "CC Dev Ad Hoc";
@@ -605,6 +661,31 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppCenter\"",
+					"-framework",
+					"\"AppCenterAnalytics\"",
+					"-framework",
+					"\"AppCenterCrashes\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IGListDiffKit\"",
+					"-framework",
+					"\"IGListKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
@@ -687,6 +768,31 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppCenter\"",
+					"-framework",
+					"\"AppCenterAnalytics\"",
+					"-framework",
+					"\"AppCenterCrashes\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IGListDiffKit\"",
+					"-framework",
+					"\"IGListKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "CC Dev Ad Hoc";
@@ -730,7 +836,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -822,6 +928,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LT4X78Q64A;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
@@ -831,6 +938,31 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppCenter\"",
+					"-framework",
+					"\"AppCenterAnalytics\"",
+					"-framework",
+					"\"AppCenterCrashes\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IGListDiffKit\"",
+					"-framework",
+					"\"IGListKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
@@ -857,6 +989,31 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppCenter\"",
+					"-framework",
+					"\"AppCenterAnalytics\"",
+					"-framework",
+					"\"AppCenterCrashes\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IGListDiffKit\"",
+					"-framework",
+					"\"IGListKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
@@ -897,7 +1054,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B7552927269C3F01005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		B7552945269C5C73005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -932,10 +1089,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B7552928269C3F01005D5EB5 /* FirebaseAnalytics */ = {
+		B7552946269C5C73005D5EB5 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B7552927269C3F01005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = B7552945269C5C73005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		B7552948269C5C73005D5EB5 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7552945269C5C73005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 		B75E627C26961A7F003E1ADA /* SwiftColor */ = {
 			isa = XCSwiftPackageProductDependency;

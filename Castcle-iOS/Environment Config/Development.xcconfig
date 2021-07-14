@@ -15,3 +15,6 @@
 APP_NAME = Develop
 APP_BUNDLE_ID = com.castcle.ios.devs
 APP_VERSION = 8.8.8
+
+// Key
+FIREBASR_CONFIG_FILE = GoogleService-Info-Dev
