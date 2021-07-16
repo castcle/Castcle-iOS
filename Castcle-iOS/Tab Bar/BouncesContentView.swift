@@ -20,12 +20,10 @@ class BouncesContentView: BasicContentView {
     }
 
     override func selectAnimation(animated: Bool, completion: (() -> ())?) {
-        self.bounceAnimation()
         completion?()
     }
 
     override func reselectAnimation(animated: Bool, completion: (() -> ())?) {
-        self.bounceAnimation()
         completion?()
     }
     

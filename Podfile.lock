@@ -7,25 +7,143 @@ PODS:
   - AppCenter/Core (4.2.0)
   - AppCenter/Crashes (4.2.0):
     - AppCenter/Core
+  - Firebase/Analytics (8.3.0):
+    - Firebase/Core
+  - Firebase/Core (8.3.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (~> 8.3.0)
+  - Firebase/CoreOnly (8.3.0):
+    - FirebaseCore (= 8.3.0)
+  - Firebase/Crashlytics (8.3.0):
+    - Firebase/CoreOnly
+    - FirebaseCrashlytics (~> 8.3.0)
+  - FirebaseAnalytics (8.3.0):
+    - FirebaseAnalytics/AdIdSupport (= 8.3.0)
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
+    - GoogleUtilities/MethodSwizzler (~> 7.4)
+    - GoogleUtilities/Network (~> 7.4)
+    - "GoogleUtilities/NSData+zlib (~> 7.4)"
+    - nanopb (~> 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (8.3.0):
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleAppMeasurement (= 8.3.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
+    - GoogleUtilities/MethodSwizzler (~> 7.4)
+    - GoogleUtilities/Network (~> 7.4)
+    - "GoogleUtilities/NSData+zlib (~> 7.4)"
+    - nanopb (~> 2.30908.0)
+  - FirebaseCore (8.3.0):
+    - FirebaseCoreDiagnostics (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GoogleUtilities/Logger (~> 7.4)
+  - FirebaseCoreDiagnostics (8.3.0):
+    - GoogleDataTransport (~> 9.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GoogleUtilities/Logger (~> 7.4)
+    - nanopb (~> 2.30908.0)
+  - FirebaseCrashlytics (8.3.0):
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleDataTransport (~> 9.0)
+    - nanopb (~> 2.30908.0)
+    - PromisesObjC (~> 1.2)
+  - FirebaseInstallations (8.3.0):
+    - FirebaseCore (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GoogleUtilities/UserDefaults (~> 7.4)
+    - PromisesObjC (~> 1.2)
+  - GoogleAppMeasurement (8.3.0):
+    - GoogleAppMeasurement/AdIdSupport (= 8.3.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
+    - GoogleUtilities/MethodSwizzler (~> 7.4)
+    - GoogleUtilities/Network (~> 7.4)
+    - "GoogleUtilities/NSData+zlib (~> 7.4)"
+    - nanopb (~> 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (8.3.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
+    - GoogleUtilities/MethodSwizzler (~> 7.4)
+    - GoogleUtilities/Network (~> 7.4)
+    - "GoogleUtilities/NSData+zlib (~> 7.4)"
+    - nanopb (~> 2.30908.0)
+  - GoogleDataTransport (9.1.0):
+    - GoogleUtilities/Environment (~> 7.2)
+    - nanopb (~> 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/AppDelegateSwizzler (7.5.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.5.0):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.5.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.5.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.5.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.5.0)"
+  - GoogleUtilities/Reachability (7.5.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (7.5.0):
+    - GoogleUtilities/Logger
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
+  - MHWebViewController (1.1.2)
+  - nanopb (2.30908.0):
+    - nanopb/decode (= 2.30908.0)
+    - nanopb/encode (= 2.30908.0)
+  - nanopb/decode (2.30908.0)
+  - nanopb/encode (2.30908.0)
+  - PromisesObjC (1.2.12)
 
 DEPENDENCIES:
   - AppCenter
+  - Firebase/Analytics
+  - Firebase/Crashlytics
   - IGListKit
+  - MHWebViewController
 
 SPEC REPOS:
   trunk:
     - AppCenter
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCrashlytics
+    - FirebaseInstallations
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleUtilities
     - IGListDiffKit
     - IGListKit
+    - MHWebViewController
+    - nanopb
+    - PromisesObjC
 
 SPEC CHECKSUMS:
   AppCenter: 87ef6eefd8ade4df59e88951288587429f3dd2a5
+  Firebase: 817b9171d0d51dccc458b94a5e8edff6b1dd323d
+  FirebaseAnalytics: 456f2c51599870a15ded4548d1f1f7b2cabf65a7
+  FirebaseCore: a6dba751680d7033b9d3831e1cfc95ead0605118
+  FirebaseCoreDiagnostics: 7e873baabcfaa9512f538554ae4fa0817aaafbdb
+  FirebaseCrashlytics: 3d83f2e8a47f476f47c82ff4536b169df6781271
+  FirebaseInstallations: b69db7680870dbac17bba7a51fc0b5c4b365baa7
+  GoogleAppMeasurement: de70802583dedceb0bca18172b345307e8f410b8
+  GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
+  GoogleUtilities: eea970f4a389963963bffe8d8fabe43540678b9c
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
+  MHWebViewController: bc0c4be723b798260ccec01ce6b9e86c6543741e
+  nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 3454c426aab87c38360f9f2ef2d9301817499050
+PODFILE CHECKSUM: 761054ef75dcb3daa1e6ab70f0f85bdafe389473
 
 COCOAPODS: 1.10.1

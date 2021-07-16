@@ -7,13 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A393B65F49BE072F6442CEC3 /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F2C8BD3940A792CF57B433 /* Pods_Castcle_iOS.framework */; };
-		B7552903269C0E63005D5EB5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */; };
+		1A3307605E4BDA7A70ACB166 /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBDEA5622E4EB149926831E /* Pods_Castcle_iOS.framework */; };
 		B7552904269C0E63005D5EB5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7552902269C0E63005D5EB5 /* README.md */; };
-		B7552915269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */; };
-		B7552917269C1F38005D5EB5 /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */; };
-		B7552947269C5C73005D5EB5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B7552946269C5C73005D5EB5 /* FirebaseAnalytics */; };
-		B7552949269C5C73005D5EB5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = B7552948269C5C73005D5EB5 /* FirebaseCrashlytics */; };
 		B75E627D26961A7F003E1ADA /* SwiftColor in Frameworks */ = {isa = PBXBuildFile; productRef = B75E627C26961A7F003E1ADA /* SwiftColor */; };
 		B75E628726969B04003E1ADA /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; };
 		B75E628826969B04003E1ADA /* Component.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -28,6 +23,9 @@
 		B79281B5269455D1000ED84A /* Feed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B2269455D1000ED84A /* Feed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B79281B6269455D1000ED84A /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B3269455D1000ED84A /* Search.framework */; };
 		B79281B7269455D1000ED84A /* Search.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B3269455D1000ED84A /* Search.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7B1E39A26A141C8006E2FF6 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */; };
+		B7B1E39B26A141C8006E2FF6 /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */; };
+		B7B1E39C26A141C8006E2FF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */; };
 		B7F69CA8268EB21E00B01223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CA7268EB21E00B01223 /* AppDelegate.swift */; };
 		B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB0268EB22000B01223 /* Assets.xcassets */; };
 		B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */; };
@@ -51,12 +49,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		14A68731C9E65FB1DB83D037 /* Pods-Castcle-iOS.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (production).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (production).xcconfig"; sourceTree = "<group>"; };
-		3CE4328E4BEF766669341FEB /* Pods-Castcle-iOS.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (development).xcconfig"; sourceTree = "<group>"; };
-		79FB8ABF20FB62E812578223 /* Pods-Castcle-iOS.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (development).xcconfig"; sourceTree = "<group>"; };
-		7CA596D6545C329BB5A086C2 /* Pods-Castcle-iOS.release (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (staging).xcconfig"; sourceTree = "<group>"; };
-		86E31196B050D4DA835F018C /* Pods-Castcle-iOS.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (staging).xcconfig"; sourceTree = "<group>"; };
-		904740782EC2244E87331776 /* Pods-Castcle-iOS.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (production).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (production).xcconfig"; sourceTree = "<group>"; };
+		098173DEDC6206384A3832D5 /* Pods-Castcle-iOS.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (development).xcconfig"; sourceTree = "<group>"; };
+		7F2A958BDBB0E6DE866E118D /* Pods-Castcle-iOS.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (production).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (production).xcconfig"; sourceTree = "<group>"; };
+		8EBDEA5622E4EB149926831E /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1EDBFDF508C4588DB04DA2B /* Pods-Castcle-iOS.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (development).xcconfig"; sourceTree = "<group>"; };
+		A282ED21286BB6639EE09CA5 /* Pods-Castcle-iOS.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (staging).xcconfig"; sourceTree = "<group>"; };
 		B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7552902269C0E63005D5EB5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
@@ -76,7 +73,8 @@
 		B7F69CB0268EB22000B01223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7F69CB3268EB22000B01223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7F69CB5268EB22000B01223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7F2C8BD3940A792CF57B433 /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB093B70161FB20D04EF541D /* Pods-Castcle-iOS.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (production).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (production).xcconfig"; sourceTree = "<group>"; };
+		E4F24D61C9ACC74BC15EEB3C /* Pods-Castcle-iOS.release (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (staging).xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +89,7 @@
 				B79281B6269455D1000ED84A /* Search.framework in Frameworks */,
 				B75E628726969B04003E1ADA /* Component.framework in Frameworks */,
 				B75E628B26969C5D003E1ADA /* ESTabBarController in Frameworks */,
-				B7552949269C5C73005D5EB5 /* FirebaseCrashlytics in Frameworks */,
-				A393B65F49BE072F6442CEC3 /* Pods_Castcle_iOS.framework in Frameworks */,
-				B7552947269C5C73005D5EB5 /* FirebaseAnalytics in Frameworks */,
+				1A3307605E4BDA7A70ACB166 /* Pods_Castcle_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +103,7 @@
 				B79281B2269455D1000ED84A /* Feed.framework */,
 				B79281B3269455D1000ED84A /* Search.framework */,
 				B792811B268EC784000ED84A /* Core.framework */,
-				F7F2C8BD3940A792CF57B433 /* Pods_Castcle_iOS.framework */,
+				8EBDEA5622E4EB149926831E /* Pods_Castcle_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,10 +111,10 @@
 		B7552900269C0E63005D5EB5 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */,
+				B7552902269C0E63005D5EB5 /* README.md */,
 				B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */,
 				B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */,
-				B7552902269C0E63005D5EB5 /* README.md */,
+				B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */,
 			);
 			path = Config;
 			sourceTree = SOURCE_ROOT;
@@ -178,12 +174,12 @@
 		F093F7C16BC95A49994F6E0B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				904740782EC2244E87331776 /* Pods-Castcle-iOS.debug (production).xcconfig */,
-				86E31196B050D4DA835F018C /* Pods-Castcle-iOS.debug (staging).xcconfig */,
-				3CE4328E4BEF766669341FEB /* Pods-Castcle-iOS.debug (development).xcconfig */,
-				14A68731C9E65FB1DB83D037 /* Pods-Castcle-iOS.release (production).xcconfig */,
-				7CA596D6545C329BB5A086C2 /* Pods-Castcle-iOS.release (staging).xcconfig */,
-				79FB8ABF20FB62E812578223 /* Pods-Castcle-iOS.release (development).xcconfig */,
+				BB093B70161FB20D04EF541D /* Pods-Castcle-iOS.debug (production).xcconfig */,
+				A282ED21286BB6639EE09CA5 /* Pods-Castcle-iOS.debug (staging).xcconfig */,
+				A1EDBFDF508C4588DB04DA2B /* Pods-Castcle-iOS.debug (development).xcconfig */,
+				7F2A958BDBB0E6DE866E118D /* Pods-Castcle-iOS.release (production).xcconfig */,
+				E4F24D61C9ACC74BC15EEB3C /* Pods-Castcle-iOS.release (staging).xcconfig */,
+				098173DEDC6206384A3832D5 /* Pods-Castcle-iOS.release (development).xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -195,13 +191,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7F69CB8268EB22000B01223 /* Build configuration list for PBXNativeTarget "Castcle-iOS" */;
 			buildPhases = (
-				68B083CF6F451B154200CB15 /* [CP] Check Pods Manifest.lock */,
+				CD8FF22605758C87BAF1F859 /* [CP] Check Pods Manifest.lock */,
 				B7F69CA0268EB21E00B01223 /* Sources */,
 				B7F69CA1268EB21E00B01223 /* Frameworks */,
 				B7F69CA2268EB21E00B01223 /* Resources */,
 				B792811E268EC784000ED84A /* Embed Frameworks */,
-				4401A52C35813D29F104FAA7 /* [CP] Embed Pods Frameworks */,
 				B7552944269C5179005D5EB5 /* ShellScript */,
+				F71D68287B99955E4E64E54A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,8 +208,6 @@
 				B7928166269420B5000ED84A /* Defaults */,
 				B75E627C26961A7F003E1ADA /* SwiftColor */,
 				B75E628A26969C5D003E1ADA /* ESTabBarController */,
-				B7552946269C5C73005D5EB5 /* FirebaseAnalytics */,
-				B7552948269C5C73005D5EB5 /* FirebaseCrashlytics */,
 			);
 			productName = "Castcle-iOS";
 			productReference = B7F69CA4268EB21E00B01223 /* Castcle.app */;
@@ -246,7 +240,6 @@
 				B7928165269420B5000ED84A /* XCRemoteSwiftPackageReference "Defaults" */,
 				B75E627B26961A7F003E1ADA /* XCRemoteSwiftPackageReference "SwiftColor" */,
 				B75E628926969C5D003E1ADA /* XCRemoteSwiftPackageReference "ESTabBarController" */,
-				B7552945269C5C73005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B7F69CA5268EB21E00B01223 /* Products */;
 			projectDirPath = "";
@@ -262,36 +255,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7552915269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist in Resources */,
+				B7B1E39A26A141C8006E2FF6 /* GoogleService-Info-Dev.plist in Resources */,
+				B7B1E39B26A141C8006E2FF6 /* GoogleService-Info-Stg.plist in Resources */,
+				B7B1E39C26A141C8006E2FF6 /* GoogleService-Info.plist in Resources */,
 				B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */,
-				B7552917269C1F38005D5EB5 /* GoogleService-Info-Stg.plist in Resources */,
 				B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */,
 				B7552904269C0E63005D5EB5 /* README.md in Resources */,
-				B7552903269C0E63005D5EB5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4401A52C35813D29F104FAA7 /* [CP] Embed Pods Frameworks */ = {
+		B7552944269C5179005D5EB5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "buildNumber=$(date +%Y%m%d%H%M)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n\"${PODS_ROOT}/FirebaseCrashlytics/run\" -gsp \"${PROJECT_DIR}/Config/${FIREBASR_CONFIG_FILE}.plist\"\n";
 		};
-		68B083CF6F451B154200CB15 /* [CP] Check Pods Manifest.lock */ = {
+		CD8FF22605758C87BAF1F859 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,23 +308,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B7552944269C5179005D5EB5 /* ShellScript */ = {
+		F71D68287B99955E4E64E54A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
-			);
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(date +%Y%m%d%H%M)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run -gsp \"${PROJECT_DIR}/Config/${FIREBASR_CONFIG_FILE}.plist\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1054,14 +1048,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B7552945269C5C73005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.3.0;
-			};
-		};
 		B75E627B26961A7F003E1ADA /* XCRemoteSwiftPackageReference "SwiftColor" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/icodesign/SwiftColor.git";
@@ -1089,16 +1075,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B7552946269C5C73005D5EB5 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B7552945269C5C73005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		B7552948269C5C73005D5EB5 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B7552945269C5C73005D5EB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
 		B75E627C26961A7F003E1ADA /* SwiftColor */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B75E627B26961A7F003E1ADA /* XCRemoteSwiftPackageReference "SwiftColor" */;

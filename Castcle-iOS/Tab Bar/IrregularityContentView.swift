@@ -49,8 +49,6 @@ class IrregularityContentView: ESTabBarItemContentView {
         view.layer.opacity = 0.5
         view.backgroundColor = UIColor.init(red: 10/255.0, green: 66/255.0, blue: 91/255.0, alpha: 1.0)
         self.addSubview(view)
-        
-        self.bounceAnimation()
     }
     
     public override func reselectAnimation(animated: Bool, completion: (() -> ())?) {

@@ -30,35 +30,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIFont.loadAllFonts
         
         // MARK: - Setup Firebase
+        var filePath:String!
         if Environment.appEnv == .prod {
-            let filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info", ofType: "plist")
-            guard let fileopts = FirebaseOptions(contentsOfFile: filePath!) else {
-                assert(false, "Couldn't load config file")
-                return true
-            }
-            FirebaseApp.configure(options: fileopts)
+            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info", ofType: "plist")
         } else if Environment.appEnv == .stg {
-            let filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Stg", ofType: "plist")
-            guard let fileopts = FirebaseOptions(contentsOfFile: filePath!) else {
-                assert(false, "Couldn't load config file")
-                return true
-            }
-            FirebaseApp.configure(options: fileopts)
+            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Stg", ofType: "plist")
         } else {
-            let filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Dev", ofType: "plist")
-            guard let fileopts = FirebaseOptions(contentsOfFile: filePath!) else {
-                assert(false, "Couldn't load config file")
-                return true
-            }
-            FirebaseApp.configure(options: fileopts)
+            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Dev", ofType: "plist")
         }
+        let options = FirebaseOptions.init(contentsOfFile: filePath)!
+        FirebaseApp.configure(options: options)
         
         // MARK: - App Center
         AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
-          Analytics.self,
-          Crashes.self
+            Analytics.self,
+            Crashes.self
         ])
-        print()
         
         // MARK: - Setup TabBar
         let tabBarController = ESTabBarController()
