@@ -10,6 +10,7 @@ def share_pods
   pod 'MHWebViewController'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
+  pod 'Lightbox'
 end
 
 # Castcle-iOS

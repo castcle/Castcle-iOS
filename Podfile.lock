@@ -7,6 +7,7 @@ PODS:
   - AppCenter/Core (4.2.0)
   - AppCenter/Crashes (4.2.0):
     - AppCenter/Core
+  - Cache (6.0.0)
   - Firebase/Analytics (8.3.0):
     - Firebase/Core
   - Firebase/Core (8.3.0):
@@ -94,6 +95,10 @@ PODS:
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
+  - Imaginary (5.0.0):
+    - Cache (~> 6.0.0)
+  - Lightbox (2.5.0):
+    - Imaginary (~> 5.0.0)
   - MHWebViewController (1.1.2)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
@@ -107,11 +112,13 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Crashlytics
   - IGListKit
+  - Lightbox
   - MHWebViewController
 
 SPEC REPOS:
   trunk:
     - AppCenter
+    - Cache
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -123,12 +130,15 @@ SPEC REPOS:
     - GoogleUtilities
     - IGListDiffKit
     - IGListKit
+    - Imaginary
+    - Lightbox
     - MHWebViewController
     - nanopb
     - PromisesObjC
 
 SPEC CHECKSUMS:
   AppCenter: 87ef6eefd8ade4df59e88951288587429f3dd2a5
+  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   Firebase: 817b9171d0d51dccc458b94a5e8edff6b1dd323d
   FirebaseAnalytics: 456f2c51599870a15ded4548d1f1f7b2cabf65a7
   FirebaseCore: a6dba751680d7033b9d3831e1cfc95ead0605118
@@ -140,10 +150,12 @@ SPEC CHECKSUMS:
   GoogleUtilities: eea970f4a389963963bffe8d8fabe43540678b9c
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
+  Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
+  Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
   MHWebViewController: bc0c4be723b798260ccec01ce6b9e86c6543741e
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 761054ef75dcb3daa1e6ab70f0f85bdafe389473
+PODFILE CHECKSUM: a659c6da79ca960b94ff4f5eb288295a8b3f5b34
 
 COCOAPODS: 1.10.1
