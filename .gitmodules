@@ -1,15 +1,15 @@
 [submodule "Core"]
 	path = Core
-	url = git@github.com:castcle/Core-iOS.git
+	url = ../Core-iOS.git
 [submodule "Feed"]
 	path = Feed
-	url = git@github.com:castcle/Feed-iOS.git
+	url = ../Feed-iOS.git
 [submodule "Search"]
 	path = Search
-	url = git@github.com:castcle/Search-iOS.git
+	url = ../Search-iOS.git
 [submodule "Component"]
 	path = Component
-	url = git@github.com:castcle/Component-iOS.git
+	url = ../Component-iOS.git
 [submodule "Config"]
 	path = Config
-	url = git@github.com:castcle/Config-iOS.git
+	url = ../Config-iOS.git
