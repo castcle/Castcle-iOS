@@ -11,6 +11,7 @@ def share_pods
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'Lightbox'
+  pod 'SnackBar.swift'
 end
 
 # Castcle-iOS

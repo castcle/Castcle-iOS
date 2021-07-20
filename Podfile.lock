@@ -106,6 +106,9 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (1.2.12)
+  - SnackBar.swift (0.1.0):
+    - SnapKit
+  - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - AppCenter
@@ -114,6 +117,7 @@ DEPENDENCIES:
   - IGListKit
   - Lightbox
   - MHWebViewController
+  - SnackBar.swift
 
 SPEC REPOS:
   trunk:
@@ -135,6 +139,8 @@ SPEC REPOS:
     - MHWebViewController
     - nanopb
     - PromisesObjC
+    - SnackBar.swift
+    - SnapKit
 
 SPEC CHECKSUMS:
   AppCenter: 87ef6eefd8ade4df59e88951288587429f3dd2a5
@@ -155,7 +161,9 @@ SPEC CHECKSUMS:
   MHWebViewController: bc0c4be723b798260ccec01ce6b9e86c6543741e
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  SnackBar.swift: 79ea4df13ea9e6633137dd6acbd490534d26440d
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: a659c6da79ca960b94ff4f5eb288295a8b3f5b34
+PODFILE CHECKSUM: 53246f0e717779a471438f586cfb2751d31bb7ea
 
 COCOAPODS: 1.10.1
