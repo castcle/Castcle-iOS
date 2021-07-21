@@ -26,7 +26,7 @@
 //
 
 import UIKit
-import ESTabBarController
+import ESTabBarController_swift
 
 class IrregularityContentView: ESTabBarItemContentView {
 

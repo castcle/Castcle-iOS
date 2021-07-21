@@ -27,7 +27,7 @@
 
 import UIKit
 import Core
-import ESTabBarController
+import ESTabBarController_swift
 
 class BasicContentView: ESTabBarItemContentView {
 

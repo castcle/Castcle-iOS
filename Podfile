@@ -12,6 +12,13 @@ def share_pods
   pod 'Firebase/Crashlytics'
   pod 'Lightbox'
   pod 'SnackBar.swift'
+  pod 'Defaults'
+  pod 'SwiftColor'
+  pod 'ESTabBarController-swift'
+  pod 'Kingfisher'
+  pod 'Moya'
+  pod 'SwiftyJSON'
+  pod 'ActiveLabel'
 end
 
 # Castcle-iOS

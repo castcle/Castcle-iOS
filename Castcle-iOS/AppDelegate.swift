@@ -29,7 +29,7 @@ import UIKit
 import Core
 import Feed
 import Search
-import ESTabBarController
+import ESTabBarController_swift
 import SwiftColor
 import Firebase
 import AppCenter

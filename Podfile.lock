@@ -1,4 +1,6 @@
 PODS:
+  - ActiveLabel (1.1.0)
+  - Alamofire (5.4.3)
   - AppCenter (4.2.0):
     - AppCenter/Analytics (= 4.2.0)
     - AppCenter/Crashes (= 4.2.0)
@@ -8,18 +10,20 @@ PODS:
   - AppCenter/Crashes (4.2.0):
     - AppCenter/Core
   - Cache (6.0.0)
-  - Firebase/Analytics (8.3.0):
+  - Defaults (4.2.2)
+  - ESTabBarController-swift (2.8.0)
+  - Firebase/Analytics (8.4.0):
     - Firebase/Core
-  - Firebase/Core (8.3.0):
+  - Firebase/Core (8.4.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (~> 8.3.0)
-  - Firebase/CoreOnly (8.3.0):
-    - FirebaseCore (= 8.3.0)
-  - Firebase/Crashlytics (8.3.0):
+    - FirebaseAnalytics (~> 8.4.0)
+  - Firebase/CoreOnly (8.4.0):
+    - FirebaseCore (= 8.4.0)
+  - Firebase/Crashlytics (8.4.0):
     - Firebase/CoreOnly
-    - FirebaseCrashlytics (~> 8.3.0)
-  - FirebaseAnalytics (8.3.0):
-    - FirebaseAnalytics/AdIdSupport (= 8.3.0)
+    - FirebaseCrashlytics (~> 8.4.0)
+  - FirebaseAnalytics (8.4.0):
+    - FirebaseAnalytics/AdIdSupport (= 8.4.0)
     - FirebaseCore (~> 8.0)
     - FirebaseInstallations (~> 8.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
@@ -27,43 +31,44 @@ PODS:
     - GoogleUtilities/Network (~> 7.4)
     - "GoogleUtilities/NSData+zlib (~> 7.4)"
     - nanopb (~> 2.30908.0)
-  - FirebaseAnalytics/AdIdSupport (8.3.0):
+  - FirebaseAnalytics/AdIdSupport (8.4.0):
     - FirebaseCore (~> 8.0)
     - FirebaseInstallations (~> 8.0)
-    - GoogleAppMeasurement (= 8.3.0)
+    - GoogleAppMeasurement (= 8.4.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
     - GoogleUtilities/MethodSwizzler (~> 7.4)
     - GoogleUtilities/Network (~> 7.4)
     - "GoogleUtilities/NSData+zlib (~> 7.4)"
     - nanopb (~> 2.30908.0)
-  - FirebaseCore (8.3.0):
+  - FirebaseCore (8.4.0):
     - FirebaseCoreDiagnostics (~> 8.0)
     - GoogleUtilities/Environment (~> 7.4)
     - GoogleUtilities/Logger (~> 7.4)
-  - FirebaseCoreDiagnostics (8.3.0):
+  - FirebaseCoreDiagnostics (8.4.0):
     - GoogleDataTransport (~> 9.0)
     - GoogleUtilities/Environment (~> 7.4)
     - GoogleUtilities/Logger (~> 7.4)
     - nanopb (~> 2.30908.0)
-  - FirebaseCrashlytics (8.3.0):
+  - FirebaseCrashlytics (8.4.0):
     - FirebaseCore (~> 8.0)
     - FirebaseInstallations (~> 8.0)
     - GoogleDataTransport (~> 9.0)
+    - GoogleUtilities/Environment (~> 7.4)
     - nanopb (~> 2.30908.0)
-    - PromisesObjC (~> 1.2)
-  - FirebaseInstallations (8.3.0):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - FirebaseInstallations (8.4.0):
     - FirebaseCore (~> 8.0)
     - GoogleUtilities/Environment (~> 7.4)
     - GoogleUtilities/UserDefaults (~> 7.4)
-    - PromisesObjC (~> 1.2)
-  - GoogleAppMeasurement (8.3.0):
-    - GoogleAppMeasurement/AdIdSupport (= 8.3.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleAppMeasurement (8.4.0):
+    - GoogleAppMeasurement/AdIdSupport (= 8.4.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
     - GoogleUtilities/MethodSwizzler (~> 7.4)
     - GoogleUtilities/Network (~> 7.4)
     - "GoogleUtilities/NSData+zlib (~> 7.4)"
     - nanopb (~> 2.30908.0)
-  - GoogleAppMeasurement/AdIdSupport (8.3.0):
+  - GoogleAppMeasurement/AdIdSupport (8.4.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
     - GoogleUtilities/MethodSwizzler (~> 7.4)
     - GoogleUtilities/Network (~> 7.4)
@@ -97,32 +102,50 @@ PODS:
     - IGListDiffKit (= 4.0.0)
   - Imaginary (5.0.0):
     - Cache (~> 6.0.0)
+  - Kingfisher (6.3.0)
   - Lightbox (2.5.0):
     - Imaginary (~> 5.0.0)
   - MHWebViewController (1.1.2)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
-  - PromisesObjC (1.2.12)
+  - PromisesObjC (2.0.0)
   - SnackBar.swift (0.1.0):
     - SnapKit
   - SnapKit (5.0.1)
+  - SwiftColor (1.6.0)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
+  - ActiveLabel
   - AppCenter
+  - Defaults
+  - ESTabBarController-swift
   - Firebase/Analytics
   - Firebase/Crashlytics
   - IGListKit
+  - Kingfisher
   - Lightbox
   - MHWebViewController
+  - Moya
   - SnackBar.swift
+  - SwiftColor
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - ActiveLabel
+    - Alamofire
     - AppCenter
     - Cache
+    - Defaults
+    - ESTabBarController-swift
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -135,35 +158,47 @@ SPEC REPOS:
     - IGListDiffKit
     - IGListKit
     - Imaginary
+    - Kingfisher
     - Lightbox
     - MHWebViewController
+    - Moya
     - nanopb
     - PromisesObjC
     - SnackBar.swift
     - SnapKit
+    - SwiftColor
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   AppCenter: 87ef6eefd8ade4df59e88951288587429f3dd2a5
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
-  Firebase: 817b9171d0d51dccc458b94a5e8edff6b1dd323d
-  FirebaseAnalytics: 456f2c51599870a15ded4548d1f1f7b2cabf65a7
-  FirebaseCore: a6dba751680d7033b9d3831e1cfc95ead0605118
-  FirebaseCoreDiagnostics: 7e873baabcfaa9512f538554ae4fa0817aaafbdb
-  FirebaseCrashlytics: 3d83f2e8a47f476f47c82ff4536b169df6781271
-  FirebaseInstallations: b69db7680870dbac17bba7a51fc0b5c4b365baa7
-  GoogleAppMeasurement: de70802583dedceb0bca18172b345307e8f410b8
+  Defaults: d785e56c0fb8890dc40351603f05c8e1df1bdd45
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
+  Firebase: 54cdc8bc9c9b3de54f43dab86e62f5a76b47034f
+  FirebaseAnalytics: 4751d6a49598a2b58da678cc07df696bcd809ab9
+  FirebaseCore: 31f389c37ac1ea52454a53d3081f2d7019485a4a
+  FirebaseCoreDiagnostics: cad03be1904b975f845e632f2720c3337da27faf
+  FirebaseCrashlytics: c9eb562b2f6bd5ee5e880144fd5ef1bfe46c5dc5
+  FirebaseInstallations: 1585729afc787877763208c2088ed84221161f77
+  GoogleAppMeasurement: 6b6a08fd9c71f4dbc89e0e812acca81d797aa342
   GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
   GoogleUtilities: eea970f4a389963963bffe8d8fabe43540678b9c
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
   MHWebViewController: bc0c4be723b798260ccec01ce6b9e86c6543741e
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
-  PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SnackBar.swift: 79ea4df13ea9e6633137dd6acbd490534d26440d
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftColor: 3db8a6a1ffb4df61f074a0643d620bf91876c267
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 53246f0e717779a471438f586cfb2751d31bb7ea
+PODFILE CHECKSUM: 0ef4f28e3656c80c2b75ca95362c2a63c4625f77
 
 COCOAPODS: 1.10.1
