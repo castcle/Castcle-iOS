@@ -44,3 +44,9 @@ end
      project 'Search/Search.xcodeproj'
      share_pods
  end
+
+# Authen
+ target 'Authen' do
+     project 'Authen/Authen.xcodeproj'
+     share_pods
+ end

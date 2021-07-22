@@ -13,3 +13,6 @@
 [submodule "Config"]
 	path = Config
 	url = ../Config-iOS.git
+[submodule "Authen"]
+	path = Authen
+	url = ../Authen-iOS.git
