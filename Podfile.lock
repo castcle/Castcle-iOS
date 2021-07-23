@@ -116,6 +116,7 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - Nantes (0.1.2)
+  - PanModal (1.2.7)
   - PromisesObjC (2.0.0)
   - SnackBar.swift (0.1.0):
     - SnapKit
@@ -136,6 +137,7 @@ DEPENDENCIES:
   - MHWebViewController
   - Moya
   - Nantes
+  - PanModal
   - SnackBar.swift
   - SwiftColor
   - SwiftyJSON
@@ -166,6 +168,7 @@ SPEC REPOS:
     - Moya
     - nanopb
     - Nantes
+    - PanModal
     - PromisesObjC
     - SnackBar.swift
     - SnapKit
@@ -197,12 +200,13 @@ SPEC CHECKSUMS:
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   Nantes: 0396442578e32242223fed46050dea1850236184
+  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SnackBar.swift: 79ea4df13ea9e6633137dd6acbd490534d26440d
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftColor: 3db8a6a1ffb4df61f074a0643d620bf91876c267
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 10a3bdf795835632cfd15ab60a7af90b065ef860
+PODFILE CHECKSUM: a46416bfc3888e58cfde1e6b5bbe6049d6ee8a52
 
 COCOAPODS: 1.10.1

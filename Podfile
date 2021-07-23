@@ -20,6 +20,7 @@ def share_pods
   pod 'SwiftyJSON'
   pod 'ActiveLabel'
   pod 'Nantes'
+  pod 'PanModal'
 end
 
 # Castcle-iOS
