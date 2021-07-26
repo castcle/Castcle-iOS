@@ -20,16 +20,16 @@ While **Castcle Application** is still under ***Work in Progress***, you can see
 
 #### **Features x Circles**
 
-<table cellspacing="0" cellpadding="0" style="border: none;">
+<table cellspacing="0" cellpadding="0" style="border: none; width: 100%;">
 <tr>
-<td>
+<td style="min-width: 150px;">
 <a href="https://castcle-public.s3.us-east-2.amazonaws.com/features_circles.png" target="_blank">
 <img src="https://castcle-public.s3.us-east-2.amazonaws.com/features_circles.png" style="max-height:350px; min-width:150px;">
 </a>
 </td>
 <td valign="top">
 <h5 style="font-weight: bold">Features:</h5>
-In v3+, we plan to launch <em><strong>Castcle Features</strong></em> in Castcle application, including <em><a href="https://castcle-public.s3.us-east-2.amazonaws.com/features_photo.png" target="_blank">Castcle Photo</a></em> and <em><a href="https://castcle-public.s3.us-east-2.amazonaws.com/features_watch.png" target="_blank">Castcle Watch</a></em>, which will provide the richer user experiences than a simple <em>content feed</em> reading in v1. <i>See examples below</i>.
+In v3+, we plan to launch <em><strong>Castcle Features</strong></em> in Castcle application, including <em><a href="https://castcle-public.s3.us-east-2.amazonaws.com/features_photo.png" target="_blank">Castcle Photo</a></em> and <em><a href="https://castcle-public.s3.us-east-2.amazonaws.com/features_watch.png" target="_blank">Castcle Watch</a></em>, which will provide the richer user experiences than a simple <em>content feed</em> reading in v1. <i>See examples <a href="#examples">below</a></i>.
 <h5 style="font-weight: bold">Circles:<a name="circles"></a></h5>
 In v2+, the additional <em><strong>Castcle Circles</strong></em>, not only <em><strong>For You</strong></em> circle, will be available. Each <em>Castcle Circle</em> is designed to represent different social bubble. For exmaple, when user navigates to <em><strong>Friends</strong> circle</em>, he/she will only see contents posted by his/her family and friends. Then, when he/she changes to <em><strong>Following</strong> circle</em>, he/she will see a flood of contents that he/she subscribes to. There are many more circles that we plan to provide such as <em><strong>Now</strong></em>, a circle which prioritize new contents to come first, <em><strong>Topics</strong></em>, a circle that feed contents on the topics that user interests, etc.
 </td>
@@ -38,9 +38,9 @@ In v2+, the additional <em><strong>Castcle Circles</strong></em>, not only <em><
 
 #### **The Circle Experience:** *Let's Burst our Social Bubbles*
 
-<table cellspacing="0" cellpadding="0" style="border: none;">
+<table cellspacing="0" cellpadding="0" style="border: none; width: 100%;">
 <tr>
-<td>
+<td style="min-width: 150px;">
 <a href="https://castcle-public.s3.us-east-2.amazonaws.com/circle_swipe.png" target="_blank">
 <img src="https://castcle-public.s3.us-east-2.amazonaws.com/circle_swipe.png" style="max-height:350px; min-width:150px;">
 </a>
@@ -59,9 +59,9 @@ Consequently, **to make Castcle Platform sustainable**, we have designed the pla
 
 ##### Features Switcher
 
-<table cellspacing="0" cellpadding="0" style="border: none;">
+<table cellspacing="0" cellpadding="0" style="border: none; width: 100%;">
 <tr>
-<td>
+<td style="min-width: 150px;">
 <a href="https://castcle-public.s3.us-east-2.amazonaws.com/features_switcher.png" target="_blank">
 <img src="https://castcle-public.s3.us-east-2.amazonaws.com/features_switcher.png" style="max-height:350px; min-width:150px;">
 </a>
@@ -72,7 +72,7 @@ In v3+, the <em><strong>Castcle Features</strong></em> such as <em><strong>Photo
 </tr>
 </table>
 
-##### Features Examples: Feed, Photo and Watch
+##### Features Examples: Feed, Photo and Watch <a name="examples"></a>
 
 <table cellspacing="0" cellpadding="0" style="border: none;">
 <tr>
