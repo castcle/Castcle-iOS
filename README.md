@@ -109,19 +109,27 @@ Watch
 
 #### Prerequisites
 
-- Download and ***install XCode*** from https://developer.apple.com/xcode/.
+- Download and ***install XCode*** from [Link](https://developer.apple.com/xcode/).
+
+- Install ***CocoaPods*** to computer with command `$ sudo gem install cocoapods`
 
 - Download and ***install git*** tool you prefer. If you don't have one, try [Github Desktop](https://desktop.github.com/).
 
 - ***Clone***, aka ***Check out***, this repository to your local `<INSTALL_DIR>` by following [these steps](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository).
 
-#### Running - via Simulator
+- Go to project directory and run `pod install`
 
-- <span style="color: red;">!!! PLEASE EDIT THIS !!!</span>
+#### Running
 
-#### Running - via iOS Device
+- Open project at `Castcle-iOS.xcworkspace`
 
-- <span style="color: red;">!!! PLEASE EDIT THIS !!!</span>
+- Select scheme
+
+    - Development ***Castcle-Development***
+
+    - Staging ***Castcle-Staging***
+
+    - Production ***Castcle***
 
 ## **Milestones**
 
