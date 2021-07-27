@@ -117,7 +117,7 @@ Watch
 
 - ***Clone***, aka ***Check out***, this repository to your local `<INSTALL_DIR>` by following [these steps](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository).
 
-- Go to project directory and run `pod install`
+- Go to project directory and run `$ pod install`
 
 #### Running
 
@@ -130,6 +130,8 @@ Watch
     - Staging ***Castcle-Staging***
 
     - Production ***Castcle***
+
+- Start ***Run*** or ***Command + B***
 
 ## **Milestones**
 
