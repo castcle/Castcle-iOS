@@ -52,3 +52,9 @@ end
      project 'Authen/Authen.xcodeproj'
      share_pods
  end
+
+# Profile
+ target 'Profile' do
+     project 'Profile/Profile.xcodeproj'
+     share_pods
+ end

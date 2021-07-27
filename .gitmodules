@@ -16,3 +16,6 @@
 [submodule "Authen"]
 	path = Authen
 	url = ../Authen-iOS.git
+[submodule "Profile"]
+	path = Profile
+	url = ../Profile-iOS.git
