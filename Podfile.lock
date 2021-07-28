@@ -9,6 +9,9 @@ PODS:
   - AppCenter/Core (4.2.0)
   - AppCenter/Crashes (4.2.0):
     - AppCenter/Core
+  - BlueCryptor (1.0.32)
+  - BlueECC (1.2.5)
+  - BlueRSA (1.0.34)
   - Cache (6.0.0)
   - Defaults (4.2.2)
   - ESTabBarController-swift (2.8.0)
@@ -103,8 +106,13 @@ PODS:
   - Imaginary (5.0.0):
     - Cache (~> 6.0.0)
   - Kingfisher (6.3.0)
+  - KituraContracts (1.2.1):
+    - LoggerAPI (~> 1.7)
   - Lightbox (2.5.0):
     - Imaginary (~> 5.0.0)
+  - LoggerAPI (1.9.200):
+    - Logging (~> 1.1)
+  - Logging (1.4.0)
   - MHWebViewController (1.1.2)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
@@ -122,6 +130,12 @@ PODS:
     - SnapKit
   - SnapKit (5.0.1)
   - SwiftColor (1.6.0)
+  - SwiftJWT (3.6.200):
+    - BlueCryptor (~> 1.0)
+    - BlueECC (~> 1.1)
+    - BlueRSA (~> 1.0)
+    - KituraContracts (~> 1.2)
+    - LoggerAPI (~> 1.7)
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
@@ -140,6 +154,7 @@ DEPENDENCIES:
   - PanModal
   - SnackBar.swift
   - SwiftColor
+  - SwiftJWT
   - SwiftyJSON
 
 SPEC REPOS:
@@ -147,6 +162,9 @@ SPEC REPOS:
     - ActiveLabel
     - Alamofire
     - AppCenter
+    - BlueCryptor
+    - BlueECC
+    - BlueRSA
     - Cache
     - Defaults
     - ESTabBarController-swift
@@ -163,7 +181,10 @@ SPEC REPOS:
     - IGListKit
     - Imaginary
     - Kingfisher
+    - KituraContracts
     - Lightbox
+    - LoggerAPI
+    - Logging
     - MHWebViewController
     - Moya
     - nanopb
@@ -173,12 +194,16 @@ SPEC REPOS:
     - SnackBar.swift
     - SnapKit
     - SwiftColor
+    - SwiftJWT
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   AppCenter: 87ef6eefd8ade4df59e88951288587429f3dd2a5
+  BlueCryptor: b0aee3d9b8f367b49b30de11cda90e1735571c24
+  BlueECC: 0d18e93347d3ec6d41416de21c1ffa4d4cd3c2cc
+  BlueRSA: 6f9776d62d9773502415a7db3bcbb2bbb3f71fc3
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   Defaults: d785e56c0fb8890dc40351603f05c8e1df1bdd45
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
@@ -195,7 +220,10 @@ SPEC CHECKSUMS:
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
   Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  KituraContracts: e845e60dc8627ad0a76fa55ef20a45451d8f830b
   Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
+  LoggerAPI: ad9c4a6f1e32f518fdb43a1347ac14d765ab5e3d
+  Logging: beeb016c9c80cf77042d62e83495816847ef108b
   MHWebViewController: bc0c4be723b798260ccec01ce6b9e86c6543741e
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
@@ -205,8 +233,9 @@ SPEC CHECKSUMS:
   SnackBar.swift: 79ea4df13ea9e6633137dd6acbd490534d26440d
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftColor: 3db8a6a1ffb4df61f074a0643d620bf91876c267
+  SwiftJWT: 88c412708f58c169d431d344c87bc79a87c830ae
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 2d7c08b4415c4e74eaccd7f39cca0c4d96a89577
+PODFILE CHECKSUM: 06f39fcd509379262f40dd20cbbc5f847560a6fa
 
 COCOAPODS: 1.10.1
