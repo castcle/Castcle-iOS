@@ -29,6 +29,7 @@ import UIKit
 import Core
 import Feed
 import Search
+import Component
 import ESTabBarController_swift
 import SwiftColor
 import Firebase
@@ -42,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var feedNavi: UINavigationController?
     var searchNavi: UINavigationController?
+    let tabBarController = ESTabBarController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -67,10 +69,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Crashes.self
         ])
         
+        // MARK: - Setup View
+        let frame = UIScreen.main.bounds
+        self.window = UIWindow(frame: frame)
+        self.window!.rootViewController = ComponentOpener.open(.splashScreen)
+        self.window!.overrideUserInterfaceStyle = .dark
+        self.window!.makeKeyAndVisible()
+        
+        return true
+    }
+    
+    func setupTabBar() {
         // MARK: - Setup TabBar
-        let tabBarController = ESTabBarController()
-        tabBarController.tabBar.backgroundImage = UIColor.Asset.darkGraphiteBlue.toImage()
-        tabBarController.shouldHijackHandler = {
+        self.tabBarController.tabBar.backgroundImage = UIColor.Asset.darkGraphiteBlue.toImage()
+        self.tabBarController.shouldHijackHandler = {
             tabbarController, viewController, index in
             if index == 1 {
                 return true
@@ -78,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
-        tabBarController.didHijackHandler = {
+        self.tabBarController.didHijackHandler = {
             [weak tabBarController] tabbarController, viewController, index in
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -102,15 +114,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.searchNavi?.tabBarItem = ESTabBarItem.init(BouncesContentView(), image: UIImage.init(icon: .castcle(.search), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .castcle(.search), size: CGSize(width: 23, height: 23)))
         
         tabBarController.viewControllers = [self.feedNavi, actionViewController, self.searchNavi] as? [UIViewController] ?? []
-        
-        // MARK: - Setup View
-        let frame = UIScreen.main.bounds
-        window = UIWindow(frame: frame)
-        window!.rootViewController = tabBarController
-        window!.overrideUserInterfaceStyle = .dark
-        window!.makeKeyAndVisible()
-        
-        return true
     }
 }
 

@@ -7,7 +7,6 @@ workspace 'Castcle-iOS'
 def share_pods
   pod 'AppCenter'
   pod 'IGListKit'
-  pod 'MHWebViewController'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'Lightbox'
@@ -22,6 +21,7 @@ def share_pods
   pod 'Nantes'
   pod 'PanModal'
   pod 'SwiftJWT'
+  pod 'IQKeyboardManagerSwift'
 end
 
 # Castcle-iOS

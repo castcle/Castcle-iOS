@@ -105,6 +105,7 @@ PODS:
     - IGListDiffKit (= 4.0.0)
   - Imaginary (5.0.0):
     - Cache (~> 6.0.0)
+  - IQKeyboardManagerSwift (6.5.6)
   - Kingfisher (6.3.0)
   - KituraContracts (1.2.1):
     - LoggerAPI (~> 1.7)
@@ -113,7 +114,6 @@ PODS:
   - LoggerAPI (1.9.200):
     - Logging (~> 1.1)
   - Logging (1.4.0)
-  - MHWebViewController (1.1.2)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -146,9 +146,9 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Crashlytics
   - IGListKit
+  - IQKeyboardManagerSwift
   - Kingfisher
   - Lightbox
-  - MHWebViewController
   - Moya
   - Nantes
   - PanModal
@@ -180,12 +180,12 @@ SPEC REPOS:
     - IGListDiffKit
     - IGListKit
     - Imaginary
+    - IQKeyboardManagerSwift
     - Kingfisher
     - KituraContracts
     - Lightbox
     - LoggerAPI
     - Logging
-    - MHWebViewController
     - Moya
     - nanopb
     - Nantes
@@ -219,12 +219,12 @@ SPEC CHECKSUMS:
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   KituraContracts: e845e60dc8627ad0a76fa55ef20a45451d8f830b
   Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
   LoggerAPI: ad9c4a6f1e32f518fdb43a1347ac14d765ab5e3d
   Logging: beeb016c9c80cf77042d62e83495816847ef108b
-  MHWebViewController: bc0c4be723b798260ccec01ce6b9e86c6543741e
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   Nantes: 0396442578e32242223fed46050dea1850236184
@@ -236,6 +236,6 @@ SPEC CHECKSUMS:
   SwiftJWT: 88c412708f58c169d431d344c87bc79a87c830ae
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 06f39fcd509379262f40dd20cbbc5f847560a6fa
+PODFILE CHECKSUM: 795c6a313588f3e373bc6884304802710208657f
 
 COCOAPODS: 1.10.1
