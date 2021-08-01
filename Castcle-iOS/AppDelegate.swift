@@ -69,10 +69,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Crashes.self
         ])
         
+        // MARK: - Setup Splash Screen
+        let splashScreenViewController = ComponentOpener.open(.splashScreen) as? SplashScreenViewController
+        splashScreenViewController?.delegate = self
+        
         // MARK: - Setup View
         let frame = UIScreen.main.bounds
         self.window = UIWindow(frame: frame)
-        self.window!.rootViewController = ComponentOpener.open(.splashScreen)
+        self.window!.rootViewController = splashScreenViewController
         self.window!.overrideUserInterfaceStyle = .dark
         self.window!.makeKeyAndVisible()
         
@@ -113,7 +117,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         actionViewController.tabBarItem = ESTabBarItem.init(IrregularityContentView(), image: UIImage(named: "add-content"), selectedImage: UIImage(named: "add-content"))
         self.searchNavi?.tabBarItem = ESTabBarItem.init(BouncesContentView(), image: UIImage.init(icon: .castcle(.search), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .castcle(.search), size: CGSize(width: 23, height: 23)))
         
-        tabBarController.viewControllers = [self.feedNavi, actionViewController, self.searchNavi] as? [UIViewController] ?? []
+        self.tabBarController.viewControllers = [self.feedNavi, actionViewController, self.searchNavi] as? [UIViewController] ?? []
     }
 }
 
+extension AppDelegate: SplashScreenViewControllerDelegate {
+    func didLoadFinish(_ view: SplashScreenViewController) {
+        self.setupTabBar()
+        self.window!.rootViewController = self.tabBarController
+    }
+}
