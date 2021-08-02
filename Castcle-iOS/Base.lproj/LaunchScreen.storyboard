@@ -20,13 +20,22 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-launch-screen" translatesAutoresizingMaskIntoConstraints="NO" id="tMb-cQ-E1P">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-launch-screen" translatesAutoresizingMaskIntoConstraints="NO" id="6iw-Sn-lW3">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5SZ-2b-FoC"/>
+                                    <constraint firstAttribute="width" constant="200" id="Jj1-Aa-vwR"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6iw-Sn-lW3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="EQn-dR-9lX"/>
                             <constraint firstItem="tMb-cQ-E1P" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Q8W-W5-E94"/>
                             <constraint firstAttribute="bottom" secondItem="tMb-cQ-E1P" secondAttribute="bottom" id="VhQ-bu-zA6"/>
                             <constraint firstAttribute="trailing" secondItem="tMb-cQ-E1P" secondAttribute="trailing" id="Yef-s0-HhZ"/>
+                            <constraint firstItem="6iw-Sn-lW3" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="nPN-04-mpy"/>
                             <constraint firstItem="tMb-cQ-E1P" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="qtE-GN-tJ8"/>
                         </constraints>
                     </view>
@@ -38,6 +47,7 @@
     </scenes>
     <resources>
         <image name="background-launch-screen" width="375" height="667"/>
+        <image name="logo-launch-screen" width="221.5" height="231.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
