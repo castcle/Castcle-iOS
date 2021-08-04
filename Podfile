@@ -22,6 +22,7 @@ def share_pods
   pod 'PanModal'
   pod 'SwiftJWT'
   pod 'IQKeyboardManagerSwift'
+  pod 'JVFloatLabeledTextField'
 end
 
 # Castcle-iOS

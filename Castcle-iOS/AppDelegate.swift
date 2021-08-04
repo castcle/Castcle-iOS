@@ -36,6 +36,7 @@ import Firebase
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -50,6 +51,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Load Font
         UIFont.loadAllFonts
+        
+        // MARK: - Setup Keyboard
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
         
         // MARK: - Setup Firebase
         var filePath:String!
