@@ -138,6 +138,7 @@ PODS:
     - KituraContracts (~> 1.2)
     - LoggerAPI (~> 1.7)
   - SwiftyJSON (5.0.1)
+  - TOCropViewController (2.6.0)
 
 DEPENDENCIES:
   - ActiveLabel
@@ -158,6 +159,7 @@ DEPENDENCIES:
   - SwiftColor
   - SwiftJWT
   - SwiftyJSON
+  - TOCropViewController
 
 SPEC REPOS:
   trunk:
@@ -199,6 +201,7 @@ SPEC REPOS:
     - SwiftColor
     - SwiftJWT
     - SwiftyJSON
+    - TOCropViewController
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
@@ -239,7 +242,8 @@ SPEC CHECKSUMS:
   SwiftColor: 3db8a6a1ffb4df61f074a0643d620bf91876c267
   SwiftJWT: 88c412708f58c169d431d344c87bc79a87c830ae
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  TOCropViewController: 3105367e808b7d3d886a74ff59bf4804e7d3ab38
 
-PODFILE CHECKSUM: 551964b9629b2622d1ce370c1efa36801f72cac8
+PODFILE CHECKSUM: 8f5dd3962c7e1941d7c4715f28ee627b9dadd365
 
 COCOAPODS: 1.10.2

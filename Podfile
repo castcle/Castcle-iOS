@@ -23,6 +23,7 @@ def share_pods
   pod 'SwiftJWT'
   pod 'IQKeyboardManagerSwift'
   pod 'JVFloatLabeledTextField'
+  pod 'TOCropViewController'
 end
 
 # Castcle-iOS
