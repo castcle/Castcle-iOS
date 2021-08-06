@@ -25,6 +25,8 @@ def share_pods
   pod 'JVFloatLabeledTextField'
   pod 'TOCropViewController'
   pod 'TLPhotoPicker'
+  pod 'UITextView+Placeholder'
+  pod 'SwiftDate'
 end
 
 # Castcle-iOS

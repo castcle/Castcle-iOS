@@ -131,6 +131,7 @@ PODS:
     - SnapKit
   - SnapKit (5.0.1)
   - SwiftColor (1.6.0)
+  - SwiftDate (6.3.1)
   - SwiftJWT (3.6.200):
     - BlueCryptor (~> 1.0)
     - BlueECC (~> 1.1)
@@ -140,6 +141,7 @@ PODS:
   - SwiftyJSON (5.0.1)
   - TLPhotoPicker (2.1.4)
   - TOCropViewController (2.6.0)
+  - "UITextView+Placeholder (1.4.0)"
 
 DEPENDENCIES:
   - ActiveLabel
@@ -158,10 +160,12 @@ DEPENDENCIES:
   - PanModal
   - SnackBar.swift
   - SwiftColor
+  - SwiftDate
   - SwiftJWT
   - SwiftyJSON
   - TLPhotoPicker
   - TOCropViewController
+  - "UITextView+Placeholder"
 
 SPEC REPOS:
   trunk:
@@ -201,10 +205,12 @@ SPEC REPOS:
     - SnackBar.swift
     - SnapKit
     - SwiftColor
+    - SwiftDate
     - SwiftJWT
     - SwiftyJSON
     - TLPhotoPicker
     - TOCropViewController
+    - "UITextView+Placeholder"
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
@@ -243,11 +249,13 @@ SPEC CHECKSUMS:
   SnackBar.swift: 79ea4df13ea9e6633137dd6acbd490534d26440d
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftColor: 3db8a6a1ffb4df61f074a0643d620bf91876c267
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   SwiftJWT: 88c412708f58c169d431d344c87bc79a87c830ae
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TLPhotoPicker: f486e8499e1c3f464d0e886697635e25a72a52b8
   TOCropViewController: 3105367e808b7d3d886a74ff59bf4804e7d3ab38
+  "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
 
-PODFILE CHECKSUM: 801c2ca8a0350ec6e9760238b6c97e430c7858c2
+PODFILE CHECKSUM: 45f9efd45691f6f94976a744b57dc2aed7f1d09d
 
 COCOAPODS: 1.10.2
