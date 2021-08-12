@@ -63,3 +63,9 @@ end
      project 'Profile/Profile.xcodeproj'
      share_pods
  end
+
+# Network
+ target 'Networking' do
+     project 'Networking/Networking.xcodeproj'
+     share_pods
+ end

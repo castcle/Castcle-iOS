@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A3307605E4BDA7A70ACB166 /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBDEA5622E4EB149926831E /* Pods_Castcle_iOS.framework */; };
+		B74CEF1F26C50760006B1F2C /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74CEF1E26C50760006B1F2C /* Networking.framework */; };
+		B74CEF2026C50760006B1F2C /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B74CEF1E26C50760006B1F2C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7552904269C0E63005D5EB5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7552902269C0E63005D5EB5 /* README.md */; };
 		B75E628726969B04003E1ADA /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; };
 		B75E628826969B04003E1ADA /* Component.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -45,6 +47,7 @@
 				B79281B7269455D1000ED84A /* Search.framework in Embed Frameworks */,
 				B75E628826969B04003E1ADA /* Component.framework in Embed Frameworks */,
 				B792811D268EC784000ED84A /* Core.framework in Embed Frameworks */,
+				B74CEF2026C50760006B1F2C /* Networking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +60,7 @@
 		8EBDEA5622E4EB149926831E /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EDBFDF508C4588DB04DA2B /* Pods-Castcle-iOS.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (development).xcconfig"; sourceTree = "<group>"; };
 		A282ED21286BB6639EE09CA5 /* Pods-Castcle-iOS.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (staging).xcconfig"; sourceTree = "<group>"; };
+		B74CEF1E26C50760006B1F2C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7552902269C0E63005D5EB5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74CEF1F26C50760006B1F2C /* Networking.framework in Frameworks */,
 				B7910E1126B12FEF0097C94E /* Profile.framework in Frameworks */,
 				B79281B4269455D1000ED84A /* Feed.framework in Frameworks */,
 				B792811C268EC784000ED84A /* Core.framework in Frameworks */,
@@ -103,6 +108,7 @@
 		7F3A3F40D4655699A46A2DB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B74CEF1E26C50760006B1F2C /* Networking.framework */,
 				B7910E1026B12FEF0097C94E /* Profile.framework */,
 				B7910E0D26B12FE60097C94E /* Authen.framework */,
 				B75E628626969B04003E1ADA /* Component.framework */,

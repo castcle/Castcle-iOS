@@ -19,3 +19,6 @@
 [submodule "Profile"]
 	path = Profile
 	url = ../Profile-iOS.git
+[submodule "Networking"]
+	path = Networking
+	url = ../Networking-iOS.git
