@@ -20,7 +20,6 @@ def share_pods
   pod 'ActiveLabel'
   pod 'Nantes'
   pod 'PanModal'
-  pod 'SwiftJWT'
   pod 'IQKeyboardManagerSwift'
   pod 'JVFloatLabeledTextField'
   pod 'TOCropViewController'
