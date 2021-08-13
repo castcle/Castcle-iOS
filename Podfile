@@ -15,7 +15,6 @@ def share_pods
   pod 'SwiftColor'
   pod 'ESTabBarController-swift'
   pod 'Kingfisher'
-  pod 'Moya'
   pod 'SwiftyJSON'
   pod 'ActiveLabel'
   pod 'Nantes'
@@ -26,6 +25,7 @@ def share_pods
   pod 'TLPhotoPicker'
   pod 'UITextView+Placeholder'
   pod 'SwiftDate'
+  pod 'XLPagerTabStrip'
 end
 
 # Castcle-iOS
@@ -64,8 +64,14 @@ end
      share_pods
  end
 
-# Network
+# Networking
  target 'Networking' do
      project 'Networking/Networking.xcodeproj'
+     share_pods
+ end
+
+# Share
+ target 'Share' do
+     project 'Share/Share.xcodeproj'
      share_pods
  end

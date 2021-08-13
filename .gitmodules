@@ -22,3 +22,6 @@
 [submodule "Networking"]
 	path = Networking
 	url = ../Networking-iOS.git
+[submodule "Share"]
+	path = Share
+	url = ../Share-iOS.git

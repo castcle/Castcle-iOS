@@ -1,6 +1,5 @@
 PODS:
   - ActiveLabel (1.1.0)
-  - Alamofire (5.4.3)
   - AppCenter (4.2.0):
     - AppCenter/Analytics (= 4.2.0)
     - AppCenter/Crashes (= 4.2.0)
@@ -107,10 +106,6 @@ PODS:
   - Kingfisher (6.3.1)
   - Lightbox (2.5.0):
     - Imaginary (~> 5.0.0)
-  - Moya (14.0.0):
-    - Moya/Core (= 14.0.0)
-  - Moya/Core (14.0.0):
-    - Alamofire (~> 5.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -128,6 +123,7 @@ PODS:
   - TLPhotoPicker (2.1.4)
   - TOCropViewController (2.6.0)
   - "UITextView+Placeholder (1.4.0)"
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - ActiveLabel
@@ -141,7 +137,6 @@ DEPENDENCIES:
   - JVFloatLabeledTextField
   - Kingfisher
   - Lightbox
-  - Moya
   - Nantes
   - PanModal
   - SnackBar.swift
@@ -151,11 +146,11 @@ DEPENDENCIES:
   - TLPhotoPicker
   - TOCropViewController
   - "UITextView+Placeholder"
+  - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
     - ActiveLabel
-    - Alamofire
     - AppCenter
     - Cache
     - Defaults
@@ -176,7 +171,6 @@ SPEC REPOS:
     - JVFloatLabeledTextField
     - Kingfisher
     - Lightbox
-    - Moya
     - nanopb
     - Nantes
     - PanModal
@@ -189,10 +183,10 @@ SPEC REPOS:
     - TLPhotoPicker
     - TOCropViewController
     - "UITextView+Placeholder"
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   AppCenter: 87ef6eefd8ade4df59e88951288587429f3dd2a5
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   Defaults: d785e56c0fb8890dc40351603f05c8e1df1bdd45
@@ -213,7 +207,6 @@ SPEC CHECKSUMS:
   JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
-  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   Nantes: 0396442578e32242223fed46050dea1850236184
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
@@ -226,7 +219,8 @@ SPEC CHECKSUMS:
   TLPhotoPicker: f486e8499e1c3f464d0e886697635e25a72a52b8
   TOCropViewController: 3105367e808b7d3d886a74ff59bf4804e7d3ab38
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 8a23ff809c85c4ce8d04f5e1e0bf4007bd499825
+PODFILE CHECKSUM: a36552ec2ad71d1907c578cb5740b8c6a742aeac
 
 COCOAPODS: 1.10.2
