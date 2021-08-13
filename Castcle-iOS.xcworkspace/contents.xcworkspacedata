@@ -17,9 +17,6 @@
       location = "group:Component/Component.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Share/Share.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Networking/Networking.xcodeproj">
    </FileRef>
    <FileRef
