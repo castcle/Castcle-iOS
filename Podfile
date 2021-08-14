@@ -70,8 +70,8 @@ end
      share_pods
  end
 
-# Share
- target 'Share' do
-     project 'Share/Share.xcodeproj'
+# Post
+ target 'Post' do
+     project 'Post/Post.xcodeproj'
      share_pods
  end
