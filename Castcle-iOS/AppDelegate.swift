@@ -30,6 +30,7 @@ import Core
 import Feed
 import Search
 import Component
+import Post
 import ESTabBarController_swift
 import SwiftColor
 import Firebase
@@ -109,9 +110,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             [weak tabBarController] tabbarController, viewController, index in
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                let alert = UIAlertController(title: nil, message: "Go to post view", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                tabBarController?.present(alert, animated: true, completion: nil)
+                let vc = PostOpener.open(.post)
+                vc.modalPresentationStyle = .fullScreen
+                tabBarController?.present(vc, animated: true, completion: nil)
             }
         }
         

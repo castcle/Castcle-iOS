@@ -29,6 +29,8 @@
 		B7B1E39A26A141C8006E2FF6 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */; };
 		B7B1E39B26A141C8006E2FF6 /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */; };
 		B7B1E39C26A141C8006E2FF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */; };
+		B7C2524B26C84B8700ACBB84 /* Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C2524A26C84B8700ACBB84 /* Post.framework */; };
+		B7C2524C26C84B8700ACBB84 /* Post.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C2524A26C84B8700ACBB84 /* Post.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7F69CA8268EB21E00B01223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CA7268EB21E00B01223 /* AppDelegate.swift */; };
 		B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB0268EB22000B01223 /* Assets.xcassets */; };
 		B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */; };
@@ -41,6 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B7C2524C26C84B8700ACBB84 /* Post.framework in Embed Frameworks */,
 				B7910E1226B12FEF0097C94E /* Profile.framework in Embed Frameworks */,
 				B7910E0F26B12FE60097C94E /* Authen.framework in Embed Frameworks */,
 				B79281B5269455D1000ED84A /* Feed.framework in Embed Frameworks */,
@@ -77,6 +80,7 @@
 		B792811B268EC784000ED84A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79281B2269455D1000ED84A /* Feed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Feed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79281B3269455D1000ED84A /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C2524A26C84B8700ACBB84 /* Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA4268EB21E00B01223 /* Castcle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castcle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA7268EB21E00B01223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F69CB0268EB22000B01223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 				B7910E1126B12FEF0097C94E /* Profile.framework in Frameworks */,
 				B79281B4269455D1000ED84A /* Feed.framework in Frameworks */,
 				B792811C268EC784000ED84A /* Core.framework in Frameworks */,
+				B7C2524B26C84B8700ACBB84 /* Post.framework in Frameworks */,
 				B79281B6269455D1000ED84A /* Search.framework in Frameworks */,
 				B75E628726969B04003E1ADA /* Component.framework in Frameworks */,
 				1A3307605E4BDA7A70ACB166 /* Pods_Castcle_iOS.framework in Frameworks */,
@@ -108,6 +113,7 @@
 		7F3A3F40D4655699A46A2DB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B7C2524A26C84B8700ACBB84 /* Post.framework */,
 				B74CEF1E26C50760006B1F2C /* Networking.framework */,
 				B7910E1026B12FEF0097C94E /* Profile.framework */,
 				B7910E0D26B12FE60097C94E /* Authen.framework */,
