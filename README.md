@@ -10,7 +10,7 @@ All works and source files published in this repository are under [GNU AGPLv3](h
 
 ## **About**
 
-For more **about** ***Castcle Platform***, please visit [Castcle API](https://github.com/castcle/castcle-api) repository to see project *Abstracts, Key Ideas and also the [Whitepaper](https://drive.google.com/file/d/116uCmMy_H_5fX02nXHMWqRSN85wxsvp9/view?usp=sharing)*.
+For more **about** ***Castcle Platform***, please visit [Castcle API](https://github.com/castcle/castcle-api) repository to see project *Abstracts, Key Ideas and also the [Whitepaper](https://drive.google.com/file/d/1-67KY3kSFyV1YZ1A8Qxv4UAPVxYcTzvJ/view?usp=sharing)*.
 
 ## **Demo**
 
