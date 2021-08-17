@@ -31,6 +31,7 @@ import Feed
 import Search
 import Component
 import Post
+import Authen
 import ESTabBarController_swift
 import SwiftColor
 import Firebase
@@ -39,6 +40,7 @@ import AppCenterAnalytics
 import AppCenterCrashes
 import IQKeyboardManagerSwift
 import Defaults
+import PanModal
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -110,9 +112,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             [weak tabBarController] tabbarController, viewController, index in
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                let vc = PostOpener.open(.post)
-                vc.modalPresentationStyle = .fullScreen
-                tabBarController?.present(vc, animated: true, completion: nil)
+                if UserState.shared.isLogin {
+                    let vc = PostOpener.open(.post(PostViewModel(postType: .newCast)))
+                    vc.modalPresentationStyle = .fullScreen
+                    tabBarController?.present(vc, animated: true, completion: nil)
+                } else {
+                    Utility.currentViewController().presentPanModal(AuthenOpener.open(.signUpMethod) as! SignUpMethodViewController)
+                }
             }
         }
         
