@@ -26,6 +26,8 @@ def share_pods
   pod 'UITextView+Placeholder'
   pod 'SwiftDate'
   pod 'XLPagerTabStrip'
+  pod 'DropDown'
+  pod 'Atributika'
 end
 
 # Castcle-iOS
