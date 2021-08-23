@@ -58,6 +58,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Defaults[.deviceUuid] = UUID().uuidString
         }
         
+        // MARK: - Get Version and Build Number
+        Defaults[.appVersion] = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
+        Defaults[.appBuild] = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "000000000000"
+        
+        
         // MARK: - Load Font
         UIFont.loadAllFonts
         
