@@ -121,6 +121,7 @@ PODS:
   - SnapKit (5.0.1)
   - SwiftColor (1.6.0)
   - SwiftDate (6.3.1)
+  - SwiftLinkPreview (3.4.0)
   - SwiftyJSON (5.0.1)
   - TLPhotoPicker (2.1.4)
   - TOCropViewController (2.6.0)
@@ -146,6 +147,7 @@ DEPENDENCIES:
   - SnackBar.swift
   - SwiftColor
   - SwiftDate
+  - SwiftLinkPreview
   - SwiftyJSON
   - TLPhotoPicker
   - TOCropViewController
@@ -185,6 +187,7 @@ SPEC REPOS:
     - SnapKit
     - SwiftColor
     - SwiftDate
+    - SwiftLinkPreview
     - SwiftyJSON
     - TLPhotoPicker
     - TOCropViewController
@@ -223,12 +226,13 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftColor: 3db8a6a1ffb4df61f074a0643d620bf91876c267
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
+  SwiftLinkPreview: c1bc5b2cb3cd42f2865137c1a61f5d788dcf5c9c
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TLPhotoPicker: f486e8499e1c3f464d0e886697635e25a72a52b8
   TOCropViewController: 3105367e808b7d3d886a74ff59bf4804e7d3ab38
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 370eb75d95f15081e17e8dbd2c75855e7489df22
+PODFILE CHECKSUM: 340635ac4edd20d91d1502a87b9e1136665ca0d6
 
 COCOAPODS: 1.10.2

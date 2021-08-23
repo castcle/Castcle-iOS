@@ -28,6 +28,7 @@ def share_pods
   pod 'XLPagerTabStrip'
   pod 'DropDown'
   pod 'Atributika'
+  pod 'SwiftLinkPreview'
 end
 
 # Castcle-iOS
@@ -75,5 +76,11 @@ end
 # Post
  target 'Post' do
      project 'Post/Post.xcodeproj'
+     share_pods
+ end
+
+# Setting
+ target 'Setting' do
+     project 'Setting/Setting.xcodeproj'
      share_pods
  end

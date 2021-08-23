@@ -25,3 +25,6 @@
 [submodule "Post"]
 	path = Post
 	url = ../Post-iOS.git
+[submodule "Setting"]
+	path = Setting
+	url = ../Setting-iOS.git
