@@ -40,10 +40,10 @@ class IrregularityContentView: ESTabBarItemContentView {
         self.imageView.transform = transform
         self.superview?.bringSubviewToFront(self)
 
-        textColor = UIColor.init(white: 255.0 / 255.0, alpha: 1.0)
-        highlightTextColor = UIColor.init(white: 255.0 / 255.0, alpha: 1.0)
-        iconColor = UIColor.init(white: 255.0 / 255.0, alpha: 1.0)
-        highlightIconColor = UIColor.init(white: 255.0 / 255.0, alpha: 1.0)
+        textColor = UIColor.init(white: 1.0, alpha: 1.0)
+        highlightTextColor = UIColor.init(white: 1.0, alpha: 1.0)
+        iconColor = UIColor.init(white: 1.0, alpha: 1.0)
+        highlightIconColor = UIColor.init(white: 1.0, alpha: 1.0)
         backdropColor = .clear
         highlightBackdropColor = .clear
     }
