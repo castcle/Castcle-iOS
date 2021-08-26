@@ -17,7 +17,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>$(APP_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>202108251655</string>
+	<string>202108261038</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>

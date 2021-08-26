@@ -1,5 +1,6 @@
 # **Castcle iOS**
 [![Build status](https://build.appcenter.ms/v0.1/apps/735a0a62-562f-4d59-a626-1a639f4dc656/branches/develop/badge)](https://appcenter.ms)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=castcle_Castcle-iOS&metric=alert_status)](https://sonarcloud.io/dashboard?id=castcle_Castcle-iOS)
 ## A decentralized social media for everyone
 
 [![N|Solid](https://avatars.githubusercontent.com/u/85831466?s=200&v=4)](https://github.com/castcle)
