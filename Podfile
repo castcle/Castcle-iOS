@@ -29,6 +29,7 @@ def share_pods
   pod 'DropDown'
   pod 'Atributika'
   pod 'SwiftLinkPreview'
+  pod 'SVPinView'
 end
 
 # Castcle-iOS
