@@ -47,7 +47,7 @@
     </scenes>
     <resources>
         <image name="background-launch-screen" width="375" height="667"/>
-        <image name="logo-launch-screen" width="221.5" height="231.5"/>
+        <image name="logo-launch-screen" width="501.5" height="459"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
