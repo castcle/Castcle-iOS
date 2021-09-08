@@ -116,7 +116,6 @@ PODS:
   - Nantes (0.1.2)
   - PanModal (1.2.7)
   - PromisesObjC (2.0.0)
-  - ShiftTransitions (0.1.2)
   - SnackBar.swift (0.1.0):
     - SnapKit
   - SnapKit (5.0.1)
@@ -146,7 +145,6 @@ DEPENDENCIES:
   - Lightbox
   - Nantes
   - PanModal
-  - ShiftTransitions
   - SnackBar.swift
   - SVPinView
   - SwiftColor
@@ -187,7 +185,6 @@ SPEC REPOS:
     - Nantes
     - PanModal
     - PromisesObjC
-    - ShiftTransitions
     - SnackBar.swift
     - SnapKit
     - SVPinView
@@ -228,7 +225,6 @@ SPEC CHECKSUMS:
   Nantes: 0396442578e32242223fed46050dea1850236184
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
-  ShiftTransitions: d728534308eebf9076be10e301349f745e3c3396
   SnackBar.swift: 79ea4df13ea9e6633137dd6acbd490534d26440d
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
@@ -241,6 +237,6 @@ SPEC CHECKSUMS:
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 47eb61da4801067b0c8e08b0a352c106f862f105
+PODFILE CHECKSUM: 69def09ffd7fd4aaf1e80f03d7ce40186ce32765
 
 COCOAPODS: 1.11.0
