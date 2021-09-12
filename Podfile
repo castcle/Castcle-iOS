@@ -9,6 +9,8 @@ def share_pods
   pod 'IGListKit'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/DynamicLinks'
   pod 'Lightbox'
   pod 'SnackBar.swift'
   pod 'Defaults'
