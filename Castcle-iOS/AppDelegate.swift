@@ -28,6 +28,7 @@
 import UIKit
 import UserNotifications
 import Core
+import Networking
 import Feed
 import Search
 import Component
@@ -55,6 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // MARK: - Prepare Engagement
+        Defaults[.screenId] = ScreenId.splashScreen.rawValue
         
         // MARK: - Check device UUID
         if Defaults[.deviceUuid].isEmpty {
@@ -172,6 +176,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
       }
       return false
+    }
+}
+
+extension AppDelegate {
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        let systemVersion = UIDevice.current.systemVersion
+        var engagementRequest: EngagementRequest = EngagementRequest()
+        engagementRequest.client = "iOS \(systemVersion)"
+        engagementRequest.accountId = UserState.shared.accountId
+        engagementRequest.uxSessionId = UserState.shared.uxSessionId
+        engagementRequest.screenId =  Defaults[.screenId]
+        engagementRequest.eventType = EventType.startSession.rawValue
+        engagementRequest.timestamp = "\(Date.currentTimeStamp)"
+        
+        if !Defaults[.accessToken].isEmpty {
+            let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
+            engagementHelper.sendEngagement()
+        }
+    }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        let systemVersion = UIDevice.current.systemVersion
+        var engagementRequest: EngagementRequest = EngagementRequest()
+        engagementRequest.client = "iOS \(systemVersion)"
+        engagementRequest.accountId = UserState.shared.accountId
+        engagementRequest.uxSessionId = UserState.shared.uxSessionId
+        engagementRequest.screenId =  Defaults[.screenId]
+        engagementRequest.eventType = EventType.endSession.rawValue
+        engagementRequest.timestamp = "\(Date.currentTimeStamp)"
+        
+        if !Defaults[.accessToken].isEmpty {
+            let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
+            engagementHelper.sendEngagement()
+        }
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        let systemVersion = UIDevice.current.systemVersion
+        var engagementRequest: EngagementRequest = EngagementRequest()
+        engagementRequest.client = "iOS \(systemVersion)"
+        engagementRequest.accountId = UserState.shared.accountId
+        engagementRequest.uxSessionId = UserState.shared.uxSessionId
+        engagementRequest.screenId =  Defaults[.screenId]
+        engagementRequest.eventType = EventType.endSession.rawValue
+        engagementRequest.timestamp = "\(Date.currentTimeStamp)"
+        
+        if !Defaults[.accessToken].isEmpty {
+            let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
+            engagementHelper.sendEngagement()
+        }
     }
 }
 
