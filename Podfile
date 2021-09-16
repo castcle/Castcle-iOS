@@ -33,6 +33,7 @@ def share_pods
   pod 'SwiftLinkPreview'
   pod 'SVPinView'
   pod 'loady'
+  pod 'JGProgressHUD'
 end
 
 # Castcle-iOS

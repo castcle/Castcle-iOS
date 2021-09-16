@@ -1,12 +1,12 @@
 PODS:
   - ActiveLabel (1.1.0)
-  - AppCenter (4.2.0):
-    - AppCenter/Analytics (= 4.2.0)
-    - AppCenter/Crashes (= 4.2.0)
-  - AppCenter/Analytics (4.2.0):
+  - AppCenter (4.3.0):
+    - AppCenter/Analytics (= 4.3.0)
+    - AppCenter/Crashes (= 4.3.0)
+  - AppCenter/Analytics (4.3.0):
     - AppCenter/Core
-  - AppCenter/Core (4.2.0)
-  - AppCenter/Crashes (4.2.0):
+  - AppCenter/Core (4.3.0)
+  - AppCenter/Crashes (4.3.0):
     - AppCenter/Core
   - Atributika (4.10.1)
   - Cache (6.0.0)
@@ -121,6 +121,7 @@ PODS:
   - Imaginary (5.0.0):
     - Cache (~> 6.0.0)
   - IQKeyboardManagerSwift (6.5.6)
+  - JGProgressHUD (2.2)
   - JVFloatLabeledTextField (1.2.2)
   - Kingfisher (6.3.1)
   - Lightbox (2.5.0):
@@ -160,6 +161,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - IGListKit
   - IQKeyboardManagerSwift
+  - JGProgressHUD
   - JVFloatLabeledTextField
   - Kingfisher
   - Lightbox
@@ -201,6 +203,7 @@ SPEC REPOS:
     - IGListKit
     - Imaginary
     - IQKeyboardManagerSwift
+    - JGProgressHUD
     - JVFloatLabeledTextField
     - Kingfisher
     - Lightbox
@@ -223,7 +226,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
-  AppCenter: 87ef6eefd8ade4df59e88951288587429f3dd2a5
+  AppCenter: 883369ab78427b0561c688158d689dfe1f993ea9
   Atributika: 47e778507cfb3cd2c996278b0285221a62e97d71
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   Defaults: d785e56c0fb8890dc40351603f05c8e1df1bdd45
@@ -244,6 +247,7 @@ SPEC CHECKSUMS:
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
@@ -264,6 +268,6 @@ SPEC CHECKSUMS:
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: b536fdbe7ec956070877fccaa7bf83bf3588a5be
+PODFILE CHECKSUM: 2800e026c0102fca210e5025cd366e86acb350a3
 
-COCOAPODS: 1.11.0
+COCOAPODS: 1.11.2

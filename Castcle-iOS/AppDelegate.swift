@@ -189,7 +189,7 @@ extension AppDelegate {
         engagementRequest.screenId =  Defaults[.screenId]
         engagementRequest.eventType = EventType.startSession.rawValue
         engagementRequest.timestamp = "\(Date.currentTimeStamp)"
-        
+
         if !Defaults[.accessToken].isEmpty {
             let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
             engagementHelper.sendEngagement()
