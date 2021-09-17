@@ -34,6 +34,7 @@ def share_pods
   pod 'SVPinView'
   pod 'loady'
   pod 'JGProgressHUD'
+  pod 'BetterSegmentedControl'
 end
 
 # Castcle-iOS

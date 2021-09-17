@@ -9,6 +9,7 @@ PODS:
   - AppCenter/Crashes (4.3.0):
     - AppCenter/Core
   - Atributika (4.10.1)
+  - BetterSegmentedControl (2.0.1)
   - Cache (6.0.0)
   - Defaults (4.2.2)
   - DropDown (2.3.13)
@@ -152,6 +153,7 @@ DEPENDENCIES:
   - ActiveLabel
   - AppCenter
   - Atributika
+  - BetterSegmentedControl
   - Defaults
   - DropDown
   - ESTabBarController-swift
@@ -184,6 +186,7 @@ SPEC REPOS:
     - ActiveLabel
     - AppCenter
     - Atributika
+    - BetterSegmentedControl
     - Cache
     - Defaults
     - DropDown
@@ -228,6 +231,7 @@ SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
   AppCenter: 883369ab78427b0561c688158d689dfe1f993ea9
   Atributika: 47e778507cfb3cd2c996278b0285221a62e97d71
+  BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   Defaults: d785e56c0fb8890dc40351603f05c8e1df1bdd45
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
@@ -268,6 +272,6 @@ SPEC CHECKSUMS:
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: e74c17badc80ddc231f7756f7da32192f5a110a9
+PODFILE CHECKSUM: dcf119543d5f10a8c461f958c08b0397fb332f03
 
 COCOAPODS: 1.11.2
