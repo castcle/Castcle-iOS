@@ -89,3 +89,9 @@ end
      project 'Setting/Setting.xcodeproj'
      share_pods
  end
+
+# Setting
+ target 'Notification' do
+     project 'Notification/Notification.xcodeproj'
+     share_pods
+ end

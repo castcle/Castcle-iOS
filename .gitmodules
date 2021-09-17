@@ -28,3 +28,6 @@
 [submodule "Setting"]
 	path = Setting
 	url = ../Setting-iOS.git
+[submodule "Notification"]
+	path = Notification
+	url = ../Notification-iOS.git
