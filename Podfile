@@ -32,7 +32,6 @@ def share_pods
   pod 'Atributika'
   pod 'SwiftLinkPreview'
   pod 'SVPinView'
-  pod 'loady'
   pod 'JGProgressHUD'
   pod 'BetterSegmentedControl'
 end

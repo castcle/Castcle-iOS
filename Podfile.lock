@@ -127,7 +127,6 @@ PODS:
   - Kingfisher (6.3.1)
   - Lightbox (2.5.0):
     - Imaginary (~> 5.0.0)
-  - loady (1.0.7)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -167,7 +166,6 @@ DEPENDENCIES:
   - JVFloatLabeledTextField
   - Kingfisher
   - Lightbox
-  - loady
   - Nantes
   - PanModal
   - SnackBar.swift
@@ -210,7 +208,6 @@ SPEC REPOS:
     - JVFloatLabeledTextField
     - Kingfisher
     - Lightbox
-    - loady
     - nanopb
     - Nantes
     - PanModal
@@ -255,7 +252,6 @@ SPEC CHECKSUMS:
   JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
-  loady: f2acbcbd53bdeb55425e478304da2f7ff3ec706e
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   Nantes: 0396442578e32242223fed46050dea1850236184
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
@@ -272,6 +268,6 @@ SPEC CHECKSUMS:
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: dcf119543d5f10a8c461f958c08b0397fb332f03
+PODFILE CHECKSUM: ac0273737f6e17532ddfffdf1af443977f87bb8c
 
 COCOAPODS: 1.11.2
