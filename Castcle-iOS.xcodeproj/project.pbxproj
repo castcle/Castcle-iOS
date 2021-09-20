@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A3307605E4BDA7A70ACB166 /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBDEA5622E4EB149926831E /* Pods_Castcle_iOS.framework */; };
+		B737DC8026F85454003487BB /* GoogleService-Info-Stgs.plist in Resources */ = {isa = PBXBuildFile; fileRef = B737DC7F26F85454003487BB /* GoogleService-Info-Stgs.plist */; };
 		B74CEF1F26C50760006B1F2C /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74CEF1E26C50760006B1F2C /* Networking.framework */; };
 		B74CEF2026C50760006B1F2C /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B74CEF1E26C50760006B1F2C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7552904269C0E63005D5EB5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7552902269C0E63005D5EB5 /* README.md */; };
@@ -69,6 +70,7 @@
 		8EBDEA5622E4EB149926831E /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EDBFDF508C4588DB04DA2B /* Pods-Castcle-iOS.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (development).xcconfig"; sourceTree = "<group>"; };
 		A282ED21286BB6639EE09CA5 /* Pods-Castcle-iOS.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (staging).xcconfig"; sourceTree = "<group>"; };
+		B737DC7F26F85454003487BB /* GoogleService-Info-Stgs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stgs.plist"; sourceTree = "<group>"; };
 		B74CEF1E26C50760006B1F2C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7552902269C0E63005D5EB5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				B7552902269C0E63005D5EB5 /* README.md */,
 				B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */,
 				B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */,
+				B737DC7F26F85454003487BB /* GoogleService-Info-Stgs.plist */,
 				B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */,
 			);
 			path = Config;
@@ -284,6 +287,7 @@
 				B7B1E39A26A141C8006E2FF6 /* GoogleService-Info-Dev.plist in Resources */,
 				B7B1E39B26A141C8006E2FF6 /* GoogleService-Info-Stg.plist in Resources */,
 				B7B1E39C26A141C8006E2FF6 /* GoogleService-Info.plist in Resources */,
+				B737DC8026F85454003487BB /* GoogleService-Info-Stgs.plist in Resources */,
 				B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */,
 				B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */,
 				B7552904269C0E63005D5EB5 /* README.md in Resources */,
@@ -490,7 +494,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(APP_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
+				PROVISIONING_PROFILE_SPECIFIER = "CC Stg develop";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -607,7 +611,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(APP_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "CC Dev";
+				PROVISIONING_PROFILE_SPECIFIER = "CC Dev develop";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -717,7 +721,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(APP_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
+				PROVISIONING_PROFILE_SPECIFIER = "CC Stg develop";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -827,7 +831,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(APP_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "CC Dev";
+				PROVISIONING_PROFILE_SPECIFIER = "CC Dev develop";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

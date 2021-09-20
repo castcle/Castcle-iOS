@@ -13,8 +13,8 @@
 
 // App Settings
 APP_NAME = Staging
-APP_BUNDLE_ID = com.castcle.ios.stg
+APP_BUNDLE_ID = com.castcle.ios.stgs
 APP_VERSION = 9.9.9
 
 // Key
-FIREBASR_CONFIG_FILE = GoogleService-Info-Stg
+FIREBASR_CONFIG_FILE = GoogleService-Info-Stgs
