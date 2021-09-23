@@ -164,18 +164,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ app: UIApplication, open url: URL,
                      options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
-      return application(app, open: url,
-                         sourceApplication: options[UIApplication.OpenURLOptionsKey
-                           .sourceApplication] as? String,
-                         annotation: "")
+        return application(app, open: url,
+                           sourceApplication: options[UIApplication.OpenURLOptionsKey
+                                                        .sourceApplication] as? String,
+                           annotation: "")
     }
 
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?,
                      annotation: Any) -> Bool {
-      if let dynamicLink = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
-        return true
-      }
-      return false
+        if let dynamicLink = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
+            return true
+        }
+        return false
     }
 }
 
@@ -238,42 +238,42 @@ extension AppDelegate: SplashScreenViewControllerDelegate {
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func application(_ application: UIApplication,
-                       didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
+                     didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         Messaging.messaging().appDidReceiveMessage(userInfo)
         
         if let messageID = userInfo[gcmMessageIDKey] {
-          print("Message ID: \(messageID)")
+            print("Message ID: \(messageID)")
         }
-
+        
         print(userInfo)
-      }
-
-      // [START receive_message]
-      func application(_ application: UIApplication,
-                       didReceiveRemoteNotification userInfo: [AnyHashable: Any],
-                       fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult)
-                         -> Void) {
+    }
+    
+    // [START receive_message]
+    func application(_ application: UIApplication,
+                     didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult)
+                        -> Void) {
         Messaging.messaging().appDidReceiveMessage(userInfo)
         
         if let messageID = userInfo[gcmMessageIDKey] {
-          print("Message ID: \(messageID)")
+            print("Message ID: \(messageID)")
         }
-
+        
         print(userInfo)
-
+        
         completionHandler(UIBackgroundFetchResult.newData)
-      }
-
-      func application(_ application: UIApplication,
-                       didFailToRegisterForRemoteNotificationsWithError error: Error) {
+    }
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("Unable to register for remote notifications: \(error.localizedDescription)")
-      }
-
-      func application(_ application: UIApplication,
-                       didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    }
+    
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Messaging.messaging().apnsToken = deviceToken
         print("APNs token retrieved: \(deviceToken)")
-      }
+    }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
@@ -285,7 +285,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-
+        
         print(userInfo)
         
         completionHandler([[.alert, .sound]])
@@ -310,6 +310,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 extension AppDelegate: MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         print("Firebase registration token: \(String(describing: fcmToken))")
+        Defaults[.firebaseToken] = fcmToken ?? ""
         let dataDict: [String: String] = ["token": fcmToken ?? ""]
         NotificationCenter.default.post(
             name: Notification.Name("FCMToken"),

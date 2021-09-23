@@ -124,7 +124,7 @@ PODS:
   - IQKeyboardManagerSwift (6.5.6)
   - JGProgressHUD (2.2)
   - JVFloatLabeledTextField (1.2.2)
-  - Kingfisher (6.3.1)
+  - Kingfisher (7.0.0)
   - Lightbox (2.5.0):
     - Imaginary (~> 5.0.0)
   - nanopb (2.30908.0):
@@ -250,7 +250,7 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
-  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
   Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   Nantes: 0396442578e32242223fed46050dea1850236184
