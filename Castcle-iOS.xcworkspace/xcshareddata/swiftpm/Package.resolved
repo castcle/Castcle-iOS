@@ -29,15 +29,6 @@
         }
       },
       {
-        "package": "JWTDecode",
-        "repositoryURL": "https://github.com/auth0/JWTDecode.swift.git",
-        "state": {
-          "branch": null,
-          "revision": "65b03eae055ef22f93e6acd3c0d6153cc0f6ec8d",
-          "version": "2.6.2"
-        }
-      },
-      {
         "package": "Logger",
         "repositoryURL": "https://github.com/shibapm/Logger",
         "state": {
@@ -125,6 +116,15 @@
           "branch": null,
           "revision": "a6014fe94c3dbff0ad500e8da4f251a5d336530b",
           "version": "5.1.0-beta.1"
+        }
+      },
+      {
+        "package": "SwiftyJSON",
+        "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON.git",
+        "state": {
+          "branch": null,
+          "revision": "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
+          "version": "5.0.1"
         }
       },
       {
