@@ -65,6 +65,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Defaults[.deviceUuid] = UUID().uuidString
         }
         
+        // MARK: - Reset Load Feed
+        Defaults[.startLoadFeed] = true
+        
         // MARK: - Get Version and Build Number
         Defaults[.appVersion] = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
         Defaults[.appBuild] = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "000000000000"
@@ -90,7 +93,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Setup Notification
         Messaging.messaging().delegate = self
-        
         UNUserNotificationCenter.current().delegate = self
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(
@@ -135,7 +137,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             [weak tabBarController] tabbarController, viewController, index in
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                if UserState.shared.isLogin {
+                if UserManager.shared.isLogin {
                     let vc = PostOpener.open(.post(PostViewModel(postType: .newCast)))
                     vc.modalPresentationStyle = .fullScreen
                     tabBarController?.present(vc, animated: true, completion: nil)
@@ -180,48 +182,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
-        let systemVersion = UIDevice.current.systemVersion
-        var engagementRequest: EngagementRequest = EngagementRequest()
-        engagementRequest.client = "iOS \(systemVersion)"
-        engagementRequest.accountId = UserState.shared.accountId
-        engagementRequest.uxSessionId = UserState.shared.uxSessionId
-        engagementRequest.screenId =  Defaults[.screenId]
-        engagementRequest.eventType = EventType.startSession.rawValue
-        engagementRequest.timestamp = "\(Date.currentTimeStamp)"
-
         if !Defaults[.accessToken].isEmpty {
+            let systemVersion = UIDevice.current.systemVersion
+            var engagementRequest: EngagementRequest = EngagementRequest()
+            engagementRequest.client = "iOS \(systemVersion)"
+            engagementRequest.accountId = UserManager.shared.accountId
+            engagementRequest.uxSessionId = UserManager.shared.uxSessionId
+            engagementRequest.screenId =  Defaults[.screenId]
+            engagementRequest.eventType = EventType.startSession.rawValue
+            engagementRequest.timestamp = "\(Date.currentTimeStamp)"
             let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
             engagementHelper.sendEngagement()
         }
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
-        let systemVersion = UIDevice.current.systemVersion
-        var engagementRequest: EngagementRequest = EngagementRequest()
-        engagementRequest.client = "iOS \(systemVersion)"
-        engagementRequest.accountId = UserState.shared.accountId
-        engagementRequest.uxSessionId = UserState.shared.uxSessionId
-        engagementRequest.screenId =  Defaults[.screenId]
-        engagementRequest.eventType = EventType.endSession.rawValue
-        engagementRequest.timestamp = "\(Date.currentTimeStamp)"
-        
         if !Defaults[.accessToken].isEmpty {
+            let systemVersion = UIDevice.current.systemVersion
+            var engagementRequest: EngagementRequest = EngagementRequest()
+            engagementRequest.client = "iOS \(systemVersion)"
+            engagementRequest.accountId = UserManager.shared.accountId
+            engagementRequest.uxSessionId = UserManager.shared.uxSessionId
+            engagementRequest.screenId =  Defaults[.screenId]
+            engagementRequest.eventType = EventType.endSession.rawValue
+            engagementRequest.timestamp = "\(Date.currentTimeStamp)"
             let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
             engagementHelper.sendEngagement()
         }
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        let systemVersion = UIDevice.current.systemVersion
-        var engagementRequest: EngagementRequest = EngagementRequest()
-        engagementRequest.client = "iOS \(systemVersion)"
-        engagementRequest.accountId = UserState.shared.accountId
-        engagementRequest.uxSessionId = UserState.shared.uxSessionId
-        engagementRequest.screenId =  Defaults[.screenId]
-        engagementRequest.eventType = EventType.endSession.rawValue
-        engagementRequest.timestamp = "\(Date.currentTimeStamp)"
-        
         if !Defaults[.accessToken].isEmpty {
+            let systemVersion = UIDevice.current.systemVersion
+            var engagementRequest: EngagementRequest = EngagementRequest()
+            engagementRequest.client = "iOS \(systemVersion)"
+            engagementRequest.accountId = UserManager.shared.accountId
+            engagementRequest.uxSessionId = UserManager.shared.uxSessionId
+            engagementRequest.screenId =  Defaults[.screenId]
+            engagementRequest.eventType = EventType.endSession.rawValue
+            engagementRequest.timestamp = "\(Date.currentTimeStamp)"
             let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
             engagementHelper.sendEngagement()
         }
