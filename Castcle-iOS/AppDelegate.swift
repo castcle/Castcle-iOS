@@ -183,6 +183,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
         if !Defaults[.accessToken].isEmpty {
+            TokenHelper().refreshToken()
             let systemVersion = UIDevice.current.systemVersion
             var engagementRequest: EngagementRequest = EngagementRequest()
             engagementRequest.client = "iOS \(systemVersion)"
