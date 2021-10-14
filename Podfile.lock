@@ -11,7 +11,6 @@ PODS:
   - Atributika (4.10.1)
   - BetterSegmentedControl (2.0.1)
   - Cache (6.0.0)
-  - Defaults (4.2.2)
   - DropDown (2.3.13)
   - ESTabBarController-swift (2.8.0)
   - Firebase/Analytics (8.8.0):
@@ -131,7 +130,7 @@ PODS:
   - IQKeyboardManagerSwift (6.5.6)
   - JGProgressHUD (2.2)
   - JVFloatLabeledTextField (1.2.2)
-  - Kingfisher (7.0.0)
+  - Kingfisher (7.1.0)
   - Lightbox (2.5.0):
     - Imaginary (~> 5.0.0)
   - nanopb (2.30908.0):
@@ -142,6 +141,12 @@ PODS:
   - Nantes (0.1.2)
   - PanModal (1.2.7)
   - PromisesObjC (2.0.0)
+  - Realm (10.17.0):
+    - Realm/Headers (= 10.17.0)
+  - Realm/Headers (10.17.0)
+  - RealmSwift (10.17.0):
+    - Realm (= 10.17.0)
+  - SkeletonView (1.25.1)
   - SnackBar.swift (0.1.0):
     - SnapKit
   - SnapKit (5.0.1)
@@ -149,8 +154,7 @@ PODS:
   - SwiftColor (1.6.0)
   - SwiftDate (6.3.1)
   - SwiftLinkPreview (3.4.0)
-  - SwiftyJSON (5.0.1)
-  - TLPhotoPicker (2.1.4)
+  - TLPhotoPicker (2.1.5)
   - TOCropViewController (2.6.0)
   - "UITextView+Placeholder (1.4.0)"
   - XLPagerTabStrip (9.0.0)
@@ -160,7 +164,6 @@ DEPENDENCIES:
   - AppCenter
   - Atributika
   - BetterSegmentedControl
-  - Defaults
   - DropDown
   - ESTabBarController-swift
   - Firebase/Analytics
@@ -175,12 +178,13 @@ DEPENDENCIES:
   - Lightbox
   - Nantes
   - PanModal
+  - RealmSwift
+  - SkeletonView
   - SnackBar.swift
   - SVPinView
   - SwiftColor
   - SwiftDate
   - SwiftLinkPreview
-  - SwiftyJSON
   - TLPhotoPicker
   - TOCropViewController
   - "UITextView+Placeholder"
@@ -193,7 +197,6 @@ SPEC REPOS:
     - Atributika
     - BetterSegmentedControl
     - Cache
-    - Defaults
     - DropDown
     - ESTabBarController-swift
     - Firebase
@@ -219,13 +222,15 @@ SPEC REPOS:
     - Nantes
     - PanModal
     - PromisesObjC
+    - Realm
+    - RealmSwift
+    - SkeletonView
     - SnackBar.swift
     - SnapKit
     - SVPinView
     - SwiftColor
     - SwiftDate
     - SwiftLinkPreview
-    - SwiftyJSON
     - TLPhotoPicker
     - TOCropViewController
     - "UITextView+Placeholder"
@@ -237,7 +242,6 @@ SPEC CHECKSUMS:
   Atributika: 47e778507cfb3cd2c996278b0285221a62e97d71
   BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
-  Defaults: d785e56c0fb8890dc40351603f05c8e1df1bdd45
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   Firebase: 629510f1a9ddb235f3a7c5c8ceb23ba887f0f814
@@ -257,24 +261,26 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
-  Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
+  Kingfisher: cdabaf49be7ee7cc124f0f276b355edf61903cf8
   Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   Nantes: 0396442578e32242223fed46050dea1850236184
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  Realm: 9533276bd76f66aa2fd0d3ffe700c1f6023dcab6
+  RealmSwift: 57f5d59aa29852587aad1e861989e7af139894b5
+  SkeletonView: 77079530e1348a72f48b79ae30dcb966c1b18b6a
   SnackBar.swift: 79ea4df13ea9e6633137dd6acbd490534d26440d
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
   SwiftColor: 3db8a6a1ffb4df61f074a0643d620bf91876c267
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   SwiftLinkPreview: c1bc5b2cb3cd42f2865137c1a61f5d788dcf5c9c
-  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
-  TLPhotoPicker: f486e8499e1c3f464d0e886697635e25a72a52b8
+  TLPhotoPicker: 44ebb15e46b8326d7a12445c2304ac8ee2512e27
   TOCropViewController: 3105367e808b7d3d886a74ff59bf4804e7d3ab38
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: ac0273737f6e17532ddfffdf1af443977f87bb8c
+PODFILE CHECKSUM: 876abfa85ee5328b71670044d963c042defc2843
 
 COCOAPODS: 1.11.2

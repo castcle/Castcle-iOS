@@ -13,11 +13,9 @@ def share_pods
   pod 'Firebase/DynamicLinks'
   pod 'Lightbox'
   pod 'SnackBar.swift'
-  pod 'Defaults'
   pod 'SwiftColor'
   pod 'ESTabBarController-swift'
   pod 'Kingfisher'
-  pod 'SwiftyJSON'
   pod 'ActiveLabel'
   pod 'Nantes'
   pod 'PanModal'
@@ -34,6 +32,8 @@ def share_pods
   pod 'SVPinView'
   pod 'JGProgressHUD'
   pod 'BetterSegmentedControl'
+  pod 'SkeletonView'
+  pod 'RealmSwift'
 end
 
 # Castcle-iOS
