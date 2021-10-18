@@ -22,7 +22,7 @@ def share_pods
   pod 'IQKeyboardManagerSwift'
   pod 'JVFloatLabeledTextField'
   pod 'TOCropViewController'
-  pod 'TLPhotoPicker'
+  pod 'TLPhotoPicker', '=2.1.4'
   pod 'UITextView+Placeholder'
   pod 'SwiftDate'
   pod 'XLPagerTabStrip'

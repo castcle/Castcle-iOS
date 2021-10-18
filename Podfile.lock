@@ -154,7 +154,7 @@ PODS:
   - SwiftColor (1.6.0)
   - SwiftDate (6.3.1)
   - SwiftLinkPreview (3.4.0)
-  - TLPhotoPicker (2.1.5)
+  - TLPhotoPicker (2.1.4)
   - TOCropViewController (2.6.0)
   - "UITextView+Placeholder (1.4.0)"
   - XLPagerTabStrip (9.0.0)
@@ -185,7 +185,7 @@ DEPENDENCIES:
   - SwiftColor
   - SwiftDate
   - SwiftLinkPreview
-  - TLPhotoPicker
+  - TLPhotoPicker (= 2.1.4)
   - TOCropViewController
   - "UITextView+Placeholder"
   - XLPagerTabStrip
@@ -276,11 +276,11 @@ SPEC CHECKSUMS:
   SwiftColor: 3db8a6a1ffb4df61f074a0643d620bf91876c267
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   SwiftLinkPreview: c1bc5b2cb3cd42f2865137c1a61f5d788dcf5c9c
-  TLPhotoPicker: 44ebb15e46b8326d7a12445c2304ac8ee2512e27
+  TLPhotoPicker: f486e8499e1c3f464d0e886697635e25a72a52b8
   TOCropViewController: 3105367e808b7d3d886a74ff59bf4804e7d3ab38
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 876abfa85ee5328b71670044d963c042defc2843
+PODFILE CHECKSUM: d143c66cb4247e8237da870df1cc7589e0502ef0
 
 COCOAPODS: 1.11.2
