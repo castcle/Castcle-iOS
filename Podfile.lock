@@ -99,7 +99,7 @@ PODS:
     - GoogleUtilities/Network (~> 7.4)
     - "GoogleUtilities/NSData+zlib (~> 7.4)"
     - nanopb (~> 2.30908.0)
-  - GoogleDataTransport (9.1.0):
+  - GoogleDataTransport (9.1.2):
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
@@ -154,7 +154,7 @@ PODS:
   - SwiftColor (1.6.0)
   - SwiftDate (6.3.1)
   - SwiftLinkPreview (3.4.0)
-  - TLPhotoPicker (2.1.4)
+  - TLPhotoPicker (2.1.5)
   - TOCropViewController (2.6.0)
   - "UITextView+Placeholder (1.4.0)"
   - XLPagerTabStrip (9.0.0)
@@ -185,7 +185,7 @@ DEPENDENCIES:
   - SwiftColor
   - SwiftDate
   - SwiftLinkPreview
-  - TLPhotoPicker (= 2.1.4)
+  - TLPhotoPicker
   - TOCropViewController
   - "UITextView+Placeholder"
   - XLPagerTabStrip
@@ -253,7 +253,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 2563cb18a723ef9c6ef18318a49519b75dce613c
   FirebaseMessaging: 419b5c9d84f294a753c6501d8cfb9ced1ce37304
   GoogleAppMeasurement: 5ba1164e3c844ba84272555e916d0a6d3d977e91
-  GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
+  GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleUtilities: 8de2a97a17e15b6b98e38e8770e2d129a57c0040
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
@@ -276,11 +276,11 @@ SPEC CHECKSUMS:
   SwiftColor: 3db8a6a1ffb4df61f074a0643d620bf91876c267
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   SwiftLinkPreview: c1bc5b2cb3cd42f2865137c1a61f5d788dcf5c9c
-  TLPhotoPicker: f486e8499e1c3f464d0e886697635e25a72a52b8
+  TLPhotoPicker: 44ebb15e46b8326d7a12445c2304ac8ee2512e27
   TOCropViewController: 3105367e808b7d3d886a74ff59bf4804e7d3ab38
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: d143c66cb4247e8237da870df1cc7589e0502ef0
+PODFILE CHECKSUM: 876abfa85ee5328b71670044d963c042defc2843
 
 COCOAPODS: 1.11.2
