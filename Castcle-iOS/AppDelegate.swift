@@ -34,6 +34,7 @@ import Search
 import Component
 import Post
 import Authen
+import Profile
 import ESTabBarController_swift
 import SwiftColor
 import Firebase
@@ -100,6 +101,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             completionHandler: { _, _ in }
         )
         application.registerForRemoteNotifications()
+        
+        // MARK: - Setup Notification Center
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notfication:)), name: .updateProfileDelegate, object: nil)
 
         
         // MARK: - App Center
@@ -316,5 +320,11 @@ extension AppDelegate: MessagingDelegate {
             object: nil,
             userInfo: dataDict
         )
+    }
+}
+
+extension AppDelegate {
+    @objc func openEditProfile(notfication: NSNotification) {
+        Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.welcome), animated: true)
     }
 }
