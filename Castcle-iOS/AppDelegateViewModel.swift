@@ -22,7 +22,7 @@
 //  AppDelegateViewModel.swift
 //  Castcle-iOS
 //
-//  Created by Tanakorn Phoochaliaw on 21/10/2564 BE.
+//  Created by Castcle Co., Ltd. on 21/10/2564 BE.
 //
 
 import Foundation
