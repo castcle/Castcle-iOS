@@ -30,7 +30,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>202110261348</string>
+	<string>202110261434</string>
 	<key>FirebaseDynamicLinksCustomDomains</key>
 	<array>
 		<string>https://link-dev.castcle.com</string>
