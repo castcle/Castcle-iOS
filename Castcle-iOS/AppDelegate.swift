@@ -45,6 +45,7 @@ import AppCenterCrashes
 import IQKeyboardManagerSwift
 import Defaults
 import PanModal
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -91,6 +92,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         let options = FirebaseOptions.init(contentsOfFile: filePath)!
         FirebaseApp.configure(options: options)
+        
+        // MARK: - Migrations Realm
+        let config = Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: { migration, oldSchemaVersion in
+                if (oldSchemaVersion < 1) {
+                    // Nothing to do!
+                    // Realm will automatically detect new properties and removed properties
+                    // And will update the schema on disk automatically
+                }
+            })
+        Realm.Configuration.defaultConfiguration = config
         
         // MARK: - Setup Notification
         Messaging.messaging().delegate = self

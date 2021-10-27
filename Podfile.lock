@@ -1,5 +1,4 @@
 PODS:
-  - ActiveLabel (1.1.0)
   - AppCenter (4.3.0):
     - AppCenter/Analytics (= 4.3.0)
     - AppCenter/Crashes (= 4.3.0)
@@ -8,8 +7,6 @@ PODS:
   - AppCenter/Core (4.3.0)
   - AppCenter/Crashes (4.3.0):
     - AppCenter/Core
-  - Atributika (4.10.1)
-  - BetterSegmentedControl (2.0.1)
   - Cache (6.0.0)
   - DropDown (2.3.13)
   - ESTabBarController-swift (2.8.0)
@@ -127,10 +124,6 @@ PODS:
     - IGListDiffKit (= 4.0.0)
   - Imaginary (5.0.0):
     - Cache (~> 6.0.0)
-  - IQKeyboardManagerSwift (6.5.6)
-  - JGProgressHUD (2.2)
-  - JVFloatLabeledTextField (1.2.2)
-  - Kingfisher (7.1.1)
   - Lightbox (2.5.0):
     - Imaginary (~> 5.0.0)
   - nanopb (2.30908.0):
@@ -138,32 +131,15 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
-  - Nantes (0.1.2)
-  - PanModal (1.2.7)
   - PromisesObjC (2.0.0)
-  - Realm (10.18.0):
-    - Realm/Headers (= 10.18.0)
-  - Realm/Headers (10.18.0)
-  - RealmSwift (10.18.0):
-    - Realm (= 10.18.0)
-  - SkeletonView (1.25.2)
-  - SnackBar.swift (0.1.0):
-    - SnapKit
-  - SnapKit (5.0.1)
   - SVPinView (1.0.11)
   - SwiftColor (1.6.0)
-  - SwiftDate (6.3.1)
-  - SwiftLinkPreview (3.4.0)
   - TLPhotoPicker (2.1.5)
-  - TOCropViewController (2.6.0)
   - "UITextView+Placeholder (1.4.0)"
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
-  - ActiveLabel
   - AppCenter
-  - Atributika
-  - BetterSegmentedControl
   - DropDown
   - ESTabBarController-swift
   - Firebase/Analytics
@@ -171,31 +147,16 @@ DEPENDENCIES:
   - Firebase/DynamicLinks
   - Firebase/Messaging
   - IGListKit
-  - IQKeyboardManagerSwift
-  - JGProgressHUD
-  - JVFloatLabeledTextField
-  - Kingfisher
   - Lightbox
-  - Nantes
-  - PanModal
-  - RealmSwift
-  - SkeletonView
-  - SnackBar.swift
   - SVPinView
   - SwiftColor
-  - SwiftDate
-  - SwiftLinkPreview
   - TLPhotoPicker
-  - TOCropViewController
   - "UITextView+Placeholder"
   - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
-    - ActiveLabel
     - AppCenter
-    - Atributika
-    - BetterSegmentedControl
     - Cache
     - DropDown
     - ESTabBarController-swift
@@ -213,34 +174,17 @@ SPEC REPOS:
     - IGListDiffKit
     - IGListKit
     - Imaginary
-    - IQKeyboardManagerSwift
-    - JGProgressHUD
-    - JVFloatLabeledTextField
-    - Kingfisher
     - Lightbox
     - nanopb
-    - Nantes
-    - PanModal
     - PromisesObjC
-    - Realm
-    - RealmSwift
-    - SkeletonView
-    - SnackBar.swift
-    - SnapKit
     - SVPinView
     - SwiftColor
-    - SwiftDate
-    - SwiftLinkPreview
     - TLPhotoPicker
-    - TOCropViewController
     - "UITextView+Placeholder"
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
-  ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
   AppCenter: 883369ab78427b0561c688158d689dfe1f993ea9
-  Atributika: 47e778507cfb3cd2c996278b0285221a62e97d71
-  BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
@@ -258,29 +202,15 @@ SPEC CHECKSUMS:
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
-  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
-  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
-  JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
-  Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
-  Nantes: 0396442578e32242223fed46050dea1850236184
-  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
-  Realm: b8b0a36bf48c39c50fd8cee7ac34005e6d887ddd
-  RealmSwift: fe2f33d731f47aaf4c3618930f9f7cf7b935c33f
-  SkeletonView: 820b2bbd180d7408f3f03b6462cfc3cac39d2ef2
-  SnackBar.swift: 79ea4df13ea9e6633137dd6acbd490534d26440d
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
   SwiftColor: 3db8a6a1ffb4df61f074a0643d620bf91876c267
-  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
-  SwiftLinkPreview: c1bc5b2cb3cd42f2865137c1a61f5d788dcf5c9c
   TLPhotoPicker: 44ebb15e46b8326d7a12445c2304ac8ee2512e27
-  TOCropViewController: 3105367e808b7d3d886a74ff59bf4804e7d3ab38
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 876abfa85ee5328b71670044d963c042defc2843
+PODFILE CHECKSUM: 96a07849ecc0f89a42fbb78b7526e9d8f1865364
 
 COCOAPODS: 1.11.2

@@ -2,12 +2,39 @@
   "object": {
     "pins": [
       {
+        "package": "ActiveLabel",
+        "repositoryURL": "https://github.com/optonaut/ActiveLabel.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "36949c1a69ef8b40574da20c9e24b115f387b1cf",
+          "version": "1.1.5"
+        }
+      },
+      {
         "package": "Alamofire",
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
           "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
           "version": "5.4.4"
+        }
+      },
+      {
+        "package": "Atributika",
+        "repositoryURL": "https://github.com/psharanda/Atributika.git",
+        "state": {
+          "branch": null,
+          "revision": "d018897afbd55d9065ef859650585bac890ada7e",
+          "version": "4.10.1"
+        }
+      },
+      {
+        "package": "BetterSegmentedControl",
+        "repositoryURL": "https://github.com/gmarm/BetterSegmentedControl.git",
+        "state": {
+          "branch": null,
+          "revision": "a2b2116761f71320cee7e69b4249863f0f372c71",
+          "version": "2.0.1"
         }
       },
       {
@@ -29,6 +56,42 @@
         }
       },
       {
+        "package": "IQKeyboardManagerSwift",
+        "repositoryURL": "https://github.com/hackiftekhar/IQKeyboardManager.git",
+        "state": {
+          "branch": null,
+          "revision": "4dc6bc7d1c9747bd0c261c8c055903f9fdef91f7",
+          "version": "6.5.6"
+        }
+      },
+      {
+        "package": "JGProgressHUD",
+        "repositoryURL": "https://github.com/JonasGessner/JGProgressHUD.git",
+        "state": {
+          "branch": null,
+          "revision": "78d7cd35f1d90ff74fd82e486f2cbe4b24be8cf9",
+          "version": "2.2.0"
+        }
+      },
+      {
+        "package": "JVFloatLabeledTextField",
+        "repositoryURL": "https://github.com/jverdi/JVFloatLabeledTextField.git",
+        "state": {
+          "branch": null,
+          "revision": "69c0e80a2d0b9dac52ec37a164c9c5fe0e901038",
+          "version": "1.2.5"
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "318e319998bf555c3e914d5c3adb6da05af86a32",
+          "version": "7.1.1"
+        }
+      },
+      {
         "package": "Logger",
         "repositoryURL": "https://github.com/shibapm/Logger",
         "state": {
@@ -44,6 +107,15 @@
           "branch": null,
           "revision": "d27767c3624cc64a45bb371b267b89c92d70c670",
           "version": "14.0.1"
+        }
+      },
+      {
+        "package": "Nantes",
+        "repositoryURL": "https://github.com/instacart/Nantes.git",
+        "state": {
+          "branch": null,
+          "revision": "a82b861bc7863b22c798601e28ff2e8ec86ce4ee",
+          "version": "0.1.2"
         }
       },
       {
@@ -74,6 +146,15 @@
         }
       },
       {
+        "package": "PanModal",
+        "repositoryURL": "https://github.com/slackhq/PanModal.git",
+        "state": {
+          "branch": null,
+          "revision": "b012aecb6b67a8e46369227f893c12544846613f",
+          "version": "1.2.7"
+        }
+      },
+      {
         "package": "Quick",
         "repositoryURL": "https://github.com/Quick/Quick.git",
         "state": {
@@ -89,6 +170,24 @@
           "branch": null,
           "revision": "f195d82bb30e412e70446e2b4a77e1b514099e88",
           "version": "6.1.0"
+        }
+      },
+      {
+        "package": "Realm",
+        "repositoryURL": "https://github.com/realm/realm-cocoa.git",
+        "state": {
+          "branch": null,
+          "revision": "9f43d0da902c55b493d6c8bb63203764caa8acbe",
+          "version": "10.18.0"
+        }
+      },
+      {
+        "package": "RealmDatabase",
+        "repositoryURL": "https://github.com/realm/realm-core",
+        "state": {
+          "branch": null,
+          "revision": "23f60515a00f076a9e3f2dc672fe1ae07601ee90",
+          "version": "11.4.1"
         }
       },
       {
@@ -110,6 +209,51 @@
         }
       },
       {
+        "package": "SkeletonView",
+        "repositoryURL": "https://github.com/Juanpe/SkeletonView.git",
+        "state": {
+          "branch": null,
+          "revision": "ff1a7e299b20786774c1951e2cce2276ac4b8463",
+          "version": "1.25.2"
+        }
+      },
+      {
+        "package": "SnackBar",
+        "repositoryURL": "https://github.com/ahmedAlmasri/SnackBar.swift",
+        "state": {
+          "branch": null,
+          "revision": "1582bc0f57a65a84f2bed763ed695d30f7afe3a0",
+          "version": "0.1.1"
+        }
+      },
+      {
+        "package": "SnapKit",
+        "repositoryURL": "https://github.com/SnapKit/SnapKit.git",
+        "state": {
+          "branch": null,
+          "revision": "d458564516e5676af9c70b4f4b2a9178294f1bc6",
+          "version": "5.0.1"
+        }
+      },
+      {
+        "package": "SwiftDate",
+        "repositoryURL": "https://github.com/malcommac/SwiftDate.git",
+        "state": {
+          "branch": null,
+          "revision": "6190d0cefff3013e77ed567e6b074f324e5c5bf5",
+          "version": "6.3.1"
+        }
+      },
+      {
+        "package": "SwiftLinkPreview",
+        "repositoryURL": "https://github.com/LeonardoCardoso/SwiftLinkPreview.git",
+        "state": {
+          "branch": null,
+          "revision": "3eb30b1832a9cf0eaeec3e2cf6cfc0ed18ef763f",
+          "version": "3.4.0"
+        }
+      },
+      {
         "package": "SwiftShell",
         "repositoryURL": "https://github.com/kareman/SwiftShell",
         "state": {
@@ -125,6 +269,15 @@
           "branch": null,
           "revision": "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
           "version": "5.0.1"
+        }
+      },
+      {
+        "package": "TOCropViewController",
+        "repositoryURL": "https://github.com/TimOliver/TOCropViewController.git",
+        "state": {
+          "branch": null,
+          "revision": "dad97167bf1be16aeecd109130900995dd01c515",
+          "version": "2.6.0"
         }
       },
       {
