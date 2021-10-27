@@ -22,15 +22,15 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>Castcle</string>
+			<string>$(APP_URL_SCHEMES)</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>Castcle</string>
+				<string>$(APP_URL_SCHEMES)</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>202110271705</string>
+	<string>202110271735</string>
 	<key>FirebaseDynamicLinksCustomDomains</key>
 	<array>
 		<string>https://link-dev.castcle.com</string>
