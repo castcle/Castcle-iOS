@@ -5,7 +5,6 @@ use_frameworks!
 workspace 'Castcle-iOS'
 
 def share_pods
-  pod 'AppCenter'
   pod 'IGListKit'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
@@ -25,6 +24,7 @@ end
 target 'Castcle-iOS' do
     project 'Castcle-iOS.xcodeproj'
     share_pods
+    pod 'AppCenter'
 end
 
 # Component
