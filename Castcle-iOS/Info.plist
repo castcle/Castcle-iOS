@@ -30,7 +30,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>202111011546</string>
+	<string>202111041632</string>
 	<key>FirebaseDynamicLinksCustomDomains</key>
 	<array>
 		<string>https://link-dev.castcle.com</string>
@@ -40,9 +40,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>???</string>
+	<string>This lets you take photo to share on Castcle</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>???</string>
+	<string>This lets you share photo from your library and save photos to your camera roll</string>
 	<key>UIApplicationShortcutItems</key>
 	<array/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
