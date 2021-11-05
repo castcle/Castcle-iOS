@@ -9,7 +9,6 @@ PODS:
     - AppCenter/Core
   - Cache (6.0.0)
   - DropDown (2.3.13)
-  - ESTabBarController-swift (2.8.0)
   - Firebase/Analytics (8.9.1):
     - Firebase/Core
   - Firebase/Core (8.9.1):
@@ -141,7 +140,6 @@ PODS:
 DEPENDENCIES:
   - AppCenter
   - DropDown
-  - ESTabBarController-swift
   - Firebase/Analytics
   - Firebase/Crashlytics
   - Firebase/DynamicLinks
@@ -159,7 +157,6 @@ SPEC REPOS:
     - AppCenter
     - Cache
     - DropDown
-    - ESTabBarController-swift
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -187,7 +184,6 @@ SPEC CHECKSUMS:
   AppCenter: 883369ab78427b0561c688158d689dfe1f993ea9
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
-  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   Firebase: fb5114cd2bf96e2ff7bcb01d0d9a156cf5fd2f07
   FirebaseAnalytics: 4ab446ce08a3fe52e8a4303dd997cf26276bf968
   FirebaseCore: c5aab092d9c4b8efea894946166b04c9d9ef0e68
@@ -211,6 +207,6 @@ SPEC CHECKSUMS:
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 2e101a8ce316292372a879227b54555db29787be
+PODFILE CHECKSUM: 6063612b36079ced74d1748829a15df4f47f4b12
 
 COCOAPODS: 1.11.2

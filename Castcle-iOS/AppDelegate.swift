@@ -35,7 +35,6 @@ import Component
 import Post
 import Authen
 import Profile
-import ESTabBarController_swift
 import SwiftColor
 import Firebase
 import FirebaseDynamicLinks
@@ -53,12 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var feedNavi: UINavigationController?
     var searchNavi: UINavigationController?
-    let tabBarController = ESTabBarController()
+    let tabBarController = UITabBarController()
     let gcmMessageIDKey = "gcm.message_id"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
         // MARK: - Prepare Engagement
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
         
@@ -141,41 +138,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupTabBar() {
         // MARK: - Setup TabBar
-        self.tabBarController.tabBar.backgroundImage = UIColor.Asset.darkGraphiteBlue.toImage()
-        self.tabBarController.shouldHijackHandler = {
-            tabbarController, viewController, index in
-            if index == 1 {
-                return true
-            }
-            return false
-        }
+        UITabBar.appearance().barTintColor = UIColor.Asset.darkGraphiteBlue
+        UITabBar.appearance().isTranslucent = false
+        self.tabBarController.tabBar.tintColor = UIColor.Asset.lightBlue
+        self.tabBarController.tabBar.unselectedItemTintColor = UIColor.Asset.white
+        self.tabBarController.delegate = self
         
-        self.tabBarController.didHijackHandler = {
-            [weak tabBarController] tabbarController, viewController, index in
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                if UserManager.shared.isLogin {
-                    let vc = PostOpener.open(.post(PostViewModel(postType: .newCast)))
-                    vc.modalPresentationStyle = .fullScreen
-                    tabBarController?.present(vc, animated: true, completion: nil)
-                } else {
-                    Utility.currentViewController().presentPanModal(AuthenOpener.open(.signUpMethod) as! SignUpMethodViewController)
-                }
-            }
-        }
+        let bottomSafeAreaHeight = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0.0
+        let inset: CGFloat = (bottomSafeAreaHeight > 20 ? 10.0 : 5.0)
+        let insets = UIEdgeInsets(top: inset, left: 0, bottom: -inset, right: 0)
         
         // MARK: - Feed
         self.feedNavi = UINavigationController(rootViewController: FeedOpener.open(.feed))
+        let iconFeed = UITabBarItem(title: nil, image: UIImage.init(icon: .castcle(.feed), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .castcle(.feed), size: CGSize(width: 23, height: 23)))
+        self.feedNavi?.tabBarItem = iconFeed
+        self.searchNavi?.tabBarItem.tag = 0
+        self.feedNavi?.tabBarItem.imageInsets = insets
                 
         // MARK: - Search
         self.searchNavi = UINavigationController(rootViewController: SearchOpener.open(.search))
+        let iconSearch = UITabBarItem(title: nil, image: UIImage.init(icon: .castcle(.search), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .castcle(.search), size: CGSize(width: 23, height: 23)))
+        self.searchNavi?.tabBarItem = iconSearch
+        self.searchNavi?.tabBarItem.tag = 2
+        self.searchNavi?.tabBarItem.imageInsets = insets
         
         // MARK: - Action
         let actionViewController: UIViewController = UIViewController()
-
-        self.feedNavi?.tabBarItem = ESTabBarItem.init(BouncesContentView(), image: UIImage.init(icon: .castcle(.feed), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .castcle(.feed), size: CGSize(width: 23, height: 23)))
-        actionViewController.tabBarItem = ESTabBarItem.init(IrregularityContentView(), image: UIImage(named: "add-content"), selectedImage: UIImage(named: "add-content"))
-        self.searchNavi?.tabBarItem = ESTabBarItem.init(BouncesContentView(), image: UIImage.init(icon: .castcle(.search), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .castcle(.search), size: CGSize(width: 23, height: 23)))
+        actionViewController.tabBarItem.image = UIImage(named: "add-content")?.withRenderingMode(.alwaysOriginal)
+        actionViewController.tabBarItem.tag = 1
+        actionViewController.tabBarItem.imageInsets = insets
         
         self.tabBarController.viewControllers = [self.feedNavi, actionViewController, self.searchNavi] as? [UIViewController] ?? []
     }
@@ -332,6 +323,29 @@ extension AppDelegate: MessagingDelegate {
             object: nil,
             userInfo: dataDict
         )
+    }
+}
+
+extension AppDelegate: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if viewController.tabBarItem.tag == 1 {
+            self.createPost()
+            return false
+        }
+        return true
+    }
+    
+    private func createPost() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            if UserManager.shared.isLogin {
+                let vc = PostOpener.open(.post(PostViewModel(postType: .newCast)))
+                vc.modalPresentationStyle = .fullScreen
+                self.tabBarController.present(vc, animated: true, completion: nil)
+            } else {
+                self.tabBarController.selectedIndex = 0
+                Utility.currentViewController().presentPanModal(AuthenOpener.open(.signUpMethod) as! SignUpMethodViewController)
+            }
+        }
     }
 }
 
