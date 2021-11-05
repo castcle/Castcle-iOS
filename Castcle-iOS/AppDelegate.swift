@@ -86,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if Environment.appEnv == .prod {
             filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info", ofType: "plist")
         } else if Environment.appEnv == .stg {
-            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Stgs", ofType: "plist")
+            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Stg", ofType: "plist")
         } else {
             filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Dev", ofType: "plist")
         }
