@@ -10,9 +10,6 @@
 		7EDBF332196C2D1833C692C1 /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0E8115C73A1F33488B9C87 /* Pods_Castcle_iOS.framework */; };
 		B71B666B27210CEF00191A62 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */; };
 		B7552904269C0E63005D5EB5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7552902269C0E63005D5EB5 /* README.md */; };
-		B75E629B2696A003003E1ADA /* BouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75E629A2696A003003E1ADA /* BouncesContentView.swift */; };
-		B75E629D2696A062003E1ADA /* BasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75E629C2696A062003E1ADA /* BasicContentView.swift */; };
-		B75E629F2696ADB6003E1ADA /* IrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75E629E2696ADB5003E1ADA /* IrregularityContentView.swift */; };
 		B7B1E39A26A141C8006E2FF6 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */; };
 		B7B1E39B26A141C8006E2FF6 /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */; };
 		B7B1E39C26A141C8006E2FF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */; };
@@ -78,9 +75,6 @@
 		B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stg.plist"; sourceTree = "<group>"; };
 		B758AC5426F4396A00A4A5FB /* Notification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Notification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75E628626969B04003E1ADA /* Component.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Component.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B75E629A2696A003003E1ADA /* BouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncesContentView.swift; sourceTree = "<group>"; };
-		B75E629C2696A062003E1ADA /* BasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicContentView.swift; sourceTree = "<group>"; };
-		B75E629E2696ADB5003E1ADA /* IrregularityContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrregularityContentView.swift; sourceTree = "<group>"; };
 		B75E62EE269978CA003E1ADA /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		B75E62EF269978DA003E1ADA /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		B75E62F0269978ED003E1ADA /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
@@ -152,16 +146,6 @@
 			path = Config;
 			sourceTree = SOURCE_ROOT;
 		};
-		B75E629726969DFB003E1ADA /* Tab Bar */ = {
-			isa = PBXGroup;
-			children = (
-				B75E629A2696A003003E1ADA /* BouncesContentView.swift */,
-				B75E629C2696A062003E1ADA /* BasicContentView.swift */,
-				B75E629E2696ADB5003E1ADA /* IrregularityContentView.swift */,
-			);
-			path = "Tab Bar";
-			sourceTree = "<group>";
-		};
 		B75E62ED269978A7003E1ADA /* Environment Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,7 +180,6 @@
 				B7FF592326EB5903002EA174 /* Castcle.entitlements */,
 				B7F69CA7268EB21E00B01223 /* AppDelegate.swift */,
 				B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */,
-				B75E629726969DFB003E1ADA /* Tab Bar */,
 				B7F69CB0268EB22000B01223 /* Assets.xcassets */,
 				B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */,
 				B7F69CB5268EB22000B01223 /* Info.plist */,
@@ -358,10 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71B666B27210CEF00191A62 /* AppDelegateViewModel.swift in Sources */,
-				B75E629B2696A003003E1ADA /* BouncesContentView.swift in Sources */,
-				B75E629F2696ADB6003E1ADA /* IrregularityContentView.swift in Sources */,
 				B7F69CA8268EB21E00B01223 /* AppDelegate.swift in Sources */,
-				B75E629D2696A062003E1ADA /* BasicContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

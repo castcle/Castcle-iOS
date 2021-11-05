@@ -12,7 +12,6 @@ def share_pods
   pod 'Firebase/DynamicLinks'
   pod 'Lightbox'
   pod 'SwiftColor'
-  pod 'ESTabBarController-swift'
   pod 'TLPhotoPicker'
   pod 'UITextView+Placeholder'
   pod 'XLPagerTabStrip'
