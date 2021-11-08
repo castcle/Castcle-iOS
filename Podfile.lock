@@ -132,8 +132,7 @@ PODS:
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
   - SVPinView (1.0.11)
-  - SwiftColor (1.6.0)
-  - TLPhotoPicker (2.1.5)
+  - TLPhotoPicker (2.1.6)
   - "UITextView+Placeholder (1.4.0)"
   - XLPagerTabStrip (9.0.0)
 
@@ -147,7 +146,6 @@ DEPENDENCIES:
   - IGListKit
   - Lightbox
   - SVPinView
-  - SwiftColor
   - TLPhotoPicker
   - "UITextView+Placeholder"
   - XLPagerTabStrip
@@ -175,7 +173,6 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - SVPinView
-    - SwiftColor
     - TLPhotoPicker
     - "UITextView+Placeholder"
     - XLPagerTabStrip
@@ -202,11 +199,10 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
-  SwiftColor: 3db8a6a1ffb4df61f074a0643d620bf91876c267
-  TLPhotoPicker: 44ebb15e46b8326d7a12445c2304ac8ee2512e27
+  TLPhotoPicker: 57ad6b54a9cf8c9ec60107be0864d42f3dbe7175
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 6063612b36079ced74d1748829a15df4f47f4b12
+PODFILE CHECKSUM: dabdec930514d7fd47073ff11b680ccdfc5156cc
 
 COCOAPODS: 1.11.2

@@ -45,6 +45,7 @@ import IQKeyboardManagerSwift
 import Defaults
 import PanModal
 import RealmSwift
+import SwiftKeychainWrapper
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -60,8 +61,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
         
         // MARK: - Check device UUID
-        if Defaults[.deviceUuid].isEmpty {
-            Defaults[.deviceUuid] = UUID().uuidString
+        if let castcleDeviceId: String = KeychainWrapper.standard.string(forKey: "castcleDeviceId") {
+            Defaults[.deviceUuid] = castcleDeviceId
+        } else {
+            if Defaults[.deviceUuid].isEmpty {
+                let deviceUdid = UUID().uuidString
+                Defaults[.deviceUuid] = deviceUdid
+                let _: Bool = KeychainWrapper.standard.set(deviceUdid, forKey: "castcleDeviceId")
+            } else {
+                let _: Bool = KeychainWrapper.standard.set(Defaults[.deviceUuid], forKey: "castcleDeviceId")
+            }
         }
         
         // MARK: - Reset Load Feed

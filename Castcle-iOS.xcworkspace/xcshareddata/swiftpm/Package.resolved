@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/hackiftekhar/IQKeyboardManager.git",
         "state": {
           "branch": null,
-          "revision": "4dc6bc7d1c9747bd0c261c8c055903f9fdef91f7",
-          "version": "6.5.6"
+          "revision": "b6bac3571ac50c9218a0bb5147ec04399ff66b44",
+          "version": "6.5.8"
         }
       },
       {
@@ -236,12 +236,30 @@
         }
       },
       {
+        "package": "SwiftColor",
+        "repositoryURL": "https://github.com/icodesign/SwiftColor.git",
+        "state": {
+          "branch": null,
+          "revision": "8ada1bd6b4c132a658b63cc95ff77a56e345ccb7",
+          "version": "1.6.0"
+        }
+      },
+      {
         "package": "SwiftDate",
         "repositoryURL": "https://github.com/malcommac/SwiftDate.git",
         "state": {
           "branch": null,
           "revision": "6190d0cefff3013e77ed567e6b074f324e5c5bf5",
           "version": "6.3.1"
+        }
+      },
+      {
+        "package": "SwiftKeychainWrapper",
+        "repositoryURL": "https://github.com/jrendel/SwiftKeychainWrapper.git",
+        "state": {
+          "branch": null,
+          "revision": "185a3165346a03767101c4f62e9a545a0fe0530f",
+          "version": "4.0.1"
         }
       },
       {
