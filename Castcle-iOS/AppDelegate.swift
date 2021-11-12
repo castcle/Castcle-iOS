@@ -341,6 +341,11 @@ extension AppDelegate: UITabBarControllerDelegate {
             self.createPost()
             return false
         }
+        
+        if viewController.tabBarItem.tag == 0 {
+            NotificationCenter.default.post(name: .feedScrollToTop, object: nil)
+        }
+        
         return true
     }
     
