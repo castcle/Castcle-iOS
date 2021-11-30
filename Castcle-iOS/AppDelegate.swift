@@ -122,7 +122,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerForRemoteNotifications()
         
         // MARK: - Setup Notification Center
-        NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notfication:)), name: .updateProfileDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notification:)), name: .updateProfileDelegate, object: nil)
 
         
         // MARK: - App Center
@@ -364,7 +364,7 @@ extension AppDelegate: UITabBarControllerDelegate {
 }
 
 extension AppDelegate {
-    @objc func openEditProfile(notfication: NSNotification) {
+    @objc func openEditProfile(notification: NSNotification) {
         Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.welcome), animated: true)
     }
 }
