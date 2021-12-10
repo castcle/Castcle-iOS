@@ -19,21 +19,14 @@
 //  Thailand 10160, or visit www.castcle.com if you need additional information
 //  or have any questions.
 //
-//  ViewController.swift
+//  AppDelegateViewModel.swift
 //  Castcle-iOS
 //
-//  Created by Tanakorn Phoochaliaw on 2/7/2564 BE.
+//  Created by Castcle Co., Ltd. on 21/10/2564 BE.
 //
 
-import UIKit
+import Foundation
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
+class AppDelegateViewModel {
+    
 }
-

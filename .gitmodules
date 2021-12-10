@@ -1,0 +1,33 @@
+[submodule "Core"]
+	path = Core
+	url = ../Core-iOS.git
+[submodule "Feed"]
+	path = Feed
+	url = ../Feed-iOS.git
+[submodule "Search"]
+	path = Search
+	url = ../Search-iOS.git
+[submodule "Component"]
+	path = Component
+	url = ../Component-iOS.git
+[submodule "Config"]
+	path = Config
+	url = ../Config-iOS.git
+[submodule "Authen"]
+	path = Authen
+	url = ../Authen-iOS.git
+[submodule "Profile"]
+	path = Profile
+	url = ../Profile-iOS.git
+[submodule "Networking"]
+	path = Networking
+	url = ../Networking-iOS.git
+[submodule "Post"]
+	path = Post
+	url = ../Post-iOS.git
+[submodule "Setting"]
+	path = Setting
+	url = ../Setting-iOS.git
+[submodule "Notification"]
+	path = Notification
+	url = ../Notification-iOS.git

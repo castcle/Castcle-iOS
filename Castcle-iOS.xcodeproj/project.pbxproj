@@ -7,27 +7,92 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		317C19E41885EF74A040E1DA /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570CA31EAA7E46A1F57A79A1 /* Pods_Castcle_iOS.framework */; };
+		7EDBF332196C2D1833C692C1 /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0E8115C73A1F33488B9C87 /* Pods_Castcle_iOS.framework */; };
+		B71B666B27210CEF00191A62 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */; };
+		B7552904269C0E63005D5EB5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7552902269C0E63005D5EB5 /* README.md */; };
+		B7B1E39A26A141C8006E2FF6 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */; };
+		B7B1E39B26A141C8006E2FF6 /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */; };
+		B7B1E39C26A141C8006E2FF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */; };
+		B7B4A53426F89D97001C4737 /* Authen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E0D26B12FE60097C94E /* Authen.framework */; };
+		B7B4A53526F89D97001C4737 /* Authen.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E0D26B12FE60097C94E /* Authen.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7B4A53726F89D9E001C4737 /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; };
+		B7B4A53826F89D9E001C4737 /* Component.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7B4A53926F89DA0001C4737 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B792811B268EC784000ED84A /* Core.framework */; };
+		B7B4A53A26F89DA0001C4737 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B792811B268EC784000ED84A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7B4A53B26F89DA3001C4737 /* Feed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B2269455D1000ED84A /* Feed.framework */; };
+		B7B4A53C26F89DA3001C4737 /* Feed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B2269455D1000ED84A /* Feed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7B4A53D26F89DA5001C4737 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74CEF1E26C50760006B1F2C /* Networking.framework */; };
+		B7B4A53E26F89DA5001C4737 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B74CEF1E26C50760006B1F2C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7B4A53F26F89DA7001C4737 /* Notification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B758AC5426F4396A00A4A5FB /* Notification.framework */; };
+		B7B4A54026F89DA7001C4737 /* Notification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B758AC5426F4396A00A4A5FB /* Notification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7B4A54126F89DAB001C4737 /* Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C2524A26C84B8700ACBB84 /* Post.framework */; };
+		B7B4A54226F89DAB001C4737 /* Post.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C2524A26C84B8700ACBB84 /* Post.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7B4A54326F89DAE001C4737 /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E1026B12FEF0097C94E /* Profile.framework */; };
+		B7B4A54426F89DAE001C4737 /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E1026B12FEF0097C94E /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7B4A54526F89DB0001C4737 /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B3269455D1000ED84A /* Search.framework */; };
+		B7B4A54626F89DB0001C4737 /* Search.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B3269455D1000ED84A /* Search.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7B4A54726F89DB2001C4737 /* Setting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C252D826D3964D00ACBB84 /* Setting.framework */; };
+		B7B4A54826F89DB2001C4737 /* Setting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C252D826D3964D00ACBB84 /* Setting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7F69CA8268EB21E00B01223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CA7268EB21E00B01223 /* AppDelegate.swift */; };
-		B7F69CAA268EB21E00B01223 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CA9268EB21E00B01223 /* SceneDelegate.swift */; };
-		B7F69CAC268EB21E00B01223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CAB268EB21E00B01223 /* ViewController.swift */; };
-		B7F69CAF268EB21E00B01223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CAD268EB21E00B01223 /* Main.storyboard */; };
 		B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB0268EB22000B01223 /* Assets.xcassets */; };
 		B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B7B4A53626F89D97001C4737 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B7B4A53826F89D9E001C4737 /* Component.framework in Embed Frameworks */,
+				B7B4A54226F89DAB001C4737 /* Post.framework in Embed Frameworks */,
+				B7B4A53A26F89DA0001C4737 /* Core.framework in Embed Frameworks */,
+				B7B4A53C26F89DA3001C4737 /* Feed.framework in Embed Frameworks */,
+				B7B4A54626F89DB0001C4737 /* Search.framework in Embed Frameworks */,
+				B7B4A53E26F89DA5001C4737 /* Networking.framework in Embed Frameworks */,
+				B7B4A53526F89D97001C4737 /* Authen.framework in Embed Frameworks */,
+				B7B4A54826F89DB2001C4737 /* Setting.framework in Embed Frameworks */,
+				B7B4A54426F89DAE001C4737 /* Profile.framework in Embed Frameworks */,
+				B7B4A54026F89DA7001C4737 /* Notification.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		570CA31EAA7E46A1F57A79A1 /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6531F0FD738A8AE8E4BD9A16 /* Pods-Castcle-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release.xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		67C62DB390E9DE628C42BA78 /* Pods-Castcle-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		B7F69CA4268EB21E00B01223 /* Castcle-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Castcle-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A0E8115C73A1F33488B9C87 /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F31E4D4A709479F928098A /* Pods-Castcle-iOS.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (production).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (production).xcconfig"; sourceTree = "<group>"; };
+		54468F2BB87EA3EC29940A29 /* Pods-Castcle-iOS.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (development).xcconfig"; sourceTree = "<group>"; };
+		64A8DAA29FEC8FDD6E47AD64 /* Pods-Castcle-iOS.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (staging).xcconfig"; sourceTree = "<group>"; };
+		7E551B796A1F35FF9C177613 /* Pods-Castcle-iOS.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (development).xcconfig"; sourceTree = "<group>"; };
+		B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateViewModel.swift; sourceTree = "<group>"; };
+		B74CEF1E26C50760006B1F2C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7552902269C0E63005D5EB5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
+		B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stg.plist"; sourceTree = "<group>"; };
+		B758AC5426F4396A00A4A5FB /* Notification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Notification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B75E628626969B04003E1ADA /* Component.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Component.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B75E62EE269978CA003E1ADA /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		B75E62EF269978DA003E1ADA /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		B75E62F0269978ED003E1ADA /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		B7910E0D26B12FE60097C94E /* Authen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7910E1026B12FEF0097C94E /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B792811B268EC784000ED84A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79281B2269455D1000ED84A /* Feed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Feed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79281B3269455D1000ED84A /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C2524A26C84B8700ACBB84 /* Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C252D826D3964D00ACBB84 /* Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7F69CA4268EB21E00B01223 /* Castcle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castcle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA7268EB21E00B01223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7F69CA9268EB21E00B01223 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7F69CAB268EB21E00B01223 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B7F69CAE268EB21E00B01223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7F69CB0268EB22000B01223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7F69CB3268EB22000B01223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7F69CB5268EB22000B01223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7FF592326EB5903002EA174 /* Castcle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Castcle.entitlements; sourceTree = "<group>"; };
+		CDE3A964844B6FBAEB2A6899 /* Pods-Castcle-iOS.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (production).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (production).xcconfig"; sourceTree = "<group>"; };
+		E8CC1D4F332D86DAA3973122 /* Pods-Castcle-iOS.release (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (staging).xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +100,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				317C19E41885EF74A040E1DA /* Pods_Castcle_iOS.framework in Frameworks */,
+				B7B4A53D26F89DA5001C4737 /* Networking.framework in Frameworks */,
+				B7B4A54126F89DAB001C4737 /* Post.framework in Frameworks */,
+				B7B4A54326F89DAE001C4737 /* Profile.framework in Frameworks */,
+				B7B4A54726F89DB2001C4737 /* Setting.framework in Frameworks */,
+				B7B4A53726F89D9E001C4737 /* Component.framework in Frameworks */,
+				B7B4A54526F89DB0001C4737 /* Search.framework in Frameworks */,
+				B7B4A53B26F89DA3001C4737 /* Feed.framework in Frameworks */,
+				B7B4A53426F89D97001C4737 /* Authen.framework in Frameworks */,
+				B7B4A53926F89DA0001C4737 /* Core.framework in Frameworks */,
+				B7B4A53F26F89DA7001C4737 /* Notification.framework in Frameworks */,
+				7EDBF332196C2D1833C692C1 /* Pods_Castcle_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,9 +120,40 @@
 		7F3A3F40D4655699A46A2DB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				570CA31EAA7E46A1F57A79A1 /* Pods_Castcle_iOS.framework */,
+				B758AC5426F4396A00A4A5FB /* Notification.framework */,
+				B7C252D826D3964D00ACBB84 /* Setting.framework */,
+				B7C2524A26C84B8700ACBB84 /* Post.framework */,
+				B74CEF1E26C50760006B1F2C /* Networking.framework */,
+				B7910E1026B12FEF0097C94E /* Profile.framework */,
+				B7910E0D26B12FE60097C94E /* Authen.framework */,
+				B75E628626969B04003E1ADA /* Component.framework */,
+				B79281B2269455D1000ED84A /* Feed.framework */,
+				B79281B3269455D1000ED84A /* Search.framework */,
+				B792811B268EC784000ED84A /* Core.framework */,
+				2A0E8115C73A1F33488B9C87 /* Pods_Castcle_iOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7552900269C0E63005D5EB5 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B7552902269C0E63005D5EB5 /* README.md */,
+				B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */,
+				B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */,
+				B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */,
+			);
+			path = Config;
+			sourceTree = SOURCE_ROOT;
+		};
+		B75E62ED269978A7003E1ADA /* Environment Config */ = {
+			isa = PBXGroup;
+			children = (
+				B75E62EE269978CA003E1ADA /* Development.xcconfig */,
+				B75E62EF269978DA003E1ADA /* Staging.xcconfig */,
+				B75E62F0269978ED003E1ADA /* Production.xcconfig */,
+			);
+			path = "Environment Config";
 			sourceTree = "<group>";
 		};
 		B7F69C9B268EB21E00B01223 = {
@@ -63,7 +169,7 @@
 		B7F69CA5268EB21E00B01223 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B7F69CA4268EB21E00B01223 /* Castcle-iOS.app */,
+				B7F69CA4268EB21E00B01223 /* Castcle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,13 +177,14 @@
 		B7F69CA6268EB21E00B01223 /* Castcle-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B7FF592326EB5903002EA174 /* Castcle.entitlements */,
 				B7F69CA7268EB21E00B01223 /* AppDelegate.swift */,
-				B7F69CA9268EB21E00B01223 /* SceneDelegate.swift */,
-				B7F69CAB268EB21E00B01223 /* ViewController.swift */,
-				B7F69CAD268EB21E00B01223 /* Main.storyboard */,
+				B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */,
 				B7F69CB0268EB22000B01223 /* Assets.xcassets */,
 				B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */,
 				B7F69CB5268EB22000B01223 /* Info.plist */,
+				B7552900269C0E63005D5EB5 /* Config */,
+				B75E62ED269978A7003E1ADA /* Environment Config */,
 			);
 			path = "Castcle-iOS";
 			sourceTree = "<group>";
@@ -85,8 +192,12 @@
 		F093F7C16BC95A49994F6E0B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				67C62DB390E9DE628C42BA78 /* Pods-Castcle-iOS.debug.xcconfig */,
-				6531F0FD738A8AE8E4BD9A16 /* Pods-Castcle-iOS.release.xcconfig */,
+				37F31E4D4A709479F928098A /* Pods-Castcle-iOS.debug (production).xcconfig */,
+				64A8DAA29FEC8FDD6E47AD64 /* Pods-Castcle-iOS.debug (staging).xcconfig */,
+				7E551B796A1F35FF9C177613 /* Pods-Castcle-iOS.debug (development).xcconfig */,
+				CDE3A964844B6FBAEB2A6899 /* Pods-Castcle-iOS.release (production).xcconfig */,
+				E8CC1D4F332D86DAA3973122 /* Pods-Castcle-iOS.release (staging).xcconfig */,
+				54468F2BB87EA3EC29940A29 /* Pods-Castcle-iOS.release (development).xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -98,11 +209,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7F69CB8268EB22000B01223 /* Build configuration list for PBXNativeTarget "Castcle-iOS" */;
 			buildPhases = (
-				5EA9CB78A8A171CF87CCF337 /* [CP] Check Pods Manifest.lock */,
+				CAF3094C0DC976EC7A6ACE9B /* [CP] Check Pods Manifest.lock */,
 				B7F69CA0268EB21E00B01223 /* Sources */,
 				B7F69CA1268EB21E00B01223 /* Frameworks */,
 				B7F69CA2268EB21E00B01223 /* Resources */,
-				53C0194CFA97C5F46B67A04E /* [CP] Embed Pods Frameworks */,
+				B7552944269C5179005D5EB5 /* ShellScript */,
+				B7B4A53626F89D97001C4737 /* Embed Frameworks */,
+				5D2EDCA8CE11E29E1A1B1565 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,7 +223,7 @@
 			);
 			name = "Castcle-iOS";
 			productName = "Castcle-iOS";
-			productReference = B7F69CA4268EB21E00B01223 /* Castcle-iOS.app */;
+			productReference = B7F69CA4268EB21E00B01223 /* Castcle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -150,16 +263,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7B1E39A26A141C8006E2FF6 /* GoogleService-Info-Dev.plist in Resources */,
+				B7B1E39B26A141C8006E2FF6 /* GoogleService-Info-Stg.plist in Resources */,
+				B7B1E39C26A141C8006E2FF6 /* GoogleService-Info.plist in Resources */,
 				B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */,
 				B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */,
-				B7F69CAF268EB21E00B01223 /* Main.storyboard in Resources */,
+				B7552904269C0E63005D5EB5 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		53C0194CFA97C5F46B67A04E /* [CP] Embed Pods Frameworks */ = {
+		5D2EDCA8CE11E29E1A1B1565 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -176,7 +292,26 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5EA9CB78A8A171CF87CCF337 /* [CP] Check Pods Manifest.lock */ = {
+		B7552944269C5179005D5EB5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\" -gsp \"${PROJECT_DIR}/Config/${FIREBASR_CONFIG_FILE}.plist\"\n";
+		};
+		CAF3094C0DC976EC7A6ACE9B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,23 +340,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7F69CAC268EB21E00B01223 /* ViewController.swift in Sources */,
+				B71B666B27210CEF00191A62 /* AppDelegateViewModel.swift in Sources */,
 				B7F69CA8268EB21E00B01223 /* AppDelegate.swift in Sources */,
-				B7F69CAA268EB21E00B01223 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B7F69CAD268EB21E00B01223 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B7F69CAE268EB21E00B01223 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -233,69 +359,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B7F69CB6268EB22000B01223 /* Debug */ = {
+		B75E62E526997702003E1ADA /* Debug (Staging) */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		B7F69CB7268EB22000B01223 /* Release */ = {
-			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EF269978DA003E1ADA /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -329,6 +395,241 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug (Staging)";
+		};
+		B75E62E626997702003E1ADA /* Debug (Staging) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EF269978DA003E1ADA /* Staging.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Stg";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = AL7Y45DV5Q;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppCenter\"",
+					"-framework",
+					"\"AppCenterAnalytics\"",
+					"-framework",
+					"\"AppCenterCrashes\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IGListDiffKit\"",
+					"-framework",
+					"\"IGListKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Stg Castcle Development";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug (Staging)";
+		};
+		B75E62E726997707003E1ADA /* Debug (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EE269978CA003E1ADA /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug (Development)";
+		};
+		B75E62E826997707003E1ADA /* Debug (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EE269978CA003E1ADA /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = AL7Y45DV5Q;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppCenter\"",
+					"-framework",
+					"\"AppCenterAnalytics\"",
+					"-framework",
+					"\"AppCenterCrashes\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IGListDiffKit\"",
+					"-framework",
+					"\"IGListKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Dev Castcle Development";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug (Development)";
+		};
+		B75E62E92699770B003E1ADA /* Release (Staging) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EF269978DA003E1ADA /* Staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -339,7 +640,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -347,47 +648,397 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Release (Staging)";
 		};
-		B7F69CB9268EB22000B01223 /* Debug */ = {
+		B75E62EA2699770B003E1ADA /* Release (Staging) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67C62DB390E9DE628C42BA78 /* Pods-Castcle-iOS.debug.xcconfig */;
+			baseConfigurationReference = B75E62EF269978DA003E1ADA /* Staging.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Stg";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = AL7Y45DV5Q;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.castcle.Castcle-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppCenter\"",
+					"-framework",
+					"\"AppCenterAnalytics\"",
+					"-framework",
+					"\"AppCenterCrashes\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IGListDiffKit\"",
+					"-framework",
+					"\"IGListKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Stg Castcle Development";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Debug;
+			name = "Release (Staging)";
 		};
-		B7F69CBA268EB22000B01223 /* Release */ = {
+		B75E62EB2699770E003E1ADA /* Release (Development) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6531F0FD738A8AE8E4BD9A16 /* Pods-Castcle-iOS.release.xcconfig */;
+			baseConfigurationReference = B75E62EE269978CA003E1ADA /* Development.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release (Development)";
+		};
+		B75E62EC2699770E003E1ADA /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62EE269978CA003E1ADA /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = AL7Y45DV5Q;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.castcle.Castcle-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppCenter\"",
+					"-framework",
+					"\"AppCenterAnalytics\"",
+					"-framework",
+					"\"AppCenterCrashes\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IGListDiffKit\"",
+					"-framework",
+					"\"IGListKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Dev Castcle Development";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Release;
+			name = "Release (Development)";
+		};
+		B7F69CB6268EB22000B01223 /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62F0269978ED003E1ADA /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug (Production)";
+		};
+		B7F69CB7268EB22000B01223 /* Release (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62F0269978ED003E1ADA /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release (Production)";
+		};
+		B7F69CB9268EB22000B01223 /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62F0269978ED003E1ADA /* Production.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = AL7Y45DV5Q;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppCenter\"",
+					"-framework",
+					"\"AppCenterAnalytics\"",
+					"-framework",
+					"\"AppCenterCrashes\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IGListDiffKit\"",
+					"-framework",
+					"\"IGListKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Prod Castcle App Store";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug (Production)";
+		};
+		B7F69CBA268EB22000B01223 /* Release (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75E62F0269978ED003E1ADA /* Production.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = AL7Y45DV5Q;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = "Castcle-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppCenter\"",
+					"-framework",
+					"\"AppCenterAnalytics\"",
+					"-framework",
+					"\"AppCenterCrashes\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IGListDiffKit\"",
+					"-framework",
+					"\"IGListKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Prod Castcle App Store";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Release (Production)";
 		};
 /* End XCBuildConfiguration section */
 
@@ -395,20 +1046,28 @@
 		B7F69C9F268EB21E00B01223 /* Build configuration list for PBXProject "Castcle-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7F69CB6268EB22000B01223 /* Debug */,
-				B7F69CB7268EB22000B01223 /* Release */,
+				B7F69CB6268EB22000B01223 /* Debug (Production) */,
+				B75E62E526997702003E1ADA /* Debug (Staging) */,
+				B75E62E726997707003E1ADA /* Debug (Development) */,
+				B7F69CB7268EB22000B01223 /* Release (Production) */,
+				B75E62E92699770B003E1ADA /* Release (Staging) */,
+				B75E62EB2699770E003E1ADA /* Release (Development) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Production)";
 		};
 		B7F69CB8268EB22000B01223 /* Build configuration list for PBXNativeTarget "Castcle-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7F69CB9268EB22000B01223 /* Debug */,
-				B7F69CBA268EB22000B01223 /* Release */,
+				B7F69CB9268EB22000B01223 /* Debug (Production) */,
+				B75E62E626997702003E1ADA /* Debug (Staging) */,
+				B75E62E826997707003E1ADA /* Debug (Development) */,
+				B7F69CBA268EB22000B01223 /* Release (Production) */,
+				B75E62EA2699770B003E1ADA /* Release (Staging) */,
+				B75E62EC2699770E003E1ADA /* Release (Development) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Production)";
 		};
 /* End XCConfigurationList section */
 	};

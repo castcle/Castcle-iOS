@@ -2,6 +2,36 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Notification/Notification.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Setting/Setting.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Post/Post.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Profile/Profile.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Authen/Authen.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Search/Search.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Feed/Feed.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Component/Component.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Networking/Networking.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Core/Core.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Castcle-iOS.xcodeproj">
    </FileRef>
    <FileRef

@@ -1,0 +1,322 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ActiveLabel",
+        "repositoryURL": "https://github.com/optonaut/ActiveLabel.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "36949c1a69ef8b40574da20c9e24b115f387b1cf",
+          "version": "1.1.5"
+        }
+      },
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
+          "version": "5.4.4"
+        }
+      },
+      {
+        "package": "Atributika",
+        "repositoryURL": "https://github.com/psharanda/Atributika.git",
+        "state": {
+          "branch": null,
+          "revision": "d018897afbd55d9065ef859650585bac890ada7e",
+          "version": "4.10.1"
+        }
+      },
+      {
+        "package": "BetterSegmentedControl",
+        "repositoryURL": "https://github.com/gmarm/BetterSegmentedControl.git",
+        "state": {
+          "branch": null,
+          "revision": "a2b2116761f71320cee7e69b4249863f0f372c71",
+          "version": "2.0.1"
+        }
+      },
+      {
+        "package": "Defaults",
+        "repositoryURL": "https://github.com/sindresorhus/Defaults.git",
+        "state": {
+          "branch": null,
+          "revision": "55f3302c3ab30a8760f10042d0ebc0a6907f865a",
+          "version": "6.1.0"
+        }
+      },
+      {
+        "package": "DeviceKit",
+        "repositoryURL": "https://github.com/devicekit/DeviceKit.git",
+        "state": {
+          "branch": null,
+          "revision": "da57c444cbb7b6159aa871534d4cf2616d1d55c6",
+          "version": "4.5.2"
+        }
+      },
+      {
+        "package": "IQKeyboardManagerSwift",
+        "repositoryURL": "https://github.com/hackiftekhar/IQKeyboardManager.git",
+        "state": {
+          "branch": null,
+          "revision": "474f849accae40fe61b5302d9b057dd48ee073ba",
+          "version": "6.5.9"
+        }
+      },
+      {
+        "package": "JGProgressHUD",
+        "repositoryURL": "https://github.com/JonasGessner/JGProgressHUD.git",
+        "state": {
+          "branch": null,
+          "revision": "78d7cd35f1d90ff74fd82e486f2cbe4b24be8cf9",
+          "version": "2.2.0"
+        }
+      },
+      {
+        "package": "JVFloatLabeledTextField",
+        "repositoryURL": "https://github.com/jverdi/JVFloatLabeledTextField.git",
+        "state": {
+          "branch": null,
+          "revision": "69c0e80a2d0b9dac52ec37a164c9c5fe0e901038",
+          "version": "1.2.5"
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "318e319998bf555c3e914d5c3adb6da05af86a32",
+          "version": "7.1.1"
+        }
+      },
+      {
+        "package": "Logger",
+        "repositoryURL": "https://github.com/shibapm/Logger",
+        "state": {
+          "branch": null,
+          "revision": "53c3ecca5abe8cf46697e33901ee774236d94cce",
+          "version": "0.2.3"
+        }
+      },
+      {
+        "package": "Moya",
+        "repositoryURL": "https://github.com/Moya/Moya.git",
+        "state": {
+          "branch": null,
+          "revision": "d27767c3624cc64a45bb371b267b89c92d70c670",
+          "version": "14.0.1"
+        }
+      },
+      {
+        "package": "Nantes",
+        "repositoryURL": "https://github.com/instacart/Nantes.git",
+        "state": {
+          "branch": null,
+          "revision": "a82b861bc7863b22c798601e28ff2e8ec86ce4ee",
+          "version": "0.1.2"
+        }
+      },
+      {
+        "package": "Nimble",
+        "repositoryURL": "https://github.com/Quick/Nimble.git",
+        "state": {
+          "branch": null,
+          "revision": "7a46a5fc86cb917f69e3daf79fcb045283d8f008",
+          "version": "8.1.2"
+        }
+      },
+      {
+        "package": "OHHTTPStubs",
+        "repositoryURL": "https://github.com/AliSoftware/OHHTTPStubs.git",
+        "state": {
+          "branch": null,
+          "revision": "12f19662426d0434d6c330c6974d53e2eb10ecd9",
+          "version": "9.1.0"
+        }
+      },
+      {
+        "package": "PackageConfig",
+        "repositoryURL": "https://github.com/shibapm/PackageConfig.git",
+        "state": {
+          "branch": null,
+          "revision": "5df1709f87e40e27b3fbe5022b826aff30d652d9",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "PanModal",
+        "repositoryURL": "https://github.com/slackhq/PanModal.git",
+        "state": {
+          "branch": null,
+          "revision": "b012aecb6b67a8e46369227f893c12544846613f",
+          "version": "1.2.7"
+        }
+      },
+      {
+        "package": "Quick",
+        "repositoryURL": "https://github.com/Quick/Quick.git",
+        "state": {
+          "branch": null,
+          "revision": "09b3becb37cb2163919a3842a4c5fa6ec7130792",
+          "version": "2.2.1"
+        }
+      },
+      {
+        "package": "ReactiveSwift",
+        "repositoryURL": "https://github.com/Moya/ReactiveSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "f195d82bb30e412e70446e2b4a77e1b514099e88",
+          "version": "6.1.0"
+        }
+      },
+      {
+        "package": "Realm",
+        "repositoryURL": "https://github.com/realm/realm-cocoa.git",
+        "state": {
+          "branch": null,
+          "revision": "bdbbd57f411a0f4e72b359113dbc6d23fdf96680",
+          "version": "10.20.0"
+        }
+      },
+      {
+        "package": "RealmDatabase",
+        "repositoryURL": "https://github.com/realm/realm-core",
+        "state": {
+          "branch": null,
+          "revision": "c3c11a841642ac93c27bd1edd61f989fc0bfb809",
+          "version": "11.6.1"
+        }
+      },
+      {
+        "package": "Rocket",
+        "repositoryURL": "https://github.com/shibapm/Rocket",
+        "state": {
+          "branch": null,
+          "revision": "9880a5beb7fcb9e61ddd5764edc1700b8c418deb",
+          "version": "1.2.1"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "cec68169a048a079f461ba203fe85636548d7a89",
+          "version": "5.1.3"
+        }
+      },
+      {
+        "package": "SkeletonView",
+        "repositoryURL": "https://github.com/Juanpe/SkeletonView.git",
+        "state": {
+          "branch": null,
+          "revision": "a9c22f502a4d938bd3fb6f17fe4d6633c423085a",
+          "version": "1.26.0"
+        }
+      },
+      {
+        "package": "SnackBar",
+        "repositoryURL": "https://github.com/ahmedAlmasri/SnackBar.swift",
+        "state": {
+          "branch": null,
+          "revision": "1582bc0f57a65a84f2bed763ed695d30f7afe3a0",
+          "version": "0.1.1"
+        }
+      },
+      {
+        "package": "SnapKit",
+        "repositoryURL": "https://github.com/SnapKit/SnapKit.git",
+        "state": {
+          "branch": null,
+          "revision": "d458564516e5676af9c70b4f4b2a9178294f1bc6",
+          "version": "5.0.1"
+        }
+      },
+      {
+        "package": "SwiftColor",
+        "repositoryURL": "https://github.com/icodesign/SwiftColor.git",
+        "state": {
+          "branch": null,
+          "revision": "8ada1bd6b4c132a658b63cc95ff77a56e345ccb7",
+          "version": "1.6.0"
+        }
+      },
+      {
+        "package": "SwiftDate",
+        "repositoryURL": "https://github.com/malcommac/SwiftDate.git",
+        "state": {
+          "branch": null,
+          "revision": "6190d0cefff3013e77ed567e6b074f324e5c5bf5",
+          "version": "6.3.1"
+        }
+      },
+      {
+        "package": "SwiftIP",
+        "repositoryURL": "https://github.com/Samasaur1/SwiftIP.git",
+        "state": {
+          "branch": null,
+          "revision": "e1e8a43bd3020f1002c2680ae91056e6d81b647e",
+          "version": "2.2.0"
+        }
+      },
+      {
+        "package": "SwiftKeychainWrapper",
+        "repositoryURL": "https://github.com/jrendel/SwiftKeychainWrapper.git",
+        "state": {
+          "branch": null,
+          "revision": "185a3165346a03767101c4f62e9a545a0fe0530f",
+          "version": "4.0.1"
+        }
+      },
+      {
+        "package": "SwiftLinkPreview",
+        "repositoryURL": "https://github.com/LeonardoCardoso/SwiftLinkPreview.git",
+        "state": {
+          "branch": null,
+          "revision": "3eb30b1832a9cf0eaeec3e2cf6cfc0ed18ef763f",
+          "version": "3.4.0"
+        }
+      },
+      {
+        "package": "SwiftShell",
+        "repositoryURL": "https://github.com/kareman/SwiftShell",
+        "state": {
+          "branch": null,
+          "revision": "a6014fe94c3dbff0ad500e8da4f251a5d336530b",
+          "version": "5.1.0-beta.1"
+        }
+      },
+      {
+        "package": "SwiftyJSON",
+        "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON.git",
+        "state": {
+          "branch": null,
+          "revision": "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
+          "version": "5.0.1"
+        }
+      },
+      {
+        "package": "TOCropViewController",
+        "repositoryURL": "https://github.com/TimOliver/TOCropViewController.git",
+        "state": {
+          "branch": null,
+          "revision": "dad97167bf1be16aeecd109130900995dd01c515",
+          "version": "2.6.0"
+        }
+      },
+      {
+        "package": "Yams",
+        "repositoryURL": "https://github.com/jpsim/Yams",
+        "state": {
+          "branch": null,
+          "revision": "9ff1cc9327586db4e0c8f46f064b6a82ec1566fa",
+          "version": "4.0.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
