@@ -5,41 +5,24 @@ use_frameworks!
 workspace 'Castcle-iOS'
 
 def share_pods
-  pod 'AppCenter'
   pod 'IGListKit'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Messaging'
   pod 'Firebase/DynamicLinks'
   pod 'Lightbox'
-  pod 'SnackBar.swift'
-  pod 'Defaults'
-  pod 'SwiftColor'
-  pod 'ESTabBarController-swift'
-  pod 'Kingfisher'
-  pod 'SwiftyJSON'
-  pod 'ActiveLabel'
-  pod 'Nantes'
-  pod 'PanModal'
-  pod 'IQKeyboardManagerSwift'
-  pod 'JVFloatLabeledTextField'
-  pod 'TOCropViewController'
   pod 'TLPhotoPicker'
   pod 'UITextView+Placeholder'
-  pod 'SwiftDate'
   pod 'XLPagerTabStrip'
   pod 'DropDown'
-  pod 'Atributika'
-  pod 'SwiftLinkPreview'
   pod 'SVPinView'
-  pod 'JGProgressHUD'
-  pod 'BetterSegmentedControl'
 end
 
 # Castcle-iOS
 target 'Castcle-iOS' do
     project 'Castcle-iOS.xcodeproj'
     share_pods
+    pod 'AppCenter'
 end
 
 # Component

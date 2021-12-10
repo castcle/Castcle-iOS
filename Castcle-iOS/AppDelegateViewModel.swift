@@ -19,39 +19,14 @@
 //  Thailand 10160, or visit www.castcle.com if you need additional information
 //  or have any questions.
 //
-//  BouncesContentView.swift
+//  AppDelegateViewModel.swift
 //  Castcle-iOS
 //
-//  Created by Tanakorn Phoochaliaw on 8/7/2564 BE.
+//  Created by Castcle Co., Ltd. on 21/10/2564 BE.
 //
 
-import UIKit
+import Foundation
 
-class BouncesContentView: BasicContentView {
-
-    public var duration = 0.3
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
+class AppDelegateViewModel {
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override func selectAnimation(animated: Bool, completion: (() -> ())?) {
-        completion?()
-    }
-
-    override func reselectAnimation(animated: Bool, completion: (() -> ())?) {
-        completion?()
-    }
-    
-    func bounceAnimation() {
-        let impliesAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
-        impliesAnimation.values = [1.0 ,1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
-        impliesAnimation.duration = duration * 2
-        impliesAnimation.calculationMode = CAAnimationCalculationMode.cubic
-        imageView.layer.add(impliesAnimation, forKey: nil)
-    }
 }

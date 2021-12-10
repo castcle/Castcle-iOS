@@ -22,7 +22,7 @@
 //  AppDelegate.swift
 //  Castcle-iOS
 //
-//  Created by Tanakorn Phoochaliaw on 2/7/2564 BE.
+//  Created by Castcle Co., Ltd. on 2/7/2564 BE.
 //
 
 import UIKit
@@ -34,7 +34,7 @@ import Search
 import Component
 import Post
 import Authen
-import ESTabBarController_swift
+import Profile
 import SwiftColor
 import Firebase
 import FirebaseDynamicLinks
@@ -44,6 +44,8 @@ import AppCenterCrashes
 import IQKeyboardManagerSwift
 import Defaults
 import PanModal
+import RealmSwift
+import SwiftKeychainWrapper
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -51,24 +53,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var feedNavi: UINavigationController?
     var searchNavi: UINavigationController?
-    let tabBarController = ESTabBarController()
+    let tabBarController = UITabBarController()
     let gcmMessageIDKey = "gcm.message_id"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
         // MARK: - Prepare Engagement
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
         
         // MARK: - Check device UUID
-        if Defaults[.deviceUuid].isEmpty {
-            Defaults[.deviceUuid] = UUID().uuidString
+        if let castcleDeviceId: String = KeychainWrapper.standard.string(forKey: "castcleDeviceId") {
+            Defaults[.deviceUuid] = castcleDeviceId
+        } else {
+            if Defaults[.deviceUuid].isEmpty {
+                let deviceUdid = UUID().uuidString
+                Defaults[.deviceUuid] = deviceUdid
+                let _: Bool = KeychainWrapper.standard.set(deviceUdid, forKey: "castcleDeviceId")
+            } else {
+                let _: Bool = KeychainWrapper.standard.set(Defaults[.deviceUuid], forKey: "castcleDeviceId")
+            }
         }
+        
+        // MARK: - Reset Load Feed
+        Defaults[.startLoadFeed] = true
         
         // MARK: - Get Version and Build Number
         Defaults[.appVersion] = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
         Defaults[.appBuild] = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "000000000000"
-        
         
         // MARK: - Load Font
         UIFont.loadAllFonts
@@ -82,16 +92,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if Environment.appEnv == .prod {
             filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info", ofType: "plist")
         } else if Environment.appEnv == .stg {
-            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Stgs", ofType: "plist")
+            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Stg", ofType: "plist")
         } else {
             filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Dev", ofType: "plist")
         }
         let options = FirebaseOptions.init(contentsOfFile: filePath)!
         FirebaseApp.configure(options: options)
         
+        // MARK: - Migrations Realm
+        let config = Realm.Configuration(
+            schemaVersion: 5,
+            migrationBlock: { migration, oldSchemaVersion in
+                if (oldSchemaVersion < 5) {
+                    // Nothing to do!
+                    // Realm will automatically detect new properties and removed properties
+                    // And will update the schema on disk automatically
+                }
+            })
+        Realm.Configuration.defaultConfiguration = config
+        
         // MARK: - Setup Notification
         Messaging.messaging().delegate = self
-        
         UNUserNotificationCenter.current().delegate = self
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(
@@ -99,6 +120,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             completionHandler: { _, _ in }
         )
         application.registerForRemoteNotifications()
+        
+        // MARK: - Setup Notification Center
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notification:)), name: .updateProfileDelegate, object: nil)
 
         
         // MARK: - App Center
@@ -123,106 +147,97 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupTabBar() {
         // MARK: - Setup TabBar
-        self.tabBarController.tabBar.backgroundImage = UIColor.Asset.darkGraphiteBlue.toImage()
-        self.tabBarController.shouldHijackHandler = {
-            tabbarController, viewController, index in
-            if index == 1 {
-                return true
-            }
-            return false
-        }
+        UITabBar.appearance().barTintColor = UIColor.Asset.darkGraphiteBlue
+        UITabBar.appearance().isTranslucent = false
+        self.tabBarController.tabBar.tintColor = UIColor.Asset.lightBlue
+        self.tabBarController.tabBar.unselectedItemTintColor = UIColor.Asset.white
+        self.tabBarController.delegate = self
         
-        self.tabBarController.didHijackHandler = {
-            [weak tabBarController] tabbarController, viewController, index in
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                if UserState.shared.isLogin {
-                    let vc = PostOpener.open(.post(PostViewModel(postType: .newCast)))
-                    vc.modalPresentationStyle = .fullScreen
-                    tabBarController?.present(vc, animated: true, completion: nil)
-                } else {
-                    Utility.currentViewController().presentPanModal(AuthenOpener.open(.signUpMethod) as! SignUpMethodViewController)
-                }
-            }
-        }
+        let bottomSafeAreaHeight = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0.0
+        let inset: CGFloat = (bottomSafeAreaHeight > 20 ? 10.0 : 5.0)
+        let insets = UIEdgeInsets(top: inset, left: 0, bottom: -inset, right: 0)
         
         // MARK: - Feed
         self.feedNavi = UINavigationController(rootViewController: FeedOpener.open(.feed))
+        let iconFeed = UITabBarItem(title: nil, image: UIImage.init(icon: .castcle(.feed), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .castcle(.feed), size: CGSize(width: 23, height: 23)))
+        self.feedNavi?.tabBarItem = iconFeed
+        self.searchNavi?.tabBarItem.tag = 0
+        self.feedNavi?.tabBarItem.imageInsets = insets
                 
         // MARK: - Search
         self.searchNavi = UINavigationController(rootViewController: SearchOpener.open(.search))
+        let iconSearch = UITabBarItem(title: nil, image: UIImage.init(icon: .castcle(.search), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .castcle(.search), size: CGSize(width: 23, height: 23)))
+        self.searchNavi?.tabBarItem = iconSearch
+        self.searchNavi?.tabBarItem.tag = 2
+        self.searchNavi?.tabBarItem.imageInsets = insets
         
         // MARK: - Action
         let actionViewController: UIViewController = UIViewController()
-
-        self.feedNavi?.tabBarItem = ESTabBarItem.init(BouncesContentView(), image: UIImage.init(icon: .castcle(.feed), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .castcle(.feed), size: CGSize(width: 23, height: 23)))
-        actionViewController.tabBarItem = ESTabBarItem.init(IrregularityContentView(), image: UIImage(named: "add-content"), selectedImage: UIImage(named: "add-content"))
-        self.searchNavi?.tabBarItem = ESTabBarItem.init(BouncesContentView(), image: UIImage.init(icon: .castcle(.search), size: CGSize(width: 23, height: 23)), selectedImage: UIImage.init(icon: .castcle(.search), size: CGSize(width: 23, height: 23)))
+        actionViewController.tabBarItem.image = UIImage(named: "add-content")?.withRenderingMode(.alwaysOriginal)
+        actionViewController.tabBarItem.tag = 1
+        actionViewController.tabBarItem.imageInsets = insets
         
         self.tabBarController.viewControllers = [self.feedNavi, actionViewController, self.searchNavi] as? [UIViewController] ?? []
     }
     
     func application(_ app: UIApplication, open url: URL,
                      options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
-      return application(app, open: url,
-                         sourceApplication: options[UIApplication.OpenURLOptionsKey
-                           .sourceApplication] as? String,
-                         annotation: "")
+        return application(app, open: url,
+                           sourceApplication: options[UIApplication.OpenURLOptionsKey
+                                                        .sourceApplication] as? String,
+                           annotation: "")
     }
 
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?,
                      annotation: Any) -> Bool {
-      if let dynamicLink = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
-        return true
-      }
-      return false
+        if let dynamicLink = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
+            return true
+        }
+        return false
     }
 }
 
 extension AppDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
-        let systemVersion = UIDevice.current.systemVersion
-        var engagementRequest: EngagementRequest = EngagementRequest()
-        engagementRequest.client = "iOS \(systemVersion)"
-        engagementRequest.accountId = UserState.shared.accountId
-        engagementRequest.uxSessionId = UserState.shared.uxSessionId
-        engagementRequest.screenId =  Defaults[.screenId]
-        engagementRequest.eventType = EventType.startSession.rawValue
-        engagementRequest.timestamp = "\(Date.currentTimeStamp)"
-
         if !Defaults[.accessToken].isEmpty {
+            let systemVersion = UIDevice.current.systemVersion
+            var engagementRequest: EngagementRequest = EngagementRequest()
+            engagementRequest.client = "iOS \(systemVersion)"
+            engagementRequest.accountId = UserManager.shared.accountId
+            engagementRequest.uxSessionId = UserManager.shared.uxSessionId
+            engagementRequest.screenId =  Defaults[.screenId]
+            engagementRequest.eventType = EventType.startSession.rawValue
+            engagementRequest.timestamp = "\(Date.currentTimeStamp)"
             let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
             engagementHelper.sendEngagement()
         }
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
-        let systemVersion = UIDevice.current.systemVersion
-        var engagementRequest: EngagementRequest = EngagementRequest()
-        engagementRequest.client = "iOS \(systemVersion)"
-        engagementRequest.accountId = UserState.shared.accountId
-        engagementRequest.uxSessionId = UserState.shared.uxSessionId
-        engagementRequest.screenId =  Defaults[.screenId]
-        engagementRequest.eventType = EventType.endSession.rawValue
-        engagementRequest.timestamp = "\(Date.currentTimeStamp)"
-        
         if !Defaults[.accessToken].isEmpty {
+            let systemVersion = UIDevice.current.systemVersion
+            var engagementRequest: EngagementRequest = EngagementRequest()
+            engagementRequest.client = "iOS \(systemVersion)"
+            engagementRequest.accountId = UserManager.shared.accountId
+            engagementRequest.uxSessionId = UserManager.shared.uxSessionId
+            engagementRequest.screenId =  Defaults[.screenId]
+            engagementRequest.eventType = EventType.endSession.rawValue
+            engagementRequest.timestamp = "\(Date.currentTimeStamp)"
             let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
             engagementHelper.sendEngagement()
         }
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        let systemVersion = UIDevice.current.systemVersion
-        var engagementRequest: EngagementRequest = EngagementRequest()
-        engagementRequest.client = "iOS \(systemVersion)"
-        engagementRequest.accountId = UserState.shared.accountId
-        engagementRequest.uxSessionId = UserState.shared.uxSessionId
-        engagementRequest.screenId =  Defaults[.screenId]
-        engagementRequest.eventType = EventType.endSession.rawValue
-        engagementRequest.timestamp = "\(Date.currentTimeStamp)"
-        
         if !Defaults[.accessToken].isEmpty {
+            let systemVersion = UIDevice.current.systemVersion
+            var engagementRequest: EngagementRequest = EngagementRequest()
+            engagementRequest.client = "iOS \(systemVersion)"
+            engagementRequest.accountId = UserManager.shared.accountId
+            engagementRequest.uxSessionId = UserManager.shared.uxSessionId
+            engagementRequest.screenId =  Defaults[.screenId]
+            engagementRequest.eventType = EventType.endSession.rawValue
+            engagementRequest.timestamp = "\(Date.currentTimeStamp)"
             let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
             engagementHelper.sendEngagement()
         }
@@ -238,42 +253,42 @@ extension AppDelegate: SplashScreenViewControllerDelegate {
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func application(_ application: UIApplication,
-                       didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
+                     didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         Messaging.messaging().appDidReceiveMessage(userInfo)
         
         if let messageID = userInfo[gcmMessageIDKey] {
-          print("Message ID: \(messageID)")
+            print("Message ID: \(messageID)")
         }
-
+        
         print(userInfo)
-      }
-
-      // [START receive_message]
-      func application(_ application: UIApplication,
-                       didReceiveRemoteNotification userInfo: [AnyHashable: Any],
-                       fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult)
-                         -> Void) {
+    }
+    
+    // [START receive_message]
+    func application(_ application: UIApplication,
+                     didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult)
+                        -> Void) {
         Messaging.messaging().appDidReceiveMessage(userInfo)
         
         if let messageID = userInfo[gcmMessageIDKey] {
-          print("Message ID: \(messageID)")
+            print("Message ID: \(messageID)")
         }
-
+        
         print(userInfo)
-
+        
         completionHandler(UIBackgroundFetchResult.newData)
-      }
-
-      func application(_ application: UIApplication,
-                       didFailToRegisterForRemoteNotificationsWithError error: Error) {
+    }
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("Unable to register for remote notifications: \(error.localizedDescription)")
-      }
-
-      func application(_ application: UIApplication,
-                       didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    }
+    
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Messaging.messaging().apnsToken = deviceToken
         print("APNs token retrieved: \(deviceToken)")
-      }
+    }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
@@ -285,7 +300,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-
+        
         print(userInfo)
         
         completionHandler([[.alert, .sound]])
@@ -310,11 +325,46 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 extension AppDelegate: MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         print("Firebase registration token: \(String(describing: fcmToken))")
+        Defaults[.firebaseToken] = fcmToken ?? ""
         let dataDict: [String: String] = ["token": fcmToken ?? ""]
         NotificationCenter.default.post(
             name: Notification.Name("FCMToken"),
             object: nil,
             userInfo: dataDict
         )
+    }
+}
+
+extension AppDelegate: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if viewController.tabBarItem.tag == 1 {
+            self.createPost()
+            return false
+        }
+        
+        if viewController.tabBarItem.tag == 0 {
+            NotificationCenter.default.post(name: .feedScrollToTop, object: nil)
+        }
+        
+        return true
+    }
+    
+    private func createPost() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            if UserManager.shared.isLogin {
+                let vc = PostOpener.open(.post(PostViewModel(postType: .newCast)))
+                vc.modalPresentationStyle = .fullScreen
+                self.tabBarController.present(vc, animated: true, completion: nil)
+            } else {
+                self.tabBarController.selectedIndex = 0
+                Utility.currentViewController().presentPanModal(AuthenOpener.open(.signUpMethod) as! SignUpMethodViewController)
+            }
+        }
+    }
+}
+
+extension AppDelegate {
+    @objc func openEditProfile(notification: NSNotification) {
+        Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.welcome), animated: true)
     }
 }
