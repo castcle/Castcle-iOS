@@ -299,6 +299,15 @@
         }
       },
       {
+        "package": "TLPhotoPicker",
+        "repositoryURL": "https://github.com/tilltue/TLPhotoPicker.git",
+        "state": {
+          "branch": null,
+          "revision": "89f924e7a47fefc57c7771e2d49864615f9ac0d8",
+          "version": "2.1.7"
+        }
+      },
+      {
         "package": "TOCropViewController",
         "repositoryURL": "https://github.com/TimOliver/TOCropViewController.git",
         "state": {
