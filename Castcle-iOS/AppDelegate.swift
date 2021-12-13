@@ -101,9 +101,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
-            schemaVersion: 5,
+            schemaVersion: 6,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 5) {
+                if (oldSchemaVersion < 6) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically
@@ -118,7 +118,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { (success, error) in
             if error == nil {
                 if success {
-                    application.registerForRemoteNotifications()
+                    DispatchQueue.main.async {
+                      UIApplication.shared.registerForRemoteNotifications()
+                    }
                 } else {
                     print("Permission denied")
                 }
