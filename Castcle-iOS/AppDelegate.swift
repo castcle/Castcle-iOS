@@ -185,7 +185,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         actionViewController.tabBarItem.tag = 1
         actionViewController.tabBarItem.imageInsets = insets
         
-        self.tabBarController.viewControllers = [self.feedNavi, actionViewController, self.searchNavi] as? [UIViewController] ?? []
+        self.tabBarController.viewControllers = [self.feedNavi!, actionViewController, self.searchNavi!]
     }
     
     func application(_ app: UIApplication, open url: URL,
