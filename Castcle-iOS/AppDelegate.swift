@@ -101,9 +101,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
-            schemaVersion: 4,
+            schemaVersion: 5,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 4) {
+                if (oldSchemaVersion < 5) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically
@@ -115,14 +115,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Messaging.messaging().delegate = self
         UNUserNotificationCenter.current().delegate = self
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-        UNUserNotificationCenter.current().requestAuthorization(
-            options: authOptions,
-            completionHandler: { _, _ in }
-        )
-        application.registerForRemoteNotifications()
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { (success, error) in
+            if error == nil {
+                if success {
+                    application.registerForRemoteNotifications()
+                } else {
+                    print("Permission denied")
+                }
+            } else {
+                print(error as Any)
+            }
+        }
         
         // MARK: - Setup Notification Center
-        NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notfication:)), name: .updateProfileDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notification:)), name: .updateProfileDelegate, object: nil)
 
         
         // MARK: - App Center
@@ -190,7 +196,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?,
                      annotation: Any) -> Bool {
-        if let dynamicLink = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
+        if let _ = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
             return true
         }
         return false
@@ -364,7 +370,7 @@ extension AppDelegate: UITabBarControllerDelegate {
 }
 
 extension AppDelegate {
-    @objc func openEditProfile(notfication: NSNotification) {
+    @objc func openEditProfile(notification: NSNotification) {
         Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.welcome), animated: true)
     }
 }
