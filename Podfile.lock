@@ -1,11 +1,11 @@
 PODS:
-  - AppCenter (4.3.0):
-    - AppCenter/Analytics (= 4.3.0)
-    - AppCenter/Crashes (= 4.3.0)
-  - AppCenter/Analytics (4.3.0):
+  - AppCenter (4.4.0):
+    - AppCenter/Analytics (= 4.4.0)
+    - AppCenter/Crashes (= 4.4.0)
+  - AppCenter/Analytics (4.4.0):
     - AppCenter/Core
-  - AppCenter/Core (4.3.0)
-  - AppCenter/Crashes (4.3.0):
+  - AppCenter/Core (4.4.0)
+  - AppCenter/Crashes (4.4.0):
     - AppCenter/Core
   - Cache (6.0.0)
   - DropDown (2.3.13)
@@ -178,7 +178,7 @@ SPEC REPOS:
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
-  AppCenter: 883369ab78427b0561c688158d689dfe1f993ea9
+  AppCenter: 0f379425d3420fb0aacb367b499aa9f90e5f2e93
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Firebase: 44213362f1dcc52555b935dc925ed35ac55f1b20
