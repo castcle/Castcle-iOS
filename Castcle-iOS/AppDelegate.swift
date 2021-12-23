@@ -46,6 +46,7 @@ import Defaults
 import PanModal
 import RealmSwift
 import SwiftKeychainWrapper
+import SwiftyJSON
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -131,7 +132,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Setup Notification Center
         NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notification:)), name: .updateProfileDelegate, object: nil)
-
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openProfile(notification:)), name: .openProfileDelegate, object: nil)
         
         // MARK: - App Center
         AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
@@ -374,5 +375,21 @@ extension AppDelegate: UITabBarControllerDelegate {
 extension AppDelegate {
     @objc func openEditProfile(notification: NSNotification) {
         Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.welcome), animated: true)
+    }
+    
+    @objc func openProfile(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let json = JSON(dict)
+            let id = json[AuthorKey.id.rawValue].stringValue
+            let type = AuthorType(rawValue: json[AuthorKey.type.rawValue].stringValue) ?? .people
+            let castcleId = json[AuthorKey.castcleId.rawValue].stringValue
+            let displayName = json[AuthorKey.displayName.rawValue].stringValue
+            let avatar = json[AuthorKey.avatar.rawValue].stringValue
+            if type == .page {
+                ProfileOpener.openProfileDetail(type, castcleId: nil, displayName: "", page: Page().initCustom(id: id, displayName: displayName, castcleId: castcleId, avatar:avatar, cover: ""))
+            } else {
+                ProfileOpener.openProfileDetail(type, castcleId: castcleId, displayName: displayName, page: nil)
+            }
+        }
     }
 }
