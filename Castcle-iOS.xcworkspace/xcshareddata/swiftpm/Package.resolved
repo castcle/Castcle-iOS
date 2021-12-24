@@ -281,15 +281,6 @@
         }
       },
       {
-        "package": "SwiftLinkPreview",
-        "repositoryURL": "https://github.com/LeonardoCardoso/SwiftLinkPreview.git",
-        "state": {
-          "branch": null,
-          "revision": "3eb30b1832a9cf0eaeec3e2cf6cfc0ed18ef763f",
-          "version": "3.4.0"
-        }
-      },
-      {
         "package": "SwiftShell",
         "repositoryURL": "https://github.com/kareman/SwiftShell",
         "state": {
