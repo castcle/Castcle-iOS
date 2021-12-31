@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
-          "version": "5.4.4"
+          "revision": "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
+          "version": "5.5.0"
         }
       },
       {
@@ -87,8 +87,8 @@
         "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {
           "branch": null,
-          "revision": "318e319998bf555c3e914d5c3adb6da05af86a32",
-          "version": "7.1.1"
+          "revision": "0c02c46cfdc0656ce74fd0963a75e5000a0b7f23",
+          "version": "7.1.2"
         }
       },
       {
@@ -128,6 +128,15 @@
         }
       },
       {
+        "package": "NVActivityIndicatorView",
+        "repositoryURL": "https://github.com/ninjaprox/NVActivityIndicatorView.git",
+        "state": {
+          "branch": null,
+          "revision": "bcb52371f2259254bac6690f92bb474a61768c47",
+          "version": "5.1.1"
+        }
+      },
+      {
         "package": "OHHTTPStubs",
         "repositoryURL": "https://github.com/AliSoftware/OHHTTPStubs.git",
         "state": {
@@ -141,8 +150,8 @@
         "repositoryURL": "https://github.com/shibapm/PackageConfig.git",
         "state": {
           "branch": null,
-          "revision": "5df1709f87e40e27b3fbe5022b826aff30d652d9",
-          "version": "1.1.0"
+          "revision": "7081db0a7ad0ce6002115944c26c915167dc0617",
+          "version": "1.1.2"
         }
       },
       {
@@ -177,8 +186,8 @@
         "repositoryURL": "https://github.com/realm/realm-cocoa.git",
         "state": {
           "branch": null,
-          "revision": "bdbbd57f411a0f4e72b359113dbc6d23fdf96680",
-          "version": "10.20.0"
+          "revision": "e83cc9f28e8bccd477b6b81cee521c02239d2773",
+          "version": "10.20.2"
         }
       },
       {
@@ -272,15 +281,6 @@
         }
       },
       {
-        "package": "SwiftLinkPreview",
-        "repositoryURL": "https://github.com/LeonardoCardoso/SwiftLinkPreview.git",
-        "state": {
-          "branch": null,
-          "revision": "3eb30b1832a9cf0eaeec3e2cf6cfc0ed18ef763f",
-          "version": "3.4.0"
-        }
-      },
-      {
         "package": "SwiftShell",
         "repositoryURL": "https://github.com/kareman/SwiftShell",
         "state": {
@@ -296,6 +296,15 @@
           "branch": null,
           "revision": "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
           "version": "5.0.1"
+        }
+      },
+      {
+        "package": "TLPhotoPicker",
+        "repositoryURL": "https://github.com/tilltue/TLPhotoPicker.git",
+        "state": {
+          "branch": null,
+          "revision": "43cc38e7ed183b3b25867ea3e1f271468ca2756f",
+          "version": "2.1.8"
         }
       },
       {

@@ -85,6 +85,7 @@
 		B79281B3269455D1000ED84A /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C2524A26C84B8700ACBB84 /* Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C252D826D3964D00ACBB84 /* Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E4666F27673CF6006E0B89 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
 		B7F69CA4268EB21E00B01223 /* Castcle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castcle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA7268EB21E00B01223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F69CB0268EB22000B01223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 				B75E62EE269978CA003E1ADA /* Development.xcconfig */,
 				B75E62EF269978DA003E1ADA /* Staging.xcconfig */,
 				B75E62F0269978ED003E1ADA /* Production.xcconfig */,
+				B7E4666F27673CF6006E0B89 /* Test.xcconfig */,
 			);
 			path = "Environment Config";
 			sourceTree = "<group>";
@@ -233,7 +235,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					B7F69CA3268EB21E00B01223 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -431,7 +433,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 25;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -548,7 +550,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 25;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -659,7 +661,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -742,6 +744,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -753,6 +756,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -769,7 +773,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -942,7 +946,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 25;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -996,7 +1000,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
