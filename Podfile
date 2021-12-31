@@ -2,6 +2,9 @@ platform :ios, '13.0'
 
 use_frameworks!
 
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
 workspace 'Castcle-iOS'
 
 def share_pods
@@ -11,7 +14,6 @@ def share_pods
   pod 'Firebase/Messaging'
   pod 'Firebase/DynamicLinks'
   pod 'Lightbox'
-  pod 'TLPhotoPicker'
   pod 'UITextView+Placeholder'
   pod 'XLPagerTabStrip'
   pod 'DropDown'

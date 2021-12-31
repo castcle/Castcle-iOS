@@ -1,4 +1,13 @@
 PODS:
+<<<<<<< HEAD
+  - AppCenter (4.4.1):
+    - AppCenter/Analytics (= 4.4.1)
+    - AppCenter/Crashes (= 4.4.1)
+  - AppCenter/Analytics (4.4.1):
+    - AppCenter/Core
+  - AppCenter/Core (4.4.1)
+  - AppCenter/Crashes (4.4.1):
+=======
   - AppCenter (4.4.0):
     - AppCenter/Analytics (= 4.4.0)
     - AppCenter/Crashes (= 4.4.0)
@@ -6,6 +15,7 @@ PODS:
     - AppCenter/Core
   - AppCenter/Core (4.4.0)
   - AppCenter/Crashes (4.4.0):
+>>>>>>> develop
     - AppCenter/Core
   - Cache (6.0.0)
   - DropDown (2.3.13)
@@ -132,7 +142,6 @@ PODS:
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
   - SVPinView (1.0.11)
-  - TLPhotoPicker (2.1.7)
   - "UITextView+Placeholder (1.4.0)"
   - XLPagerTabStrip (9.0.0)
 
@@ -146,7 +155,6 @@ DEPENDENCIES:
   - IGListKit
   - Lightbox
   - SVPinView
-  - TLPhotoPicker
   - "UITextView+Placeholder"
   - XLPagerTabStrip
 
@@ -173,12 +181,15 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - SVPinView
-    - TLPhotoPicker
     - "UITextView+Placeholder"
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+<<<<<<< HEAD
+  AppCenter: b0b6f1190215b5f983c42934db718f3b46fff3c0
+=======
   AppCenter: 0f379425d3420fb0aacb367b499aa9f90e5f2e93
+>>>>>>> develop
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Firebase: 44213362f1dcc52555b935dc925ed35ac55f1b20
@@ -199,10 +210,9 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
-  TLPhotoPicker: ffddcfc335e1475e769b2cdd37af5bbe42ddf0cb
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: dabdec930514d7fd47073ff11b680ccdfc5156cc
+PODFILE CHECKSUM: da2aa428369cb4a94d1391e4338d62703150af44
 
 COCOAPODS: 1.11.2
