@@ -14,7 +14,7 @@
 // App Settings
 APP_NAME = Test
 APP_BUNDLE_ID = com.castcle.ios.test
-APP_VERSION = 1.0.1
+APP_VERSION = 1.1.0
 APP_URL_SCHEMES = castcle-test
 
 // Key
