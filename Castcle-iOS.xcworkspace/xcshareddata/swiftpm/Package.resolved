@@ -222,8 +222,8 @@
         "repositoryURL": "https://github.com/Juanpe/SkeletonView.git",
         "state": {
           "branch": null,
-          "revision": "a9c22f502a4d938bd3fb6f17fe4d6633c423085a",
-          "version": "1.26.0"
+          "revision": "947e2a63c2f42dc5b9d83b817de413c58f422ae9",
+          "version": "1.27.0"
         }
       },
       {
@@ -303,8 +303,8 @@
         "repositoryURL": "https://github.com/tilltue/TLPhotoPicker.git",
         "state": {
           "branch": null,
-          "revision": "43cc38e7ed183b3b25867ea3e1f271468ca2756f",
-          "version": "2.1.8"
+          "revision": "0d0cbbd2d20ed5fd36e5f4052209f5e2d9aaa8b7",
+          "version": "2.1.9"
         }
       },
       {
