@@ -46,6 +46,7 @@ import Defaults
 import PanModal
 import RealmSwift
 import SwiftKeychainWrapper
+import SwiftyJSON
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -101,9 +102,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
-            schemaVersion: 5,
+            schemaVersion: 8,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 5) {
+                if (oldSchemaVersion < 8) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically
@@ -118,7 +119,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { (success, error) in
             if error == nil {
                 if success {
-                    application.registerForRemoteNotifications()
+                    DispatchQueue.main.async {
+                      UIApplication.shared.registerForRemoteNotifications()
+                    }
                 } else {
                     print("Permission denied")
                 }
@@ -129,7 +132,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Setup Notification Center
         NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notification:)), name: .updateProfileDelegate, object: nil)
-
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openProfile(notification:)), name: .openProfileDelegate, object: nil)
         
         // MARK: - App Center
         AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
@@ -183,7 +186,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         actionViewController.tabBarItem.tag = 1
         actionViewController.tabBarItem.imageInsets = insets
         
-        self.tabBarController.viewControllers = [self.feedNavi, actionViewController, self.searchNavi] as? [UIViewController] ?? []
+        self.tabBarController.viewControllers = [self.feedNavi!, actionViewController, self.searchNavi!]
     }
     
     func application(_ app: UIApplication, open url: URL,
@@ -372,5 +375,21 @@ extension AppDelegate: UITabBarControllerDelegate {
 extension AppDelegate {
     @objc func openEditProfile(notification: NSNotification) {
         Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.welcome), animated: true)
+    }
+    
+    @objc func openProfile(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let json = JSON(dict)
+            let id = json[AuthorKey.id.rawValue].stringValue
+            let type = AuthorType(rawValue: json[AuthorKey.type.rawValue].stringValue) ?? .people
+            let castcleId = json[AuthorKey.castcleId.rawValue].stringValue
+            let displayName = json[AuthorKey.displayName.rawValue].stringValue
+            let avatar = json[AuthorKey.avatar.rawValue].stringValue
+            if type == .page {
+                ProfileOpener.openProfileDetail(type, castcleId: nil, displayName: "", page: Page().initCustom(id: id, displayName: displayName, castcleId: castcleId, avatar:avatar, cover: ""))
+            } else {
+                ProfileOpener.openProfileDetail(type, castcleId: castcleId, displayName: displayName, page: nil)
+            }
+        }
     }
 }
