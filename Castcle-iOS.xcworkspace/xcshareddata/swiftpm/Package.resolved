@@ -263,6 +263,15 @@
         }
       },
       {
+        "package": "Swifter",
+        "repositoryURL": "https://github.com/mattdonnelly/Swifter.git",
+        "state": {
+          "branch": null,
+          "revision": "50682ebe64e4c08f18957ccfd16888f035c20755",
+          "version": "2.5.0"
+        }
+      },
+      {
         "package": "SwiftIP",
         "repositoryURL": "https://github.com/Samasaur1/SwiftIP.git",
         "state": {
