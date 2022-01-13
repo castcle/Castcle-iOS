@@ -48,6 +48,7 @@ import RealmSwift
 import SwiftKeychainWrapper
 import SwiftyJSON
 import Swifter
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -191,6 +192,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        let handled: Bool = GIDSignIn.sharedInstance.handle(url)
+        if handled {
+            return true
+        }
+        
         if let callbackUrl = URL(string: TwitterConstants.CALLBACK_URL) {
             Swifter.handleOpenURL(url, callbackURL: callbackUrl)
         }
