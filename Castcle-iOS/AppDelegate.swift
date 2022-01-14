@@ -195,9 +195,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let handled: Bool = GIDSignIn.sharedInstance.handle(url)
         if handled {
             return true
-        }
-        
-        if let callbackUrl = URL(string: TwitterConstants.CALLBACK_URL) {
+        } else if let callbackUrl = URL(string: TwitterConstants.callbackUrl) {
             Swifter.handleOpenURL(url, callbackURL: callbackUrl)
         }
         return true
