@@ -45,7 +45,6 @@ import IQKeyboardManagerSwift
 import Defaults
 import PanModal
 import RealmSwift
-import SwiftKeychainWrapper
 import SwiftyJSON
 import Swifter
 import GoogleSignIn
@@ -65,16 +64,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
         
         // MARK: - Check device UUID
-        if let castcleDeviceId: String = KeychainWrapper.standard.string(forKey: "castcleDeviceId") {
-            Defaults[.deviceUuid] = castcleDeviceId
-        } else {
+        let castcleDeviceId: String = KeychainHelper.shared.getKeychainWith(with: .castcleDeviceId)
+        if castcleDeviceId.isEmpty {
             if Defaults[.deviceUuid].isEmpty {
                 let deviceUdid = UUID().uuidString
                 Defaults[.deviceUuid] = deviceUdid
-                let _: Bool = KeychainWrapper.standard.set(deviceUdid, forKey: "castcleDeviceId")
+                KeychainHelper.shared.setKeychainWith(with: .castcleDeviceId, value: deviceUdid)
             } else {
-                let _: Bool = KeychainWrapper.standard.set(Defaults[.deviceUuid], forKey: "castcleDeviceId")
+                KeychainHelper.shared.setKeychainWith(with: .castcleDeviceId, value: Defaults[.deviceUuid])
             }
+        } else {
+            Defaults[.deviceUuid] = castcleDeviceId
         }
         
         // MARK: - Reset Load Feed
