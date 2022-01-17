@@ -47,6 +47,9 @@ import PanModal
 import RealmSwift
 import SwiftKeychainWrapper
 import SwiftyJSON
+import Swifter
+import GoogleSignIn
+import FBSDKCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -91,11 +94,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - Setup Firebase
         var filePath:String!
         if Environment.appEnv == .prod {
-            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info", ofType: "plist")
+            filePath = ConfigBundle.core.path(forResource: "GoogleService-Info", ofType: "plist")
         } else if Environment.appEnv == .stg {
-            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Stg", ofType: "plist")
+            filePath = ConfigBundle.core.path(forResource: "GoogleService-Info-Stg", ofType: "plist")
         } else {
-            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Dev", ofType: "plist")
+            filePath = ConfigBundle.core.path(forResource: "GoogleService-Info-Dev", ofType: "plist")
         }
         let options = FirebaseOptions.init(contentsOfFile: filePath)!
         FirebaseApp.configure(options: options)
@@ -139,6 +142,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Analytics.self,
             Crashes.self
         ])
+        
+        // MARK: - Facebook Login
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         // MARK: - Setup Splash Screen
         let splashScreenViewController = ComponentOpener.open(.splashScreen) as? SplashScreenViewController
@@ -189,21 +195,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.tabBarController.viewControllers = [self.feedNavi!, actionViewController, self.searchNavi!]
     }
     
-    func application(_ app: UIApplication, open url: URL,
-                     options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
-        return application(app, open: url,
-                           sourceApplication: options[UIApplication.OpenURLOptionsKey
-                                                        .sourceApplication] as? String,
-                           annotation: "")
-    }
-
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?,
-                     annotation: Any) -> Bool {
-        if let _ = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        let handled: Bool = GIDSignIn.sharedInstance.handle(url)
+        if handled {
             return true
+        } else if let callbackUrl = URL(string: TwitterConstants.callbackUrl) {
+            Swifter.handleOpenURL(url, callbackURL: callbackUrl)
         }
-        return false
+        return ApplicationDelegate.shared.application(app, open: url, options: options)
     }
+    
+//    func application(_ app: UIApplication, open url: URL,
+//                     options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
+//        return application(app, open: url,
+//                           sourceApplication: options[UIApplication.OpenURLOptionsKey
+//                                                        .sourceApplication] as? String,
+//                           annotation: "")
+//    }
+
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?,
+//                     annotation: Any) -> Bool {
+//        if let _ = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
+//            return true
+//        }
+//        return false
+//    }
 }
 
 extension AppDelegate {
@@ -379,12 +395,11 @@ extension AppDelegate {
     
     @objc func openProfile(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            let json = JSON(dict)
-            let id = json[AuthorKey.id.rawValue].stringValue
-            let type = AuthorType(rawValue: json[AuthorKey.type.rawValue].stringValue) ?? .people
-            let castcleId = json[AuthorKey.castcleId.rawValue].stringValue
-            let displayName = json[AuthorKey.displayName.rawValue].stringValue
-            let avatar = json[AuthorKey.avatar.rawValue].stringValue
+            let id: String = dict[AuthorKey.id.rawValue] as? String ?? ""
+            let type: AuthorType = AuthorType(rawValue: dict[AuthorKey.type.rawValue] as? String ?? "") ?? .people
+            let castcleId: String = dict[AuthorKey.castcleId.rawValue] as? String ?? ""
+            let displayName: String = dict[AuthorKey.displayName.rawValue] as? String ?? ""
+            let avatar: String = dict[AuthorKey.avatar.rawValue] as? String ?? ""
             if type == .page {
                 ProfileOpener.openProfileDetail(type, castcleId: nil, displayName: "", page: Page().initCustom(id: id, displayName: displayName, castcleId: castcleId, avatar:avatar, cover: ""))
             } else {

@@ -18,6 +18,8 @@ def share_pods
   pod 'XLPagerTabStrip'
   pod 'DropDown'
   pod 'SVPinView'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
 end
 
 # Castcle-iOS
