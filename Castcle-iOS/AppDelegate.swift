@@ -204,22 +204,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return ApplicationDelegate.shared.application(app, open: url, options: options)
     }
-    
-//    func application(_ app: UIApplication, open url: URL,
-//                     options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
-//        return application(app, open: url,
-//                           sourceApplication: options[UIApplication.OpenURLOptionsKey
-//                                                        .sourceApplication] as? String,
-//                           annotation: "")
-//    }
-
-//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?,
-//                     annotation: Any) -> Bool {
-//        if let _ = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
-//            return true
-//        }
-//        return false
-//    }
 }
 
 extension AppDelegate {
