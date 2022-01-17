@@ -49,6 +49,8 @@ import SwiftKeychainWrapper
 import SwiftyJSON
 import Swifter
 import GoogleSignIn
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -142,6 +144,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Crashes.self
         ])
         
+        // MARK: - Facebook Login
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         // MARK: - Setup Splash Screen
         let splashScreenViewController = ComponentOpener.open(.splashScreen) as? SplashScreenViewController
         splashScreenViewController?.delegate = self
@@ -198,7 +203,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else if let callbackUrl = URL(string: TwitterConstants.callbackUrl) {
             Swifter.handleOpenURL(url, callbackURL: callbackUrl)
         }
-        return true
+        return ApplicationDelegate.shared.application(app, open: url, options: options)
     }
     
 //    func application(_ app: UIApplication, open url: URL,
