@@ -92,13 +92,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enableAutoToolbar = false
         
         // MARK: - Setup Firebase
-        var filePath:String!
+        var filePath: String!
         if Environment.appEnv == .prod {
-            filePath = ConfigBundle.core.path(forResource: "GoogleService-Info", ofType: "plist")
+            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info", ofType: "plist")
         } else if Environment.appEnv == .stg {
-            filePath = ConfigBundle.core.path(forResource: "GoogleService-Info-Stg", ofType: "plist")
+            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Stg", ofType: "plist")
         } else {
-            filePath = ConfigBundle.core.path(forResource: "GoogleService-Info-Dev", ofType: "plist")
+            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Dev", ofType: "plist")
         }
         let options = FirebaseOptions.init(contentsOfFile: filePath)!
         FirebaseApp.configure(options: options)
@@ -208,7 +208,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
-        if !Defaults[.accessToken].isEmpty {
+        if !UserManager.shared.accessToken.isEmpty {
             let systemVersion = UIDevice.current.systemVersion
             var engagementRequest: EngagementRequest = EngagementRequest()
             engagementRequest.client = "iOS \(systemVersion)"
@@ -223,7 +223,7 @@ extension AppDelegate {
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
-        if !Defaults[.accessToken].isEmpty {
+        if !UserManager.shared.accessToken.isEmpty {
             let systemVersion = UIDevice.current.systemVersion
             var engagementRequest: EngagementRequest = EngagementRequest()
             engagementRequest.client = "iOS \(systemVersion)"
@@ -238,7 +238,7 @@ extension AppDelegate {
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        if !Defaults[.accessToken].isEmpty {
+        if !UserManager.shared.accessToken.isEmpty {
             let systemVersion = UIDevice.current.systemVersion
             var engagementRequest: EngagementRequest = EngagementRequest()
             engagementRequest.client = "iOS \(systemVersion)"
