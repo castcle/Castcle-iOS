@@ -50,7 +50,6 @@ import SwiftyJSON
 import Swifter
 import GoogleSignIn
 import FBSDKCoreKit
-import FBSDKLoginKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
