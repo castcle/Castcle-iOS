@@ -9,8 +9,6 @@ PODS:
     - AppCenter/Core
   - Cache (6.0.0)
   - DropDown (2.3.13)
-<<<<<<< HEAD
-=======
   - FBAEMKit (12.3.1):
     - FBSDKCoreKit_Basics (= 12.3.1)
   - FBSDKCoreKit (12.3.1):
@@ -19,7 +17,6 @@ PODS:
   - FBSDKCoreKit_Basics (12.3.1)
   - FBSDKLoginKit (12.3.1):
     - FBSDKCoreKit (= 12.3.1)
->>>>>>> release/release_1.1.0
   - Firebase/Analytics (8.11.0):
     - Firebase/Core
   - Firebase/Core (8.11.0):
@@ -195,13 +192,10 @@ SPEC CHECKSUMS:
   AppCenter: b0b6f1190215b5f983c42934db718f3b46fff3c0
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
-<<<<<<< HEAD
-=======
   FBAEMKit: 98e4afc9f867c6db3d1c0e7e3727d94a630b5f59
   FBSDKCoreKit: 4f348872eae956c922aca1a13771b9c2d4602088
   FBSDKCoreKit_Basics: b832439de7a8262ee17495889264e75785af54de
   FBSDKLoginKit: 4adb764028103621b48dfd601b08b03fe2114cdf
->>>>>>> release/release_1.1.0
   Firebase: 44dd9724c84df18b486639e874f31436eaa9a20c
   FirebaseAnalytics: 4e4b13031034e6561ed3bd1d47b6fdabbd6487c6
   FirebaseCore: 2f4f85b453cc8fea4bb2b37e370007d2bcafe3f0
