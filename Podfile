@@ -82,3 +82,9 @@ end
      project 'Notification/Notification.xcodeproj'
      share_pods
  end
+
+# Ads
+ target 'Ads' do
+     project 'Ads/Ads.xcodeproj'
+     share_pods
+ end
