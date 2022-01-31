@@ -209,46 +209,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
         if !UserManager.shared.accessToken.isEmpty {
-            let systemVersion = UIDevice.current.systemVersion
-            var engagementRequest: EngagementRequest = EngagementRequest()
-            engagementRequest.client = "iOS \(systemVersion)"
-            engagementRequest.accountId = UserManager.shared.accountId
-            engagementRequest.uxSessionId = UserManager.shared.uxSessionId
-            engagementRequest.screenId =  Defaults[.screenId]
-            engagementRequest.eventType = EventType.startSession.rawValue
-            engagementRequest.timestamp = "\(Date.currentTimeStamp)"
-            let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
-            engagementHelper.sendEngagement()
+            let screenId: ScreenId = ScreenId(rawValue: Defaults[.screenId]) ?? .unknown
+            EngagementHelper().sendCastcleAnalytic(event: .startSession, screen: screenId)
         }
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
         if !UserManager.shared.accessToken.isEmpty {
-            let systemVersion = UIDevice.current.systemVersion
-            var engagementRequest: EngagementRequest = EngagementRequest()
-            engagementRequest.client = "iOS \(systemVersion)"
-            engagementRequest.accountId = UserManager.shared.accountId
-            engagementRequest.uxSessionId = UserManager.shared.uxSessionId
-            engagementRequest.screenId =  Defaults[.screenId]
-            engagementRequest.eventType = EventType.endSession.rawValue
-            engagementRequest.timestamp = "\(Date.currentTimeStamp)"
-            let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
-            engagementHelper.sendEngagement()
+            let screenId: ScreenId = ScreenId(rawValue: Defaults[.screenId]) ?? .unknown
+            EngagementHelper().sendCastcleAnalytic(event: .endSession, screen: screenId)
         }
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
         if !UserManager.shared.accessToken.isEmpty {
-            let systemVersion = UIDevice.current.systemVersion
-            var engagementRequest: EngagementRequest = EngagementRequest()
-            engagementRequest.client = "iOS \(systemVersion)"
-            engagementRequest.accountId = UserManager.shared.accountId
-            engagementRequest.uxSessionId = UserManager.shared.uxSessionId
-            engagementRequest.screenId =  Defaults[.screenId]
-            engagementRequest.eventType = EventType.endSession.rawValue
-            engagementRequest.timestamp = "\(Date.currentTimeStamp)"
-            let engagementHelper: EngagementHelper = EngagementHelper(engagementRequest: engagementRequest)
-            engagementHelper.sendEngagement()
+            let screenId: ScreenId = ScreenId(rawValue: Defaults[.screenId]) ?? .unknown
+            EngagementHelper().sendCastcleAnalytic(event: .endSession, screen: screenId)
         }
     }
 }
