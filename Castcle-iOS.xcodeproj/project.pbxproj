@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7EDBF332196C2D1833C692C1 /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0E8115C73A1F33488B9C87 /* Pods_Castcle_iOS.framework */; };
+		B70748F327955CC600F01CB4 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748EF27955CC600F01CB4 /* Development.xcconfig */; };
+		B70748F427955CC600F01CB4 /* Test.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F027955CC600F01CB4 /* Test.xcconfig */; };
+		B70748F527955CC600F01CB4 /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F127955CC600F01CB4 /* Staging.xcconfig */; };
+		B70748F627955CC600F01CB4 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F227955CC600F01CB4 /* Production.xcconfig */; };
 		B71B666B27210CEF00191A62 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */; };
-		B7552904269C0E63005D5EB5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7552902269C0E63005D5EB5 /* README.md */; };
-		B7B1E39A26A141C8006E2FF6 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */; };
-		B7B1E39B26A141C8006E2FF6 /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */; };
-		B7B1E39C26A141C8006E2FF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */; };
+		B792AA1827955D9800364F7C /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1527955D9700364F7C /* GoogleService-Info-Dev.plist */; };
+		B792AA1927955D9800364F7C /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1627955D9700364F7C /* GoogleService-Info-Stg.plist */; };
+		B792AA1A27955D9800364F7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1727955D9800364F7C /* GoogleService-Info.plist */; };
 		B7B4A53426F89D97001C4737 /* Authen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E0D26B12FE60097C94E /* Authen.framework */; };
 		B7B4A53526F89D97001C4737 /* Authen.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E0D26B12FE60097C94E /* Authen.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A53726F89D9E001C4737 /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; };
@@ -67,25 +70,24 @@
 		54468F2BB87EA3EC29940A29 /* Pods-Castcle-iOS.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (development).xcconfig"; sourceTree = "<group>"; };
 		64A8DAA29FEC8FDD6E47AD64 /* Pods-Castcle-iOS.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (staging).xcconfig"; sourceTree = "<group>"; };
 		7E551B796A1F35FF9C177613 /* Pods-Castcle-iOS.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (development).xcconfig"; sourceTree = "<group>"; };
+		B70748EF27955CC600F01CB4 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		B70748F027955CC600F01CB4 /* Test.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
+		B70748F127955CC600F01CB4 /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		B70748F227955CC600F01CB4 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateViewModel.swift; sourceTree = "<group>"; };
 		B74CEF1E26C50760006B1F2C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B7552902269C0E63005D5EB5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
-		B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stg.plist"; sourceTree = "<group>"; };
 		B758AC5426F4396A00A4A5FB /* Notification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Notification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75E628626969B04003E1ADA /* Component.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Component.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B75E62EE269978CA003E1ADA /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
-		B75E62EF269978DA003E1ADA /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
-		B75E62F0269978ED003E1ADA /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		B7910E0D26B12FE60097C94E /* Authen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7910E1026B12FEF0097C94E /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B792811B268EC784000ED84A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79281B2269455D1000ED84A /* Feed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Feed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79281B3269455D1000ED84A /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B792AA1527955D9700364F7C /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
+		B792AA1627955D9700364F7C /* GoogleService-Info-Stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stg.plist"; sourceTree = "<group>"; };
+		B792AA1727955D9800364F7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7C2524A26C84B8700ACBB84 /* Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C252D826D3964D00ACBB84 /* Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E4666F27673CF6006E0B89 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
 		B7F69CA4268EB21E00B01223 /* Castcle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castcle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA7268EB21E00B01223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F69CB0268EB22000B01223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,27 +138,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B7552900269C0E63005D5EB5 /* Config */ = {
+		B70748EE27955CC600F01CB4 /* Main Config */ = {
 			isa = PBXGroup;
 			children = (
-				B7552902269C0E63005D5EB5 /* README.md */,
-				B7552914269C1E8A005D5EB5 /* GoogleService-Info-Dev.plist */,
-				B7552916269C1F38005D5EB5 /* GoogleService-Info-Stg.plist */,
-				B7552901269C0E63005D5EB5 /* GoogleService-Info.plist */,
+				B70748EF27955CC600F01CB4 /* Development.xcconfig */,
+				B70748F027955CC600F01CB4 /* Test.xcconfig */,
+				B70748F127955CC600F01CB4 /* Staging.xcconfig */,
+				B70748F227955CC600F01CB4 /* Production.xcconfig */,
+				B792AA1527955D9700364F7C /* GoogleService-Info-Dev.plist */,
+				B792AA1627955D9700364F7C /* GoogleService-Info-Stg.plist */,
+				B792AA1727955D9800364F7C /* GoogleService-Info.plist */,
 			);
-			path = Config;
+			name = "Main Config";
+			path = "Config/Main Config";
 			sourceTree = SOURCE_ROOT;
-		};
-		B75E62ED269978A7003E1ADA /* Environment Config */ = {
-			isa = PBXGroup;
-			children = (
-				B75E62EE269978CA003E1ADA /* Development.xcconfig */,
-				B75E62EF269978DA003E1ADA /* Staging.xcconfig */,
-				B75E62F0269978ED003E1ADA /* Production.xcconfig */,
-				B7E4666F27673CF6006E0B89 /* Test.xcconfig */,
-			);
-			path = "Environment Config";
-			sourceTree = "<group>";
 		};
 		B7F69C9B268EB21E00B01223 = {
 			isa = PBXGroup;
@@ -185,8 +180,7 @@
 				B7F69CB0268EB22000B01223 /* Assets.xcassets */,
 				B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */,
 				B7F69CB5268EB22000B01223 /* Info.plist */,
-				B7552900269C0E63005D5EB5 /* Config */,
-				B75E62ED269978A7003E1ADA /* Environment Config */,
+				B70748EE27955CC600F01CB4 /* Main Config */,
 			);
 			path = "Castcle-iOS";
 			sourceTree = "<group>";
@@ -265,12 +259,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7B1E39A26A141C8006E2FF6 /* GoogleService-Info-Dev.plist in Resources */,
-				B7B1E39B26A141C8006E2FF6 /* GoogleService-Info-Stg.plist in Resources */,
-				B7B1E39C26A141C8006E2FF6 /* GoogleService-Info.plist in Resources */,
+				B792AA1927955D9800364F7C /* GoogleService-Info-Stg.plist in Resources */,
+				B70748F427955CC600F01CB4 /* Test.xcconfig in Resources */,
+				B792AA1A27955D9800364F7C /* GoogleService-Info.plist in Resources */,
+				B792AA1827955D9800364F7C /* GoogleService-Info-Dev.plist in Resources */,
+				B70748F327955CC600F01CB4 /* Development.xcconfig in Resources */,
 				B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */,
+				B70748F527955CC600F01CB4 /* Staging.xcconfig in Resources */,
 				B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */,
-				B7552904269C0E63005D5EB5 /* README.md in Resources */,
+				B70748F627955CC600F01CB4 /* Production.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +308,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\" -gsp \"${PROJECT_DIR}/Config/${FIREBASR_CONFIG_FILE}.plist\"\n";
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\" -gsp \"${PROJECT_DIR}/Config/Main Config/${FIREBASE_CONFIG_FILE}.plist\"\n";
 		};
 		CAF3094C0DC976EC7A6ACE9B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -363,7 +360,7 @@
 /* Begin XCBuildConfiguration section */
 		B75E62E526997702003E1ADA /* Debug (Staging) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75E62EF269978DA003E1ADA /* Staging.xcconfig */;
+			baseConfigurationReference = B70748F127955CC600F01CB4 /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -426,14 +423,14 @@
 		};
 		B75E62E626997702003E1ADA /* Debug (Staging) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75E62EF269978DA003E1ADA /* Staging.xcconfig */;
+			baseConfigurationReference = B70748F127955CC600F01CB4 /* Staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Stg";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 47;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -480,7 +477,7 @@
 		};
 		B75E62E726997707003E1ADA /* Debug (Development) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75E62EE269978CA003E1ADA /* Development.xcconfig */;
+			baseConfigurationReference = B70748EF27955CC600F01CB4 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -543,14 +540,14 @@
 		};
 		B75E62E826997707003E1ADA /* Debug (Development) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75E62EE269978CA003E1ADA /* Development.xcconfig */;
+			baseConfigurationReference = B70748EF27955CC600F01CB4 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 47;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -597,7 +594,7 @@
 		};
 		B75E62E92699770B003E1ADA /* Release (Staging) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75E62EF269978DA003E1ADA /* Staging.xcconfig */;
+			baseConfigurationReference = B70748F127955CC600F01CB4 /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -654,14 +651,14 @@
 		};
 		B75E62EA2699770B003E1ADA /* Release (Staging) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75E62EF269978DA003E1ADA /* Staging.xcconfig */;
+			baseConfigurationReference = B70748F127955CC600F01CB4 /* Staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Stg";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -707,7 +704,7 @@
 		};
 		B75E62EB2699770E003E1ADA /* Release (Development) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75E62EE269978CA003E1ADA /* Development.xcconfig */;
+			baseConfigurationReference = B70748EF27955CC600F01CB4 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -766,14 +763,14 @@
 		};
 		B75E62EC2699770E003E1ADA /* Release (Development) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75E62EE269978CA003E1ADA /* Development.xcconfig */;
+			baseConfigurationReference = B70748EF27955CC600F01CB4 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -819,7 +816,7 @@
 		};
 		B7F69CB6268EB22000B01223 /* Debug (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75E62F0269978ED003E1ADA /* Production.xcconfig */;
+			baseConfigurationReference = B70748F227955CC600F01CB4 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -882,7 +879,7 @@
 		};
 		B7F69CB7268EB22000B01223 /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75E62F0269978ED003E1ADA /* Production.xcconfig */;
+			baseConfigurationReference = B70748F227955CC600F01CB4 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -939,14 +936,14 @@
 		};
 		B7F69CB9268EB22000B01223 /* Debug (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75E62F0269978ED003E1ADA /* Production.xcconfig */;
+			baseConfigurationReference = B70748F227955CC600F01CB4 /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 47;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -985,7 +982,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(APP_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Prod Castcle App Store";
+				PROVISIONING_PROFILE_SPECIFIER = "Prod Castcle Development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -993,14 +990,14 @@
 		};
 		B7F69CBA268EB22000B01223 /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75E62F0269978ED003E1ADA /* Production.xcconfig */;
+			baseConfigurationReference = B70748F227955CC600F01CB4 /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -1038,7 +1035,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(APP_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Prod Castcle App Store";
+				PROVISIONING_PROFILE_SPECIFIER = "Prod Castcle Development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
