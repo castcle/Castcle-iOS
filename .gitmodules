@@ -31,3 +31,6 @@
 [submodule "Notification"]
 	path = Notification
 	url = ../Notification-iOS.git
+[submodule "Ads"]
+	path = Ads
+	url = ../Ads-iOS.git
