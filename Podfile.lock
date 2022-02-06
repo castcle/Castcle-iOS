@@ -126,6 +126,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.7.0):
     - GoogleUtilities/Logger
+  - GTProgressBar (0.3.3)
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
@@ -152,6 +153,7 @@ DEPENDENCIES:
   - Firebase/Crashlytics
   - Firebase/DynamicLinks
   - Firebase/Messaging
+  - GTProgressBar
   - IGListKit
   - Lightbox
   - SVPinView
@@ -178,6 +180,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - GTProgressBar
     - IGListDiffKit
     - IGListKit
     - Imaginary
@@ -207,6 +210,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: aa3cb422fab2b05d2efac543a5720d1a85b9dea5
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
+  GTProgressBar: a480283ecb0ada50de16c71e634892826928f640
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
@@ -217,6 +221,6 @@ SPEC CHECKSUMS:
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 0a7dcaef1969d40e18c57fbd995a15c10566defb
+PODFILE CHECKSUM: 01b8717588ab790658de9c86a41a3c578c5f400b
 
 COCOAPODS: 1.11.2
