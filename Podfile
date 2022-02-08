@@ -20,6 +20,7 @@ def share_pods
   pod 'SVPinView'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  pod 'GTProgressBar'
 end
 
 # Castcle-iOS
@@ -80,5 +81,11 @@ end
 # Setting
  target 'Notification' do
      project 'Notification/Notification.xcodeproj'
+     share_pods
+ end
+
+# Ads
+ target 'Ads' do
+     project 'Ads/Ads.xcodeproj'
      share_pods
  end

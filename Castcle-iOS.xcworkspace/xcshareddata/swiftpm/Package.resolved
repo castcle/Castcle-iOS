@@ -47,12 +47,21 @@
         }
       },
       {
+        "package": "CenteredCollectionView",
+        "repositoryURL": "https://github.com/BenEmdon/CenteredCollectionView.git",
+        "state": {
+          "branch": null,
+          "revision": "f2bf371dae314b46f1bc03c222861c9fc40fff32",
+          "version": "2.2.2"
+        }
+      },
+      {
         "package": "Defaults",
         "repositoryURL": "https://github.com/sindresorhus/Defaults.git",
         "state": {
           "branch": null,
-          "revision": "55f3302c3ab30a8760f10042d0ebc0a6907f865a",
-          "version": "6.1.0"
+          "revision": "c9198bb1d097486711a36269b191f4e96d93130b",
+          "version": "6.2.0"
         }
       },
       {
