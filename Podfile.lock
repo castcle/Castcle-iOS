@@ -30,9 +30,14 @@ PODS:
   - Firebase/DynamicLinks (8.12.1):
     - Firebase/CoreOnly
     - FirebaseDynamicLinks (~> 8.12.0)
+  - Firebase/InAppMessaging (8.12.1):
+    - Firebase/CoreOnly
+    - FirebaseInAppMessaging (~> 8.12.0-beta)
   - Firebase/Messaging (8.12.1):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 8.12.0)
+  - FirebaseABTesting (8.12.0):
+    - FirebaseCore (~> 8.0)
   - FirebaseAnalytics (8.12.0):
     - FirebaseAnalytics/AdIdSupport (= 8.12.0)
     - FirebaseCore (~> 8.0)
@@ -69,6 +74,12 @@ PODS:
     - PromisesObjC (< 3.0, >= 1.2)
   - FirebaseDynamicLinks (8.12.0):
     - FirebaseCore (~> 8.0)
+  - FirebaseInAppMessaging (8.12.0-beta):
+    - FirebaseABTesting (~> 8.0)
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (~> 2.30908.0)
   - FirebaseInstallations (8.12.0):
     - FirebaseCore (~> 8.0)
     - GoogleUtilities/Environment (~> 7.7)
@@ -152,6 +163,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Crashlytics
   - Firebase/DynamicLinks
+  - Firebase/InAppMessaging
   - Firebase/Messaging
   - GTProgressBar
   - IGListKit
@@ -170,11 +182,13 @@ SPEC REPOS:
     - FBSDKCoreKit_Basics
     - FBSDKLoginKit
     - Firebase
+    - FirebaseABTesting
     - FirebaseAnalytics
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseCrashlytics
     - FirebaseDynamicLinks
+    - FirebaseInAppMessaging
     - FirebaseInstallations
     - FirebaseMessaging
     - GoogleAppMeasurement
@@ -200,11 +214,13 @@ SPEC CHECKSUMS:
   FBSDKCoreKit_Basics: 6bee7c1f0932432901781203fa5e587ec5099148
   FBSDKLoginKit: 56d55e23fe66a6db045826190b0b4dbc0e1ca0a0
   Firebase: 580d09e8edafc3073ebf09c03fd42e4d80d35fe9
+  FirebaseABTesting: 1b05c92327b3f0a9545cea3bab4d93e82550e29b
   FirebaseAnalytics: bd10d7706ba8d6e01ea2816f8fe9e9b881cb0918
   FirebaseCore: 8138de860a90ca7eec5e324da5788fb0ebf1d93c
   FirebaseCoreDiagnostics: 3b40dfadef5b90433a60ae01f01e90fe87aa76aa
   FirebaseCrashlytics: 7952ffd988006128325510664b99dc8ca5851dff
   FirebaseDynamicLinks: 98a5f0fe542245a89ec55f646d2581298c29219d
+  FirebaseInAppMessaging: 871e8d04ed0d1ca77c9c0e4c246c13d010d7a8de
   FirebaseInstallations: 25764cf322e77f99449395870a65b2bef88e1545
   FirebaseMessaging: 23db8bf05585e929ada8af0f0968933c25252808
   GoogleAppMeasurement: ae033c3aad67e68294369373056b4d74cc8ae0d6
@@ -221,6 +237,6 @@ SPEC CHECKSUMS:
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 01b8717588ab790658de9c86a41a3c578c5f400b
+PODFILE CHECKSUM: d5c3ea892b5484524a8b048c0d3c30ef711ee89b
 
 COCOAPODS: 1.11.2

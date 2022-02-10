@@ -202,7 +202,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else if let callbackUrl = URL(string: TwitterConstants.callbackUrl) {
             Swifter.handleOpenURL(url, callbackURL: callbackUrl)
         }
+        
+        if url.absoluteString == "castcle-dev://verify_mobile" {
+            let urlStr = "castcle-dev://?view=verify_mobile"
+            if let view = self.getQueryStringParameter(url: urlStr, param: "view") {
+                if view == "verify_mobile" {
+                    print("Open Verify Mobile")
+                }
+            }
+        }
+        
         return ApplicationDelegate.shared.application(app, open: url, options: options)
+    }
+    
+    func getQueryStringParameter(url: String, param: String) -> String? {
+        guard let url = URLComponents(string: url) else { return nil }
+        return url.queryItems?.first(where: { $0.name == param })?.value
     }
 }
 
