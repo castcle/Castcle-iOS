@@ -35,6 +35,7 @@ import Component
 import Post
 import Authen
 import Profile
+import Setting
 import SwiftColor
 import Firebase
 import FirebaseDynamicLinks
@@ -58,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var searchNavi: UINavigationController?
     let tabBarController = UITabBarController()
     let gcmMessageIDKey = "gcm.message_id"
+    var isOpenDeepLink: Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: - Prepare Engagement
@@ -203,11 +205,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Swifter.handleOpenURL(url, callbackURL: callbackUrl)
         }
         
-        if url.absoluteString == "castcle-dev://verify_mobile" {
-            let urlStr = "castcle-dev://?view=verify_mobile"
-            if let view = self.getQueryStringParameter(url: urlStr, param: "view") {
-                if view == "verify_mobile" {
-                    print("Open Verify Mobile")
+        if let view = self.getQueryStringParameter(url: url.absoluteString, param: "view") {
+            if view == "verify_mobile" && UserManager.shared.isLogin && !self.isOpenDeepLink {
+                self.isOpenDeepLink = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.gotoVerifyMobile()
                 }
             }
         }
@@ -381,5 +383,10 @@ extension AppDelegate {
                 ProfileOpener.openProfileDetail(type, castcleId: castcleId, displayName: displayName, page: nil)
             }
         }
+    }
+    
+    private func gotoVerifyMobile() {
+        self.isOpenDeepLink = false
+        Utility.currentViewController().navigationController?.pushViewController(SettingOpener.open(.verifyMobile), animated: true)
     }
 }
