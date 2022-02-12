@@ -35,6 +35,7 @@ import Component
 import Post
 import Authen
 import Profile
+import Setting
 import SwiftColor
 import Firebase
 import FirebaseDynamicLinks
@@ -58,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var searchNavi: UINavigationController?
     let tabBarController = UITabBarController()
     let gcmMessageIDKey = "gcm.message_id"
+    var isOpenDeepLink: Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: - Prepare Engagement
@@ -105,9 +107,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
-            schemaVersion: 10,
+            schemaVersion: 11,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 10) {
+                if (oldSchemaVersion < 11) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically
@@ -202,7 +204,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else if let callbackUrl = URL(string: TwitterConstants.callbackUrl) {
             Swifter.handleOpenURL(url, callbackURL: callbackUrl)
         }
+        
+        if let view = self.getQueryStringParameter(url: url.absoluteString, param: "view") {
+            if view == "verify_mobile" && UserManager.shared.isLogin && !self.isOpenDeepLink {
+                self.isOpenDeepLink = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.gotoVerifyMobile()
+                }
+            }
+        }
+        
         return ApplicationDelegate.shared.application(app, open: url, options: options)
+    }
+    
+    func getQueryStringParameter(url: String, param: String) -> String? {
+        guard let url = URLComponents(string: url) else { return nil }
+        return url.queryItems?.first(where: { $0.name == param })?.value
     }
 }
 
@@ -366,5 +383,10 @@ extension AppDelegate {
                 ProfileOpener.openProfileDetail(type, castcleId: castcleId, displayName: displayName, page: nil)
             }
         }
+    }
+    
+    private func gotoVerifyMobile() {
+        self.isOpenDeepLink = false
+        Utility.currentViewController().navigationController?.pushViewController(SettingOpener.open(.verifyMobile), animated: true)
     }
 }

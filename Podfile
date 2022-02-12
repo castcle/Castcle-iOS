@@ -13,6 +13,7 @@ def share_pods
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Messaging'
   pod 'Firebase/DynamicLinks'
+  pod 'Firebase/InAppMessaging'
   pod 'Lightbox'
   pod 'UITextView+Placeholder'
   pod 'XLPagerTabStrip'
