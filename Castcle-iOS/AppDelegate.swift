@@ -217,6 +217,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return ApplicationDelegate.shared.application(app, open: url, options: options)
     }
     
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        let handled = DynamicLinks.dynamicLinks()
+            .handleUniversalLink(userActivity.webpageURL!) { dynamiclink, error in
+                print(dynamiclink)
+            }
+        return handled
+    }
+    
     func getQueryStringParameter(url: String, param: String) -> String? {
         guard let url = URLComponents(string: url) else { return nil }
         return url.queryItems?.first(where: { $0.name == param })?.value
