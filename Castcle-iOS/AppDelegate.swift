@@ -107,9 +107,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
-            schemaVersion: 11,
+            schemaVersion: 12,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 11) {
+                if (oldSchemaVersion < 12) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically
@@ -378,7 +378,7 @@ extension AppDelegate {
             let displayName: String = dict[AuthorKey.displayName.rawValue] as? String ?? ""
             let avatar: String = dict[AuthorKey.avatar.rawValue] as? String ?? ""
             if type == .page {
-                ProfileOpener.openProfileDetail(type, castcleId: nil, displayName: "", page: Page().initCustom(id: id, displayName: displayName, castcleId: castcleId, avatar:avatar, cover: ""))
+                ProfileOpener.openProfileDetail(type, castcleId: nil, displayName: "", page: Page().initCustom(id: id, displayName: displayName, castcleId: castcleId, avatar:avatar, cover: "", overview: "", official: false))
             } else {
                 ProfileOpener.openProfileDetail(type, castcleId: castcleId, displayName: displayName, page: nil)
             }
