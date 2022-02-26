@@ -220,7 +220,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         let handled = DynamicLinks.dynamicLinks()
             .handleUniversalLink(userActivity.webpageURL!) { dynamiclink, error in
-                print(dynamiclink)
+                print(dynamiclink ?? "")
             }
         return handled
     }
@@ -380,16 +380,10 @@ extension AppDelegate {
     
     @objc func openProfile(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            let id: String = dict[AuthorKey.id.rawValue] as? String ?? ""
             let type: AuthorType = AuthorType(rawValue: dict[AuthorKey.type.rawValue] as? String ?? "") ?? .people
             let castcleId: String = dict[AuthorKey.castcleId.rawValue] as? String ?? ""
             let displayName: String = dict[AuthorKey.displayName.rawValue] as? String ?? ""
-            let avatar: String = dict[AuthorKey.avatar.rawValue] as? String ?? ""
-            if type == .page {
-                ProfileOpener.openProfileDetail(type, castcleId: nil, displayName: "", page: Page().initCustom(id: id, displayName: displayName, castcleId: castcleId, avatar:avatar, cover: ""))
-            } else {
-                ProfileOpener.openProfileDetail(type, castcleId: castcleId, displayName: displayName, page: nil)
-            }
+            ProfileOpener.openProfileDetail(type, castcleId: castcleId, displayName: displayName)
         }
     }
     
