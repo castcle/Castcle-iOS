@@ -53,7 +53,7 @@
 	<string>$(APP_NAME)</string>
 	<key>FirebaseDynamicLinksCustomDomains</key>
 	<array>
-		<string>https://link-dev.castcle.com</string>
+		<string>https://castcle.page.link</string>
 		<string>https://link-staging.castcle.com</string>
 		<string>https://link.castcle.com</string>
 	</array>

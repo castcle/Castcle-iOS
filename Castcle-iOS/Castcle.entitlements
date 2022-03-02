@@ -10,8 +10,8 @@
 	</array>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:link-dev.castcle.com</string>
-		<string>applinks:link-staging.castcle.com</string>
+		<string>applinks:castcle.page.link</string>
+		<string>applinks:stgs.page.link</string>
 		<string>applinks:link.castcle.com</string>
 	</array>
 </dict>

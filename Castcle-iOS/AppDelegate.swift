@@ -217,6 +217,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return ApplicationDelegate.shared.application(app, open: url, options: options)
     }
     
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        let handled = DynamicLinks.dynamicLinks()
+            .handleUniversalLink(userActivity.webpageURL!) { dynamiclink, error in
+                print(dynamiclink ?? "")
+            }
+        return handled
+    }
+    
     func getQueryStringParameter(url: String, param: String) -> String? {
         guard let url = URLComponents(string: url) else { return nil }
         return url.queryItems?.first(where: { $0.name == param })?.value
@@ -372,16 +380,10 @@ extension AppDelegate {
     
     @objc func openProfile(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            let id: String = dict[AuthorKey.id.rawValue] as? String ?? ""
             let type: AuthorType = AuthorType(rawValue: dict[AuthorKey.type.rawValue] as? String ?? "") ?? .people
             let castcleId: String = dict[AuthorKey.castcleId.rawValue] as? String ?? ""
             let displayName: String = dict[AuthorKey.displayName.rawValue] as? String ?? ""
-            let avatar: String = dict[AuthorKey.avatar.rawValue] as? String ?? ""
-            if type == .page {
-                ProfileOpener.openProfileDetail(type, castcleId: nil, displayName: "", page: Page().initCustom(id: id, displayName: displayName, castcleId: castcleId, avatar:avatar, cover: "", overview: "", official: false))
-            } else {
-                ProfileOpener.openProfileDetail(type, castcleId: castcleId, displayName: displayName, page: nil)
-            }
+            ProfileOpener.openProfileDetail(type, castcleId: castcleId, displayName: displayName)
         }
     }
     
