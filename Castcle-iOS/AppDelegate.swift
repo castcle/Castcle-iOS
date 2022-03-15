@@ -39,6 +39,7 @@ import Setting
 import SwiftColor
 import Firebase
 import FirebaseDynamicLinks
+import FirebaseRemoteConfig
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
@@ -104,6 +105,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         let options = FirebaseOptions.init(contentsOfFile: filePath)!
         FirebaseApp.configure(options: options)
+        
+        // MARK: - Setup Firebase Remote Config
+        self.fetchData()
+//        _ = RemoteConfigValues.shared
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
@@ -195,6 +200,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         actionViewController.tabBarItem.imageInsets = insets
         
         self.tabBarController.viewControllers = [self.feedNavi!, actionViewController, self.searchNavi!]
+    }
+    
+    private func fetchData() {
+//        let remoteConfig = RemoteConfig.remoteConfig()
+        let setting = RemoteConfigSettings()
+        setting.minimumFetchInterval = 3600
+        RemoteConfig.remoteConfig().configSettings = setting
+        
+        let defualt: [String: NSObject] = [
+            "version_ios": "9.9.9" as NSObject
+        ]
+        RemoteConfig.remoteConfig().setDefaults(defualt)
+        RemoteConfig.remoteConfig().fetch(withExpirationDuration: 3600) { ststus, error in
+            if ststus == .success, error == nil {
+                RemoteConfig.remoteConfig().activate() { success, error in
+                    if error == nil {
+                        let value = RemoteConfig.remoteConfig().configValue(forKey: "version_ios").stringValue
+                        let json = RemoteConfig.remoteConfig().configValue(forKey: "force_version").jsonValue
+                        print(json)
+                        print(value)
+                        print("=============")
+                    } else {
+                        print("Error \(error)")
+                    }
+                }
+            } else {
+                print("Error \(error)")
+            }
+        }
+        
+        let value = RemoteConfig.remoteConfig().configValue(forKey: "version_ios").stringValue
+        let json = RemoteConfig.remoteConfig().configValue(forKey: "force_version").jsonValue
+        print(value)
+        print(json)
+        print("=============")
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {

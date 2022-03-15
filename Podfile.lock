@@ -36,6 +36,9 @@ PODS:
   - Firebase/Messaging (8.13.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 8.13.0)
+  - Firebase/RemoteConfig (8.13.0):
+    - Firebase/CoreOnly
+    - FirebaseRemoteConfig (~> 8.13.0)
   - FirebaseABTesting (8.13.0):
     - FirebaseCore (~> 8.0)
   - FirebaseAnalytics (8.13.0):
@@ -94,6 +97,12 @@ PODS:
     - GoogleUtilities/Reachability (~> 7.7)
     - GoogleUtilities/UserDefaults (~> 7.7)
     - nanopb (~> 2.30908.0)
+  - FirebaseRemoteConfig (8.13.0):
+    - FirebaseABTesting (~> 8.0)
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.7)
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
   - GoogleAppMeasurement (8.13.0):
     - GoogleAppMeasurement/AdIdSupport (= 8.13.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
@@ -165,6 +174,7 @@ DEPENDENCIES:
   - Firebase/DynamicLinks
   - Firebase/InAppMessaging
   - Firebase/Messaging
+  - Firebase/RemoteConfig
   - GTProgressBar
   - IGListKit
   - Lightbox
@@ -191,6 +201,7 @@ SPEC REPOS:
     - FirebaseInAppMessaging
     - FirebaseInstallations
     - FirebaseMessaging
+    - FirebaseRemoteConfig
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
@@ -223,6 +234,7 @@ SPEC CHECKSUMS:
   FirebaseInAppMessaging: 78ecb145bf4b14335c7f9f70435e2b0b6e386ff8
   FirebaseInstallations: 60edbf7e11d91ae4c751d26c200dfd037099abe0
   FirebaseMessaging: 8cddb4c478663611d58c03b353e10dd0ed6468f6
+  FirebaseRemoteConfig: 39462033ba6fe7979eb49499f40f07feaa016b0a
   GoogleAppMeasurement: 135c2fbcf5038e0f37dbce04fa641a702fc275d1
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
@@ -237,6 +249,6 @@ SPEC CHECKSUMS:
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: d5c3ea892b5484524a8b048c0d3c30ef711ee89b
+PODFILE CHECKSUM: 1544d53c460d6279245404822ba423e8147b993d
 
 COCOAPODS: 1.11.2

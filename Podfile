@@ -14,6 +14,7 @@ def share_pods
   pod 'Firebase/Messaging'
   pod 'Firebase/DynamicLinks'
   pod 'Firebase/InAppMessaging'
+  pod 'Firebase/RemoteConfig'
   pod 'Lightbox'
   pod 'UITextView+Placeholder'
   pod 'XLPagerTabStrip'
