@@ -143,6 +143,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - Setup Notification Center
         NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notification:)), name: .updateProfileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openProfile(notification:)), name: .openProfileDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
         
         // MARK: - App Center
         AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
@@ -420,10 +421,17 @@ extension AppDelegate {
     
     @objc func openProfile(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            let type: AuthorType = AuthorType(rawValue: dict[AuthorKey.type.rawValue] as? String ?? "") ?? .people
             let castcleId: String = dict[AuthorKey.castcleId.rawValue] as? String ?? ""
             let displayName: String = dict[AuthorKey.displayName.rawValue] as? String ?? ""
-            ProfileOpener.openProfileDetail(type, castcleId: castcleId, displayName: displayName)
+            ProfileOpener.openProfileDetail(castcleId, displayName: displayName)
+        }
+    }
+    
+    @objc func openSearch(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let hastag: String = dict["hashtag"] as? String ?? ""
+            let vc = SearchOpener.open(.searchResult(SearchResualViewModel(state: .resualt, textSearch: hastag, searchFeedState: .getFeed)))
+            Utility.currentViewController().navigationController?.pushViewController(vc, animated: true)
         }
     }
     
