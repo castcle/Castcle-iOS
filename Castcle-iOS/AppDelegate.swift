@@ -206,7 +206,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func fetchData() {
 //        let remoteConfig = RemoteConfig.remoteConfig()
         let setting = RemoteConfigSettings()
-        setting.minimumFetchInterval = 3600
+        setting.minimumFetchInterval = 0
         RemoteConfig.remoteConfig().configSettings = setting
         
         let defualt: [String: NSObject] = [
