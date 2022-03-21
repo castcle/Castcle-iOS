@@ -18,8 +18,6 @@
 		B792AA1827955D9800364F7C /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1527955D9700364F7C /* GoogleService-Info-Dev.plist */; };
 		B792AA1927955D9800364F7C /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1627955D9700364F7C /* GoogleService-Info-Stg.plist */; };
 		B792AA1A27955D9800364F7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1727955D9800364F7C /* GoogleService-Info.plist */; };
-		B7AF495027DF390400A51C2E /* RemoteConfigValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AF494F27DF390400A51C2E /* RemoteConfigValues.swift */; };
-		B7AF495427DF55E500A51C2E /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7AF495327DF55E500A51C2E /* RemoteConfigDefaults.plist */; };
 		B7B4A53426F89D97001C4737 /* Authen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E0D26B12FE60097C94E /* Authen.framework */; };
 		B7B4A53526F89D97001C4737 /* Authen.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E0D26B12FE60097C94E /* Authen.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A53726F89D9E001C4737 /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; };
@@ -92,8 +90,6 @@
 		B792AA1527955D9700364F7C /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
 		B792AA1627955D9700364F7C /* GoogleService-Info-Stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stg.plist"; sourceTree = "<group>"; };
 		B792AA1727955D9800364F7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B7AF494F27DF390400A51C2E /* RemoteConfigValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigValues.swift; sourceTree = "<group>"; };
-		B7AF495327DF55E500A51C2E /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		B7C2524A26C84B8700ACBB84 /* Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C252D826D3964D00ACBB84 /* Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA4268EB21E00B01223 /* Castcle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castcle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,15 +159,6 @@
 			path = "Config/Main Config";
 			sourceTree = SOURCE_ROOT;
 		};
-		B7AF494E27DF38B100A51C2E /* Remote Config */ = {
-			isa = PBXGroup;
-			children = (
-				B7AF495327DF55E500A51C2E /* RemoteConfigDefaults.plist */,
-				B7AF494F27DF390400A51C2E /* RemoteConfigValues.swift */,
-			);
-			path = "Remote Config";
-			sourceTree = "<group>";
-		};
 		B7F69C9B268EB21E00B01223 = {
 			isa = PBXGroup;
 			children = (
@@ -199,7 +186,6 @@
 				B7F69CB0268EB22000B01223 /* Assets.xcassets */,
 				B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */,
 				B7F69CB5268EB22000B01223 /* Info.plist */,
-				B7AF494E27DF38B100A51C2E /* Remote Config */,
 				B70748EE27955CC600F01CB4 /* Main Config */,
 			);
 			path = "Castcle-iOS";
@@ -285,7 +271,6 @@
 				B792AA1827955D9800364F7C /* GoogleService-Info-Dev.plist in Resources */,
 				B70748F327955CC600F01CB4 /* Development.xcconfig in Resources */,
 				B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */,
-				B7AF495427DF55E500A51C2E /* RemoteConfigDefaults.plist in Resources */,
 				B70748F527955CC600F01CB4 /* Staging.xcconfig in Resources */,
 				B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */,
 				B70748F627955CC600F01CB4 /* Production.xcconfig in Resources */,
@@ -361,7 +346,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71B666B27210CEF00191A62 /* AppDelegateViewModel.swift in Sources */,
-				B7AF495027DF390400A51C2E /* RemoteConfigValues.swift in Sources */,
 				B7F69CA8268EB21E00B01223 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

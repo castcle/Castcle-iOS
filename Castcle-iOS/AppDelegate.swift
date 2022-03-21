@@ -230,12 +230,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Error \(error)")
             }
         }
-        
-        let value = RemoteConfig.remoteConfig().configValue(forKey: "version_ios").stringValue
-        let json = RemoteConfig.remoteConfig().configValue(forKey: "force_version").jsonValue
-        print(value)
-        print(json)
-        print("=============")
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
