@@ -141,6 +141,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // MARK: - Setup Notification Center
+        NotificationCenter.default.addObserver(self, selector: #selector(self.resetApplication(notification:)), name: .resetApplication, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notification:)), name: .updateProfileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openProfile(notification:)), name: .openProfileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
@@ -204,9 +205,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func fetchData() {
-//        let remoteConfig = RemoteConfig.remoteConfig()
         let setting = RemoteConfigSettings()
-        setting.minimumFetchInterval = 0
+        setting.minimumFetchInterval = 3600
         RemoteConfig.remoteConfig().configSettings = setting
         
         let defualt: [String: NSObject] = [
@@ -409,6 +409,11 @@ extension AppDelegate: UITabBarControllerDelegate {
 }
 
 extension AppDelegate {
+    @objc func resetApplication(notification: NSNotification) {
+        self.setupTabBar()
+        self.window!.rootViewController = self.tabBarController
+    }
+    
     @objc func openEditProfile(notification: NSNotification) {
         Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.welcome), animated: true)
     }
