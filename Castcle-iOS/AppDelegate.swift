@@ -222,6 +222,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         print(json)
                         print(value)
                         print("=============")
+                        CheckUpdate.shared.showUpdate(withConfirmation: true)
                     } else {
                         print("Error \(error)")
                     }
