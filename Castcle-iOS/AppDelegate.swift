@@ -39,10 +39,9 @@ import Setting
 import SwiftColor
 import Firebase
 import FirebaseDynamicLinks
-import FirebaseRemoteConfig
-import AppCenter
-import AppCenterAnalytics
-import AppCenterCrashes
+//import AppCenter
+//import AppCenterAnalytics
+//import AppCenterCrashes
 import IQKeyboardManagerSwift
 import Defaults
 import PanModal
@@ -106,10 +105,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let options = FirebaseOptions.init(contentsOfFile: filePath)!
         FirebaseApp.configure(options: options)
         
-        // MARK: - Setup Firebase Remote Config
-        self.fetchData()
-//        _ = RemoteConfigValues.shared
-        
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
             schemaVersion: 13,
@@ -147,10 +142,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
         
         // MARK: - App Center
-        AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
-            Analytics.self,
-            Crashes.self
-        ])
+//        AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
+//            Analytics.self,
+//            Crashes.self
+//        ])
         
         // MARK: - Facebook Login
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -202,35 +197,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         actionViewController.tabBarItem.imageInsets = insets
         
         self.tabBarController.viewControllers = [self.feedNavi!, actionViewController, self.searchNavi!]
-    }
-    
-    private func fetchData() {
-        let setting = RemoteConfigSettings()
-        setting.minimumFetchInterval = 3600
-        RemoteConfig.remoteConfig().configSettings = setting
-        
-        let defualt: [String: NSObject] = [
-            "version_ios": "9.9.9" as NSObject
-        ]
-        RemoteConfig.remoteConfig().setDefaults(defualt)
-        RemoteConfig.remoteConfig().fetch(withExpirationDuration: 3600) { ststus, error in
-            if ststus == .success, error == nil {
-                RemoteConfig.remoteConfig().activate() { success, error in
-                    if error == nil {
-                        let value = RemoteConfig.remoteConfig().configValue(forKey: "version_ios").stringValue
-                        let json = RemoteConfig.remoteConfig().configValue(forKey: "force_version").jsonValue
-                        print(json)
-                        print(value)
-                        print("=============")
-                        CheckUpdate.shared.showUpdate(withConfirmation: true)
-                    } else {
-                        print("Error \(error)")
-                    }
-                }
-            } else {
-                print("Error \(error)")
-            }
-        }
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {

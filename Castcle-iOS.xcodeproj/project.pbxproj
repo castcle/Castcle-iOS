@@ -314,7 +314,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\" -gsp \"${PROJECT_DIR}/Config/Main Config/${FIREBASE_CONFIG_FILE}.plist\"\n";
+			shellScript = "
+";
 		};
 		CAF3094C0DC976EC7A6ACE9B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
