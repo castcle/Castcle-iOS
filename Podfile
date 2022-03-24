@@ -17,6 +17,7 @@ def share_pods
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
   pod 'GTProgressBar'
+  pod 'PopupDialog'
 end
 
 # Castcle-iOS

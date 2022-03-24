@@ -39,9 +39,9 @@ import Setting
 import SwiftColor
 import Firebase
 import FirebaseDynamicLinks
-//import AppCenter
-//import AppCenterAnalytics
-//import AppCenterCrashes
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 import IQKeyboardManagerSwift
 import Defaults
 import PanModal
@@ -50,6 +50,7 @@ import SwiftyJSON
 import Swifter
 import GoogleSignIn
 import FBSDKCoreKit
+import PopupDialog
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -88,6 +89,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Load Font
         UIFont.loadAllFonts
+        
+        // MARK: - Setup Popup Dialog
+        self.setupPopupAppearance()
         
         // MARK: - Setup Keyboard
         IQKeyboardManager.shared.enable = true
@@ -142,10 +146,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
         
         // MARK: - App Center
-//        AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
-//            Analytics.self,
-//            Crashes.self
-//        ])
+        AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
+            Analytics.self,
+            Crashes.self
+        ])
         
         // MARK: - Facebook Login
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -197,6 +201,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         actionViewController.tabBarItem.imageInsets = insets
         
         self.tabBarController.viewControllers = [self.feedNavi!, actionViewController, self.searchNavi!]
+    }
+    
+    func setupPopupAppearance() {
+        // Customize dialog appearance
+        let pv = PopupDialogDefaultView.appearance()
+        pv.titleFont    = UIFont.asset(.bold, fontSize: .body)
+        pv.titleColor   = UIColor.Asset.darkGraphiteBlue
+        pv.messageFont  = UIFont.asset(.regular, fontSize: .overline)
+        pv.messageColor = UIColor.Asset.darkGraphiteBlue
+
+        // Customize default button appearance
+        let db = DefaultButton.appearance()
+        db.titleFont      = UIFont.asset(.bold, fontSize: .overline)
+        db.titleColor     = UIColor.Asset.darkGraphiteBlue
+
+        // Customize cancel button appearance
+        let cb = CancelButton.appearance()
+        cb.titleFont      = UIFont.asset(.regular, fontSize: .overline)
+        cb.titleColor     = UIColor.Asset.gray
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {

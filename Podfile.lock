@@ -9,6 +9,7 @@ PODS:
     - AppCenter/Core
   - Cache (6.0.0)
   - DropDown (2.3.13)
+  - DynamicBlurView (4.1.0)
   - FBAEMKit (13.1.0):
     - FBSDKCoreKit_Basics (= 13.1.0)
   - FBSDKCoreKit (13.1.0):
@@ -25,6 +26,8 @@ PODS:
     - Cache (~> 6.0.0)
   - Lightbox (2.5.0):
     - Imaginary (~> 5.0.0)
+  - PopupDialog (1.1.1):
+    - DynamicBlurView (~> 4.0)
   - SVPinView (1.0.11)
   - "UITextView+Placeholder (1.4.0)"
   - XLPagerTabStrip (9.0.0)
@@ -37,6 +40,7 @@ DEPENDENCIES:
   - GTProgressBar
   - IGListKit
   - Lightbox
+  - PopupDialog
   - SVPinView
   - "UITextView+Placeholder"
   - XLPagerTabStrip
@@ -46,6 +50,7 @@ SPEC REPOS:
     - AppCenter
     - Cache
     - DropDown
+    - DynamicBlurView
     - FBAEMKit
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
@@ -55,6 +60,7 @@ SPEC REPOS:
     - IGListKit
     - Imaginary
     - Lightbox
+    - PopupDialog
     - SVPinView
     - "UITextView+Placeholder"
     - XLPagerTabStrip
@@ -63,6 +69,7 @@ SPEC CHECKSUMS:
   AppCenter: b0b6f1190215b5f983c42934db718f3b46fff3c0
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   FBAEMKit: 9ce89760a23f03ffecd907c8e1f3201160f2dcc7
   FBSDKCoreKit: eff97dea778dbe6cc4498959cffb619c75675102
   FBSDKCoreKit_Basics: c151609a1cf6976a5958febcf0043266a8fd5151
@@ -72,10 +79,11 @@ SPEC CHECKSUMS:
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
   Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
+  PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: bc69c2b38596b09cfce30f4b769d7dac1d0970aa
+PODFILE CHECKSUM: 6243cd00b3f0aacc33e8468608c89d7a37bf925e
 
 COCOAPODS: 1.11.3
