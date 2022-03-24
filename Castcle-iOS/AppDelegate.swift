@@ -39,7 +39,6 @@ import Setting
 import SwiftColor
 import Firebase
 import FirebaseDynamicLinks
-import FirebaseRemoteConfig
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
@@ -51,6 +50,7 @@ import SwiftyJSON
 import Swifter
 import GoogleSignIn
 import FBSDKCoreKit
+import PopupDialog
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -90,6 +90,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - Load Font
         UIFont.loadAllFonts
         
+        // MARK: - Setup Popup Dialog
+        self.setupPopupAppearance()
+        
         // MARK: - Setup Keyboard
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
@@ -105,10 +108,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         let options = FirebaseOptions.init(contentsOfFile: filePath)!
         FirebaseApp.configure(options: options)
-        
-        // MARK: - Setup Firebase Remote Config
-        self.fetchData()
-//        _ = RemoteConfigValues.shared
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
@@ -141,6 +140,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // MARK: - Setup Notification Center
+        NotificationCenter.default.addObserver(self, selector: #selector(self.resetApplication(notification:)), name: .resetApplication, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notification:)), name: .updateProfileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openProfile(notification:)), name: .openProfileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
@@ -203,39 +203,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.tabBarController.viewControllers = [self.feedNavi!, actionViewController, self.searchNavi!]
     }
     
-    private func fetchData() {
-//        let remoteConfig = RemoteConfig.remoteConfig()
-        let setting = RemoteConfigSettings()
-        setting.minimumFetchInterval = 0
-        RemoteConfig.remoteConfig().configSettings = setting
-        
-        let defualt: [String: NSObject] = [
-            "version_ios": "9.9.9" as NSObject
-        ]
-        RemoteConfig.remoteConfig().setDefaults(defualt)
-        RemoteConfig.remoteConfig().fetch(withExpirationDuration: 3600) { ststus, error in
-            if ststus == .success, error == nil {
-                RemoteConfig.remoteConfig().activate() { success, error in
-                    if error == nil {
-                        let value = RemoteConfig.remoteConfig().configValue(forKey: "version_ios").stringValue
-                        let json = RemoteConfig.remoteConfig().configValue(forKey: "force_version").jsonValue
-                        print(json)
-                        print(value)
-                        print("=============")
-                    } else {
-                        print("Error \(error)")
-                    }
-                }
-            } else {
-                print("Error \(error)")
-            }
-        }
-        
-        let value = RemoteConfig.remoteConfig().configValue(forKey: "version_ios").stringValue
-        let json = RemoteConfig.remoteConfig().configValue(forKey: "force_version").jsonValue
-        print(value)
-        print(json)
-        print("=============")
+    func setupPopupAppearance() {
+        // Customize dialog appearance
+        let pv = PopupDialogDefaultView.appearance()
+        pv.titleFont    = UIFont.asset(.bold, fontSize: .body)
+        pv.titleColor   = UIColor.Asset.darkGraphiteBlue
+        pv.messageFont  = UIFont.asset(.regular, fontSize: .overline)
+        pv.messageColor = UIColor.Asset.darkGraphiteBlue
+
+        // Customize default button appearance
+        let db = DefaultButton.appearance()
+        db.titleFont      = UIFont.asset(.bold, fontSize: .overline)
+        db.titleColor     = UIColor.Asset.darkGraphiteBlue
+
+        // Customize cancel button appearance
+        let cb = CancelButton.appearance()
+        cb.titleFont      = UIFont.asset(.regular, fontSize: .overline)
+        cb.titleColor     = UIColor.Asset.gray
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
@@ -415,6 +399,11 @@ extension AppDelegate: UITabBarControllerDelegate {
 }
 
 extension AppDelegate {
+    @objc func resetApplication(notification: NSNotification) {
+        self.setupTabBar()
+        self.window!.rootViewController = self.tabBarController
+    }
+    
     @objc func openEditProfile(notification: NSNotification) {
         Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.welcome), animated: true)
     }
