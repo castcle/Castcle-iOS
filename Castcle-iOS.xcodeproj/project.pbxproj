@@ -18,6 +18,8 @@
 		B792AA1827955D9800364F7C /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1527955D9700364F7C /* GoogleService-Info-Dev.plist */; };
 		B792AA1927955D9800364F7C /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1627955D9700364F7C /* GoogleService-Info-Stg.plist */; };
 		B792AA1A27955D9800364F7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1727955D9800364F7C /* GoogleService-Info.plist */; };
+		B79723F527F1A66A00111F24 /* Farming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79723F427F1A66A00111F24 /* Farming.framework */; };
+		B79723F627F1A66A00111F24 /* Farming.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B79723F427F1A66A00111F24 /* Farming.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A53426F89D97001C4737 /* Authen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E0D26B12FE60097C94E /* Authen.framework */; };
 		B7B4A53526F89D97001C4737 /* Authen.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E0D26B12FE60097C94E /* Authen.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A53726F89D9E001C4737 /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; };
@@ -51,6 +53,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B7B4A53826F89D9E001C4737 /* Component.framework in Embed Frameworks */,
+				B79723F627F1A66A00111F24 /* Farming.framework in Embed Frameworks */,
 				B7B4A54226F89DAB001C4737 /* Post.framework in Embed Frameworks */,
 				B7B4A53A26F89DA0001C4737 /* Core.framework in Embed Frameworks */,
 				B7B4A53C26F89DA3001C4737 /* Feed.framework in Embed Frameworks */,
@@ -90,6 +93,7 @@
 		B792AA1527955D9700364F7C /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
 		B792AA1627955D9700364F7C /* GoogleService-Info-Stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stg.plist"; sourceTree = "<group>"; };
 		B792AA1727955D9800364F7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B79723F427F1A66A00111F24 /* Farming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Farming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C2524A26C84B8700ACBB84 /* Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C252D826D3964D00ACBB84 /* Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA4268EB21E00B01223 /* Castcle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castcle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +119,7 @@
 				B7B4A53726F89D9E001C4737 /* Component.framework in Frameworks */,
 				B7B4A54526F89DB0001C4737 /* Search.framework in Frameworks */,
 				B7B4A53B26F89DA3001C4737 /* Feed.framework in Frameworks */,
+				B79723F527F1A66A00111F24 /* Farming.framework in Frameworks */,
 				B7B4A53426F89D97001C4737 /* Authen.framework in Frameworks */,
 				B7B4A53926F89DA0001C4737 /* Core.framework in Frameworks */,
 				B7B4A53F26F89DA7001C4737 /* Notification.framework in Frameworks */,
@@ -128,6 +133,7 @@
 		7F3A3F40D4655699A46A2DB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B79723F427F1A66A00111F24 /* Farming.framework */,
 				B7927DB827A80228005DB48A /* Ads.framework */,
 				B758AC5426F4396A00A4A5FB /* Notification.framework */,
 				B7C252D826D3964D00ACBB84 /* Setting.framework */,
