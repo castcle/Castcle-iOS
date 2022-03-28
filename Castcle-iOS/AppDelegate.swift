@@ -146,10 +146,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
         
         // MARK: - App Center
-        AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
-            Analytics.self,
-            Crashes.self
-        ])
+        if Environment.appEnv == .prod {
+            AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
+                Analytics.self,
+                Crashes.self
+            ])
+        }
         
         // MARK: - Facebook Login
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
