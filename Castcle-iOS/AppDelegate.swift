@@ -36,6 +36,7 @@ import Post
 import Authen
 import Profile
 import Setting
+import Farming
 import SwiftColor
 import Firebase
 import FirebaseDynamicLinks
@@ -144,6 +145,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notification:)), name: .updateProfileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openProfile(notification:)), name: .openProfileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openFarmingHistory(notification:)), name: .openFarmmingDelegate, object: nil)
         
         // MARK: - App Center
         if Environment.appEnv == .prod {
@@ -423,6 +425,12 @@ extension AppDelegate {
             let hastag: String = dict["hashtag"] as? String ?? ""
             let vc = SearchOpener.open(.searchResult(SearchResualViewModel(state: .resualt, textSearch: hastag, searchFeedState: .getFeed)))
             Utility.currentViewController().navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    @objc func openFarmingHistory(notification: NSNotification) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {
+            Utility.currentViewController().navigationController?.pushViewController(FarmingOpener.open(.contentFarming), animated: true)
         }
     }
     
