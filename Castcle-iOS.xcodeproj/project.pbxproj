@@ -314,7 +314,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\" -gsp \"${PROJECT_DIR}/Config/Main Config/${FIREBASE_CONFIG_FILE}.plist\"\n";
+			shellScript = "
+";
 		};
 		CAF3094C0DC976EC7A6ACE9B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -436,7 +437,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 71;
+				CURRENT_PROJECT_VERSION = 84;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -553,7 +554,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 71;
+				CURRENT_PROJECT_VERSION = 84;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -664,7 +665,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 71;
+				CURRENT_PROJECT_VERSION = 84;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -776,7 +777,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 71;
+				CURRENT_PROJECT_VERSION = 84;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -949,7 +950,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 71;
+				CURRENT_PROJECT_VERSION = 84;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -1003,7 +1004,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 71;
+				CURRENT_PROJECT_VERSION = 84;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";

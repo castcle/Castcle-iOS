@@ -9,11 +9,6 @@ workspace 'Castcle-iOS'
 
 def share_pods
   pod 'IGListKit'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Crashlytics'
-  pod 'Firebase/Messaging'
-  pod 'Firebase/DynamicLinks'
-  pod 'Firebase/InAppMessaging'
   pod 'Lightbox'
   pod 'UITextView+Placeholder'
   pod 'XLPagerTabStrip'
@@ -22,6 +17,7 @@ def share_pods
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
   pod 'GTProgressBar'
+  pod 'PopupDialog'
 end
 
 # Castcle-iOS

@@ -50,6 +50,7 @@ import SwiftyJSON
 import Swifter
 import GoogleSignIn
 import FBSDKCoreKit
+import PopupDialog
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -89,6 +90,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - Load Font
         UIFont.loadAllFonts
         
+        // MARK: - Setup Popup Dialog
+        self.setupPopupAppearance()
+        
         // MARK: - Setup Keyboard
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
@@ -107,9 +111,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
-            schemaVersion: 11,
+            schemaVersion: 13,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 11) {
+                if (oldSchemaVersion < 13) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically
@@ -136,8 +140,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // MARK: - Setup Notification Center
+        NotificationCenter.default.addObserver(self, selector: #selector(self.resetApplication(notification:)), name: .resetApplication, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notification:)), name: .updateProfileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openProfile(notification:)), name: .openProfileDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
         
         // MARK: - App Center
         AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
@@ -195,6 +201,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         actionViewController.tabBarItem.imageInsets = insets
         
         self.tabBarController.viewControllers = [self.feedNavi!, actionViewController, self.searchNavi!]
+    }
+    
+    func setupPopupAppearance() {
+        // Customize dialog appearance
+        let pv = PopupDialogDefaultView.appearance()
+        pv.titleFont    = UIFont.asset(.bold, fontSize: .body)
+        pv.titleColor   = UIColor.Asset.darkGraphiteBlue
+        pv.messageFont  = UIFont.asset(.regular, fontSize: .overline)
+        pv.messageColor = UIColor.Asset.darkGraphiteBlue
+
+        // Customize default button appearance
+        let db = DefaultButton.appearance()
+        db.titleFont      = UIFont.asset(.bold, fontSize: .overline)
+        db.titleColor     = UIColor.Asset.darkGraphiteBlue
+
+        // Customize cancel button appearance
+        let cb = CancelButton.appearance()
+        cb.titleFont      = UIFont.asset(.regular, fontSize: .overline)
+        cb.titleColor     = UIColor.Asset.gray
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
@@ -374,16 +399,28 @@ extension AppDelegate: UITabBarControllerDelegate {
 }
 
 extension AppDelegate {
+    @objc func resetApplication(notification: NSNotification) {
+        self.setupTabBar()
+        self.window!.rootViewController = self.tabBarController
+    }
+    
     @objc func openEditProfile(notification: NSNotification) {
         Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.welcome), animated: true)
     }
     
     @objc func openProfile(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            let type: AuthorType = AuthorType(rawValue: dict[AuthorKey.type.rawValue] as? String ?? "") ?? .people
             let castcleId: String = dict[AuthorKey.castcleId.rawValue] as? String ?? ""
             let displayName: String = dict[AuthorKey.displayName.rawValue] as? String ?? ""
-            ProfileOpener.openProfileDetail(type, castcleId: castcleId, displayName: displayName)
+            ProfileOpener.openProfileDetail(castcleId, displayName: displayName)
+        }
+    }
+    
+    @objc func openSearch(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let hastag: String = dict["hashtag"] as? String ?? ""
+            let vc = SearchOpener.open(.searchResult(SearchResualViewModel(state: .resualt, textSearch: hastag, searchFeedState: .getFeed)))
+            Utility.currentViewController().navigationController?.pushViewController(vc, animated: true)
         }
     }
     
