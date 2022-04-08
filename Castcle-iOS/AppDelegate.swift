@@ -146,6 +146,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openProfile(notification:)), name: .openProfileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openFarmingHistory(notification:)), name: .openFarmmingDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openSignIn(notification:)), name: .openSignInDelegate, object: nil)
         
         // MARK: - App Center
         if Environment.appEnv == .prod {
@@ -396,9 +397,15 @@ extension AppDelegate: UITabBarControllerDelegate {
                 self.tabBarController.present(vc, animated: true, completion: nil)
             } else {
                 self.tabBarController.selectedIndex = 0
-                Utility.currentViewController().presentPanModal(AuthenOpener.open(.signUpMethod) as! SignUpMethodViewController)
+                self.signInView()
             }
         }
+    }
+    
+    private func signInView() {
+        let signInNav = UINavigationController(rootViewController: AuthenOpener.open(.signIn))
+        signInNav.modalPresentationStyle = .fullScreen
+        Utility.currentViewController().present(signInNav, animated: true)
     }
 }
 
@@ -432,6 +439,10 @@ extension AppDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {
             Utility.currentViewController().navigationController?.pushViewController(FarmingOpener.open(.contentFarming), animated: true)
         }
+    }
+    
+    @objc func openSignIn(notification: NSNotification) {
+        self.signInView()
     }
     
     private func gotoVerifyMobile() {
