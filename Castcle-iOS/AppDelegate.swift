@@ -112,9 +112,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
-            schemaVersion: 13,
+            schemaVersion: 14,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 13) {
+                if (oldSchemaVersion < 14) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically
