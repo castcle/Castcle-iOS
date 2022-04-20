@@ -414,8 +414,8 @@ extension AppDelegate {
     
     @objc func openProfile(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            let castcleId: String = dict[AuthorKey.castcleId.rawValue] as? String ?? ""
-            let displayName: String = dict[AuthorKey.displayName.rawValue] as? String ?? ""
+            let castcleId: String = dict[JsonKey.castcleId.rawValue] as? String ?? ""
+            let displayName: String = dict[JsonKey.displayName.rawValue] as? String ?? ""
             ProfileOpener.openProfileDetail(castcleId, displayName: displayName)
         }
     }
