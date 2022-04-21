@@ -52,6 +52,7 @@ import Swifter
 import GoogleSignIn
 import FBSDKCoreKit
 import PopupDialog
+import netfox
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -66,6 +67,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: - Prepare Engagement
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
+        
+        // MARK: - Log network api
+//        NFX.sharedInstance().start()
         
         // MARK: - Check device UUID
         let castcleDeviceId: String = KeychainHelper.shared.getKeychainWith(with: .castcleDeviceId)
