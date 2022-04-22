@@ -69,7 +69,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
         
         // MARK: - Log network api
-//        NFX.sharedInstance().start()
+        if Environment.appEnv == .dev {
+            NFX.sharedInstance().start()
+        }
         
         // MARK: - Check device UUID
         let castcleDeviceId: String = KeychainHelper.shared.getKeychainWith(with: .castcleDeviceId)
