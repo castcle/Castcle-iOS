@@ -52,6 +52,7 @@ import Swifter
 import GoogleSignIn
 import FBSDKCoreKit
 import PopupDialog
+import netfox
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -66,6 +67,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: - Prepare Engagement
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
+        
+        // MARK: - Log network api
+        if Environment.appEnv == .dev {
+            NFX.sharedInstance().start()
+        }
         
         // MARK: - Check device UUID
         let castcleDeviceId: String = KeychainHelper.shared.getKeychainWith(with: .castcleDeviceId)
@@ -112,9 +118,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
-            schemaVersion: 14,
+            schemaVersion: 15,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 14) {
+                if (oldSchemaVersion < 15) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically
@@ -414,8 +420,8 @@ extension AppDelegate {
     
     @objc func openProfile(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            let castcleId: String = dict[AuthorKey.castcleId.rawValue] as? String ?? ""
-            let displayName: String = dict[AuthorKey.displayName.rawValue] as? String ?? ""
+            let castcleId: String = dict[JsonKey.castcleId.rawValue] as? String ?? ""
+            let displayName: String = dict[JsonKey.displayName.rawValue] as? String ?? ""
             ProfileOpener.openProfileDetail(castcleId, displayName: displayName)
         }
     }
