@@ -86,3 +86,9 @@ end
      project 'Ads/Ads.xcodeproj'
      share_pods
  end
+
+# Farming
+ target 'Farming' do
+     project 'Farming/Farming.xcodeproj'
+     share_pods
+ end

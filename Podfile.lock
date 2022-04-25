@@ -1,11 +1,11 @@
 PODS:
-  - AppCenter (4.4.1):
-    - AppCenter/Analytics (= 4.4.1)
-    - AppCenter/Crashes (= 4.4.1)
-  - AppCenter/Analytics (4.4.1):
+  - AppCenter (4.4.2):
+    - AppCenter/Analytics (= 4.4.2)
+    - AppCenter/Crashes (= 4.4.2)
+  - AppCenter/Analytics (4.4.2):
     - AppCenter/Core
-  - AppCenter/Core (4.4.1)
-  - AppCenter/Crashes (4.4.1):
+  - AppCenter/Core (4.4.2)
+  - AppCenter/Crashes (4.4.2):
     - AppCenter/Core
   - Cache (6.0.0)
   - DropDown (2.3.13)
@@ -66,7 +66,7 @@ SPEC REPOS:
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
-  AppCenter: b0b6f1190215b5f983c42934db718f3b46fff3c0
+  AppCenter: b0eca112a27b71e97488ffa1949ee38c7abd4b79
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
@@ -84,6 +84,6 @@ SPEC CHECKSUMS:
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 6243cd00b3f0aacc33e8468608c89d7a37bf925e
+PODFILE CHECKSUM: 8947ff8862ded572a128fc04f20b6f57b0c63c6b
 
 COCOAPODS: 1.11.3

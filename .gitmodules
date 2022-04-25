@@ -34,3 +34,6 @@
 [submodule "Ads"]
 	path = Ads
 	url = ../Ads-iOS.git
+[submodule "Farming"]
+	path = Farming
+	url = ../Farming-iOS.git
