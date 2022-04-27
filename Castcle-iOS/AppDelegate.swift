@@ -35,6 +35,8 @@ import Component
 import Post
 import Authen
 import Profile
+import Setting
+import Farming
 import SwiftColor
 import Firebase
 import FirebaseDynamicLinks
@@ -49,6 +51,8 @@ import SwiftyJSON
 import Swifter
 import GoogleSignIn
 import FBSDKCoreKit
+import PopupDialog
+import netfox
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -58,10 +62,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var searchNavi: UINavigationController?
     let tabBarController = UITabBarController()
     let gcmMessageIDKey = "gcm.message_id"
+    var isOpenDeepLink: Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: - Prepare Engagement
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
+        
+        // MARK: - Log network api
+        if Environment.appEnv == .dev {
+            NFX.sharedInstance().start()
+        }
         
         // MARK: - Check device UUID
         let castcleDeviceId: String = KeychainHelper.shared.getKeychainWith(with: .castcleDeviceId)
@@ -87,6 +97,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - Load Font
         UIFont.loadAllFonts
         
+        // MARK: - Setup Popup Dialog
+        self.setupPopupAppearance()
+        
         // MARK: - Setup Keyboard
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
@@ -105,9 +118,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
-            schemaVersion: 10,
+            schemaVersion: 15,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 10) {
+                if (oldSchemaVersion < 15) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically
@@ -134,14 +147,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // MARK: - Setup Notification Center
+        NotificationCenter.default.addObserver(self, selector: #selector(self.resetApplication(notification:)), name: .resetApplication, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notification:)), name: .updateProfileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openProfile(notification:)), name: .openProfileDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openFarmingHistory(notification:)), name: .openFarmmingDelegate, object: nil)
         
         // MARK: - App Center
-        AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
-            Analytics.self,
-            Crashes.self
-        ])
+        if Environment.appEnv == .prod {
+            AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
+                Analytics.self,
+                Crashes.self
+            ])
+        }
         
         // MARK: - Facebook Login
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -195,6 +213,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.tabBarController.viewControllers = [self.feedNavi!, actionViewController, self.searchNavi!]
     }
     
+    func setupPopupAppearance() {
+        // Customize dialog appearance
+        let pv = PopupDialogDefaultView.appearance()
+        pv.titleFont    = UIFont.asset(.bold, fontSize: .body)
+        pv.titleColor   = UIColor.Asset.darkGraphiteBlue
+        pv.messageFont  = UIFont.asset(.regular, fontSize: .overline)
+        pv.messageColor = UIColor.Asset.darkGraphiteBlue
+
+        // Customize default button appearance
+        let db = DefaultButton.appearance()
+        db.titleFont      = UIFont.asset(.bold, fontSize: .overline)
+        db.titleColor     = UIColor.Asset.darkGraphiteBlue
+
+        // Customize cancel button appearance
+        let cb = CancelButton.appearance()
+        cb.titleFont      = UIFont.asset(.regular, fontSize: .overline)
+        cb.titleColor     = UIColor.Asset.gray
+    }
+    
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
         let handled: Bool = GIDSignIn.sharedInstance.handle(url)
         if handled {
@@ -202,7 +239,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else if let callbackUrl = URL(string: TwitterConstants.callbackUrl) {
             Swifter.handleOpenURL(url, callbackURL: callbackUrl)
         }
+        
+        if let view = self.getQueryStringParameter(url: url.absoluteString, param: "view") {
+            if view == "verify_mobile" && UserManager.shared.isLogin && !self.isOpenDeepLink {
+                self.isOpenDeepLink = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.gotoVerifyMobile()
+                }
+            }
+        }
+        
         return ApplicationDelegate.shared.application(app, open: url, options: options)
+    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        let handled = DynamicLinks.dynamicLinks()
+            .handleUniversalLink(userActivity.webpageURL!) { dynamiclink, error in
+                print(dynamiclink ?? "")
+            }
+        return handled
+    }
+    
+    func getQueryStringParameter(url: String, param: String) -> String? {
+        guard let url = URLComponents(string: url) else { return nil }
+        return url.queryItems?.first(where: { $0.name == param })?.value
     }
 }
 
@@ -349,22 +409,39 @@ extension AppDelegate: UITabBarControllerDelegate {
 }
 
 extension AppDelegate {
+    @objc func resetApplication(notification: NSNotification) {
+        self.setupTabBar()
+        self.window!.rootViewController = self.tabBarController
+    }
+    
     @objc func openEditProfile(notification: NSNotification) {
         Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.welcome), animated: true)
     }
     
     @objc func openProfile(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            let id: String = dict[AuthorKey.id.rawValue] as? String ?? ""
-            let type: AuthorType = AuthorType(rawValue: dict[AuthorKey.type.rawValue] as? String ?? "") ?? .people
-            let castcleId: String = dict[AuthorKey.castcleId.rawValue] as? String ?? ""
-            let displayName: String = dict[AuthorKey.displayName.rawValue] as? String ?? ""
-            let avatar: String = dict[AuthorKey.avatar.rawValue] as? String ?? ""
-            if type == .page {
-                ProfileOpener.openProfileDetail(type, castcleId: nil, displayName: "", page: Page().initCustom(id: id, displayName: displayName, castcleId: castcleId, avatar:avatar, cover: ""))
-            } else {
-                ProfileOpener.openProfileDetail(type, castcleId: castcleId, displayName: displayName, page: nil)
-            }
+            let castcleId: String = dict[JsonKey.castcleId.rawValue] as? String ?? ""
+            let displayName: String = dict[JsonKey.displayName.rawValue] as? String ?? ""
+            ProfileOpener.openProfileDetail(castcleId, displayName: displayName)
         }
+    }
+    
+    @objc func openSearch(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let hastag: String = dict["hashtag"] as? String ?? ""
+            let vc = SearchOpener.open(.searchResult(SearchResualViewModel(state: .resualt, textSearch: hastag, searchFeedState: .getFeed)))
+            Utility.currentViewController().navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    @objc func openFarmingHistory(notification: NSNotification) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {
+            Utility.currentViewController().navigationController?.pushViewController(FarmingOpener.open(.contentFarming), animated: true)
+        }
+    }
+    
+    private func gotoVerifyMobile() {
+        self.isOpenDeepLink = false
+        Utility.currentViewController().navigationController?.pushViewController(SettingOpener.open(.verifyMobile), animated: true)
     }
 }

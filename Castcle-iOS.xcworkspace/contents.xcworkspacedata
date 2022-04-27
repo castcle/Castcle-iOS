@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Farming/Farming.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Ads/Ads.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Notification/Notification.xcodeproj">
    </FileRef>
    <FileRef

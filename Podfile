@@ -9,10 +9,6 @@ workspace 'Castcle-iOS'
 
 def share_pods
   pod 'IGListKit'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Crashlytics'
-  pod 'Firebase/Messaging'
-  pod 'Firebase/DynamicLinks'
   pod 'Lightbox'
   pod 'UITextView+Placeholder'
   pod 'XLPagerTabStrip'
@@ -20,6 +16,9 @@ def share_pods
   pod 'SVPinView'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  pod 'GTProgressBar'
+  pod 'PopupDialog'
+  pod 'netfox'
 end
 
 # Castcle-iOS
@@ -80,5 +79,17 @@ end
 # Setting
  target 'Notification' do
      project 'Notification/Notification.xcodeproj'
+     share_pods
+ end
+
+# Ads
+ target 'Ads' do
+     project 'Ads/Ads.xcodeproj'
+     share_pods
+ end
+
+# Farming
+ target 'Farming' do
+     project 'Farming/Farming.xcodeproj'
      share_pods
  end

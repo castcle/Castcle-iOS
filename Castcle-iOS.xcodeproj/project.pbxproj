@@ -13,9 +13,13 @@
 		B70748F527955CC600F01CB4 /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F127955CC600F01CB4 /* Staging.xcconfig */; };
 		B70748F627955CC600F01CB4 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F227955CC600F01CB4 /* Production.xcconfig */; };
 		B71B666B27210CEF00191A62 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */; };
+		B7927DB927A80228005DB48A /* Ads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7927DB827A80228005DB48A /* Ads.framework */; };
+		B7927DBA27A80228005DB48A /* Ads.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7927DB827A80228005DB48A /* Ads.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B792AA1827955D9800364F7C /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1527955D9700364F7C /* GoogleService-Info-Dev.plist */; };
 		B792AA1927955D9800364F7C /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1627955D9700364F7C /* GoogleService-Info-Stg.plist */; };
 		B792AA1A27955D9800364F7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1727955D9800364F7C /* GoogleService-Info.plist */; };
+		B79723F527F1A66A00111F24 /* Farming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79723F427F1A66A00111F24 /* Farming.framework */; };
+		B79723F627F1A66A00111F24 /* Farming.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B79723F427F1A66A00111F24 /* Farming.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A53426F89D97001C4737 /* Authen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E0D26B12FE60097C94E /* Authen.framework */; };
 		B7B4A53526F89D97001C4737 /* Authen.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E0D26B12FE60097C94E /* Authen.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A53726F89D9E001C4737 /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75E628626969B04003E1ADA /* Component.framework */; };
@@ -49,12 +53,14 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B7B4A53826F89D9E001C4737 /* Component.framework in Embed Frameworks */,
+				B79723F627F1A66A00111F24 /* Farming.framework in Embed Frameworks */,
 				B7B4A54226F89DAB001C4737 /* Post.framework in Embed Frameworks */,
 				B7B4A53A26F89DA0001C4737 /* Core.framework in Embed Frameworks */,
 				B7B4A53C26F89DA3001C4737 /* Feed.framework in Embed Frameworks */,
 				B7B4A54626F89DB0001C4737 /* Search.framework in Embed Frameworks */,
 				B7B4A53E26F89DA5001C4737 /* Networking.framework in Embed Frameworks */,
 				B7B4A53526F89D97001C4737 /* Authen.framework in Embed Frameworks */,
+				B7927DBA27A80228005DB48A /* Ads.framework in Embed Frameworks */,
 				B7B4A54826F89DB2001C4737 /* Setting.framework in Embed Frameworks */,
 				B7B4A54426F89DAE001C4737 /* Profile.framework in Embed Frameworks */,
 				B7B4A54026F89DA7001C4737 /* Notification.framework in Embed Frameworks */,
@@ -80,12 +86,14 @@
 		B75E628626969B04003E1ADA /* Component.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Component.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7910E0D26B12FE60097C94E /* Authen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7910E1026B12FEF0097C94E /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7927DB827A80228005DB48A /* Ads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Ads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B792811B268EC784000ED84A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79281B2269455D1000ED84A /* Feed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Feed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79281B3269455D1000ED84A /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B792AA1527955D9700364F7C /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
 		B792AA1627955D9700364F7C /* GoogleService-Info-Stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stg.plist"; sourceTree = "<group>"; };
 		B792AA1727955D9800364F7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B79723F427F1A66A00111F24 /* Farming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Farming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C2524A26C84B8700ACBB84 /* Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C252D826D3964D00ACBB84 /* Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA4268EB21E00B01223 /* Castcle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castcle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,12 +112,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7B4A53D26F89DA5001C4737 /* Networking.framework in Frameworks */,
+				B7927DB927A80228005DB48A /* Ads.framework in Frameworks */,
 				B7B4A54126F89DAB001C4737 /* Post.framework in Frameworks */,
 				B7B4A54326F89DAE001C4737 /* Profile.framework in Frameworks */,
 				B7B4A54726F89DB2001C4737 /* Setting.framework in Frameworks */,
 				B7B4A53726F89D9E001C4737 /* Component.framework in Frameworks */,
 				B7B4A54526F89DB0001C4737 /* Search.framework in Frameworks */,
 				B7B4A53B26F89DA3001C4737 /* Feed.framework in Frameworks */,
+				B79723F527F1A66A00111F24 /* Farming.framework in Frameworks */,
 				B7B4A53426F89D97001C4737 /* Authen.framework in Frameworks */,
 				B7B4A53926F89DA0001C4737 /* Core.framework in Frameworks */,
 				B7B4A53F26F89DA7001C4737 /* Notification.framework in Frameworks */,
@@ -123,6 +133,8 @@
 		7F3A3F40D4655699A46A2DB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B79723F427F1A66A00111F24 /* Farming.framework */,
+				B7927DB827A80228005DB48A /* Ads.framework */,
 				B758AC5426F4396A00A4A5FB /* Notification.framework */,
 				B7C252D826D3964D00ACBB84 /* Setting.framework */,
 				B7C2524A26C84B8700ACBB84 /* Post.framework */,
@@ -308,7 +320,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\" -gsp \"${PROJECT_DIR}/Config/Main Config/${FIREBASE_CONFIG_FILE}.plist\"\n";
+			shellScript = "${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\n";
 		};
 		CAF3094C0DC976EC7A6ACE9B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -430,7 +442,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 44;
+				CURRENT_PROJECT_VERSION = 91;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -547,7 +559,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 44;
+				CURRENT_PROJECT_VERSION = 91;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -658,7 +670,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 44;
+				CURRENT_PROJECT_VERSION = 91;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -770,7 +782,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 44;
+				CURRENT_PROJECT_VERSION = 91;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -943,7 +955,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 44;
+				CURRENT_PROJECT_VERSION = 91;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -997,7 +1009,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 44;
+				CURRENT_PROJECT_VERSION = 91;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
