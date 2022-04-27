@@ -69,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
         
         // MARK: - Log network api
-        if Environment.appEnv == .dev {
+        if Environment.appEnv != .prod {
             NFX.sharedInstance().start()
         }
         
