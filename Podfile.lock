@@ -26,6 +26,7 @@ PODS:
     - Cache (~> 6.0.0)
   - Lightbox (2.5.0):
     - Imaginary (~> 5.0.0)
+  - netfox (1.21.0)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
   - SVPinView (1.0.11)
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - GTProgressBar
   - IGListKit
   - Lightbox
+  - netfox
   - PopupDialog
   - SVPinView
   - "UITextView+Placeholder"
@@ -60,6 +62,7 @@ SPEC REPOS:
     - IGListKit
     - Imaginary
     - Lightbox
+    - netfox
     - PopupDialog
     - SVPinView
     - "UITextView+Placeholder"
@@ -79,11 +82,12 @@ SPEC CHECKSUMS:
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
   Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
+  netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 6243cd00b3f0aacc33e8468608c89d7a37bf925e
+PODFILE CHECKSUM: c13121dff8d26100704f0480762dc38904d6aec6
 
 COCOAPODS: 1.11.3

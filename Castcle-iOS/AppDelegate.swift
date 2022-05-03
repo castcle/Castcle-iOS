@@ -36,6 +36,7 @@ import Post
 import Authen
 import Profile
 import Setting
+import Farming
 import SwiftColor
 import Firebase
 import FirebaseDynamicLinks
@@ -51,6 +52,7 @@ import Swifter
 import GoogleSignIn
 import FBSDKCoreKit
 import PopupDialog
+import netfox
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -65,6 +67,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: - Prepare Engagement
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
+        
+        // MARK: - Log network api
+        if Environment.appEnv != .prod {
+            NFX.sharedInstance().start()
+        }
         
         // MARK: - Check device UUID
         let castcleDeviceId: String = KeychainHelper.shared.getKeychainWith(with: .castcleDeviceId)
@@ -111,9 +118,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
-            schemaVersion: 13,
+            schemaVersion: 15,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 13) {
+                if (oldSchemaVersion < 15) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically
@@ -144,12 +151,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openEditProfile(notification:)), name: .updateProfileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openProfile(notification:)), name: .openProfileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openFarmingHistory(notification:)), name: .openFarmmingDelegate, object: nil)
         
         // MARK: - App Center
-        AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
-            Analytics.self,
-            Crashes.self
-        ])
+        if Environment.appEnv == .prod {
+            AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
+                Analytics.self,
+                Crashes.self
+            ])
+        }
         
         // MARK: - Facebook Login
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -410,8 +420,8 @@ extension AppDelegate {
     
     @objc func openProfile(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            let castcleId: String = dict[AuthorKey.castcleId.rawValue] as? String ?? ""
-            let displayName: String = dict[AuthorKey.displayName.rawValue] as? String ?? ""
+            let castcleId: String = dict[JsonKey.castcleId.rawValue] as? String ?? ""
+            let displayName: String = dict[JsonKey.displayName.rawValue] as? String ?? ""
             ProfileOpener.openProfileDetail(castcleId, displayName: displayName)
         }
     }
@@ -421,6 +431,12 @@ extension AppDelegate {
             let hastag: String = dict["hashtag"] as? String ?? ""
             let vc = SearchOpener.open(.searchResult(SearchResualViewModel(state: .resualt, textSearch: hastag, searchFeedState: .getFeed)))
             Utility.currentViewController().navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    @objc func openFarmingHistory(notification: NSNotification) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {
+            Utility.currentViewController().navigationController?.pushViewController(FarmingOpener.open(.contentFarming), animated: true)
         }
     }
     

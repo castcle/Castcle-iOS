@@ -18,6 +18,7 @@ def share_pods
   pod 'FBSDKLoginKit'
   pod 'GTProgressBar'
   pod 'PopupDialog'
+  pod 'netfox'
 end
 
 # Castcle-iOS
@@ -84,5 +85,11 @@ end
 # Ads
  target 'Ads' do
      project 'Ads/Ads.xcodeproj'
+     share_pods
+ end
+
+# Farming
+ target 'Farming' do
+     project 'Farming/Farming.xcodeproj'
      share_pods
  end
