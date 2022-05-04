@@ -153,6 +153,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openFarmingHistory(notification:)), name: .openFarmmingDelegate, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openFoller(notification:)), name: .openFollerDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openCast(notification:)), name: .openCastDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openComment(notification:)), name: .openCommentDelegate, object: nil)
+        
         // MARK: - App Center
         if Environment.appEnv == .prod {
             AppCenter.start(withAppSecret: Environment.appCenterKey, services:[
@@ -428,7 +432,7 @@ extension AppDelegate {
     
     @objc func openSearch(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            let hastag: String = dict["hashtag"] as? String ?? ""
+            let hastag: String = dict[JsonKey.hashtag.rawValue] as? String ?? ""
             let vc = SearchOpener.open(.searchResult(SearchResualViewModel(state: .resualt, textSearch: hastag, searchFeedState: .getFeed)))
             Utility.currentViewController().navigationController?.pushViewController(vc, animated: true)
         }
@@ -443,5 +447,27 @@ extension AppDelegate {
     private func gotoVerifyMobile() {
         self.isOpenDeepLink = false
         Utility.currentViewController().navigationController?.pushViewController(SettingOpener.open(.verifyMobile), animated: true)
+    }
+    
+    @objc func openFoller(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let profileId: String = dict[JsonKey.profileId.rawValue] as? String ?? ""
+            Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.userFollow(UserFollowViewModel(followType: .follower, castcleId: profileId))), animated: true)
+        }
+    }
+    
+    @objc func openCast(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let contentId: String = dict[JsonKey.contentId.rawValue] as? String ?? ""
+            Utility.currentViewController().navigationController?.pushViewController(ComponentOpener.open(.comment(CommentViewModel(contentId: contentId))), animated: true)
+        }
+    }
+    
+    @objc func openComment(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let contentId: String = dict[JsonKey.contentId.rawValue] as? String ?? ""
+            let commentId: String = dict[JsonKey.commentId.rawValue] as? String ?? ""
+            Utility.currentViewController().navigationController?.pushViewController(ComponentOpener.open(.commentDetail(CommentDetailViewModel(contentId: contentId, commentId: commentId))), animated: true)
+        }
     }
 }
