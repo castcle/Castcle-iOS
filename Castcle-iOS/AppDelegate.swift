@@ -52,6 +52,7 @@ import Swifter
 import GoogleSignIn
 import FBSDKCoreKit
 import PopupDialog
+import netfox
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -66,6 +67,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: - Prepare Engagement
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
+        
+        // MARK: - Log network api
+        if Environment.appEnv != .prod {
+            NFX.sharedInstance().start()
+        }
         
         // MARK: - Check device UUID
         let castcleDeviceId: String = KeychainHelper.shared.getKeychainWith(with: .castcleDeviceId)
@@ -112,9 +118,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Migrations Realm
         let config = Realm.Configuration(
-            schemaVersion: 13,
+            schemaVersion: 15,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 13) {
+                if (oldSchemaVersion < 15) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically
@@ -147,6 +153,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openFarmingHistory(notification:)), name: .openFarmmingDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSignIn(notification:)), name: .openSignInDelegate, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openFoller(notification:)), name: .openFollerDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openCast(notification:)), name: .openCastDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openComment(notification:)), name: .openCommentDelegate, object: nil)
         
         // MARK: - App Center
         if Environment.appEnv == .prod {
@@ -421,15 +431,15 @@ extension AppDelegate {
     
     @objc func openProfile(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            let castcleId: String = dict[AuthorKey.castcleId.rawValue] as? String ?? ""
-            let displayName: String = dict[AuthorKey.displayName.rawValue] as? String ?? ""
+            let castcleId: String = dict[JsonKey.castcleId.rawValue] as? String ?? ""
+            let displayName: String = dict[JsonKey.displayName.rawValue] as? String ?? ""
             ProfileOpener.openProfileDetail(castcleId, displayName: displayName)
         }
     }
     
     @objc func openSearch(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            let hastag: String = dict["hashtag"] as? String ?? ""
+            let hastag: String = dict[JsonKey.hashtag.rawValue] as? String ?? ""
             let vc = SearchOpener.open(.searchResult(SearchResualViewModel(state: .resualt, textSearch: hastag, searchFeedState: .getFeed)))
             Utility.currentViewController().navigationController?.pushViewController(vc, animated: true)
         }
@@ -448,5 +458,27 @@ extension AppDelegate {
     private func gotoVerifyMobile() {
         self.isOpenDeepLink = false
         Utility.currentViewController().navigationController?.pushViewController(SettingOpener.open(.verifyMobile), animated: true)
+    }
+    
+    @objc func openFoller(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let profileId: String = dict[JsonKey.profileId.rawValue] as? String ?? ""
+            Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.userFollow(UserFollowViewModel(followType: .follower, castcleId: profileId))), animated: true)
+        }
+    }
+    
+    @objc func openCast(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let contentId: String = dict[JsonKey.contentId.rawValue] as? String ?? ""
+            Utility.currentViewController().navigationController?.pushViewController(ComponentOpener.open(.comment(CommentViewModel(contentId: contentId))), animated: true)
+        }
+    }
+    
+    @objc func openComment(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let contentId: String = dict[JsonKey.contentId.rawValue] as? String ?? ""
+            let commentId: String = dict[JsonKey.commentId.rawValue] as? String ?? ""
+            Utility.currentViewController().navigationController?.pushViewController(ComponentOpener.open(.commentDetail(CommentDetailViewModel(contentId: contentId, commentId: commentId))), animated: true)
+        }
     }
 }

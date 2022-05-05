@@ -18,6 +18,7 @@ def share_pods
   pod 'FBSDKLoginKit'
   pod 'GTProgressBar'
   pod 'PopupDialog'
+  pod 'netfox'
 end
 
 # Castcle-iOS
