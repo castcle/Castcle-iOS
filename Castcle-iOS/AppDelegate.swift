@@ -300,6 +300,7 @@ extension AppDelegate: SplashScreenViewControllerDelegate {
     }
 }
 
+// MARK: - Notification
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func application(_ application: UIApplication,
                      didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
@@ -310,6 +311,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
         
         print(userInfo)
+        print("===")
     }
     
     // [START receive_message]
@@ -324,6 +326,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
         
         print(userInfo)
+        print("===")
         
         completionHandler(UIBackgroundFetchResult.newData)
     }
@@ -351,6 +354,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
         
         print(userInfo)
+        print("===")
         
         completionHandler([[.alert, .sound]])
     }
@@ -367,6 +371,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         Messaging.messaging().appDidReceiveMessage(userInfo)
         
         print(userInfo)
+        print("===")
         completionHandler()
     }
 }
