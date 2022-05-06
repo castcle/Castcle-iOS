@@ -153,7 +153,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSearch(notification:)), name: .openSearchDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openFarmingHistory(notification:)), name: .openFarmmingDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openSignIn(notification:)), name: .openSignInDelegate, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(self.openFoller(notification:)), name: .openFollerDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openCast(notification:)), name: .openCastDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openComment(notification:)), name: .openCommentDelegate, object: nil)
