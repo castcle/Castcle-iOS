@@ -430,7 +430,7 @@ extension AppDelegate {
     }
     
     @objc func openEditProfile(notification: NSNotification) {
-        Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.welcome), animated: true)
+        Utility.currentViewController().navigationController?.pushViewController(ProfileOpener.open(.updateUserImage), animated: true)
     }
     
     @objc func openProfile(notification: NSNotification) {
