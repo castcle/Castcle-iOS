@@ -37,3 +37,6 @@
 [submodule "Farming"]
 	path = Farming
 	url = ../Farming-iOS.git
+[submodule "Wallet"]
+	path = Wallet
+	url = ../Wallet-iOS.git
