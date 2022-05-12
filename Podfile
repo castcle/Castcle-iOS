@@ -19,6 +19,7 @@ def share_pods
   pod 'GTProgressBar'
   pod 'PopupDialog'
   pod 'netfox'
+  pod 'SwiftLint'
 end
 
 # Castcle-iOS

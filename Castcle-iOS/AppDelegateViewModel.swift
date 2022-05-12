@@ -28,5 +28,5 @@
 import Foundation
 
 class AppDelegateViewModel {
-    
+
 }

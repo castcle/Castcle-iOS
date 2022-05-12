@@ -30,6 +30,7 @@ PODS:
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
   - SVPinView (1.0.11)
+  - SwiftLint (0.47.1)
   - "UITextView+Placeholder (1.4.0)"
   - XLPagerTabStrip (9.0.0)
 
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - netfox
   - PopupDialog
   - SVPinView
+  - SwiftLint
   - "UITextView+Placeholder"
   - XLPagerTabStrip
 
@@ -65,6 +67,7 @@ SPEC REPOS:
     - netfox
     - PopupDialog
     - SVPinView
+    - SwiftLint
     - "UITextView+Placeholder"
     - XLPagerTabStrip
 
@@ -85,9 +88,10 @@ SPEC CHECKSUMS:
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
+  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: b7b02a45919361330de3437108341ff300e0bee9
+PODFILE CHECKSUM: b151723a3a0e5ee47cf78dd4af0eae8d21cc126a
 
 COCOAPODS: 1.11.3
