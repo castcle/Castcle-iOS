@@ -156,6 +156,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openFoller(notification:)), name: .openFollerDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openCast(notification:)), name: .openCastDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openComment(notification:)), name: .openCommentDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openQuoteCastList(notification:)), name: .openQuoteCastListDelegate, object: nil)
 
         // MARK: - App Center
         if Environment.appEnv == .prod {
@@ -442,7 +443,7 @@ extension AppDelegate {
     @objc func openSearch(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
             let hastag: String = dict[JsonKey.hashtag.rawValue] as? String ?? ""
-            let viewController = SearchOpener.open(.searchResult(SearchResualViewModel(state: .resualt, textSearch: hastag, searchFeedState: .getFeed)))
+            let viewController = SearchOpener.open(.searchResult(SearchResualViewModel(state: .resualt, textSearch: hastag, feedState: .getContent)))
             Utility.currentViewController().navigationController?.pushViewController(viewController, animated: true)
         }
     }
@@ -481,6 +482,13 @@ extension AppDelegate {
             let contentId: String = dict[JsonKey.contentId.rawValue] as? String ?? ""
             let commentId: String = dict[JsonKey.commentId.rawValue] as? String ?? ""
             Utility.currentViewController().navigationController?.pushViewController(ComponentOpener.open(.commentDetail(CommentDetailViewModel(contentId: contentId, commentId: commentId))), animated: true)
+        }
+    }
+
+    @objc func openQuoteCastList(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let contentId: String = dict[JsonKey.contentId.rawValue] as? String ?? ""
+            Utility.currentViewController().navigationController?.pushViewController(FeedOpener.open(.quoteCastList(QuoteCastListViewModel(contentId: contentId))), animated: true)
         }
     }
 }
