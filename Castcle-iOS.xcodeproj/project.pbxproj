@@ -13,6 +13,8 @@
 		B70748F527955CC600F01CB4 /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F127955CC600F01CB4 /* Staging.xcconfig */; };
 		B70748F627955CC600F01CB4 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F227955CC600F01CB4 /* Production.xcconfig */; };
 		B71B666B27210CEF00191A62 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */; };
+		B72FDEC528339ED400748D13 /* Wallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FDEC428339ED400748D13 /* Wallet.framework */; };
+		B72FDEC628339ED400748D13 /* Wallet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B72FDEC428339ED400748D13 /* Wallet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7927DB927A80228005DB48A /* Ads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7927DB827A80228005DB48A /* Ads.framework */; };
 		B7927DBA27A80228005DB48A /* Ads.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7927DB827A80228005DB48A /* Ads.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B792AA1827955D9800364F7C /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1527955D9700364F7C /* GoogleService-Info-Dev.plist */; };
@@ -53,6 +55,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B7B4A53826F89D9E001C4737 /* Component.framework in Embed Frameworks */,
+				B72FDEC628339ED400748D13 /* Wallet.framework in Embed Frameworks */,
 				B79723F627F1A66A00111F24 /* Farming.framework in Embed Frameworks */,
 				B7B4A54226F89DAB001C4737 /* Post.framework in Embed Frameworks */,
 				B7B4A53A26F89DA0001C4737 /* Core.framework in Embed Frameworks */,
@@ -81,6 +84,7 @@
 		B70748F127955CC600F01CB4 /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		B70748F227955CC600F01CB4 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateViewModel.swift; sourceTree = "<group>"; };
+		B72FDEC428339ED400748D13 /* Wallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Wallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74CEF1E26C50760006B1F2C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B758AC5426F4396A00A4A5FB /* Notification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Notification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75E628626969B04003E1ADA /* Component.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Component.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +128,7 @@
 				B7B4A53926F89DA0001C4737 /* Core.framework in Frameworks */,
 				B7B4A53F26F89DA7001C4737 /* Notification.framework in Frameworks */,
 				7EDBF332196C2D1833C692C1 /* Pods_Castcle_iOS.framework in Frameworks */,
+				B72FDEC528339ED400748D13 /* Wallet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +138,7 @@
 		7F3A3F40D4655699A46A2DB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B72FDEC428339ED400748D13 /* Wallet.framework */,
 				B79723F427F1A66A00111F24 /* Farming.framework */,
 				B7927DB827A80228005DB48A /* Ads.framework */,
 				B758AC5426F4396A00A4A5FB /* Notification.framework */,
