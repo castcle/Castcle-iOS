@@ -223,13 +223,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else if let callbackUrl = URL(string: TwitterConstants.callbackUrl) {
             Swifter.handleOpenURL(url, callbackURL: callbackUrl)
         }
-
-        if let view = self.getQueryStringParameter(url: url.absoluteString, param: "view") {
-            if view == "verify_mobile" && UserManager.shared.isLogin && !self.isOpenDeepLink {
-                self.isOpenDeepLink = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    self.gotoVerifyMobile()
-                }
+        if let view = self.getQueryStringParameter(url: url.absoluteString, param: "view"), view == "verify_mobile", UserManager.shared.isLogin, !self.isOpenDeepLink {
+            self.isOpenDeepLink = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.gotoVerifyMobile()
             }
         }
         return ApplicationDelegate.shared.application(app, open: url, options: options)
