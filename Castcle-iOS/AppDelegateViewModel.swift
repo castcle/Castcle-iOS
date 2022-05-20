@@ -25,8 +25,39 @@
 //  Created by Castcle Co., Ltd. on 21/10/2564 BE.
 //
 
-import Foundation
+import Core
+import netfox
+import Defaults
 
 class AppDelegateViewModel {
+    func setupLogApi() {
+        if Environment.appEnv != .prod {
+            NFX.sharedInstance().start()
+        }
+    }
 
+    func checkDeviceUuid() {
+        let castcleDeviceId: String = KeychainHelper.shared.getKeychainWith(with: .castcleDeviceId)
+        if castcleDeviceId.isEmpty {
+            if Defaults[.deviceUuid].isEmpty {
+                let deviceUdid = UUID().uuidString
+                Defaults[.deviceUuid] = deviceUdid
+                KeychainHelper.shared.setKeychainWith(with: .castcleDeviceId, value: deviceUdid)
+            } else {
+                KeychainHelper.shared.setKeychainWith(with: .castcleDeviceId, value: Defaults[.deviceUuid])
+            }
+        } else {
+            Defaults[.deviceUuid] = castcleDeviceId
+        }
+    }
+
+    func getFirebaseConfigFile() -> String {
+        if Environment.appEnv == .prod {
+            return ConfigBundle.mainApp.path(forResource: "GoogleService-Info", ofType: "plist") ?? ""
+        } else if Environment.appEnv == .stg {
+            return ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Stg", ofType: "plist") ?? ""
+        } else {
+            return ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Dev", ofType: "plist") ?? ""
+        }
+    }
 }

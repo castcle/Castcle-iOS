@@ -52,7 +52,6 @@ import Swifter
 import GoogleSignIn
 import FBSDKCoreKit
 import PopupDialog
-import netfox
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -63,29 +62,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let tabBarController = UITabBarController()
     let gcmMessageIDKey = "gcm.message_id"
     var isOpenDeepLink: Bool = false
+    let viewModel = AppDelegateViewModel()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: - Prepare Engagement
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
 
         // MARK: - Log network api
-        if Environment.appEnv != .prod {
-            NFX.sharedInstance().start()
-        }
+        self.viewModel.setupLogApi()
 
         // MARK: - Check device UUID
-        let castcleDeviceId: String = KeychainHelper.shared.getKeychainWith(with: .castcleDeviceId)
-        if castcleDeviceId.isEmpty {
-            if Defaults[.deviceUuid].isEmpty {
-                let deviceUdid = UUID().uuidString
-                Defaults[.deviceUuid] = deviceUdid
-                KeychainHelper.shared.setKeychainWith(with: .castcleDeviceId, value: deviceUdid)
-            } else {
-                KeychainHelper.shared.setKeychainWith(with: .castcleDeviceId, value: Defaults[.deviceUuid])
-            }
-        } else {
-            Defaults[.deviceUuid] = castcleDeviceId
-        }
+        self.viewModel.checkDeviceUuid()
 
         // MARK: - Reset Load Feed
         Defaults[.startLoadFeed] = true
@@ -105,15 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enableAutoToolbar = false
 
         // MARK: - Setup Firebase
-        var filePath: String!
-        if Environment.appEnv == .prod {
-            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info", ofType: "plist")
-        } else if Environment.appEnv == .stg {
-            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Stg", ofType: "plist")
-        } else {
-            filePath = ConfigBundle.mainApp.path(forResource: "GoogleService-Info-Dev", ofType: "plist")
-        }
-        let options = FirebaseOptions.init(contentsOfFile: filePath)!
+        let options = FirebaseOptions.init(contentsOfFile: self.viewModel.getFirebaseConfigFile())!
         FirebaseApp.configure(options: options)
 
         // MARK: - Migrations Realm
