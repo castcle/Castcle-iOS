@@ -17,9 +17,6 @@
       location = "group:Setting/Setting.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Post/Post.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Profile/Profile.xcodeproj">
    </FileRef>
    <FileRef

@@ -32,7 +32,6 @@ import Networking
 import Feed
 import Search
 import Component
-import Post
 import Authen
 import Profile
 import Setting
