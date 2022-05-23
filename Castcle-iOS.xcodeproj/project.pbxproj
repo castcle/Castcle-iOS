@@ -34,8 +34,6 @@
 		B7B4A53E26F89DA5001C4737 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B74CEF1E26C50760006B1F2C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A53F26F89DA7001C4737 /* Notification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B758AC5426F4396A00A4A5FB /* Notification.framework */; };
 		B7B4A54026F89DA7001C4737 /* Notification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B758AC5426F4396A00A4A5FB /* Notification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B7B4A54126F89DAB001C4737 /* Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C2524A26C84B8700ACBB84 /* Post.framework */; };
-		B7B4A54226F89DAB001C4737 /* Post.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C2524A26C84B8700ACBB84 /* Post.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A54326F89DAE001C4737 /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E1026B12FEF0097C94E /* Profile.framework */; };
 		B7B4A54426F89DAE001C4737 /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E1026B12FEF0097C94E /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A54526F89DB0001C4737 /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B3269455D1000ED84A /* Search.framework */; };
@@ -57,7 +55,6 @@
 				B7B4A53826F89D9E001C4737 /* Component.framework in Embed Frameworks */,
 				B72FDEC628339ED400748D13 /* Wallet.framework in Embed Frameworks */,
 				B79723F627F1A66A00111F24 /* Farming.framework in Embed Frameworks */,
-				B7B4A54226F89DAB001C4737 /* Post.framework in Embed Frameworks */,
 				B7B4A53A26F89DA0001C4737 /* Core.framework in Embed Frameworks */,
 				B7B4A53C26F89DA3001C4737 /* Feed.framework in Embed Frameworks */,
 				B7B4A54626F89DB0001C4737 /* Search.framework in Embed Frameworks */,
@@ -117,7 +114,6 @@
 			files = (
 				B7B4A53D26F89DA5001C4737 /* Networking.framework in Frameworks */,
 				B7927DB927A80228005DB48A /* Ads.framework in Frameworks */,
-				B7B4A54126F89DAB001C4737 /* Post.framework in Frameworks */,
 				B7B4A54326F89DAE001C4737 /* Profile.framework in Frameworks */,
 				B7B4A54726F89DB2001C4737 /* Setting.framework in Frameworks */,
 				B7B4A53726F89D9E001C4737 /* Component.framework in Frameworks */,

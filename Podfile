@@ -65,12 +65,6 @@ end
      share_pods
  end
 
-# Post
- target 'Post' do
-     project 'Post/Post.xcodeproj'
-     share_pods
- end
-
 # Setting
  target 'Setting' do
      project 'Setting/Setting.xcodeproj'
