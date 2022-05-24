@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7EDBF332196C2D1833C692C1 /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0E8115C73A1F33488B9C87 /* Pods_Castcle_iOS.framework */; };
-		B70748F327955CC600F01CB4 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748EF27955CC600F01CB4 /* Development.xcconfig */; };
-		B70748F427955CC600F01CB4 /* Test.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F027955CC600F01CB4 /* Test.xcconfig */; };
-		B70748F527955CC600F01CB4 /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F127955CC600F01CB4 /* Staging.xcconfig */; };
-		B70748F627955CC600F01CB4 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F227955CC600F01CB4 /* Production.xcconfig */; };
 		B71B666B27210CEF00191A62 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */; };
 		B72FDEC528339ED400748D13 /* Wallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FDEC428339ED400748D13 /* Wallet.framework */; };
 		B72FDEC628339ED400748D13 /* Wallet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B72FDEC428339ED400748D13 /* Wallet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -243,7 +239,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					B7F69CA3268EB21E00B01223 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -274,14 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B792AA1927955D9800364F7C /* GoogleService-Info-Stg.plist in Resources */,
-				B70748F427955CC600F01CB4 /* Test.xcconfig in Resources */,
 				B792AA1A27955D9800364F7C /* GoogleService-Info.plist in Resources */,
 				B792AA1827955D9800364F7C /* GoogleService-Info-Dev.plist in Resources */,
-				B70748F327955CC600F01CB4 /* Development.xcconfig in Resources */,
 				B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */,
-				B70748F527955CC600F01CB4 /* Staging.xcconfig in Resources */,
 				B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */,
-				B70748F627955CC600F01CB4 /* Production.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +675,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-l\"c++\"",
@@ -1022,6 +1015,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-l\"c++\"",
