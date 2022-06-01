@@ -19,6 +19,7 @@ def share_pods
   pod 'GTProgressBar'
   pod 'PopupDialog'
   pod 'netfox'
+  pod 'SwiftLint'
 end
 
 # Castcle-iOS
@@ -64,12 +65,6 @@ end
      share_pods
  end
 
-# Post
- target 'Post' do
-     project 'Post/Post.xcodeproj'
-     share_pods
- end
-
 # Setting
  target 'Setting' do
      project 'Setting/Setting.xcodeproj'
@@ -91,5 +86,11 @@ end
 # Farming
  target 'Farming' do
      project 'Farming/Farming.xcodeproj'
+     share_pods
+ end
+
+# Wallet
+ target 'Wallet' do
+     project 'Wallet/Wallet.xcodeproj'
      share_pods
  end

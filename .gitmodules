@@ -22,9 +22,6 @@
 [submodule "Networking"]
 	path = Networking
 	url = ../Networking-iOS.git
-[submodule "Post"]
-	path = Post
-	url = ../Post-iOS.git
 [submodule "Setting"]
 	path = Setting
 	url = ../Setting-iOS.git
@@ -37,3 +34,6 @@
 [submodule "Farming"]
 	path = Farming
 	url = ../Farming-iOS.git
+[submodule "Wallet"]
+	path = Wallet
+	url = ../Wallet-iOS.git

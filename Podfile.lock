@@ -10,14 +10,14 @@ PODS:
   - Cache (6.0.0)
   - DropDown (2.3.13)
   - DynamicBlurView (4.1.0)
-  - FBAEMKit (13.1.0):
-    - FBSDKCoreKit_Basics (= 13.1.0)
-  - FBSDKCoreKit (13.1.0):
-    - FBAEMKit (= 13.1.0)
-    - FBSDKCoreKit_Basics (= 13.1.0)
-  - FBSDKCoreKit_Basics (13.1.0)
-  - FBSDKLoginKit (13.1.0):
-    - FBSDKCoreKit (= 13.1.0)
+  - FBAEMKit (13.2.0):
+    - FBSDKCoreKit_Basics (= 13.2.0)
+  - FBSDKCoreKit (13.2.0):
+    - FBAEMKit (= 13.2.0)
+    - FBSDKCoreKit_Basics (= 13.2.0)
+  - FBSDKCoreKit_Basics (13.2.0)
+  - FBSDKLoginKit (13.2.0):
+    - FBSDKCoreKit (= 13.2.0)
   - GTProgressBar (0.3.3)
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
@@ -30,6 +30,7 @@ PODS:
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
   - SVPinView (1.0.11)
+  - SwiftLint (0.47.1)
   - "UITextView+Placeholder (1.4.0)"
   - XLPagerTabStrip (9.0.0)
 
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - netfox
   - PopupDialog
   - SVPinView
+  - SwiftLint
   - "UITextView+Placeholder"
   - XLPagerTabStrip
 
@@ -65,6 +67,7 @@ SPEC REPOS:
     - netfox
     - PopupDialog
     - SVPinView
+    - SwiftLint
     - "UITextView+Placeholder"
     - XLPagerTabStrip
 
@@ -73,10 +76,10 @@ SPEC CHECKSUMS:
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
-  FBAEMKit: 9ce89760a23f03ffecd907c8e1f3201160f2dcc7
-  FBSDKCoreKit: eff97dea778dbe6cc4498959cffb619c75675102
-  FBSDKCoreKit_Basics: c151609a1cf6976a5958febcf0043266a8fd5151
-  FBSDKLoginKit: 42932c7ad6f6b91854fc0a6bcc79b7e807bcde4b
+  FBAEMKit: c2b2895363b7e57192013d1dc49fdf498b28624c
+  FBSDKCoreKit: 58139803d861e72c7661dc875611a759352a55ac
+  FBSDKCoreKit_Basics: 1ffc68326a5ece051d85574f02a0adcf27c2a5f2
+  FBSDKLoginKit: 19e2a878556c2ee4f20486dc406e582783cd7578
   GTProgressBar: a480283ecb0ada50de16c71e634892826928f640
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
@@ -85,9 +88,10 @@ SPEC CHECKSUMS:
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
+  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: c13121dff8d26100704f0480762dc38904d6aec6
+PODFILE CHECKSUM: 3c730350f854301a6f87f93cf3443d0ab372e5d9
 
 COCOAPODS: 1.11.3

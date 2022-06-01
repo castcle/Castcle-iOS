@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7EDBF332196C2D1833C692C1 /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0E8115C73A1F33488B9C87 /* Pods_Castcle_iOS.framework */; };
-		B70748F327955CC600F01CB4 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748EF27955CC600F01CB4 /* Development.xcconfig */; };
-		B70748F427955CC600F01CB4 /* Test.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F027955CC600F01CB4 /* Test.xcconfig */; };
-		B70748F527955CC600F01CB4 /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F127955CC600F01CB4 /* Staging.xcconfig */; };
-		B70748F627955CC600F01CB4 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B70748F227955CC600F01CB4 /* Production.xcconfig */; };
 		B71B666B27210CEF00191A62 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */; };
+		B72FDEC528339ED400748D13 /* Wallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FDEC428339ED400748D13 /* Wallet.framework */; };
+		B72FDEC628339ED400748D13 /* Wallet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B72FDEC428339ED400748D13 /* Wallet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7927DB927A80228005DB48A /* Ads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7927DB827A80228005DB48A /* Ads.framework */; };
 		B7927DBA27A80228005DB48A /* Ads.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7927DB827A80228005DB48A /* Ads.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B792AA1827955D9800364F7C /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = B792AA1527955D9700364F7C /* GoogleService-Info-Dev.plist */; };
@@ -32,8 +30,6 @@
 		B7B4A53E26F89DA5001C4737 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B74CEF1E26C50760006B1F2C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A53F26F89DA7001C4737 /* Notification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B758AC5426F4396A00A4A5FB /* Notification.framework */; };
 		B7B4A54026F89DA7001C4737 /* Notification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B758AC5426F4396A00A4A5FB /* Notification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B7B4A54126F89DAB001C4737 /* Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C2524A26C84B8700ACBB84 /* Post.framework */; };
-		B7B4A54226F89DAB001C4737 /* Post.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C2524A26C84B8700ACBB84 /* Post.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A54326F89DAE001C4737 /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E1026B12FEF0097C94E /* Profile.framework */; };
 		B7B4A54426F89DAE001C4737 /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7910E1026B12FEF0097C94E /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A54526F89DB0001C4737 /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B3269455D1000ED84A /* Search.framework */; };
@@ -53,8 +49,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B7B4A53826F89D9E001C4737 /* Component.framework in Embed Frameworks */,
+				B72FDEC628339ED400748D13 /* Wallet.framework in Embed Frameworks */,
 				B79723F627F1A66A00111F24 /* Farming.framework in Embed Frameworks */,
-				B7B4A54226F89DAB001C4737 /* Post.framework in Embed Frameworks */,
 				B7B4A53A26F89DA0001C4737 /* Core.framework in Embed Frameworks */,
 				B7B4A53C26F89DA3001C4737 /* Feed.framework in Embed Frameworks */,
 				B7B4A54626F89DB0001C4737 /* Search.framework in Embed Frameworks */,
@@ -77,10 +73,10 @@
 		64A8DAA29FEC8FDD6E47AD64 /* Pods-Castcle-iOS.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (staging).xcconfig"; sourceTree = "<group>"; };
 		7E551B796A1F35FF9C177613 /* Pods-Castcle-iOS.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (development).xcconfig"; sourceTree = "<group>"; };
 		B70748EF27955CC600F01CB4 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
-		B70748F027955CC600F01CB4 /* Test.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
 		B70748F127955CC600F01CB4 /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		B70748F227955CC600F01CB4 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateViewModel.swift; sourceTree = "<group>"; };
+		B72FDEC428339ED400748D13 /* Wallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Wallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74CEF1E26C50760006B1F2C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B758AC5426F4396A00A4A5FB /* Notification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Notification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75E628626969B04003E1ADA /* Component.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Component.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +109,6 @@
 			files = (
 				B7B4A53D26F89DA5001C4737 /* Networking.framework in Frameworks */,
 				B7927DB927A80228005DB48A /* Ads.framework in Frameworks */,
-				B7B4A54126F89DAB001C4737 /* Post.framework in Frameworks */,
 				B7B4A54326F89DAE001C4737 /* Profile.framework in Frameworks */,
 				B7B4A54726F89DB2001C4737 /* Setting.framework in Frameworks */,
 				B7B4A53726F89D9E001C4737 /* Component.framework in Frameworks */,
@@ -124,6 +119,7 @@
 				B7B4A53926F89DA0001C4737 /* Core.framework in Frameworks */,
 				B7B4A53F26F89DA7001C4737 /* Notification.framework in Frameworks */,
 				7EDBF332196C2D1833C692C1 /* Pods_Castcle_iOS.framework in Frameworks */,
+				B72FDEC528339ED400748D13 /* Wallet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +129,7 @@
 		7F3A3F40D4655699A46A2DB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B72FDEC428339ED400748D13 /* Wallet.framework */,
 				B79723F427F1A66A00111F24 /* Farming.framework */,
 				B7927DB827A80228005DB48A /* Ads.framework */,
 				B758AC5426F4396A00A4A5FB /* Notification.framework */,
@@ -154,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				B70748EF27955CC600F01CB4 /* Development.xcconfig */,
-				B70748F027955CC600F01CB4 /* Test.xcconfig */,
 				B70748F127955CC600F01CB4 /* Staging.xcconfig */,
 				B70748F227955CC600F01CB4 /* Production.xcconfig */,
 				B792AA1527955D9700364F7C /* GoogleService-Info-Dev.plist */,
@@ -241,7 +237,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					B7F69CA3268EB21E00B01223 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -272,14 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B792AA1927955D9800364F7C /* GoogleService-Info-Stg.plist in Resources */,
-				B70748F427955CC600F01CB4 /* Test.xcconfig in Resources */,
 				B792AA1A27955D9800364F7C /* GoogleService-Info.plist in Resources */,
 				B792AA1827955D9800364F7C /* GoogleService-Info-Dev.plist in Resources */,
-				B70748F327955CC600F01CB4 /* Development.xcconfig in Resources */,
 				B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */,
-				B70748F527955CC600F01CB4 /* Staging.xcconfig in Resources */,
 				B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */,
-				B70748F627955CC600F01CB4 /* Production.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +312,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\n";
+			shellScript = "${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		CAF3094C0DC976EC7A6ACE9B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -442,7 +434,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 92;
+				CURRENT_PROJECT_VERSION = 103;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -559,7 +551,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 92;
+				CURRENT_PROJECT_VERSION = 103;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -670,7 +662,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 92;
+				CURRENT_PROJECT_VERSION = 103;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -681,6 +673,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-l\"c++\"",
@@ -782,7 +775,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 92;
+				CURRENT_PROJECT_VERSION = 103;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -955,7 +948,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 92;
+				CURRENT_PROJECT_VERSION = 103;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
@@ -1009,7 +1002,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Castcle-iOS/Castcle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 92;
+				CURRENT_PROJECT_VERSION = 103;
 				DEVELOPMENT_TEAM = AL7Y45DV5Q;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -1020,6 +1013,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-l\"c++\"",
