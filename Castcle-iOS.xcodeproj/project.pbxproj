@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7EDBF332196C2D1833C692C1 /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0E8115C73A1F33488B9C87 /* Pods_Castcle_iOS.framework */; };
+		94D2D94922384E98B9E49777 /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B82A807214B15A7C5220ED7 /* Pods_Castcle_iOS.framework */; };
 		B71B666B27210CEF00191A62 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */; };
 		B72FDEC528339ED400748D13 /* Wallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FDEC428339ED400748D13 /* Wallet.framework */; };
 		B72FDEC628339ED400748D13 /* Wallet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B72FDEC428339ED400748D13 /* Wallet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -67,11 +67,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2A0E8115C73A1F33488B9C87 /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		37F31E4D4A709479F928098A /* Pods-Castcle-iOS.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (production).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (production).xcconfig"; sourceTree = "<group>"; };
-		54468F2BB87EA3EC29940A29 /* Pods-Castcle-iOS.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (development).xcconfig"; sourceTree = "<group>"; };
-		64A8DAA29FEC8FDD6E47AD64 /* Pods-Castcle-iOS.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (staging).xcconfig"; sourceTree = "<group>"; };
-		7E551B796A1F35FF9C177613 /* Pods-Castcle-iOS.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (development).xcconfig"; sourceTree = "<group>"; };
+		04B407A1A44B21AE1A719DD3 /* Pods-Castcle-iOS.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (development).xcconfig"; sourceTree = "<group>"; };
+		1B2657371EE215ED84817538 /* Pods-Castcle-iOS.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (production).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (production).xcconfig"; sourceTree = "<group>"; };
+		1D8E24AF82853A294C2C9035 /* Pods-Castcle-iOS.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (staging).xcconfig"; sourceTree = "<group>"; };
+		5329F7E841524DD38F69139D /* Pods-Castcle-iOS.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (production).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (production).xcconfig"; sourceTree = "<group>"; };
+		7B82A807214B15A7C5220ED7 /* Pods_Castcle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Castcle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70748EF27955CC600F01CB4 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		B70748F127955CC600F01CB4 /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		B70748F227955CC600F01CB4 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
@@ -98,8 +98,8 @@
 		B7F69CB3268EB22000B01223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7F69CB5268EB22000B01223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7FF592326EB5903002EA174 /* Castcle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Castcle.entitlements; sourceTree = "<group>"; };
-		CDE3A964844B6FBAEB2A6899 /* Pods-Castcle-iOS.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (production).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (production).xcconfig"; sourceTree = "<group>"; };
-		E8CC1D4F332D86DAA3973122 /* Pods-Castcle-iOS.release (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (staging).xcconfig"; sourceTree = "<group>"; };
+		CDD8E4219FBE98C8BB0C9BD8 /* Pods-Castcle-iOS.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.debug (development).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.debug (development).xcconfig"; sourceTree = "<group>"; };
+		DA60F14B0EAC8D7BECAF2BE7 /* Pods-Castcle-iOS.release (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Castcle-iOS.release (staging).xcconfig"; path = "Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS.release (staging).xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +118,8 @@
 				B7B4A53426F89D97001C4737 /* Authen.framework in Frameworks */,
 				B7B4A53926F89DA0001C4737 /* Core.framework in Frameworks */,
 				B7B4A53F26F89DA7001C4737 /* Notification.framework in Frameworks */,
-				7EDBF332196C2D1833C692C1 /* Pods_Castcle_iOS.framework in Frameworks */,
 				B72FDEC528339ED400748D13 /* Wallet.framework in Frameworks */,
+				94D2D94922384E98B9E49777 /* Pods_Castcle_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +142,7 @@
 				B79281B2269455D1000ED84A /* Feed.framework */,
 				B79281B3269455D1000ED84A /* Search.framework */,
 				B792811B268EC784000ED84A /* Core.framework */,
-				2A0E8115C73A1F33488B9C87 /* Pods_Castcle_iOS.framework */,
+				7B82A807214B15A7C5220ED7 /* Pods_Castcle_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -196,12 +196,12 @@
 		F093F7C16BC95A49994F6E0B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				37F31E4D4A709479F928098A /* Pods-Castcle-iOS.debug (production).xcconfig */,
-				64A8DAA29FEC8FDD6E47AD64 /* Pods-Castcle-iOS.debug (staging).xcconfig */,
-				7E551B796A1F35FF9C177613 /* Pods-Castcle-iOS.debug (development).xcconfig */,
-				CDE3A964844B6FBAEB2A6899 /* Pods-Castcle-iOS.release (production).xcconfig */,
-				E8CC1D4F332D86DAA3973122 /* Pods-Castcle-iOS.release (staging).xcconfig */,
-				54468F2BB87EA3EC29940A29 /* Pods-Castcle-iOS.release (development).xcconfig */,
+				1B2657371EE215ED84817538 /* Pods-Castcle-iOS.debug (production).xcconfig */,
+				1D8E24AF82853A294C2C9035 /* Pods-Castcle-iOS.debug (staging).xcconfig */,
+				CDD8E4219FBE98C8BB0C9BD8 /* Pods-Castcle-iOS.debug (development).xcconfig */,
+				5329F7E841524DD38F69139D /* Pods-Castcle-iOS.release (production).xcconfig */,
+				DA60F14B0EAC8D7BECAF2BE7 /* Pods-Castcle-iOS.release (staging).xcconfig */,
+				04B407A1A44B21AE1A719DD3 /* Pods-Castcle-iOS.release (development).xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -213,13 +213,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7F69CB8268EB22000B01223 /* Build configuration list for PBXNativeTarget "Castcle-iOS" */;
 			buildPhases = (
-				CAF3094C0DC976EC7A6ACE9B /* [CP] Check Pods Manifest.lock */,
+				DF94125C96A15C2B8390F848 /* [CP] Check Pods Manifest.lock */,
 				B7F69CA0268EB21E00B01223 /* Sources */,
 				B7F69CA1268EB21E00B01223 /* Frameworks */,
 				B7F69CA2268EB21E00B01223 /* Resources */,
 				B7552944269C5179005D5EB5 /* ShellScript */,
 				B7B4A53626F89D97001C4737 /* Embed Frameworks */,
-				5D2EDCA8CE11E29E1A1B1565 /* [CP] Embed Pods Frameworks */,
+				EA3D382437CA3465B844AA09 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,23 +278,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5D2EDCA8CE11E29E1A1B1565 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B7552944269C5179005D5EB5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,7 +297,7 @@
 			shellPath = /bin/sh;
 			shellScript = "${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		CAF3094C0DC976EC7A6ACE9B /* [CP] Check Pods Manifest.lock */ = {
+		DF94125C96A15C2B8390F848 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,6 +317,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA3D382437CA3465B844AA09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Castcle-iOS/Pods-Castcle-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
