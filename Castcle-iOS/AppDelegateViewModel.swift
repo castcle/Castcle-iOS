@@ -32,6 +32,7 @@ import Defaults
 class AppDelegateViewModel {
     func setupLogApi() {
         if Environment.appEnv != .prod {
+            NFX.sharedInstance().ignoreURLs(LogUrl.ignoreURLs)
             NFX.sharedInstance().start()
         }
     }
