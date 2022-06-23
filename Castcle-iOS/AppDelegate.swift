@@ -51,6 +51,7 @@ import Swifter
 import GoogleSignIn
 import FBSDKCoreKit
 import PopupDialog
+import Adjust
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -66,6 +67,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: - Prepare Engagement
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
+
+        // MARK: - Setup Adjust
+        let environment = (Environment.appEnv == .prod ? ADJEnvironmentProduction : ADJEnvironmentSandbox)
+        let adjustConfig = ADJConfig(appToken: Environment.adjustAppToken, environment: environment)
+        adjustConfig?.logLevel = ADJLogLevelVerbose
+        Adjust.appDidLaunch(adjustConfig)
 
         // MARK: - Log network api
         self.viewModel.setupLogApi()
