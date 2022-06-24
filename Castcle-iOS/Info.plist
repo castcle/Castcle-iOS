@@ -72,6 +72,8 @@
 	<string>This lets you take photo to share on Castcle</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This lets you share photo from your library and save photos to your camera roll</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Your data will be used to deliver personalized ads to you.</string>
 	<key>UIApplicationShortcutItems</key>
 	<array/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
