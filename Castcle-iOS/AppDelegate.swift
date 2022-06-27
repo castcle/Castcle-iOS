@@ -147,6 +147,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openCast(notification:)), name: .openCastDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openComment(notification:)), name: .openCommentDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openQuoteCastList(notification:)), name: .openQuoteCastListDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openVerify(notification:)), name: .openVerifyDelegate, object: nil)
 
         // MARK: - App Center
         if Environment.appEnv == .prod {
@@ -494,5 +495,9 @@ extension AppDelegate {
             let contentId: String = dict[JsonKey.contentId.rawValue] as? String ?? ""
             Utility.currentViewController().navigationController?.pushViewController(FeedOpener.open(.quoteCastList(QuoteCastListViewModel(contentId: contentId))), animated: true)
         }
+    }
+
+    @objc func openVerify(notification: NSNotification) {
+        Utility.currentViewController().navigationController?.pushViewController(AuthenOpener.open(.resendEmail(ResendEmailViewModel(title: "Setting"))), animated: true)
     }
 }
