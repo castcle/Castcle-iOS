@@ -27,6 +27,7 @@
 
 import UIKit
 import UserNotifications
+import AppTrackingTransparency
 import Core
 import Networking
 import Feed
@@ -73,6 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let environment = (Environment.appEnv == .prod ? ADJEnvironmentProduction : ADJEnvironmentSandbox)
         let adjustConfig = ADJConfig(appToken: Environment.adjustAppToken, environment: environment)
         adjustConfig?.logLevel = ADJLogLevelVerbose
+        adjustConfig?.delegate = self
         Adjust.appDidLaunch(adjustConfig)
 
         // MARK: - Log network api
@@ -119,6 +121,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().delegate = self
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { (success, error) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                Adjust.requestTrackingAuthorization()
+            }
             if error == nil {
                 if success {
                     DispatchQueue.main.async {
@@ -236,10 +241,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.gotoVerifyMobile()
             }
         }
+        Adjust.appWillOpen(url)
         return ApplicationDelegate.shared.application(app, open: url, options: options)
     }
 
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb, let url: URL = userActivity.webpageURL {
+            Adjust.appWillOpen(url)
+        }
         let handled = DynamicLinks.dynamicLinks()
             .handleUniversalLink(userActivity.webpageURL!) { dynamiclink, _ in
                 print(dynamiclink ?? "")
@@ -250,6 +259,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func getQueryStringParameter(url: String, param: String) -> String? {
         guard let url = URLComponents(string: url) else { return nil }
         return url.queryItems?.first(where: { $0.name == param })?.value
+    }
+}
+
+// MARK: - Adjust
+extension AppDelegate: AdjustDelegate {
+    func adjustAttributionChanged(_ attribution: ADJAttribution?) {
+        // MARK: - Log change attribution
+    }
+    
+    func adjustDeeplinkResponse(_ deeplink: URL?) -> Bool {
+        return true
     }
 }
 
@@ -321,6 +341,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Adjust.setDeviceToken(deviceToken)
         Messaging.messaging().apnsToken = deviceToken
         print("APNs token retrieved: \(deviceToken)")
     }
