@@ -38,7 +38,8 @@ import Profile
 import Setting
 import Farming
 import SwiftColor
-import Firebase
+import FirebaseCore
+import FirebaseMessaging
 import FirebaseDynamicLinks
 import AppCenter
 import AppCenterAnalytics
@@ -301,17 +302,6 @@ extension AppDelegate: SplashScreenViewControllerDelegate {
     func didLoadFinish(_ view: SplashScreenViewController) {
         self.setupTabBar()
         self.window!.rootViewController = self.tabBarController
-    }
-}
-
-// MARK: - Adjust
-extension AppDelegate: AdjustDelegate {
-    func adjustAttributionChanged(_ attribution: ADJAttribution?) {
-        // MARK: - Log change attribution
-    }
-
-    func adjustDeeplinkResponse(_ deeplink: URL?) -> Bool {
-        return true
     }
 }
 
