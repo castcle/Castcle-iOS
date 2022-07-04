@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		94D2D94922384E98B9E49777 /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B82A807214B15A7C5220ED7 /* Pods_Castcle_iOS.framework */; };
+		4672E34664E63E4F9451D2DC /* Pods_Castcle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B82A807214B15A7C5220ED7 /* Pods_Castcle_iOS.framework */; };
 		B71B666B27210CEF00191A62 /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B666A27210CEF00191A62 /* AppDelegateViewModel.swift */; };
 		B72FDEC528339ED400748D13 /* Wallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FDEC428339ED400748D13 /* Wallet.framework */; };
 		B72FDEC628339ED400748D13 /* Wallet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B72FDEC428339ED400748D13 /* Wallet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -120,7 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7B4A53D26F89DA5001C4737 /* Networking.framework in Frameworks */,
-				B7F814E6286345AC002C3F50 /* AppTrackingTransparency.framework in Frameworks */,
 				B7927DB927A80228005DB48A /* Ads.framework in Frameworks */,
 				B7B4A54326F89DAE001C4737 /* Profile.framework in Frameworks */,
 				B7F814F2286356A2002C3F50 /* AppTrackingTransparency.framework in Frameworks */,
@@ -136,9 +135,9 @@
 				B7B4A53F26F89DA7001C4737 /* Notification.framework in Frameworks */,
 				B72FDEC528339ED400748D13 /* Wallet.framework in Frameworks */,
 				B7F814F028635696002C3F50 /* StoreKit.framework in Frameworks */,
-				94D2D94922384E98B9E49777 /* Pods_Castcle_iOS.framework in Frameworks */,
 				B7F814F4286356AA002C3F50 /* WebKit.framework in Frameworks */,
 				B7F814EA28635672002C3F50 /* AdSupport.framework in Frameworks */,
+				4672E34664E63E4F9451D2DC /* Pods_Castcle_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
