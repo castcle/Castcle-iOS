@@ -266,8 +266,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/promises.git",
       "state" : {
-        "revision" : "46c1e6b5ac09d8f82c991061c659f67e573d425d",
-        "version" : "2.1.0"
+        "revision" : "3e4e743631e86c8c70dbc6efdc7beaa6e90fd3bb",
+        "version" : "2.1.1"
       }
     },
     {
@@ -284,8 +284,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-cocoa.git",
       "state" : {
-        "revision" : "d3aaab84885e0de9a7a49955874cee160adee164",
-        "version" : "10.28.1"
+        "revision" : "fd279e0a94b46c5bd65b17e36817a4365c7a5482",
+        "version" : "10.28.2"
       }
     },
     {
@@ -293,8 +293,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core",
       "state" : {
-        "revision" : "fd48276f88f3d55dbdcdc9e8cbf32541811d5865",
-        "version" : "12.1.0"
+        "revision" : "55a48c287b5e3a8ca129c257ec7e3b92bcb2a05f",
+        "version" : "12.3.0"
       }
     },
     {

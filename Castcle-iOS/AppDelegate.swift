@@ -73,10 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let environment = (Environment.appEnv == .prod ? ADJEnvironmentProduction : ADJEnvironmentSandbox)
         let adjustConfig = ADJConfig(appToken: Environment.adjustAppToken, environment: environment)
         adjustConfig?.logLevel = ADJLogLevelVerbose
-<<<<<<< HEAD
         adjustConfig?.delegate = self
-=======
->>>>>>> develop
         Adjust.appDidLaunch(adjustConfig)
 
         // MARK: - Log network api
@@ -269,7 +266,7 @@ extension AppDelegate: AdjustDelegate {
     func adjustAttributionChanged(_ attribution: ADJAttribution?) {
         // MARK: - Log change attribution
     }
-    
+
     func adjustDeeplinkResponse(_ deeplink: URL?) -> Bool {
         return true
     }
