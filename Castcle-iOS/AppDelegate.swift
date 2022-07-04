@@ -148,6 +148,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openComment(notification:)), name: .openCommentDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openQuoteCastList(notification:)), name: .openQuoteCastListDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openVerify(notification:)), name: .openVerifyDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openVerifyMobile(notification:)), name: .openVerifyMobileDelegate, object: nil)
 
         // MARK: - App Center
         if Environment.appEnv == .prod {
@@ -499,5 +500,9 @@ extension AppDelegate {
 
     @objc func openVerify(notification: NSNotification) {
         Utility.currentViewController().navigationController?.pushViewController(AuthenOpener.open(.resendEmail(ResendEmailViewModel(title: "Setting"))), animated: true)
+    }
+
+    @objc func openVerifyMobile(notification: NSNotification) {
+        self.gotoVerifyMobile()
     }
 }
