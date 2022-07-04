@@ -120,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7B4A53D26F89DA5001C4737 /* Networking.framework in Frameworks */,
+				B7F814E6286345AC002C3F50 /* AppTrackingTransparency.framework in Frameworks */,
 				B7927DB927A80228005DB48A /* Ads.framework in Frameworks */,
 				B7B4A54326F89DAE001C4737 /* Profile.framework in Frameworks */,
 				B7F814F2286356A2002C3F50 /* AppTrackingTransparency.framework in Frameworks */,

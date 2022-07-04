@@ -263,6 +263,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+// MARK: - Adjust
+extension AppDelegate: AdjustDelegate {
+    func adjustAttributionChanged(_ attribution: ADJAttribution?) {
+        // MARK: - Log change attribution
+    }
+
+    func adjustDeeplinkResponse(_ deeplink: URL?) -> Bool {
+        return true
+    }
+}
+
 extension AppDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
         if !UserManager.shared.accessToken.isEmpty {
