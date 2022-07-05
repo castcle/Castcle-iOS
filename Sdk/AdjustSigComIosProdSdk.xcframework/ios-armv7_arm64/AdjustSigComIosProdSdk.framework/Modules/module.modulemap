@@ -1,0 +1,6 @@
+framework module AdjustSigComIosProdSdk {
+  umbrella header "ADJSigner.h"
+
+  export *
+  module * { export * }
+}
