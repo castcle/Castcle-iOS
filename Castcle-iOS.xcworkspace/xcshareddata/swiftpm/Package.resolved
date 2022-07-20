@@ -37,15 +37,6 @@
       }
     },
     {
-      "identity" : "atributika",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/psharanda/Atributika.git",
-      "state" : {
-        "revision" : "d018897afbd55d9065ef859650585bac890ada7e",
-        "version" : "4.10.1"
-      }
-    },
-    {
       "identity" : "bettersegmentedcontrol",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/gmarm/BetterSegmentedControl.git",
@@ -167,8 +158,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/adjust/ios_sdk",
       "state" : {
-        "revision" : "334c261f5c8f9ce41ff873c98ec91e38b33c550f",
-        "version" : "4.30.0"
+        "revision" : "881842eb3b8f7d2920d962de95e75b27162c83ef",
+        "version" : "4.31.0"
       }
     },
     {

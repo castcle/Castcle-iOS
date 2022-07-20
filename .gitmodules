@@ -37,3 +37,6 @@
 [submodule "Wallet"]
 	path = Wallet
 	url = ../Wallet-iOS.git
+[submodule "External"]
+	path = External-Library
+	url = ../External-Library-iOS.git
