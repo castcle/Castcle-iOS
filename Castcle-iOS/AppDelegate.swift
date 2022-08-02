@@ -71,11 +71,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Defaults[.screenId] = ScreenId.splashScreen.rawValue
 
         // MARK: - Setup Adjust
-        let environment = (Environment.appEnv == .prod ? ADJEnvironmentProduction : ADJEnvironmentSandbox)
-        let adjustConfig = ADJConfig(appToken: Environment.adjustAppToken, environment: environment)
-        adjustConfig?.logLevel = ADJLogLevelVerbose
-        adjustConfig?.delegate = self
-        Adjust.appDidLaunch(adjustConfig)
+        if Defaults[.isAdjustEnable] {
+            let environment = (Environment.appEnv == .prod ? ADJEnvironmentProduction : ADJEnvironmentSandbox)
+            let adjustConfig = ADJConfig(appToken: Environment.adjustAppToken, environment: environment)
+            adjustConfig?.logLevel = ADJLogLevelVerbose
+            adjustConfig?.delegate = self
+            Adjust.appDidLaunch(adjustConfig)
+        }
 
         // MARK: - Log network api
         self.viewModel.setupLogApi()
@@ -173,7 +175,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = splashScreenViewController
         self.window!.overrideUserInterfaceStyle = .dark
         self.window!.makeKeyAndVisible()
-
+//        adjust_enable
         return true
     }
 
@@ -244,12 +246,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.gotoVerifyMobile()
             }
         }
-        Adjust.appWillOpen(url)
+        if Defaults[.isAdjustEnable] {
+            Adjust.appWillOpen(url)
+        }
         return ApplicationDelegate.shared.application(app, open: url, options: options)
     }
 
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        if userActivity.activityType == NSUserActivityTypeBrowsingWeb, let url: URL = userActivity.webpageURL {
+        if Defaults[.isAdjustEnable], userActivity.activityType == NSUserActivityTypeBrowsingWeb, let url: URL = userActivity.webpageURL {
             Adjust.appWillOpen(url)
         }
         let handled = DynamicLinks.dynamicLinks()
@@ -344,7 +348,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        Adjust.setDeviceToken(deviceToken)
+        if Defaults[.isAdjustEnable] {
+            Adjust.setDeviceToken(deviceToken)
+        }
         Messaging.messaging().apnsToken = deviceToken
         print("APNs token retrieved: \(deviceToken)")
     }
