@@ -40,3 +40,6 @@
 [submodule "External"]
 	path = External-Library
 	url = ../External-Library-iOS.git
+[submodule "Report"]
+	path = Report
+	url = ../Report-iOS.git

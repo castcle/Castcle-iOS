@@ -94,3 +94,9 @@ end
      project 'Wallet/Wallet.xcodeproj'
      share_pods
  end
+
+# Report
+ target 'Report' do
+     project 'Report/Report.xcodeproj'
+     share_pods
+ end

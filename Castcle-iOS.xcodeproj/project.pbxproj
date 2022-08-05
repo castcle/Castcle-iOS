@@ -38,6 +38,8 @@
 		B7B4A54626F89DB0001C4737 /* Search.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B79281B3269455D1000ED84A /* Search.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7B4A54726F89DB2001C4737 /* Setting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C252D826D3964D00ACBB84 /* Setting.framework */; };
 		B7B4A54826F89DB2001C4737 /* Setting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C252D826D3964D00ACBB84 /* Setting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7BE8086289D310E0066ADF9 /* Report.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BE8085289D310E0066ADF9 /* Report.framework */; };
+		B7BE8087289D310E0066ADF9 /* Report.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7BE8085289D310E0066ADF9 /* Report.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7F69CA8268EB21E00B01223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F69CA7268EB21E00B01223 /* AppDelegate.swift */; };
 		B7F69CB1268EB22000B01223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB0268EB22000B01223 /* Assets.xcassets */; };
 		B7F69CB4268EB22000B01223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F69CB2268EB22000B01223 /* LaunchScreen.storyboard */; };
@@ -56,6 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B7BE8087289D310E0066ADF9 /* Report.framework in Embed Frameworks */,
 				B7B4A53826F89D9E001C4737 /* Component.framework in Embed Frameworks */,
 				B72FDEC628339ED400748D13 /* Wallet.framework in Embed Frameworks */,
 				B79723F627F1A66A00111F24 /* Farming.framework in Embed Frameworks */,
@@ -102,6 +105,7 @@
 		B792AA1627955D9700364F7C /* GoogleService-Info-Stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stg.plist"; sourceTree = "<group>"; };
 		B792AA1727955D9800364F7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B79723F427F1A66A00111F24 /* Farming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Farming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7BE8085289D310E0066ADF9 /* Report.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Report.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C2524A26C84B8700ACBB84 /* Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C252D826D3964D00ACBB84 /* Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F69CA4268EB21E00B01223 /* Castcle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castcle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BE8086289D310E0066ADF9 /* Report.framework in Frameworks */,
 				B7B4A53D26F89DA5001C4737 /* Networking.framework in Frameworks */,
 				B7927DB927A80228005DB48A /* Ads.framework in Frameworks */,
 				B7B4A54326F89DAE001C4737 /* Profile.framework in Frameworks */,
@@ -154,6 +159,7 @@
 		7F3A3F40D4655699A46A2DB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B7BE8085289D310E0066ADF9 /* Report.framework */,
 				B754FCAA28744CA800986C73 /* AdjustSigComIosProdSdk.xcframework */,
 				B754FCA428744BD600986C73 /* AdjustSigComIosProdSdk.framework */,
 				B754FCA728744C3B00986C73 /* AdjustSigComIosProdSdk.framework */,

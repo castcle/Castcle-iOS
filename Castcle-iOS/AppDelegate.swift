@@ -54,6 +54,7 @@ import GoogleSignIn
 import FBSDKCoreKit
 import PopupDialog
 import Adjust
+import Report
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -153,6 +154,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openVerify(notification:)), name: .openVerifyDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openVerifyMobile(notification:)), name: .openVerifyMobileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openRegisterEmail(notification:)), name: .openRegisterEmailDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openReportSuccess(notification:)), name: .openReportSuccessDelegate, object: nil)
 
         // MARK: - App Center
         if Environment.appEnv == .prod {
@@ -516,5 +518,13 @@ extension AppDelegate {
 
     @objc func openVerifyMobile(notification: NSNotification) {
         self.gotoVerifyMobile()
+    }
+
+    @objc func openReportSuccess(notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let castcleId: String = dict[JsonKey.castcleId.rawValue] as? String ?? ""
+            let isReportContent: Bool = dict[JsonKey.isReportContent.rawValue] as? Bool ?? true
+            Utility.currentViewController().navigationController?.pushViewController(ReportOpener.open(.reportSuccess(isReportContent, castcleId)), animated: true)
+        }
     }
 }
