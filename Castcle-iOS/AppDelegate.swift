@@ -154,7 +154,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.openVerify(notification:)), name: .openVerifyDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openVerifyMobile(notification:)), name: .openVerifyMobileDelegate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.openRegisterEmail(notification:)), name: .openRegisterEmailDelegate, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.openReportSuccess(notification:)), name: .openReportSuccessDelegate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openReport(notification:)), name: .openReportDelegate, object: nil)
 
         // MARK: - App Center
         if Environment.appEnv == .prod {
@@ -520,11 +520,11 @@ extension AppDelegate {
         self.gotoVerifyMobile()
     }
 
-    @objc func openReportSuccess(notification: NSNotification) {
+    @objc func openReport(notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
             let castcleId: String = dict[JsonKey.castcleId.rawValue] as? String ?? ""
-            let isReportContent: Bool = dict[JsonKey.isReportContent.rawValue] as? Bool ?? true
-            Utility.currentViewController().navigationController?.pushViewController(ReportOpener.open(.reportSuccess(isReportContent, castcleId)), animated: true)
+            let contentId: String = dict[JsonKey.contentId.rawValue] as? String ?? ""
+            Utility.currentViewController().navigationController?.pushViewController(ReportOpener.open(.reportSubject(ReportSubjectViewModel(reportType: castcleId.isEmpty ? .content : .user, castcleId: castcleId, contentId: contentId))), animated: true)
         }
     }
 }
