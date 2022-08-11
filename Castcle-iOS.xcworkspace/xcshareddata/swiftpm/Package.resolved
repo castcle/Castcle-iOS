@@ -194,8 +194,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher.git",
       "state" : {
-        "revision" : "2231f92b5af71c78ad2c1450e583bf4a8713b951",
-        "version" : "7.3.1"
+        "revision" : "be1a1acb283a702b99b630f586877ba02234b4cb",
+        "version" : "7.3.2"
       }
     },
     {
@@ -275,8 +275,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-cocoa.git",
       "state" : {
-        "revision" : "effb114129eed128007d343b9eb0323f7c49c328",
-        "version" : "10.28.4"
+        "revision" : "a107f5660b0b6067700923af7f107b6af73c546b",
+        "version" : "10.28.5"
       }
     },
     {
@@ -284,8 +284,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core",
       "state" : {
-        "revision" : "ab2b4947cd559746c775a3024972c5a9a09c47ba",
-        "version" : "12.4.0"
+        "revision" : "2b8def17bb8e0cddbcc754db6b6466b8487feebf",
+        "version" : "12.5.0"
       }
     },
     {
