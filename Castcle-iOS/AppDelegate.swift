@@ -177,7 +177,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = splashScreenViewController
         self.window!.overrideUserInterfaceStyle = .dark
         self.window!.makeKeyAndVisible()
-//        adjust_enable
+
         return true
     }
 
@@ -420,13 +420,15 @@ extension AppDelegate: UITabBarControllerDelegate {
 
     private func createPost() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            if UserManager.shared.isLogin {
+            if !UserManager.shared.isLogin {
+                self.tabBarController.selectedIndex = 0
+                self.signInView()
+            } else if !UserManager.shared.isVerified {
+                NotificationCenter.default.post(name: .openVerifyDelegate, object: nil, userInfo: nil)
+            } else {
                 let viewController = PostOpener.open(.post(PostViewModel(postType: .newCast)))
                 viewController.modalPresentationStyle = .fullScreen
                 self.tabBarController.present(viewController, animated: true, completion: nil)
-            } else {
-                self.tabBarController.selectedIndex = 0
-                self.signInView()
             }
         }
     }
