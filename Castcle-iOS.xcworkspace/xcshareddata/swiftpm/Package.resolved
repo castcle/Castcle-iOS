@@ -212,8 +212,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Moya/Moya.git",
       "state" : {
-        "revision" : "9b906860e3c3c09032879465c471e6375829593f",
-        "version" : "15.0.0"
+        "revision" : "c263811c1f3dbf002be9bd83107f7cdc38992b26",
+        "version" : "15.0.3"
       }
     },
     {
@@ -302,8 +302,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Juanpe/SkeletonView.git",
       "state" : {
-        "revision" : "b640c1d8eee79c3a5ad6e0ae1afd2ae0fea30423",
-        "version" : "1.29.3"
+        "revision" : "969f06848060ef4ced7ed274e91bb2c749d0ca22",
+        "version" : "1.30.1"
       }
     },
     {
