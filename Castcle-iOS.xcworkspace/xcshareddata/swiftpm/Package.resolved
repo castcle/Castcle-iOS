@@ -158,8 +158,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/adjust/ios_sdk",
       "state" : {
-        "revision" : "881842eb3b8f7d2920d962de95e75b27162c83ef",
-        "version" : "4.31.0"
+        "revision" : "73e4121098cad1854579575d79eff3beb1ee65b3",
+        "version" : "4.32.0"
       }
     },
     {
@@ -302,8 +302,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Juanpe/SkeletonView.git",
       "state" : {
-        "revision" : "969f06848060ef4ced7ed274e91bb2c749d0ca22",
-        "version" : "1.30.1"
+        "revision" : "ca7d2edceee613e47b7857029fc82de633460e6f",
+        "version" : "1.30.2"
       }
     },
     {
