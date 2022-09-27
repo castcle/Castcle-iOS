@@ -122,8 +122,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleUtilities.git",
       "state" : {
-        "revision" : "22907832079d808e82f1182b21af58ef3880666f",
-        "version" : "7.8.0"
+        "revision" : "68ea347bdb1a69e2d2ae2e25cd085b6ef92f64cb",
+        "version" : "7.9.0"
       }
     },
     {
@@ -158,8 +158,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/adjust/ios_sdk",
       "state" : {
-        "revision" : "73e4121098cad1854579575d79eff3beb1ee65b3",
-        "version" : "4.32.0"
+        "revision" : "a7b50f187855dfc0fb84114c22661216393387ae",
+        "version" : "4.32.1"
       }
     },
     {
